@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Backpack</key>
+		<dict>
+			<key>Title</key>
+			<string>You&apos;re going on a trip and\nyou can only bring 3 items.</string>
+			<key>Detail</key>
+			<string>Place the items in the bag.</string>
+		</dict>
+		<key>People</key>
+		<dict>
+			<key>Title</key>
+			<string>Who do you admire the most?</string>
+			<key>Detail</key>
+			<string>Rank the people by dragging their icons.</string>
+		</dict>
+		<key>Party</key>
+		<dict>
+			<key>Title</key>
+			<string>You&apos;re at a party. Where do you go first?</string>
+			<key>Detail</key>
+			<string>Place yourself there.</string>
+		</dict>
+		<key>Games</key>
+		<dict>
+			<key>Title</key>
+			<string>Your friends are coming over to play games.</string>
+			<key>Detail</key>
+			<string>Pick three you want to play.</string>
+		</dict>
+		<key>Drinks</key>
+		<dict>
+			<key>Title</key>
+			<string>You go to the kitchen for a drink. What do you pick?</string>
+			<key>Detail</key>
+			<string>Rank the drinks by dragging them.</string>
+		</dict>
+		<key>Seats</key>
+		<dict>
+			<key>Title</key>
+			<string>It&apos;s your first day in a new class.</string>
+			<key>Detail</key>
+			<string>Put yourself in your ideal seat.</string>
+		</dict>
+	</dict>
+</array>
+</plist>
