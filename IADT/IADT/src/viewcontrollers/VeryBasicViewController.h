@@ -33,5 +33,6 @@
 - (void) subscribeTextField: (UITextField *) aTextField;
 - (void) unsubscribeTextField: (UITextField *) aTextField;
 - (void) textFieldDidReturn: (UITextField *) aTextField;
+- (void) textFieldEndedEditing: (UITextField *) aTextField;
 
 @end

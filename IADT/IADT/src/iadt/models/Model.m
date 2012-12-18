@@ -11,10 +11,12 @@
 @implementation Model {
 @private
     NSDictionary *_gamesData;
+    NSString *_dataString;
 }
 
 
 @synthesize gamesData = _gamesData;
+@synthesize dataString = _dataString;
 
 
 + (Model *) sharedModel {
@@ -39,6 +41,9 @@
         NSDictionary *dictionary = [array objectAtIndex: 0];
 
         self.gamesData = dictionary;
+
+        _dataString = [[NSUserDefaults standardUserDefaults] objectForKey: @"dataString"];
+        NSLog(@"_dataString = %@", _dataString);
     }
 
     return self;

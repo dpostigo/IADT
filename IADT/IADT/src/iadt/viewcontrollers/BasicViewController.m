@@ -9,50 +9,51 @@
 #import "DeviceUtils.h"
 #import "UIColor+Utils.h"
 
-@implementation BasicViewController {
 
+@implementation BasicViewController {
 }
+
 
 @synthesize backgroundView;
 @synthesize activityView;
+@synthesize navigationBarView;
 
 
 - (void) viewDidLoad {
     [super viewDidLoad];
 
-
-//    if (backgroundView == nil) {
-//
-//        NSString *string = @"splash-bg.png";
-////        if ([DeviceUtils isPad]) string = @"background-texture-ipad.png";
-//
-//
-//        UIImageView *background = [[UIImageView alloc] initWithImage: [UIImage imageNamed: string]];
-//
-//        backgroundView = [[UIView alloc] init];
-//        [backgroundView addSubview: background];
-//
-//        [self.view insertSubview: backgroundView atIndex: 0];
-//    }
-
     self.view.backgroundColor = [UIColor colorWithString: @"e9e9e9"];
-    NSLog(@"self.view.backgroundColor = %@", self.view.backgroundColor);
     self.navigationItem.hidesBackButton = YES;
+}
+
+
+- (void) loadView {
+    [super loadView];
+    self.navigationBarView = [[[NSBundle mainBundle] loadNibNamed: @"NavigationBar" owner: navigationBarView options: nil] objectAtIndex: 0];
+    [self.view addSubview: navigationBarView];
+
+    navigationBarView.pageControl.currentPage = [self.navigationController.viewControllers count] - 1;
+
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipe:)];
+    swipe.direction = UISwipeGestureRecognizerDirectionRight;
+
+    [self.view addGestureRecognizer: swipe];
 }
 
 
 - (IBAction) popToRoot: (id) sender {
     [self.navigationController popToRootViewControllerAnimated: YES];
-
 }
 
 
+- (void) handleSwipe: (UISwipeGestureRecognizer *) swipe {
 
+    [self.navigationController popViewControllerAnimated: YES];
+}
 
 
 - (BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) toInterfaceOrientation {
     return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
 }
-
 
 @end

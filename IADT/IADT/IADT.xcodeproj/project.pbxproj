@@ -10,6 +10,7 @@
 		03150128166EB4960025F1F7 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 03150125166EB4960025F1F7 /* assets */; };
 		03150129166EB4960025F1F7 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = 03150126166EB4960025F1F7 /* scripts */; };
 		0315012A166EB4960025F1F7 /* src in Resources */ = {isa = PBXBuildFile; fileRef = 03150127166EB4960025F1F7 /* src */; };
+		033FE87D1680C0CD00F370BB /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033FE87C1680C0CD00F370BB /* NavigationBar.xib */; };
 		0346ACC1166EB0E000A00BC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346ACC0166EB0E000A00BC4 /* UIKit.framework */; };
 		0346ACC3166EB0E000A00BC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346ACC2166EB0E000A00BC4 /* Foundation.framework */; };
 		0346ACC5166EB0E000A00BC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346ACC4166EB0E000A00BC4 /* CoreGraphics.framework */; };
@@ -25,10 +26,15 @@
 		7CA440776EC534B3540FB8EC /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA449AB0EEA64E50D9B7E84 /* UIColor+Utils.m */; };
 		7CA440E254B01B33FE39F442 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA442990F2AA1E997E6A4E1 /* BasicViewController.m */; };
 		7CA4415ADF7573D4378B298C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA44A597255E591874F395D /* libTestFlight.a */; };
+		7CA441F29B57A8FA76255435 /* SaveToDocuments.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA449140D01EB85726D8D17 /* SaveToDocuments.m */; };
 		7CA4440A343B1402518E4DC4 /* BasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C54A3156CA9E9116E42 /* BasicView.m */; };
 		7CA444EFC09F4ACD21C2075D /* BasicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA440002B6DADB5E265A341 /* BasicLibrary.m */; };
+		7CA445EDB0F9FFA969AAB05D /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4483B1E625AB9B288C093 /* SMPageControl.m */; };
+		7CA44620779D3129B47EEB21 /* BasicWhiteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA442FB9EFA1F904332F21F /* BasicWhiteView.m */; };
 		7CA446617542C572C67264A0 /* TableRowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44AFDF317F3DDC298D272 /* TableRowObject.m */; };
 		7CA4467DA3E6DD6301C4CDAA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA44014CCBC3A38320655B2 /* MainStoryboard.storyboard */; };
+		7CA446C63D29BBAA3CE5B8A8 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4426399B9C8620230B71F /* NavigationBar.m */; };
+		7CA446D67311D0A6D76D7D45 /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44BA0A8AF0F496DA50559 /* TextField.m */; };
 		7CA447311154A76C89947D6A /* MainStoryboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA44796EB68CEAD388DFE4B /* MainStoryboard-iPad.storyboard */; };
 		7CA447A5308915D7E620B4A0 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D9F87CCD8B9679F1F2F /* UIView+Utils.m */; };
 		7CA447B89EEE978B2490D2BE /* FadePopSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA443DB00AFD572F2507D89 /* FadePopSegue.m */; };
@@ -37,6 +43,7 @@
 		7CA449A2BD72FBBBC073F151 /* TableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44BA33B63A9E57E509D2C /* TableSection.m */; };
 		7CA44B0A1B601296C72962A6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA440E563D2F0A2B1B17E26 /* LoginViewController.m */; };
 		7CA44B1B3467798FF75BC435 /* CBLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4493BD6ACF6FEA66A39F9 /* CBLayer.m */; };
+		7CA44C7BD5DE11418AE7DA65 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44413B0B4516C0AB86E04 /* NSString+Utils.m */; };
 		7CA44E1961E49C8E043CA613 /* BasicOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F4C3BAB96C5940B8B7A /* BasicOperation.m */; };
 		7CA44E2204AFBF78BCA6CB11 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44116AECDAA68C3ECB890 /* DeviceUtils.m */; };
 		7CA44E7E7FB6C20E1857B39F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4414DF1A9060CE207108B /* AppDelegate.m */; };
@@ -50,6 +57,7 @@
 		03150125166EB4960025F1F7 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		03150126166EB4960025F1F7 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		03150127166EB4960025F1F7 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
+		033FE87C1680C0CD00F370BB /* NavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NavigationBar.xib; path = src/xibs/NavigationBar.xib; sourceTree = "<group>"; };
 		0346ACBC166EB0E000A00BC4 /* IADT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IADT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0346ACC0166EB0E000A00BC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0346ACC2166EB0E000A00BC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,6 +74,7 @@
 		03FE777E167FC6F8007880E1 /* GameIntroView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GameIntroView.xib; path = src/xibs/GameIntroView.xib; sourceTree = "<group>"; };
 		03FE7791167FD521007880E1 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = data.plist; path = assets/_plists/data.plist; sourceTree = "<group>"; };
 		7CA440002B6DADB5E265A341 /* BasicLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicLibrary.m; path = src/models/BasicLibrary.m; sourceTree = "<group>"; };
+		7CA4400AD444B389E28A8689 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMPageControl.h; path = src/toolkit/SMPageControl/SMPageControl.h; sourceTree = "<group>"; };
 		7CA44014CCBC3A38320655B2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = src/iadt/nibs/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		7CA4406241E474C59116F5DE /* GameIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameIntroView.h; path = src/iadt/views/GameIntroView.h; sourceTree = "<group>"; };
 		7CA440E563D2F0A2B1B17E26 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/iadt/viewcontrollers/LoginViewController.m; sourceTree = "<group>"; };
@@ -75,35 +84,46 @@
 		7CA4414DF1A9060CE207108B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = src/iadt/app/AppDelegate.m; sourceTree = "<group>"; };
 		7CA441CF1B972062ACE99F69 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConstants.h; path = src/iadt/models/AppConstants.h; sourceTree = "<group>"; };
 		7CA44219A3297C11D42F8D45 /* FadeSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FadeSegue.h; path = src/iadt/segues/FadeSegue.h; sourceTree = "<group>"; };
+		7CA4426399B9C8620230B71F /* NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationBar.m; path = src/iadt/views/NavigationBar.m; sourceTree = "<group>"; };
 		7CA44264604AD8DAB2288331 /* BasicGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicGameViewController.m; path = src/iadt/viewcontrollers/BasicGameViewController.m; sourceTree = "<group>"; };
 		7CA442732FB61BD4BF293828 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = src/iadt/viewcontrollers/LoginViewController.h; sourceTree = "<group>"; };
 		7CA442855C5395A5923EE458 /* BasicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicModel.h; path = src/models/BasicModel.h; sourceTree = "<group>"; };
 		7CA442990F2AA1E997E6A4E1 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicViewController.m; path = src/iadt/viewcontrollers/BasicViewController.m; sourceTree = "<group>"; };
+		7CA442FB9EFA1F904332F21F /* BasicWhiteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicWhiteView.m; path = src/views/BasicWhiteView.m; sourceTree = "<group>"; };
 		7CA4438AF6C8580B6A8EBE3A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/iadt/app/AppDelegate.h; sourceTree = "<group>"; };
 		7CA443AC3E50A6F9E00C0AA9 /* BasicOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicOperation.h; path = src/operations/BasicOperation.h; sourceTree = "<group>"; };
 		7CA443DB00AFD572F2507D89 /* FadePopSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FadePopSegue.m; path = src/iadt/segues/FadePopSegue.m; sourceTree = "<group>"; };
+		7CA44413B0B4516C0AB86E04 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Utils.m"; path = "src/utils/NSString+Utils.m"; sourceTree = "<group>"; };
 		7CA44484B988A212F810F07F /* VeryBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VeryBasicViewController.h; path = src/viewcontrollers/VeryBasicViewController.h; sourceTree = "<group>"; };
 		7CA444FF41836A7D7A81A87D /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Utils.h"; path = "src/utils/UIView+Utils.h"; sourceTree = "<group>"; };
+		7CA44584CA6CC65C39F3F360 /* NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationBar.h; path = src/iadt/views/NavigationBar.h; sourceTree = "<group>"; };
 		7CA445FA6B9AC7A570AC7D2F /* CBLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBLayer.h; path = src/toolkit/CBButtons/CBLayer.h; sourceTree = "<group>"; };
 		7CA446926218C11435558B6D /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Utils.h"; path = "src/utils/UIColor+Utils.h"; sourceTree = "<group>"; };
 		7CA446A4C1BE2393441B06A3 /* TableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableSection.h; path = src/table/TableSection.h; sourceTree = "<group>"; };
 		7CA44730F67C21B693861BBE /* BasicGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicGameViewController.h; path = src/iadt/viewcontrollers/BasicGameViewController.h; sourceTree = "<group>"; };
 		7CA447557B77CA37DFF56A01 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = src/toolkit/TestFlight/TestFlight.h; sourceTree = "<group>"; };
 		7CA44796EB68CEAD388DFE4B /* MainStoryboard-iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "MainStoryboard-iPad.storyboard"; path = "src/iadt/nibs/MainStoryboard-iPad.storyboard"; sourceTree = "<group>"; };
+		7CA4483B1E625AB9B288C093 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMPageControl.m; path = src/toolkit/SMPageControl/SMPageControl.m; sourceTree = "<group>"; };
+		7CA4485C7E2245A6C8BFC993 /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextField.h; path = src/controls/TextField.h; sourceTree = "<group>"; };
 		7CA44885B9DFB52AF710F452 /* GameIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameIntroView.m; path = src/iadt/views/GameIntroView.m; sourceTree = "<group>"; };
+		7CA449140D01EB85726D8D17 /* SaveToDocuments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaveToDocuments.m; path = src/iadt/operations/SaveToDocuments.m; sourceTree = "<group>"; };
 		7CA4493BD6ACF6FEA66A39F9 /* CBLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBLayer.m; path = src/toolkit/CBButtons/CBLayer.m; sourceTree = "<group>"; };
 		7CA449AB0EEA64E50D9B7E84 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Utils.m"; path = "src/utils/UIColor+Utils.m"; sourceTree = "<group>"; };
 		7CA44A210007019B4258F7E9 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = src/iadt/models/Model.h; sourceTree = "<group>"; };
 		7CA44A41707BFB31F54F96BF /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceUtils.h; path = src/utils/DeviceUtils.h; sourceTree = "<group>"; };
 		7CA44A597255E591874F395D /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = src/toolkit/TestFlight/libTestFlight.a; sourceTree = "<group>"; };
+		7CA44A86697D7622DD344CBB /* BasicWhiteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicWhiteView.h; path = src/views/BasicWhiteView.h; sourceTree = "<group>"; };
 		7CA44AFDF317F3DDC298D272 /* TableRowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableRowObject.m; path = src/table/TableRowObject.m; sourceTree = "<group>"; };
+		7CA44BA0A8AF0F496DA50559 /* TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextField.m; path = src/controls/TextField.m; sourceTree = "<group>"; };
 		7CA44BA33B63A9E57E509D2C /* TableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableSection.m; path = src/table/TableSection.m; sourceTree = "<group>"; };
 		7CA44BDA30F1BBE3F1C5A218 /* BasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicView.h; path = src/views/BasicView.h; sourceTree = "<group>"; };
 		7CA44C33806448F4A0C2A111 /* BasicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicModel.m; path = src/models/BasicModel.m; sourceTree = "<group>"; };
 		7CA44C54A3156CA9E9116E42 /* BasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicView.m; path = src/views/BasicView.m; sourceTree = "<group>"; };
+		7CA44C84DED4255E14E5AE11 /* SaveToDocuments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SaveToDocuments.h; path = src/iadt/operations/SaveToDocuments.h; sourceTree = "<group>"; };
 		7CA44D5706437760E20A9845 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = src/iadt/models/Model.m; sourceTree = "<group>"; };
 		7CA44D892F9FE1E7054E20D3 /* FadePopSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FadePopSegue.h; path = src/iadt/segues/FadePopSegue.h; sourceTree = "<group>"; };
 		7CA44D8F8408EA95DDA9C41C /* VeryBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VeryBasicViewController.m; path = src/viewcontrollers/VeryBasicViewController.m; sourceTree = "<group>"; };
+		7CA44D998257E1E02D40D2FA /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Utils.h"; path = "src/utils/NSString+Utils.h"; sourceTree = "<group>"; };
 		7CA44D9F87CCD8B9679F1F2F /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Utils.m"; path = "src/utils/UIView+Utils.m"; sourceTree = "<group>"; };
 		7CA44F108609679CF5D210EE /* TableRowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableRowObject.h; path = src/table/TableRowObject.h; sourceTree = "<group>"; };
 		7CA44F33CB13E6757AF85455 /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicViewController.h; path = src/iadt/viewcontrollers/BasicViewController.h; sourceTree = "<group>"; };
@@ -130,6 +150,7 @@
 		0346ACB1166EB0DF00A00BC4 = {
 			isa = PBXGroup;
 			children = (
+				033FE87C1680C0CD00F370BB /* NavigationBar.xib */,
 				03FE7791167FD521007880E1 /* data.plist */,
 				03FE777E167FC6F8007880E1 /* GameIntroView.xib */,
 				0346ACC6166EB0E000A00BC4 /* BasicProject */,
@@ -180,6 +201,18 @@
 				7CA44219A3297C11D42F8D45 /* FadeSegue.h */,
 				7CA443DB00AFD572F2507D89 /* FadePopSegue.m */,
 				7CA44D892F9FE1E7054E20D3 /* FadePopSegue.h */,
+				7CA44A86697D7622DD344CBB /* BasicWhiteView.h */,
+				7CA442FB9EFA1F904332F21F /* BasicWhiteView.m */,
+				7CA4426399B9C8620230B71F /* NavigationBar.m */,
+				7CA44584CA6CC65C39F3F360 /* NavigationBar.h */,
+				7CA4400AD444B389E28A8689 /* SMPageControl.h */,
+				7CA4483B1E625AB9B288C093 /* SMPageControl.m */,
+				7CA449140D01EB85726D8D17 /* SaveToDocuments.m */,
+				7CA44C84DED4255E14E5AE11 /* SaveToDocuments.h */,
+				7CA44413B0B4516C0AB86E04 /* NSString+Utils.m */,
+				7CA44D998257E1E02D40D2FA /* NSString+Utils.h */,
+				7CA4485C7E2245A6C8BFC993 /* TextField.h */,
+				7CA44BA0A8AF0F496DA50559 /* TextField.m */,
 			);
 			sourceTree = "<group>";
 		};
@@ -289,6 +322,7 @@
 				7CA4467DA3E6DD6301C4CDAA /* MainStoryboard.storyboard in Resources */,
 				03FE777F167FC6F8007880E1 /* GameIntroView.xib in Resources */,
 				03FE7792167FD521007880E1 /* data.plist in Resources */,
+				033FE87D1680C0CD00F370BB /* NavigationBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +369,12 @@
 				7CA44FB16A4A79AA19F1C403 /* GameIntroView.m in Sources */,
 				7CA448862A67B04F9282C516 /* FadeSegue.m in Sources */,
 				7CA447B89EEE978B2490D2BE /* FadePopSegue.m in Sources */,
+				7CA44620779D3129B47EEB21 /* BasicWhiteView.m in Sources */,
+				7CA446C63D29BBAA3CE5B8A8 /* NavigationBar.m in Sources */,
+				7CA445EDB0F9FFA969AAB05D /* SMPageControl.m in Sources */,
+				7CA441F29B57A8FA76255435 /* SaveToDocuments.m in Sources */,
+				7CA44C7BD5DE11418AE7DA65 /* NSString+Utils.m in Sources */,
+				7CA446D67311D0A6D76D7D45 /* TextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +447,7 @@
 		0346ACDB166EB0E000A00BC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniela Postigo (64Z2RX7572)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BasicProject/IADT-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -420,6 +461,7 @@
 					"\"${PROJECT_DIR}/src/toolkit/TestFlight\"/**",
 				);
 				PRODUCT_NAME = IADT;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8F90C656-4FC9-4EF5-BCB5-9E09CED63988";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -428,6 +470,7 @@
 		0346ACDC166EB0E000A00BC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniela Postigo (64Z2RX7572)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BasicProject/IADT-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "TESTFLIGHT_ENABLED=1";
@@ -437,6 +480,7 @@
 					"\"${PROJECT_DIR}/src/toolkit/TestFlight\"/**",
 				);
 				PRODUCT_NAME = IADT;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8F90C656-4FC9-4EF5-BCB5-9E09CED63988";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -468,6 +512,7 @@
 		0348A7E6167949F600BDC6A3 /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BasicProject/IADT-Prefix.pch";
 				INFOPLIST_FILE = "BasicProject/IADT-Info.plist";

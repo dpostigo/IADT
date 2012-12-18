@@ -7,23 +7,24 @@
 
 #import "BasicModel.h"
 
-@implementation BasicModel {
 
+@implementation BasicModel {
 }
 
 
-
-
-
-- (NSString *) pathForSearchPath: (NSSearchPathDirectory)searchPath {
+- (NSString *) pathForSearchPath: (NSSearchPathDirectory) searchPath {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(searchPath, NSUserDomainMask, YES);
     NSString *directoryPath = [paths objectAtIndex: 0];
     return directoryPath;
 }
 
+
 - (NSString *) cacheDirectoryPath {
     return [self pathForSearchPath: NSCachesDirectory];
 }
 
+- (NSString *) userDocumentsPath {
+    return [self pathForSearchPath: NSDocumentDirectory];
+}
 
 @end

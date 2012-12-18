@@ -7,13 +7,16 @@
 
 #import <Foundation/Foundation.h>
 #import "BasicViewController.h"
+#import "TextField.h"
 
 
 @interface LoginViewController : BasicViewController {
     IBOutlet UITextField *name;
     IBOutlet UITextField *email;
-    IBOutlet UITextField *phone;
-    IBOutlet UITextField *zip;
+    IBOutlet TextField *phone;
+    IBOutlet TextField *zip;
+
+    IBOutlet UIButton *submitButton;
 }
 
 

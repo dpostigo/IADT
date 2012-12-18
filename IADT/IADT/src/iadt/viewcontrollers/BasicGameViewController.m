@@ -23,6 +23,7 @@
 
     introView = [[[NSBundle mainBundle] loadNibNamed: @"GameIntroView" owner: introView options: nil] objectAtIndex: 0];
     [self.view addSubview: introView];
+    [self.view insertSubview: introView belowSubview: navigationBarView];
 
     introView.textLabel.text = [[_model.gamesData objectForKey: self.restorationIdentifier] objectForKey: @"Title"];
     introView.textLabel.text = [introView.textLabel.text stringByReplacingOccurrencesOfString: @"\\n" withString: @"\n"];
@@ -52,8 +53,9 @@
 }
 
 
-- (void) viewDidLoad {
-    [super viewDidLoad];
+- (void) viewDidDisappear: (BOOL) animated {
+    [super viewDidDisappear: animated];
+    [self reset: self];
 }
 
 
@@ -91,8 +93,27 @@
         if (touch.view.tag != 0) {
             [UIView animateWithDuration: 0.2 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
 
-                touch.view.alpha = 0.5;
+//                touch.view.alpha = 0.5;
                 touch.view.transform = CGAffineTransformScale(touch.view.transform, 1.15, 1.15);
+            }                completion: ^(BOOL completion) {
+            }];
+        }
+    }
+}
+
+
+- (void) touchesEnded: (NSSet *) touches withEvent: (UIEvent *) event {
+    [super touchesEnded: touches withEvent: event];
+
+    UITouch *touch = [[touches allObjects] objectAtIndex: 0];
+    NSArray *array = [touches allObjects];
+
+    for (UITouch *touch in array) {
+        if (touch.view.tag != 0 && touch.view.alpha == 0.5) {
+            [UIView animateWithDuration: 0.2 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
+
+                touch.view.alpha = 1.0;
+                touch.view.transform = CGAffineTransformIdentity;
             }                completion: ^(BOOL completion) {
             }];
         }
