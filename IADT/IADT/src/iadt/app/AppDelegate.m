@@ -41,9 +41,7 @@
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
 
 #ifdef TESTFLIGHT_ENABLED
-    NSLog(@"is debug");
-
-    [TestFlight takeOff: TESTFLIGHT_TOKEN];
+    [TestFlight takeOff: @"44a2eeaa-a91a-4178-b51a-4d7584bef7dc"];
 #endif
 
     [self customizeAppearance];

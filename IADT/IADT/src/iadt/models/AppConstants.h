@@ -8,7 +8,7 @@
 @protocol AppConstants <NSObject>
 
 
-#define TESTFLIGHT_TOKEN @"5923614b-ffcf-41af-8a27-1775e808a74e"
+#define TESTFLIGHT_TOKEN @"44a2eeaa-a91a-4178-b51a-4d7584bef7dc"
 #define DRAWREQUESTS_CHANNEL @"DRAWREQUESTS_CHANNEL"
 #define REQUEST_ACCEPTED @"Drawing request accepted."
 #define REQUEST_DENIED @"Drawing request denied."

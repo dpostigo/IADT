@@ -11,6 +11,7 @@
 
 
 @implementation BasicViewController {
+    CGPoint startLocation;
 }
 
 
@@ -34,9 +35,8 @@
 
     navigationBarView.pageControl.currentPage = [self.navigationController.viewControllers count] - 1;
 
-    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipe:)];
-    swipe.direction = UISwipeGestureRecognizerDirectionRight;
-
+    UIPanGestureRecognizer *swipe = [[UIPanGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipe:)];
+    swipe.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer: swipe];
 }
 
@@ -46,9 +46,30 @@
 }
 
 
-- (void) handleSwipe: (UISwipeGestureRecognizer *) swipe {
+- (void) handleSwipe: (UIPanGestureRecognizer *) sender {
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        startLocation = [sender locationInView: self.view];
+    }
+    else if (sender.state == UIGestureRecognizerStateEnded) {
+        CGPoint stopLocation = [sender locationInView: self.view];
+        CGFloat dx = stopLocation.x - startLocation.x;
+        CGFloat dy = stopLocation.y - startLocation.y;
+        CGFloat distance = sqrt(dx * dx + dy * dy);
+        NSLog(@"Distance: %f", distance);
 
-    [self.navigationController popViewControllerAnimated: YES];
+        if (distance > 700) {
+
+            CGPoint velocity = [sender velocityInView: sender.view];
+
+            if (velocity.x > 0) {
+                [self.navigationController popViewControllerAnimated: YES];
+            }
+            else {
+                NSLog(@"gesture went left");
+            }
+
+        }
+    }
 }
 
 

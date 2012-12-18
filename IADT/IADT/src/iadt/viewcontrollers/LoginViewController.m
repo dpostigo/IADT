@@ -28,8 +28,11 @@
     zip.characterLimit = 5;
 
 
-    submitButton.userInteractionEnabled = NO;
-    submitButton.alpha = 0.2;
+    if (!DEBUG) {
+        submitButton.userInteractionEnabled = NO;
+        submitButton.alpha = 0.2;
+
+    }
 }
 
 
@@ -37,7 +40,7 @@
 
     BOOL isValid = [self isValid];
 
-    if (isValid) {
+    if (isValid || DEBUG) {
 
         NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
         [dict setObject: name.text forKey: @"Name"];

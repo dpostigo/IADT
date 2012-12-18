@@ -420,7 +420,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="bottom" image="screen6.png" id="FTr-MA-1co" propertyAccessControl="none">
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" id="FTr-MA-1co" propertyAccessControl="none">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -454,6 +454,21 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                     <segue destination="PCe-LK-ouo" kind="custom" customClass="FadeSegue" id="kal-38-bhT"/>
                                 </connections>
                             </button>
+                            <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="Sza-kx-wtc">
+                                <rect key="frame" x="594" y="257" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="1Vb-CX-z26">
+                                <rect key="frame" x="714" y="257" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="kQB-nD-KEX">
+                                <rect key="frame" x="832" y="257" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
                             <imageView tag="2" contentMode="scaleToFill" image="picasso-icon.png" id="kPS-cT-ON5">
                                 <rect key="frame" x="320" y="169" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -469,21 +484,6 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                             </imageView>
                             <imageView tag="4" contentMode="scaleToFill" image="rowling-icon.png" id="SEx-bp-lR6">
                                 <rect key="frame" x="320" y="336" width="160" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="Sza-kx-wtc">
-                                <rect key="frame" x="594" y="257" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="1Vb-CX-z26">
-                                <rect key="frame" x="714" y="257" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="kQB-nD-KEX">
-                                <rect key="frame" x="832" y="257" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -553,11 +553,11 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                     <segue destination="COc-Gb-Zec" kind="custom" customClass="FadeSegue" id="ecg-Nk-Z74"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" id="NXc-6B-pTh">
+                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="NXc-6B-pTh">
                                 <rect key="frame" x="563" y="181" width="403" height="249"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView tag="2" contentMode="scaleToFill" image="cards.png" id="KpE-T7-FVm">
+                                    <imageView tag="12" contentMode="scaleToFill" image="cards.png" id="KpE-T7-FVm">
                                         <rect key="frame" x="121" y="70" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
@@ -874,7 +874,6 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <image name="reset-button.png" width="80" height="80"/>
         <image name="rowling-icon.png" width="160" height="160"/>
         <image name="screen3.png" width="1024" height="768"/>
-        <image name="screen6.png" width="16" height="16"/>
         <image name="seats-bg.png" width="1024" height="768"/>
         <image name="sketchbook-icon.png" width="150" height="150"/>
         <image name="snackbar.png" width="84" height="140"/>
@@ -897,12 +896,12 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                 <relationship kind="action" name="reset:"/>
                 <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
                 <relationship kind="outletCollection" name="containerViews" candidateClass="UIView"/>
+                <relationship kind="outletCollection" name="successViews" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="BasicViewController" superclassName="VeryBasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicViewController.h"/>
             <relationships>
-                <relationship kind="action" name="popToRoot:"/>
                 <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
             </relationships>

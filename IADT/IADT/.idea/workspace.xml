@@ -17,23 +17,16 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_IPAD" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_IPAD_DYTJ8DJPDJ8T" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SaveToDocuments.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/operations/SaveToDocuments.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="29" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TextField.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controls/TextField.m">
           <provider selected="true" editor-type-id="text-editor">
             <state line="24" column="30" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <marker date="1355866479000" expanded="true" signature="195:369" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,14 +96,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginViewController.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AppConstants.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/models/AppConstants.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="36" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="44" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.8978202">
+            <state line="64" column="23" selection-start="1477" selection-end="1477" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#viewDidLoad#0;n#LoginViewController#0" expanded="true" />
                 <element signature="n#handleSubmit:#0;n#LoginViewController#0" expanded="true" />
-                <element signature="n#textFieldEndedEditing:#0;n#LoginViewController#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,18 +122,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="34" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="n#initWithDictionary:#0;n#SaveToDocuments#0" expanded="true" />
-                <element signature="n#composeFile:#0;n#SaveToDocuments#0" expanded="true" />
+                <marker date="1355864372000" expanded="true" signature="178:1430" placeholder="..." />
+                <marker date="1355864372000" expanded="true" signature="267:369" placeholder="{...}" />
+                <marker date="1355864372000" expanded="true" signature="386:846" placeholder="{...}" />
+                <marker date="1355864372000" expanded="true" signature="899:1428" placeholder="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicModel.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/BasicModel.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="15" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -144,32 +138,41 @@
               <folding>
                 <element signature="n#pathForSearchPath:#0;n#BasicModel#0" expanded="true" />
                 <element signature="n#cacheDirectoryPath#0;n#BasicModel#0" expanded="true" />
-                <element signature="n#userDocumentsPath#0;n#BasicModel#0" expanded="true" />
+                <marker date="1355862279000" expanded="true" signature="552:613" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicGameViewController.m" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BasicGameViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="53" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicGameViewController.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="96" selection-start="2999" selection-end="2999" vertical-scroll-proportion="0.0">
+            <state line="150" column="53" selection-start="4621" selection-end="4621" vertical-scroll-proportion="0.6033287">
               <folding>
                 <element signature="n#loadView#0;n#BasicGameViewController#0" expanded="true" />
                 <element signature="n#viewWillAppear:#0;n#BasicGameViewController#0" expanded="true" />
                 <element signature="n#viewDidDisappear:#0;n#BasicGameViewController#0" expanded="true" />
-                <element signature="e#2769#2925#0" expanded="true" />
-                <element signature="n#dragItem:#0;n#BasicGameViewController#0" expanded="true" />
+                <element signature="n#touchesBegan:withEvent:#0;n#BasicGameViewController#0" expanded="true" />
+                <element signature="e#2880#2996#0" expanded="true" />
+                <element signature="e#3024#3058#0" expanded="true" />
+                <element signature="n#touchesCancelled:withEvent:#0;n#BasicGameViewController#0" expanded="true" />
+                <element signature="n#touchesEnded:withEvent:#0;n#BasicGameViewController#0" expanded="true" />
+                <element signature="e#3673#3798#0" expanded="true" />
+                <element signature="e#3826#3860#0" expanded="true" />
+                <element signature="e#4905#5364#0" expanded="true" />
+                <element signature="e#5392#5636#0" expanded="true" />
+                <element signature="e#6428#6982#0" expanded="true" />
+                <element signature="e#7010#7330#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppDelegate.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/app/AppDelegate.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="40" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -186,10 +189,21 @@
       <file leaf-file-name="BasicViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="63" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.0">
+            <state line="38" column="36" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="n#loadView#0;n#BasicViewController#0" expanded="true" />
                 <element signature="n#popToRoot:#0;n#BasicViewController#0" expanded="true" />
+                <element signature="n#handleSwipe:#0;n#BasicViewController#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppDelegate.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/app/AppDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="25" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#customizeAppearance#0;n#AppDelegate#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -243,11 +257,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/toolkit/SMPageControl/Example/SMPageControl/SMViewController.m" />
-        <option value="$PROJECT_DIR$/src/iadt/views/NavigationBar.h" />
-        <option value="$PROJECT_DIR$/src/iadt/views/GameIntroView.m" />
-        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m" />
-        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m" />
         <option value="$PROJECT_DIR$/src/models/BasicModel.m" />
         <option value="$PROJECT_DIR$/src/iadt/operations/SaveToDocuments.h" />
         <option value="$PROJECT_DIR$/src/iadt/models/Model.m" />
@@ -258,7 +267,12 @@
         <option value="$PROJECT_DIR$/src/controls/TextField.m" />
         <option value="$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.m" />
         <option value="$PROJECT_DIR$/src/controls/TextField.h" />
+        <option value="$PROJECT_DIR$/src/iadt/models/AppConstants.h" />
+        <option value="$PROJECT_DIR$/src/iadt/app/AppDelegate.m" />
         <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.m" />
+        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.h" />
+        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m" />
+        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m" />
       </list>
     </option>
   </component>
@@ -476,70 +490,10 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/iadt/views/GameIntroView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="4" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="96" selection-start="2999" selection-end="2999" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#loadView#0;n#BasicGameViewController#0" expanded="true" />
-            <element signature="n#viewWillAppear:#0;n#BasicGameViewController#0" expanded="true" />
-            <element signature="n#viewDidDisappear:#0;n#BasicGameViewController#0" expanded="true" />
-            <element signature="e#2769#2925#0" expanded="true" />
-            <element signature="n#dragItem:#0;n#BasicGameViewController#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/app/AppDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="40" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/models/Model.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/UIView+Utils.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/NSString+Utils.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/models/Model.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="94" selection-start="828" selection-end="919" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#sharedModel#0;n#Model#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="63" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#loadView#0;n#BasicViewController#0" expanded="true" />
-            <element signature="n#popToRoot:#0;n#BasicViewController#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -559,8 +513,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#initWithDictionary:#0;n#SaveToDocuments#0" expanded="true" />
-            <element signature="n#composeFile:#0;n#SaveToDocuments#0" expanded="true" />
+            <marker date="1355864372000" expanded="true" signature="178:1430" placeholder="..." />
+            <marker date="1355864372000" expanded="true" signature="267:369" placeholder="{...}" />
+            <marker date="1355864372000" expanded="true" signature="386:846" placeholder="{...}" />
+            <marker date="1355864372000" expanded="true" signature="899:1428" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -575,13 +531,29 @@
     <entry file="file://$PROJECT_DIR$/src/controls/TextField.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="30" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1355866479000" expanded="true" signature="195:369" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="11" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.h">
+    <entry file="file://$PROJECT_DIR$/src/iadt/operations/SaveToDocuments.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="11" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
+        <state line="13" column="29" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/models/AppConstants.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="36" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -599,20 +571,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.h">
+    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="11" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+        <state line="19" column="11" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="44" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.8978202">
+        <state line="64" column="23" selection-start="1477" selection-end="1477" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#viewDidLoad#0;n#LoginViewController#0" expanded="true" />
             <element signature="n#handleSubmit:#0;n#LoginViewController#0" expanded="true" />
-            <element signature="n#textFieldEndedEditing:#0;n#LoginViewController#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/BasicModel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="15" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="53" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/app/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="25" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#customizeAppearance#0;n#AppDelegate#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="36" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#popToRoot:#0;n#BasicViewController#0" expanded="true" />
+            <element signature="n#handleSwipe:#0;n#BasicViewController#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="53" selection-start="4621" selection-end="4621" vertical-scroll-proportion="0.6033287">
+          <folding>
+            <element signature="n#loadView#0;n#BasicGameViewController#0" expanded="true" />
+            <element signature="n#viewWillAppear:#0;n#BasicGameViewController#0" expanded="true" />
+            <element signature="n#viewDidDisappear:#0;n#BasicGameViewController#0" expanded="true" />
+            <element signature="n#touchesBegan:withEvent:#0;n#BasicGameViewController#0" expanded="true" />
+            <element signature="e#2880#2996#0" expanded="true" />
+            <element signature="e#3024#3058#0" expanded="true" />
+            <element signature="n#touchesCancelled:withEvent:#0;n#BasicGameViewController#0" expanded="true" />
+            <element signature="n#touchesEnded:withEvent:#0;n#BasicGameViewController#0" expanded="true" />
+            <element signature="e#3673#3798#0" expanded="true" />
+            <element signature="e#3826#3860#0" expanded="true" />
+            <element signature="e#4905#5364#0" expanded="true" />
+            <element signature="e#5392#5636#0" expanded="true" />
+            <element signature="e#6428#6982#0" expanded="true" />
+            <element signature="e#7010#7330#0" expanded="true" />
           </folding>
         </state>
       </provider>

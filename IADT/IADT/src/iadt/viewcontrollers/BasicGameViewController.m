@@ -35,7 +35,6 @@
     [super viewWillAppear: animated];
     introView.frame = self.view.bounds;
 
-    NSLog(@"%s", __PRETTY_FUNCTION__);
 
     startPositions = [[NSMutableArray alloc] init];
     for (int j = 0; j < 6; j++) {
@@ -47,7 +46,9 @@
             CGPoint point = view.origin;
 
             [startPositions addObject: [NSValue valueWithCGPoint: point]];
-            [view addGestureRecognizer: [[UIPanGestureRecognizer alloc] initWithTarget: self action: @selector(dragItem:)]];
+            UIPanGestureRecognizer *panGesture =[[UIPanGestureRecognizer alloc] initWithTarget: self action: @selector(dragItem:)];
+            panGesture.cancelsTouchesInView = NO;
+            [view addGestureRecognizer: panGesture];
         }
     }
 }
@@ -89,12 +90,15 @@
     UITouch *touch = [[touches allObjects] objectAtIndex: 0];
     NSArray *array = [touches allObjects];
 
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+
     for (UITouch *touch in array) {
         if (touch.view.tag != 0) {
             [UIView animateWithDuration: 0.2 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
 
-//                touch.view.alpha = 0.5;
                 touch.view.transform = CGAffineTransformScale(touch.view.transform, 1.15, 1.15);
+
+
             }                completion: ^(BOOL completion) {
             }];
         }
@@ -102,18 +106,28 @@
 }
 
 
+- (void) touchesCancelled: (NSSet *) touches withEvent: (UIEvent *) event {
+    [super touchesCancelled: touches withEvent: event];
+
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+
 - (void) touchesEnded: (NSSet *) touches withEvent: (UIEvent *) event {
     [super touchesEnded: touches withEvent: event];
+
 
     UITouch *touch = [[touches allObjects] objectAtIndex: 0];
     NSArray *array = [touches allObjects];
 
     for (UITouch *touch in array) {
-        if (touch.view.tag != 0 && touch.view.alpha == 0.5) {
+        if (touch.view.tag != 0) {
             [UIView animateWithDuration: 0.2 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
 
                 touch.view.alpha = 1.0;
                 touch.view.transform = CGAffineTransformIdentity;
+
+
             }                completion: ^(BOOL completion) {
             }];
         }
@@ -123,17 +137,21 @@
 
 - (void) dragItem: (UIPanGestureRecognizer *) recognizer {
 
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     CGPoint translation = [recognizer translationInView: self.view];
     recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x,
             recognizer.view.center.y + translation.y);
     [recognizer setTranslation: CGPointMake(0, 0) inView: self.view];
 
     if (containerView != nil) {
+
         BOOL intersecting = CGRectIntersectsRect(containerView.frame, recognizer.view.frame);
         if (recognizer.state == UIGestureRecognizerStateChanged) {
             [UIView animateWithDuration: 0.2 delay: 0.0 options: UIViewAnimationOptionCurveEaseOut animations: ^{
-                containerView.alpha = intersecting ? 0.8: 1.0;
-            }                completion: nil];
+                if (containerView != backgroundView) containerView.alpha = intersecting ? 0.8: 1.0;
+            }
+
+            completion: nil];
         }
         else if (recognizer.state == UIGestureRecognizerStateEnded) {
 
@@ -143,7 +161,7 @@
 
                     NSLog(@"intersecting = %d", intersecting);
 
-                    recognizer.view.alpha = (containerView != backgroundView);
+                    recognizer.view.alpha = (containerView == backgroundView);
                     recognizer.view.transform = CGAffineTransformIdentity;
                 }
                 else {
@@ -151,6 +169,9 @@
                     recognizer.view.alpha = 1.0;
                     recognizer.view.transform = CGAffineTransformIdentity;
                 }
+
+
+
             }                completion: ^(BOOL completion) {
 
                 if (intersecting) {
@@ -193,6 +214,8 @@
                     if (intersecting) {
                         NSLog(@"Removed from superview");
                         //                        recognizer.view.hidden = YES;
+
+
                         recognizer.view.transform = CGAffineTransformIdentity;
                     }
                 }];
