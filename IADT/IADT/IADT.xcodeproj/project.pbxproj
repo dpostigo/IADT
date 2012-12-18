@@ -26,7 +26,6 @@
 		7CA440E254B01B33FE39F442 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA442990F2AA1E997E6A4E1 /* BasicViewController.m */; };
 		7CA4415ADF7573D4378B298C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA44A597255E591874F395D /* libTestFlight.a */; };
 		7CA4440A343B1402518E4DC4 /* BasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C54A3156CA9E9116E42 /* BasicView.m */; };
-		7CA4448116E93FCAF5A5C4A9 /* PeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4424922E198B28D4137CF /* PeopleViewController.m */; };
 		7CA444EFC09F4ACD21C2075D /* BasicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA440002B6DADB5E265A341 /* BasicLibrary.m */; };
 		7CA446617542C572C67264A0 /* TableRowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44AFDF317F3DDC298D272 /* TableRowObject.m */; };
 		7CA4467DA3E6DD6301C4CDAA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA44014CCBC3A38320655B2 /* MainStoryboard.storyboard */; };
@@ -40,7 +39,6 @@
 		7CA44B1B3467798FF75BC435 /* CBLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4493BD6ACF6FEA66A39F9 /* CBLayer.m */; };
 		7CA44E1961E49C8E043CA613 /* BasicOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F4C3BAB96C5940B8B7A /* BasicOperation.m */; };
 		7CA44E2204AFBF78BCA6CB11 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44116AECDAA68C3ECB890 /* DeviceUtils.m */; };
-		7CA44E55A8247DB3E36BCA1E /* BackpackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA444146855C7FD4DEE3AF1 /* BackpackViewController.m */; };
 		7CA44E7E7FB6C20E1857B39F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4414DF1A9060CE207108B /* AppDelegate.m */; };
 		7CA44EE395A2AA60A31497A0 /* BasicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C33806448F4A0C2A111 /* BasicModel.m */; };
 		7CA44F7CF463A45366031903 /* BasicGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44264604AD8DAB2288331 /* BasicGameViewController.m */; };
@@ -77,16 +75,13 @@
 		7CA4414DF1A9060CE207108B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = src/iadt/app/AppDelegate.m; sourceTree = "<group>"; };
 		7CA441CF1B972062ACE99F69 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConstants.h; path = src/iadt/models/AppConstants.h; sourceTree = "<group>"; };
 		7CA44219A3297C11D42F8D45 /* FadeSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FadeSegue.h; path = src/iadt/segues/FadeSegue.h; sourceTree = "<group>"; };
-		7CA4424922E198B28D4137CF /* PeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleViewController.m; path = src/iadt/viewcontrollers/PeopleViewController.m; sourceTree = "<group>"; };
 		7CA44264604AD8DAB2288331 /* BasicGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicGameViewController.m; path = src/iadt/viewcontrollers/BasicGameViewController.m; sourceTree = "<group>"; };
 		7CA442732FB61BD4BF293828 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = src/iadt/viewcontrollers/LoginViewController.h; sourceTree = "<group>"; };
 		7CA442855C5395A5923EE458 /* BasicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicModel.h; path = src/models/BasicModel.h; sourceTree = "<group>"; };
 		7CA442990F2AA1E997E6A4E1 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicViewController.m; path = src/iadt/viewcontrollers/BasicViewController.m; sourceTree = "<group>"; };
 		7CA4438AF6C8580B6A8EBE3A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/iadt/app/AppDelegate.h; sourceTree = "<group>"; };
-		7CA443A9275B18AE2FDACDB3 /* BackpackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackpackViewController.h; path = src/iadt/viewcontrollers/BackpackViewController.h; sourceTree = "<group>"; };
 		7CA443AC3E50A6F9E00C0AA9 /* BasicOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicOperation.h; path = src/operations/BasicOperation.h; sourceTree = "<group>"; };
 		7CA443DB00AFD572F2507D89 /* FadePopSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FadePopSegue.m; path = src/iadt/segues/FadePopSegue.m; sourceTree = "<group>"; };
-		7CA444146855C7FD4DEE3AF1 /* BackpackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackpackViewController.m; path = src/iadt/viewcontrollers/BackpackViewController.m; sourceTree = "<group>"; };
 		7CA44484B988A212F810F07F /* VeryBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VeryBasicViewController.h; path = src/viewcontrollers/VeryBasicViewController.h; sourceTree = "<group>"; };
 		7CA444FF41836A7D7A81A87D /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Utils.h"; path = "src/utils/UIView+Utils.h"; sourceTree = "<group>"; };
 		7CA445FA6B9AC7A570AC7D2F /* CBLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBLayer.h; path = src/toolkit/CBButtons/CBLayer.h; sourceTree = "<group>"; };
@@ -113,7 +108,6 @@
 		7CA44F108609679CF5D210EE /* TableRowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableRowObject.h; path = src/table/TableRowObject.h; sourceTree = "<group>"; };
 		7CA44F33CB13E6757AF85455 /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicViewController.h; path = src/iadt/viewcontrollers/BasicViewController.h; sourceTree = "<group>"; };
 		7CA44F4C3BAB96C5940B8B7A /* BasicOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicOperation.m; path = src/operations/BasicOperation.m; sourceTree = "<group>"; };
-		7CA44F7966F7DEA1AA76E4C4 /* PeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleViewController.h; path = src/iadt/viewcontrollers/PeopleViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,12 +174,8 @@
 				7CA44730F67C21B693861BBE /* BasicGameViewController.h */,
 				7CA440E563D2F0A2B1B17E26 /* LoginViewController.m */,
 				7CA442732FB61BD4BF293828 /* LoginViewController.h */,
-				7CA444146855C7FD4DEE3AF1 /* BackpackViewController.m */,
-				7CA443A9275B18AE2FDACDB3 /* BackpackViewController.h */,
 				7CA44885B9DFB52AF710F452 /* GameIntroView.m */,
 				7CA4406241E474C59116F5DE /* GameIntroView.h */,
-				7CA4424922E198B28D4137CF /* PeopleViewController.m */,
-				7CA44F7966F7DEA1AA76E4C4 /* PeopleViewController.h */,
 				7CA4410F635493B84B31AEC0 /* FadeSegue.m */,
 				7CA44219A3297C11D42F8D45 /* FadeSegue.h */,
 				7CA443DB00AFD572F2507D89 /* FadePopSegue.m */,
@@ -342,9 +332,7 @@
 				7CA44E7E7FB6C20E1857B39F /* AppDelegate.m in Sources */,
 				7CA44F7CF463A45366031903 /* BasicGameViewController.m in Sources */,
 				7CA44B0A1B601296C72962A6 /* LoginViewController.m in Sources */,
-				7CA44E55A8247DB3E36BCA1E /* BackpackViewController.m in Sources */,
 				7CA44FB16A4A79AA19F1C403 /* GameIntroView.m in Sources */,
-				7CA4448116E93FCAF5A5C4A9 /* PeopleViewController.m in Sources */,
 				7CA448862A67B04F9282C516 /* FadeSegue.m in Sources */,
 				7CA447B89EEE978B2490D2BE /* FadePopSegue.m in Sources */,
 			);

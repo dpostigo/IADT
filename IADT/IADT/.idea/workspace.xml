@@ -29,15 +29,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BackpackViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BackpackViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FadeSegue.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/segues/FadeSegue.h">
           <provider selected="true" editor-type-id="text-editor">
@@ -54,15 +45,6 @@
               <folding>
                 <element signature="n#perform#0;n#FadeSegue#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BackpackViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BackpackViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="24" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -138,7 +120,7 @@
       <file leaf-file-name="BasicGameViewController.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="20" selection-start="4382" selection-end="4382" vertical-scroll-proportion="0.6463246">
+            <state line="128" column="114" selection-start="4120" selection-end="4120" vertical-scroll-proportion="0.5006935">
               <folding>
                 <element signature="n#loadView#0;n#BasicGameViewController#0" expanded="true" />
                 <element signature="n#viewWillAppear:#0;n#BasicGameViewController#0" expanded="true" />
@@ -149,29 +131,11 @@
                 <element signature="e#2634#2788#0" expanded="true" />
                 <element signature="e#2816#2850#0" expanded="true" />
                 <element signature="e#3515#3594#0" expanded="true" />
-                <element signature="e#3820#4276#0" expanded="true" />
+                <element signature="e#4304#4548#0" expanded="true" />
                 <element signature="e#5023#5102#0" expanded="true" />
                 <element signature="e#5340#5894#0" expanded="true" />
                 <element signature="e#5922#6240#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PeopleViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/PeopleViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PeopleViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/PeopleViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="55" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -620,20 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BackpackViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BackpackViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="67" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
@@ -695,16 +645,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/PeopleViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="55" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="20" selection-start="4382" selection-end="4382" vertical-scroll-proportion="0.6463246">
+        <state line="128" column="114" selection-start="4120" selection-end="4120" vertical-scroll-proportion="0.5006935">
           <folding>
             <element signature="n#loadView#0;n#BasicGameViewController#0" expanded="true" />
             <element signature="n#viewWillAppear:#0;n#BasicGameViewController#0" expanded="true" />
@@ -715,7 +658,7 @@
             <element signature="e#2634#2788#0" expanded="true" />
             <element signature="e#2816#2850#0" expanded="true" />
             <element signature="e#3515#3594#0" expanded="true" />
-            <element signature="e#3820#4276#0" expanded="true" />
+            <element signature="e#4304#4548#0" expanded="true" />
             <element signature="e#5023#5102#0" expanded="true" />
             <element signature="e#5340#5894#0" expanded="true" />
             <element signature="e#5922#6240#0" expanded="true" />

@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="-2745" y="409"/>
         </scene>
-        <!--Backpack View Controller-->
+        <!--Basic Game View Controller-->
         <scene sceneID="0zP-EX-Bc6">
             <objects>
-                <viewController restorationIdentifier="Backpack" storyboardIdentifier="" id="NWR-ld-kdV" customClass="BackpackViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Backpack" storyboardIdentifier="" id="NWR-ld-kdV" customClass="BasicGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lxu-s1-N6d">
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -833,9 +833,6 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <image name="wordgame.png" width="110" height="147"/>
     </resources>
     <classes>
-        <class className="BackpackViewController" superclassName="BasicGameViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BackpackViewController.h"/>
-        </class>
         <class className="BasicGameViewController" superclassName="BasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicGameViewController.h"/>
             <relationships>
