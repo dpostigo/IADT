@@ -9,7 +9,7 @@
             <objects>
                 <viewController autoresizesArchivedViewToFullSize="NO" id="NBY-wc-PsL" customClass="BasicViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Vn-N1-YCw">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="bottom" image="splash-bg.png" id="R5K-75-uaW">
@@ -17,21 +17,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TOUCH START TO BEGIN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rlv-EP-8Hn">
-                                <rect key="frame" x="367" y="515" width="293" height="38"/>
+                                <rect key="frame" x="371" y="381" width="293" height="38"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="31"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Decode your Digital DNA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MdC-4y-vwD">
-                                <rect key="frame" x="240" y="395" width="543" height="69"/>
+                                <rect key="frame" x="240" y="285" width="543" height="69"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="56"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TCC-VX-DUP">
-                                <rect key="frame" x="473" y="707" width="80" height="80"/>
+                                <rect key="frame" x="477" y="509" width="80" height="80"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="start-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,9 +46,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="MPE-ES-yh2"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="backgroundView" destination="R5K-75-uaW" id="fSh-cc-jbY"/>
                     </connections>
@@ -62,7 +64,7 @@
             <objects>
                 <viewController id="nwi-cg-cVf" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EmL-jf-PHB">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="bottom" image="splash-bg.png" id="kJ7-Hg-3lO">
@@ -70,27 +72,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" id="nUo-74-ZRF">
-                                <rect key="frame" x="344" y="251" width="338" height="30"/>
+                                <rect key="frame" x="349" y="185" width="338" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="shz-JJ-Wwy">
-                                <rect key="frame" x="344" y="319" width="338" height="30"/>
+                                <rect key="frame" x="349" y="237" width="338" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" minimumFontSize="17" id="Dhj-Rw-eWA">
-                                <rect key="frame" x="344" y="391" width="338" height="30"/>
+                                <rect key="frame" x="349" y="287" width="338" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" minimumFontSize="17" id="bCz-aU-A1a">
-                                <rect key="frame" x="344" y="463" width="338" height="30"/>
+                                <rect key="frame" x="349" y="341" width="338" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SbO-ov-qiS">
-                                <rect key="frame" x="471" y="635" width="80" height="80"/>
+                                <rect key="frame" x="472" y="459" width="80" height="80"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="submit-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -105,6 +107,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="Z3e-wt-xTo"/>
                     <connections>
@@ -123,7 +126,7 @@
             <objects>
                 <viewController restorationIdentifier="Backpack" storyboardIdentifier="" id="NWR-ld-kdV" customClass="BackpackViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lxu-s1-N6d">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="bottom" image="backpack.png" id="WTt-LH-sBa">
@@ -192,6 +195,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="59c-rg-LhS"/>
                     <connections>
@@ -212,7 +216,7 @@
             <objects>
                 <viewController id="AzT-eV-0hw" customClass="BasicViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xqT-Cf-AN5">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="bottom" image="screen3.png" id="s3h-oe-h1S">
@@ -220,7 +224,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vYa-9V-bHW">
-                                <rect key="frame" x="245" y="343" width="533" height="96"/>
+                                <rect key="frame" x="246" y="243" width="533" height="96"/>
                                 <string key="text" base64-UTF8="YES">
 VG9tb3Jyb3figJlzIGNyZWF0aXZlIGFuZCB0ZWNobmljYWwgA2xlYWRlcnMgYXJlIGEgd2hvbGUgbmV3
 IGJyZWVkLg
@@ -230,7 +234,7 @@ IGJyZWVkLg
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ihn-US-Q0V">
-                                <rect key="frame" x="212" y="463" width="603" height="132"/>
+                                <rect key="frame" x="217" y="329" width="603" height="132"/>
                                 <string key="text" base64-UTF8="YES">
 SGlnaGx5IGV2b2x2ZWQsIGRpZ2l0YWxseSBzYXZ2eSBhbmQgYWRlcHQgYXQgbWFueSADZGlzY2lwbGlu
 ZXMuIFRha2UgdGhpcyB0ZXN0IHRvIGRpc2NvdmVyIGlmIHlvdSBoYXZlIAN0aGUgcmF3IHRhbGVudCB0
@@ -241,7 +245,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cUl-zy-CQl">
-                                <rect key="frame" x="178" y="331" width="713" height="353"/>
+                                <rect key="frame" x="183" y="201" width="713" height="353"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -256,6 +260,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="kDo-s8-Kp4"/>
                 </viewController>
@@ -287,7 +292,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
             <objects>
                 <viewController restorationIdentifier="Party" id="PCe-LK-ouo" customClass="BasicGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Sa-7q-gV7">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="bottom" image="party-bg.png" id="QfX-LZ-CQj">
@@ -349,9 +354,11 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="RVV-vZ-eX8"/>
                     <connections>
+                        <outlet property="backgroundView" destination="QfX-LZ-CQj" id="oGF-MM-NKL"/>
                         <outlet property="containerView" destination="QfX-LZ-CQj" id="OgO-yK-rh4"/>
                     </connections>
                 </viewController>
@@ -364,7 +371,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
             <objects>
                 <viewController restorationIdentifier="People" id="T9I-X7-WKF" customClass="BasicGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="maA-6j-6vn">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="bottom" image="screen6.png" id="FTr-MA-1co" propertyAccessControl="none">
@@ -445,6 +452,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="Kpp-05-wLj"/>
                     <connections>
@@ -462,7 +470,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
             <objects>
                 <viewController restorationIdentifier="Games" id="BWo-Dc-mfB" customClass="BasicGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Ye-WG-n5Y">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="bottom" image="cardgames.png" id="MHX-mC-kpo">
@@ -533,6 +541,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="pCQ-aK-dtA"/>
                     <connections>
@@ -548,7 +557,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
             <objects>
                 <viewController restorationIdentifier="Drinks" id="COc-Gb-Zec" customClass="BasicGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ld0-AN-z84">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="bottom" image="drinks.png" id="yTH-TQ-iH5">
@@ -629,6 +638,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="me8-PN-lZq"/>
                     <connections>
@@ -646,7 +656,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
             <objects>
                 <viewController restorationIdentifier="Seats" id="g8X-Ik-qcx" customClass="BasicGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CEq-lw-yql">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="bottom" image="seats-bg.png" id="YFo-4n-1oP">
@@ -690,8 +700,13 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="3cM-KX-uPX"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="YFo-4n-1oP" id="0Vh-XW-TXz"/>
+                        <outlet property="containerView" destination="YFo-4n-1oP" id="ewa-dL-vH4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7D-4g-KR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -702,7 +717,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
             <objects>
                 <viewController id="6f7-Mh-rk5" customClass="BasicViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="amd-Eh-Pko">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="congrats-bg.png" id="4Bp-YT-73b">
@@ -752,11 +767,13 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NBY-wc-PsL" kind="custom" customClass="FadePopSegue" id="oNF-aQ-MVH"/>
+                                    <action selector="popToRoot:" destination="6f7-Mh-rk5" eventType="touchUpInside" id="TAM-tl-hp3"/>
+                                    <segue destination="NBY-wc-PsL" kind="custom" customClass="FadePopSegue" id="k4Z-1z-RJ4"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="T3P-yo-pMY"/>
                 </viewController>
@@ -857,6 +874,6 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oNF-aQ-MVH"/>
+        <segue reference="k4Z-1z-RJ4"/>
     </inferredMetricsTieBreakers>
 </document>

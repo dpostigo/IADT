@@ -67,15 +67,15 @@
             view.left = point.x;
             view.top = point.y;
 
-//            if (view.hidden) {
+            //            if (view.hidden) {
 
-                view.alpha = 0;
-                view.hidden = NO;
-                [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseOut animations: ^{
+            view.alpha = 0;
+            view.hidden = NO;
+            [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseOut animations: ^{
 
-                    view.alpha = 1;
-                }                completion: nil];
-//            }
+                view.alpha = 1;
+            }                completion: nil];
+            //            }
         }
     }
 }
@@ -119,9 +119,10 @@
             [UIView animateWithDuration: 0.2 delay: 0.0 options: UIViewAnimationOptionCurveEaseOut animations: ^{
 
                 if (intersecting) {
-                    NSLog(@"Intersects");
-                    recognizer.view.alpha = 0;
-                    //recognizer.view.transform = CGAffineTransformScale(recognizer.view.transform, 0, 0);
+
+                    NSLog(@"intersecting = %d", intersecting);
+
+                    recognizer.view.alpha = (containerView != backgroundView);
                     recognizer.view.transform = CGAffineTransformIdentity;
                 }
                 else {
@@ -132,8 +133,7 @@
             }                completion: ^(BOOL completion) {
 
                 if (intersecting) {
-                    NSLog(@"Removed from superview");
-                    recognizer.view.hidden = YES;
+                    recognizer.view.hidden = (containerView != backgroundView);
                     recognizer.view.transform = CGAffineTransformIdentity;
                 }
             }];
@@ -171,7 +171,7 @@
 
                     if (intersecting) {
                         NSLog(@"Removed from superview");
-//                        recognizer.view.hidden = YES;
+                        //                        recognizer.view.hidden = YES;
                         recognizer.view.transform = CGAffineTransformIdentity;
                     }
                 }];

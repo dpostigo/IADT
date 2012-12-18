@@ -20,7 +20,9 @@
     transition.type = kCATransitionFade;
 
     [[self.sourceViewController navigationController].view.layer addAnimation: transition forKey: kCATransition];
-    [[self.sourceViewController navigationController] popToViewController: [self destinationViewController] animated: NO];
+//    [[self.sourceViewController navigationController] popToViewController: [self destinationViewController] animated: NO];
+
+    [[self.sourceViewController navigationController] popToRootViewControllerAnimated: NO];
 }
 
 @end
