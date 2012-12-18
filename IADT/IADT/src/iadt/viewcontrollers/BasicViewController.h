@@ -15,6 +15,5 @@
 
 @property(nonatomic, strong) IBOutlet UIView *backgroundView;
 @property(nonatomic, strong) UIActivityIndicatorView *activityView;
-- (IBAction) testGestureRecognizer: (UIGestureRecognizer *) recognizer;
 
 @end

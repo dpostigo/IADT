@@ -13,16 +13,17 @@
 @interface BasicGameViewController : BasicViewController {
 
     GameIntroView *introView;
+    NSMutableArray *startPositions;
 
-
-    NSString *titleText;
-    NSString *detailTitleText;
+    IBOutlet UIView *containerView;
+    IBOutletCollection(UIView) NSArray *containerViews;
 }
 
 
 @property(nonatomic, strong) GameIntroView *introView;
-@property(nonatomic, retain) NSString *titleText;
-@property(nonatomic, retain) NSString *detailTitleText;
-- (IBAction) dragItem: (UIPanGestureRecognizer *) recognizer;
+@property(nonatomic, strong) NSMutableArray *startPositions;
+
+- (IBAction) reset: (id) sender;
+- (void) dragItem: (UIPanGestureRecognizer *) recognizer;
 
 @end

@@ -14,12 +14,8 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%s", __PRETTY_FUNCTION__);
 
 
 }
 
-
-
-
-    @end
+@end

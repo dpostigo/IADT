@@ -20,15 +20,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_IPAD" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UIColor+Utils.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/UIColor+Utils.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LoginViewController.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.h">
           <provider selected="true" editor-type-id="text-editor">
@@ -41,8 +32,28 @@
       <file leaf-file-name="BackpackViewController.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BackpackViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+            <state line="13" column="0" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FadeSegue.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/segues/FadeSegue.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="41" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FadeSegue.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/segues/FadeSegue.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="0" selection-start="206" selection-end="590" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#perform#0;n#FadeSegue#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,7 +61,7 @@
       <file leaf-file-name="BackpackViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BackpackViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="30" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+            <state line="15" column="24" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -68,7 +79,27 @@
       <file leaf-file-name="AppDelegate.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/app/AppDelegate.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="25" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
+            <state line="21" column="40" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#application:didFinishLaunchingWithOptions:#0;n#AppDelegate#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FadePopSegue.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/segues/FadePopSegue.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="44" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FadePopSegue.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/iadt/segues/FadePopSegue.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="74" selection-start="551" selection-end="551" vertical-scroll-proportion="0.45769763">
               <folding />
             </state>
           </provider>
@@ -77,8 +108,11 @@
       <file leaf-file-name="BasicViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="17" column="88" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#viewDidLoad#0;n#BasicViewController#0" expanded="true" />
+                <element signature="n#popToRoot:#0;n#BasicViewController#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,7 +120,7 @@
       <file leaf-file-name="BasicViewController.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="11" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+            <state line="16" column="67" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,19 +129,31 @@
       <file leaf-file-name="BasicGameViewController.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="27" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
+            <state line="26" column="9" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicGameViewController.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BasicGameViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="721" selection-end="721" vertical-scroll-proportion="0.3966713">
+            <state line="68" column="33" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0">
               <folding>
+                <element signature="n#loadView#0;n#BasicGameViewController#0" expanded="true" />
                 <element signature="n#viewWillAppear:#0;n#BasicGameViewController#0" expanded="true" />
+                <element signature="n#viewDidLoad#0;n#BasicGameViewController#0" expanded="true" />
+                <element signature="e#2088#2145#0" expanded="true" />
+                <element signature="n#touchesBegan:withEvent:#0;n#BasicGameViewController#0" expanded="true" />
+                <element signature="e#2630#2784#0" expanded="true" />
+                <element signature="e#2812#2846#0" expanded="true" />
                 <element signature="n#dragItem:#0;n#BasicGameViewController#0" expanded="true" />
+                <element signature="e#3511#3590#0" expanded="true" />
+                <element signature="e#3816#4324#0" expanded="true" />
+                <element signature="e#4352#4620#0" expanded="true" />
+                <element signature="e#5095#5174#0" expanded="true" />
+                <element signature="e#5412#5966#0" expanded="true" />
+                <element signature="e#5994#6288#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,7 +207,7 @@
       <file leaf-file-name="Model.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/models/Model.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="60" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
+            <state line="35" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -186,22 +232,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/_app/models/AppConstants.h" />
-        <option value="$PROJECT_DIR$/src/_app/app/AppDelegate.m" />
-        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.h" />
-        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.m" />
-        <option value="$PROJECT_DIR$/src/iadt/app/AppDelegate.m" />
-        <option value="$PROJECT_DIR$/src/iadt/views/GameIntroView.m" />
-        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/PeopleViewController.h" />
-        <option value="$PROJECT_DIR$/src/iadt/views/GameIntroView.h" />
         <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/PeopleViewController.m" />
-        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.h" />
         <option value="$PROJECT_DIR$/src/iadt/models/Model.h" />
-        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m" />
+        <option value="$PROJECT_DIR$/src/iadt/app/AppDelegate.m" />
+        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.h" />
+        <option value="$PROJECT_DIR$/src/iadt/segues/FromTopSegue.h" />
+        <option value="$PROJECT_DIR$/src/iadt/segues/FromTopSegue.m" />
+        <option value="$PROJECT_DIR$/src/iadt/segues/FadeSegue.h" />
         <option value="$PROJECT_DIR$/src/iadt/models/Model.m" />
-        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BackpackViewController.m" />
         <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BackpackViewController.h" />
+        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BackpackViewController.m" />
+        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.h" />
         <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m" />
+        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m" />
+        <option value="$PROJECT_DIR$/src/iadt/segues/FadePopSegue.h" />
+        <option value="$PROJECT_DIR$/src/iadt/segues/FadeSegue.m" />
+        <option value="$PROJECT_DIR$/src/iadt/segues/FadePopSegue.m" />
       </list>
     </option>
   </component>
@@ -294,6 +340,24 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IADT" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="iadt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -317,6 +381,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="viewcontrollers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IADT" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iadt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="segues" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -507,86 +593,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="33" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/UIView+Utils.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/PeopleViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/views/GameIntroView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="37" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/PeopleViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="55" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="11" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/models/Model.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/UIColor+Utils.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/app/AppDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="25" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/models/Model.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="60" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="27" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -598,27 +607,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/app/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="40" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#application:didFinishLaunchingWithOptions:#0;n#AppDelegate#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/UIColor+Utils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="29" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/segues/FadeSegue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="41" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/models/Model.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BackpackViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BackpackViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="30" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+        <state line="15" column="24" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="67" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="9" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="721" selection-end="721" vertical-scroll-proportion="0.3966713">
+        <state line="68" column="33" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0">
           <folding>
+            <element signature="n#loadView#0;n#BasicGameViewController#0" expanded="true" />
             <element signature="n#viewWillAppear:#0;n#BasicGameViewController#0" expanded="true" />
+            <element signature="n#viewDidLoad#0;n#BasicGameViewController#0" expanded="true" />
+            <element signature="e#2088#2145#0" expanded="true" />
+            <element signature="n#touchesBegan:withEvent:#0;n#BasicGameViewController#0" expanded="true" />
+            <element signature="e#2630#2784#0" expanded="true" />
+            <element signature="e#2812#2846#0" expanded="true" />
             <element signature="n#dragItem:#0;n#BasicGameViewController#0" expanded="true" />
+            <element signature="e#3511#3590#0" expanded="true" />
+            <element signature="e#3816#4324#0" expanded="true" />
+            <element signature="e#4352#4620#0" expanded="true" />
+            <element signature="e#5095#5174#0" expanded="true" />
+            <element signature="e#5412#5966#0" expanded="true" />
+            <element signature="e#5994#6288#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="88" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#viewDidLoad#0;n#BasicViewController#0" expanded="true" />
+            <element signature="n#popToRoot:#0;n#BasicViewController#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/segues/FadePopSegue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="44" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/segues/FadeSegue.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="206" selection-end="590" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#perform#0;n#FadeSegue#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/segues/FadePopSegue.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="74" selection-start="551" selection-end="551" vertical-scroll-proportion="0.45769763">
+          <folding />
         </state>
       </provider>
     </entry>

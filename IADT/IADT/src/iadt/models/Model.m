@@ -34,14 +34,9 @@
     self = [super init];
     if (self) {
 
-        NSLog(@"%s", __PRETTY_FUNCTION__);
-
-
-
         NSString *path = [[NSBundle mainBundle] pathForResource: @"data" ofType: @"plist"];
         NSArray *array = [NSArray arrayWithContentsOfFile: path];
         NSDictionary *dictionary = [array objectAtIndex: 0];
-        NSLog(@"dictionary = %@", dictionary);
 
         self.gamesData = dictionary;
     }

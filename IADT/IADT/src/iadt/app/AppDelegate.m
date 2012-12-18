@@ -14,14 +14,15 @@
 
 - (void) customizeAppearance {
     // Create resizable images
-    UIImage *gradientImage44 = [[UIImage imageNamed: @"navbar_bg.png"]
+    UIImage *navbarBg = [[UIImage imageNamed: @"navbar_bg.png"]
             resizableImageWithCapInsets: UIEdgeInsetsMake(0, 0, 0, 0)];
 
     // Set the background image for *all* UINavigationBars
-    [[UINavigationBar appearance] setBackgroundImage: gradientImage44
-                                       forBarMetrics: UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage: navbarBg forBarMetrics: UIBarMetricsDefault];
 
-    UIImage *shadow = [[UIImage imageNamed: @"navbar_shadow.png"] resizableImageWithCapInsets: UIEdgeInsetsMake(0, 0, 0, 0)];
+    [[UINavigationBar appearance] setBarStyle: UIBarStyleBlackTranslucent];
+
+    //    UIImage *shadow = [[UIImage imageNamed: @"navbar_shadow.png"] resizableImageWithCapInsets: UIEdgeInsetsMake(0, 0, 0, 0)];
 //    [[UINavigationBar appearance] setShadowImage: shadow];
 
 

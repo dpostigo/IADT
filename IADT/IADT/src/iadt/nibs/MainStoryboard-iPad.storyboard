@@ -7,22 +7,33 @@
         <!--Basic View Controller-->
         <scene sceneID="v2Y-Ne-dAD">
             <objects>
-                <viewController id="NBY-wc-PsL" customClass="BasicViewController" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" id="NBY-wc-PsL" customClass="BasicViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Vn-N1-YCw">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Touch Start To Begin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rlv-EP-8Hn">
-                                <rect key="frame" x="432" y="315" width="161" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" image="splash-bg.png" id="R5K-75-uaW">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TOUCH START TO BEGIN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rlv-EP-8Hn">
+                                <rect key="frame" x="367" y="515" width="293" height="38"/>
                                 <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="31"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TCC-VX-DUP">
-                                <rect key="frame" x="476" y="455" width="73" height="44"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Decode your Digital DNA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MdC-4y-vwD">
+                                <rect key="frame" x="240" y="395" width="543" height="69"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="56"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TCC-VX-DUP">
+                                <rect key="frame" x="473" y="707" width="80" height="80"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" image="start-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -30,7 +41,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nwi-cg-cVf" kind="push" id="1BL-Ae-dhq"/>
+                                    <segue destination="nwi-cg-cVf" kind="custom" customClass="FadeSegue" id="1BL-Ae-dhq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -38,6 +49,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="MPE-ES-yh2"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="R5K-75-uaW" id="fSh-cc-jbY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEQ-dX-AMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,30 +65,34 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" image="splash-bg.png" id="kJ7-Hg-3lO">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" id="nUo-74-ZRF">
-                                <rect key="frame" x="343" y="251" width="338" height="30"/>
+                                <rect key="frame" x="344" y="251" width="338" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="shz-JJ-Wwy">
-                                <rect key="frame" x="343" y="319" width="338" height="30"/>
+                                <rect key="frame" x="344" y="319" width="338" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" minimumFontSize="17" id="Dhj-Rw-eWA">
-                                <rect key="frame" x="343" y="391" width="338" height="30"/>
+                                <rect key="frame" x="344" y="391" width="338" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" minimumFontSize="17" id="bCz-aU-A1a">
-                                <rect key="frame" x="343" y="463" width="338" height="30"/>
+                                <rect key="frame" x="344" y="463" width="338" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e99-qN-Ray">
-                                <rect key="frame" x="476" y="627" width="73" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SbO-ov-qiS">
+                                <rect key="frame" x="471" y="635" width="80" height="80"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Submit">
+                                <state key="normal" image="submit-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -82,7 +100,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AzT-eV-0hw" kind="push" id="P7M-5f-Qbu"/>
+                                    <segue destination="AzT-eV-0hw" kind="custom" customClass="FadeSegue" id="yHO-pC-x0W"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,30 +123,22 @@
             <objects>
                 <viewController restorationIdentifier="Backpack" storyboardIdentifier="" id="NWR-ld-kdV" customClass="BackpackViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lxu-s1-N6d">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="kitten.jpg" id="hFh-ga-8fF">
-                                <rect key="frame" x="726" y="20" width="248" height="584"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="bottom" image="backpack.png" id="WTt-LH-sBa">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lea-oA-kx5">
-                                <rect key="frame" x="765" y="616" width="73" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="backpack-icon.png" id="hFh-ga-8fF">
+                                <rect key="frame" x="661" y="184" width="210" height="350"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lea-oA-kx5">
+                                <rect key="frame" x="655" y="569" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eH0-8I-PxB">
-                                <rect key="frame" x="854" y="616" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" image="reset-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -136,37 +146,56 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="PCe-LK-ouo" kind="push" id="7Bs-UQ-tAw"/>
+                                    <action selector="reset:" destination="NWR-ld-kdV" eventType="touchUpInside" id="dyb-YW-QoS"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="aa1-f8-ld8">
-                                <rect key="frame" x="364" y="159" width="100" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eH0-8I-PxB">
+                                <rect key="frame" x="793" y="569" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="next-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="2sH-0J-hpn" appends="YES" id="gF0-cZ-gK6"/>
+                                    <segue destination="T9I-X7-WKF" kind="push" id="uY5-aK-Smi"/>
                                 </connections>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="Mou-XK-Du4">
-                                <rect key="frame" x="75" y="159" width="100" height="75"/>
+                            </button>
+                            <imageView tag="1" contentMode="scaleToFill" image="map-icon.png" id="Mou-XK-Du4">
+                                <rect key="frame" x="75" y="175" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="k6R-vj-5Mj">
-                                <rect key="frame" x="75" y="318" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="7DF-Ky-a8J">
-                                <rect key="frame" x="364" y="318" width="100" height="75"/>
+                            <imageView tag="2" contentMode="scaleToFill" image="watch-icon.png" id="aa1-f8-ld8">
+                                <rect key="frame" x="328" y="174" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                            </imageView>
+                            <imageView tag="3" contentMode="scaleToFill" image="camera-icon.png" id="k6R-vj-5Mj">
+                                <rect key="frame" x="75" y="349" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView tag="4" contentMode="scaleToFill" image="mp3-icon.png" id="7DF-Ky-a8J">
+                                <rect key="frame" x="328" y="341" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView tag="5" contentMode="scaleToFill" image="knife-icon.png" id="7G1-gL-ZZX">
+                                <rect key="frame" x="78" y="515" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView tag="6" contentMode="scaleToFill" image="sketchbook-icon.png" id="myv-pd-1hr">
+                                <rect key="frame" x="331" y="515" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="59c-rg-LhS"/>
                     <connections>
-                        <outlet property="item1" destination="7DF-Ky-a8J" id="5pU-IZ-uTs"/>
+                        <outlet property="containerView" destination="hFh-ga-8fF" id="e9p-g6-1VV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cM9-ke-2uj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -176,7 +205,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-298" y="545"/>
+            <point key="canvasLocation" x="-306" y="417"/>
         </scene>
         <!--Basic View Controller-->
         <scene sceneID="ZkW-LD-e7B">
@@ -186,16 +215,35 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tomorrow's creative and technical leader are a whole new breed." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vYa-9V-bHW">
-                                <rect key="frame" x="267" y="255" width="491" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" image="screen3.png" id="s3h-oe-h1S">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vYa-9V-bHW">
+                                <rect key="frame" x="245" y="343" width="533" height="96"/>
+                                <string key="text" base64-UTF8="YES">
+VG9tb3Jyb3figJlzIGNyZWF0aXZlIGFuZCB0ZWNobmljYWwgA2xlYWRlcnMgYXJlIGEgd2hvbGUgbmV3
+IGJyZWVkLg
+</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="38"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cUl-zy-CQl">
-                                <rect key="frame" x="476" y="439" width="73" height="44"/>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ihn-US-Q0V">
+                                <rect key="frame" x="212" y="463" width="603" height="132"/>
+                                <string key="text" base64-UTF8="YES">
+SGlnaGx5IGV2b2x2ZWQsIGRpZ2l0YWxseSBzYXZ2eSBhbmQgYWRlcHQgYXQgbWFueSADZGlzY2lwbGlu
+ZXMuIFRha2UgdGhpcyB0ZXN0IHRvIGRpc2NvdmVyIGlmIHlvdSBoYXZlIAN0aGUgcmF3IHRhbGVudCB0
+byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
+</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cUl-zy-CQl">
+                                <rect key="frame" x="178" y="331" width="713" height="353"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Continue">
+                                <state key="normal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -203,7 +251,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NWR-ld-kdV" kind="push" id="XCQ-uW-gqk"/>
+                                    <segue destination="NWR-ld-kdV" kind="custom" customClass="FadeSegue" id="XCQ-uW-gqk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -220,12 +268,14 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="0ie-Gl-MeT" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wKn-lP-S4a">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="NWR-ld-kdV" kind="relationship" relationship="rootViewController" id="8Mt-Wg-eeJ"/>
+                        <segue destination="NBY-wc-PsL" kind="relationship" relationship="rootViewController" id="tOH-Cf-bqT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vga-rP-IDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -235,28 +285,20 @@
         <!--Basic Game View Controller-->
         <scene sceneID="dNP-Pu-cs6">
             <objects>
-                <viewController restorationIdentifier="People" id="PCe-LK-ouo" customClass="BasicGameViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Party" id="PCe-LK-ouo" customClass="BasicGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Sa-7q-gV7">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ul3-80-qbt">
-                                <rect key="frame" x="707" y="617" width="73" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" image="party-bg.png" id="QfX-LZ-CQj">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ul3-80-qbt">
+                                <rect key="frame" x="656" y="569" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rm5-YM-HdW">
-                                <rect key="frame" x="796" y="617" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" image="reset-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -264,94 +306,76 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="T9I-X7-WKF" kind="push" id="nOP-v6-8wM"/>
+                                    <action selector="reset:" destination="PCe-LK-ouo" eventType="touchUpInside" id="3p4-Pb-lCV"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="H3M-vR-gLL">
-                                <rect key="frame" x="300" y="80" width="100" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rm5-YM-HdW">
+                                <rect key="frame" x="793" y="569" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="next-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="H6i-q4-6Qz" appends="YES" id="xwu-8G-cf1"/>
+                                    <segue destination="BWo-Dc-mfB" kind="push" id="Dxs-HH-SKl"/>
                                 </connections>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="ZSI-ly-QqX">
-                                <rect key="frame" x="165" y="80" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="kuk-WX-war">
-                                <rect key="frame" x="165" y="192" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="SZP-zH-ec5">
-                                <rect key="frame" x="300" y="192" width="100" height="75"/>
+                            </button>
+                            <imageView contentMode="scaleToFill" image="dancefloor.png" id="H3M-vR-gLL">
+                                <rect key="frame" x="405" y="235" width="84" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="dMR-Fd-iq4">
-                                <rect key="frame" x="627" y="192" width="100" height="75"/>
+                            <imageView contentMode="scaleToFill" image="snackbar.png" id="ZSI-ly-QqX">
+                                <rect key="frame" x="80" y="300" width="84" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" image="coatcheck.png" id="kuk-WX-war">
+                                <rect key="frame" x="827" y="170" width="85" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" image="exit.png" id="SZP-zH-ec5">
+                                <rect key="frame" x="861" y="365" width="84" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="oTb-i4-C1C">
-                                <rect key="frame" x="738" y="192" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="6lx-Vk-08N">
-                                <rect key="frame" x="846" y="192" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="GaN-Ie-eiA">
-                                <rect key="frame" x="165" y="303" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="96T-XE-IGh">
-                                <rect key="frame" x="300" y="303" width="100" height="75"/>
+                            <imageView tag="1" contentMode="scaleToFill" image="person-icon.png" id="xa3-aN-Vfo">
+                                <rect key="frame" x="88" y="553" width="50" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="RVV-vZ-eX8"/>
+                    <connections>
+                        <outlet property="containerView" destination="QfX-LZ-CQj" id="OgO-yK-rh4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQh-ow-s0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="H6i-q4-6Qz">
-                    <connections>
-                        <action selector="dragItem:" destination="PCe-LK-ouo" id="47p-7K-yif"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-298" y="1457"/>
+            <point key="canvasLocation" x="-298" y="2377"/>
         </scene>
         <!--Basic Game View Controller-->
         <scene sceneID="YhG-Qu-kFV">
             <objects>
-                <viewController restorationIdentifier="Party" id="T9I-X7-WKF" customClass="BasicGameViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="People" id="T9I-X7-WKF" customClass="BasicGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="maA-6j-6vn">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xq3-k4-7dg">
-                                <rect key="frame" x="707" y="617" width="73" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" image="screen6.png" id="FTr-MA-1co" propertyAccessControl="none">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xq3-k4-7dg">
+                                <rect key="frame" x="655" y="571" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mc0-Qt-Bt1">
-                                <rect key="frame" x="796" y="617" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" image="reset-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -359,94 +383,112 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BWo-Dc-mfB" kind="push" id="MNC-hK-jSP"/>
+                                    <action selector="reset:" destination="T9I-X7-WKF" eventType="touchUpInside" id="jjY-kV-9dm"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="kPS-cT-ON5">
-                                <rect key="frame" x="300" y="80" width="100" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mc0-Qt-Bt1">
+                                <rect key="frame" x="793" y="571" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="next-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1rz-Ca-2MF" appends="YES" id="oZK-ze-mKG"/>
+                                    <segue destination="PCe-LK-ouo" kind="push" id="kal-38-bhT"/>
                                 </connections>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="SuW-EM-JUQ">
-                                <rect key="frame" x="165" y="80" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="fTf-HI-mLj">
-                                <rect key="frame" x="165" y="192" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="SEx-bp-lR6">
-                                <rect key="frame" x="300" y="192" width="100" height="75"/>
+                            </button>
+                            <imageView tag="2" contentMode="scaleToFill" image="picasso-icon.png" id="kPS-cT-ON5">
+                                <rect key="frame" x="320" y="169" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="Sza-kx-wtc">
-                                <rect key="frame" x="627" y="192" width="100" height="75"/>
+                            <imageView tag="1" contentMode="scaleToFill" image="spielberg-icon.png" id="SuW-EM-JUQ">
+                                <rect key="frame" x="70" y="169" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView tag="3" contentMode="scaleToFill" image="jobs-icon.png" id="fTf-HI-mLj">
+                                <rect key="frame" x="70" y="336" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView tag="4" contentMode="scaleToFill" image="rowling-icon.png" id="SEx-bp-lR6">
+                                <rect key="frame" x="320" y="336" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="1Vb-CX-z26">
-                                <rect key="frame" x="738" y="192" width="100" height="75"/>
+                            <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="Sza-kx-wtc">
+                                <rect key="frame" x="594" y="257" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="kQB-nD-KEX">
-                                <rect key="frame" x="846" y="192" width="100" height="75"/>
+                            <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="1Vb-CX-z26">
+                                <rect key="frame" x="714" y="257" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="gN0-2X-cai">
-                                <rect key="frame" x="165" y="303" width="100" height="75"/>
+                            <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="kQB-nD-KEX">
+                                <rect key="frame" x="832" y="257" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView tag="5" contentMode="scaleToFill" image="einstein-icon.png" id="gN0-2X-cai">
+                                <rect key="frame" x="70" y="503" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="WHX-Av-KjR">
-                                <rect key="frame" x="300" y="303" width="100" height="75"/>
+                            <imageView tag="6" contentMode="scaleToFill" image="chanel-icon.png" id="WHX-Av-KjR">
+                                <rect key="frame" x="320" y="503" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="Kpp-05-wLj"/>
+                    <connections>
+                        <outletCollection property="containerViews" destination="Sza-kx-wtc" id="pgn-JN-pDc"/>
+                        <outletCollection property="containerViews" destination="1Vb-CX-z26" id="FsU-dd-L1a"/>
+                        <outletCollection property="containerViews" destination="kQB-nD-KEX" id="T7D-IU-xkH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myU-Wq-06b" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="1rz-Ca-2MF">
-                    <connections>
-                        <action selector="dragItem:" destination="T9I-X7-WKF" id="WXE-ns-m9Z"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-298" y="2365"/>
+            <point key="canvasLocation" x="-298" y="1477"/>
         </scene>
         <!--Basic Game View Controller-->
         <scene sceneID="juJ-FB-o2f">
             <objects>
                 <viewController restorationIdentifier="Games" id="BWo-Dc-mfB" customClass="BasicGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Ye-WG-n5Y">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P8C-sR-ABM">
-                                <rect key="frame" x="707" y="617" width="73" height="44"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="bottom" image="cardgames.png" id="MHX-mC-kpo">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="P8C-sR-ABM">
+                                <rect key="frame" x="655" y="570" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Reset">
+                                <state key="normal" image="reset-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="reset:" destination="BWo-Dc-mfB" eventType="touchUpInside" id="hQW-A2-6y7"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0if-wW-MzF">
-                                <rect key="frame" x="796" y="617" width="73" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0if-wW-MzF">
+                                <rect key="frame" x="794" y="570" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" image="next-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -457,63 +499,47 @@
                                     <segue destination="COc-Gb-Zec" kind="push" id="ecg-Nk-Z74"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="NGL-cm-1cd">
-                                <rect key="frame" x="300" y="80" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="niG-Ku-EX1" appends="YES" id="BJc-l2-cIE"/>
-                                </connections>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="QAH-Tn-kmm">
-                                <rect key="frame" x="165" y="80" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="3Rx-5N-bJc">
-                                <rect key="frame" x="165" y="192" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="R82-kU-vEI">
-                                <rect key="frame" x="300" y="192" width="100" height="75"/>
+                            <imageView contentMode="scaleToFill" image="basket.png" id="Vhv-30-dJ4">
+                                <rect key="frame" x="589" y="219" width="350" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="Vhv-30-dJ4">
-                                <rect key="frame" x="627" y="192" width="100" height="75"/>
+                            <imageView tag="2" contentMode="scaleToFill" image="cards.png" id="NGL-cm-1cd">
+                                <rect key="frame" x="325" y="173" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="6Aq-Sd-hFo">
-                                <rect key="frame" x="738" y="192" width="100" height="75"/>
+                            <imageView tag="1" contentMode="scaleToFill" image="chess.png" id="QAH-Tn-kmm">
+                                <rect key="frame" x="74" y="174" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView tag="3" contentMode="scaleToFill" image="puzzle.png" id="3Rx-5N-bJc">
+                                <rect key="frame" x="90" y="340" width="120" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView tag="4" contentMode="scaleToFill" image="wordgame.png" id="R82-kU-vEI">
+                                <rect key="frame" x="346" y="340" width="110" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="z8i-cH-7DE">
-                                <rect key="frame" x="846" y="192" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="M0j-cC-0g3">
-                                <rect key="frame" x="165" y="303" width="100" height="75"/>
+                            <imageView tag="5" contentMode="scaleToFill" image="tictactoe.png" id="M0j-cC-0g3">
+                                <rect key="frame" x="95" y="511" width="110" height="143"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="cwR-lQ-sFp">
-                                <rect key="frame" x="300" y="303" width="100" height="75"/>
+                            <imageView tag="6" contentMode="scaleToFill" image="pictionary.png" id="cwR-lQ-sFp">
+                                <rect key="frame" x="352" y="507" width="100" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="pCQ-aK-dtA"/>
+                    <connections>
+                        <outlet property="containerView" destination="Vhv-30-dJ4" id="HAf-lV-bR7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="So2-fC-tBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="niG-Ku-EX1">
-                    <connections>
-                        <action selector="dragItem:" destination="BWo-Dc-mfB" id="3po-Zb-LL0"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-298" y="3293"/>
         </scene>
@@ -522,26 +548,18 @@
             <objects>
                 <viewController restorationIdentifier="Drinks" id="COc-Gb-Zec" customClass="BasicGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ld0-AN-z84">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8i2-tK-ZBi">
-                                <rect key="frame" x="707" y="617" width="73" height="44"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="bottom" image="drinks.png" id="yTH-TQ-iH5">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8i2-tK-ZBi">
+                                <rect key="frame" x="655" y="571" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="urb-Yv-Two">
-                                <rect key="frame" x="796" y="617" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" image="reset-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -549,66 +567,77 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="g8X-Ik-qcx" kind="push" id="dNt-Ph-ejR"/>
+                                    <action selector="reset:" destination="COc-Gb-Zec" eventType="touchUpInside" id="7IW-QN-Q5A"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="dwF-D2-kb9">
-                                <rect key="frame" x="300" y="80" width="100" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="urb-Yv-Two">
+                                <rect key="frame" x="794" y="571" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="next-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Hs6-os-tWi" appends="YES" id="Ubq-d9-KwP"/>
+                                    <segue destination="g8X-Ik-qcx" kind="push" id="Mwp-Qu-9ZB"/>
                                 </connections>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="mG9-Tv-npV">
-                                <rect key="frame" x="165" y="80" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="frU-6g-MrN">
-                                <rect key="frame" x="165" y="192" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="scU-xq-xdU">
-                                <rect key="frame" x="300" y="192" width="100" height="75"/>
+                            </button>
+                            <imageView tag="2" contentMode="scaleToFill" image="milkshake.png" id="dwF-D2-kb9">
+                                <rect key="frame" x="344" y="176" width="112" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="gHT-kj-cIW">
-                                <rect key="frame" x="627" y="192" width="100" height="75"/>
+                            <imageView tag="1" contentMode="scaleToFill" image="coffee.png" id="mG9-Tv-npV">
+                                <rect key="frame" x="94" y="176" width="112" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView tag="3" contentMode="scaleToFill" image="soda.png" id="frU-6g-MrN">
+                                <rect key="frame" x="94" y="343" width="112" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView tag="4" contentMode="scaleToFill" image="juice.png" id="scU-xq-xdU">
+                                <rect key="frame" x="344" y="343" width="112" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="mv7-9o-Q9h">
-                                <rect key="frame" x="738" y="192" width="100" height="75"/>
+                            <imageView tag="5" contentMode="scaleToFill" image="tea.png" id="Hbg-h5-tLV">
+                                <rect key="frame" x="94" y="511" width="112" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView tag="6" contentMode="scaleToFill" image="water.png" id="Kxe-9f-pGZ">
+                                <rect key="frame" x="335" y="511" width="130" height="143"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="GMI-LU-KfD">
-                                <rect key="frame" x="846" y="192" width="100" height="75"/>
+                            <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="srI-13-Svs">
+                                <rect key="frame" x="593" y="257" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="Hbg-h5-tLV">
-                                <rect key="frame" x="165" y="303" width="100" height="75"/>
+                            <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="8ql-c5-hG6">
+                                <rect key="frame" x="713" y="257" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="Kxe-9f-pGZ">
-                                <rect key="frame" x="300" y="303" width="100" height="75"/>
+                            <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="P3E-38-yQd">
+                                <rect key="frame" x="831" y="257" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="me8-PN-lZq"/>
+                    <connections>
+                        <outletCollection property="containerViews" destination="srI-13-Svs" id="62l-LU-UfQ"/>
+                        <outletCollection property="containerViews" destination="8ql-c5-hG6" id="oeT-Nr-p9z"/>
+                        <outletCollection property="containerViews" destination="P3E-38-yQd" id="oIx-tV-Wz5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xab-GI-VdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="Hs6-os-tWi">
-                    <connections>
-                        <action selector="dragItem:" destination="COc-Gb-Zec" id="R5d-HW-egX"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-298" y="4241"/>
         </scene>
@@ -617,26 +646,23 @@
             <objects>
                 <viewController restorationIdentifier="Seats" id="g8X-Ik-qcx" customClass="BasicGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CEq-lw-yql">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oyK-Qn-K9m">
-                                <rect key="frame" x="707" y="617" width="73" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" image="seats-bg.png" id="YFo-4n-1oP">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView tag="1" contentMode="scaleToFill" image="person-icon.png" id="PCm-7n-nFz">
+                                <rect key="frame" x="88" y="553" width="50" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iEv-fj-RgW">
+                                <rect key="frame" x="655" y="570" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qOM-oE-T9p">
-                                <rect key="frame" x="796" y="617" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" image="reset-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -644,87 +670,93 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6f7-Mh-rk5" kind="push" id="Xsx-6t-aYr"/>
+                                    <action selector="reset:" destination="g8X-Ik-qcx" eventType="touchUpInside" id="L8X-F1-G6y"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="PGh-eN-7U3">
-                                <rect key="frame" x="300" y="80" width="100" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lWh-Uv-ofy">
+                                <rect key="frame" x="793" y="570" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="next-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="HAp-RZ-jmh" appends="YES" id="z8J-bn-6d2"/>
+                                    <segue destination="6f7-Mh-rk5" kind="push" id="132-ad-blv"/>
                                 </connections>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="UN4-sz-mYr">
-                                <rect key="frame" x="165" y="80" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="DXr-YL-Tgq">
-                                <rect key="frame" x="165" y="192" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="l3q-i5-w8C">
-                                <rect key="frame" x="300" y="192" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="PCm-7n-nFz">
-                                <rect key="frame" x="627" y="192" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="2Om-B6-P6C">
-                                <rect key="frame" x="738" y="192" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" image="kitten.jpg" id="usd-ME-SMz">
-                                <rect key="frame" x="846" y="192" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="9Qp-zu-afU">
-                                <rect key="frame" x="165" y="303" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" image="kitten.jpg" id="PrC-YQ-fIh">
-                                <rect key="frame" x="300" y="303" width="100" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="3cM-KX-uPX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7D-4g-KR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="HAp-RZ-jmh">
-                    <connections>
-                        <action selector="dragItem:" destination="g8X-Ik-qcx" id="MpD-gW-sjI"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-298" y="5197"/>
         </scene>
-        <!--View Controller-->
+        <!--Basic View Controller-->
         <scene sceneID="J2J-bj-RP7">
             <objects>
-                <viewController id="6f7-Mh-rk5" sceneMemberID="viewController">
+                <viewController id="6f7-Mh-rk5" customClass="BasicViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="amd-Eh-Pko">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Congratulations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Bt-b3-6lq">
-                                <rect key="frame" x="491" y="201" width="120" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="congrats-bg.png" id="4Bp-YT-73b">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Analytic, Logical, Innovative and Pragmatic. " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Bt-b3-6lq">
+                                <rect key="frame" x="276" y="489" width="471" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1PC-EE-SRr">
+                                <rect key="frame" x="335" y="634" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="facebook-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WDd-tC-HRD">
+                                <rect key="frame" x="472" y="634" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="twitter-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UBq-zg-t8c">
+                                <rect key="frame" x="610" y="634" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="exit-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NBY-wc-PsL" kind="custom" customClass="FadePopSegue" id="oNF-aQ-MVH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="T3P-yo-pMY"/>
                 </viewController>
@@ -734,25 +766,71 @@
         </scene>
     </scenes>
     <resources>
-        <image name="kitten.jpg" width="100" height="75"/>
+        <image name="backpack-icon.png" width="210" height="350"/>
+        <image name="backpack.png" width="1024" height="768"/>
+        <image name="basket.png" width="350" height="300"/>
+        <image name="camera-icon.png" width="150" height="150"/>
+        <image name="cardgames.png" width="1024" height="768"/>
+        <image name="cards.png" width="150" height="150"/>
+        <image name="chanel-icon.png" width="160" height="160"/>
+        <image name="chess.png" width="150" height="150"/>
+        <image name="coatcheck.png" width="85" height="140"/>
+        <image name="coffee.png" width="112" height="144"/>
+        <image name="congrats-bg.png" width="1024" height="768"/>
+        <image name="dancefloor.png" width="84" height="140"/>
+        <image name="drinks.png" width="1024" height="768"/>
+        <image name="einstein-icon.png" width="160" height="160"/>
+        <image name="exit-button.png" width="80" height="80"/>
+        <image name="exit.png" width="84" height="115"/>
+        <image name="facebook-button.png" width="80" height="80"/>
+        <image name="jobs-icon.png" width="160" height="160"/>
+        <image name="juice.png" width="112" height="144"/>
+        <image name="knife-icon.png" width="150" height="150"/>
+        <image name="map-icon.png" width="150" height="150"/>
+        <image name="milkshake.png" width="112" height="144"/>
+        <image name="mp3-icon.png" width="150" height="150"/>
+        <image name="next-button.png" width="80" height="80"/>
+        <image name="party-bg.png" width="1024" height="768"/>
+        <image name="person-icon.png" width="50" height="130"/>
+        <image name="picasso-icon.png" width="160" height="160"/>
+        <image name="pictionary.png" width="100" height="147"/>
+        <image name="placeholder-icon.png" width="100" height="100"/>
+        <image name="puzzle.png" width="120" height="148"/>
+        <image name="reset-button.png" width="80" height="80"/>
+        <image name="rowling-icon.png" width="160" height="160"/>
+        <image name="screen3.png" width="1024" height="768"/>
+        <image name="screen6.png" width="16" height="16"/>
+        <image name="seats-bg.png" width="1024" height="768"/>
+        <image name="sketchbook-icon.png" width="150" height="150"/>
+        <image name="snackbar.png" width="84" height="140"/>
+        <image name="soda.png" width="112" height="144"/>
+        <image name="spielberg-icon.png" width="160" height="160"/>
+        <image name="splash-bg.png" width="1024" height="768"/>
+        <image name="start-button.png" width="80" height="80"/>
+        <image name="submit-button.png" width="80" height="80"/>
+        <image name="tea.png" width="112" height="143"/>
+        <image name="tictactoe.png" width="110" height="143"/>
+        <image name="twitter-button.png" width="80" height="80"/>
+        <image name="watch-icon.png" width="150" height="150"/>
+        <image name="water.png" width="130" height="143"/>
+        <image name="wordgame.png" width="110" height="147"/>
     </resources>
     <classes>
         <class className="BackpackViewController" superclassName="BasicGameViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BackpackViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="item1" candidateClass="UIImageView"/>
-            </relationships>
         </class>
         <class className="BasicGameViewController" superclassName="BasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicGameViewController.h"/>
             <relationships>
-                <relationship kind="action" name="dragItem:" candidateClass="UIPanGestureRecognizer"/>
+                <relationship kind="action" name="reset:"/>
+                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
+                <relationship kind="outletCollection" name="containerViews" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="BasicViewController" superclassName="VeryBasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicViewController.h"/>
             <relationships>
-                <relationship kind="action" name="testGestureRecognizer:" candidateClass="UIGestureRecognizer"/>
+                <relationship kind="action" name="popToRoot:"/>
                 <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
             </relationships>
@@ -779,6 +857,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="8Mt-Wg-eeJ"/>
+        <segue reference="oNF-aQ-MVH"/>
     </inferredMetricsTieBreakers>
 </document>

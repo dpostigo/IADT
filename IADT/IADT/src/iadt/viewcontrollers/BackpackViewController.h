@@ -11,7 +11,7 @@
 
 
 @interface BackpackViewController : BasicGameViewController   {
-    IBOutlet UIImageView *item1;
+
 }
 
 
