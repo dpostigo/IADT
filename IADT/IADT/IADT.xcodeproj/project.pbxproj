@@ -29,6 +29,7 @@
 		7CA441F29B57A8FA76255435 /* SaveToDocuments.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA449140D01EB85726D8D17 /* SaveToDocuments.m */; };
 		7CA4440A343B1402518E4DC4 /* BasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C54A3156CA9E9116E42 /* BasicView.m */; };
 		7CA444EFC09F4ACD21C2075D /* BasicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA440002B6DADB5E265A341 /* BasicLibrary.m */; };
+		7CA445406D3E75AAF6043038 /* sucessItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CA44980FE87FCCAA06DE2B5 /* sucessItems.plist */; };
 		7CA445EDB0F9FFA969AAB05D /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4483B1E625AB9B288C093 /* SMPageControl.m */; };
 		7CA44620779D3129B47EEB21 /* BasicWhiteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA442FB9EFA1F904332F21F /* BasicWhiteView.m */; };
 		7CA446617542C572C67264A0 /* TableRowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44AFDF317F3DDC298D272 /* TableRowObject.m */; };
@@ -108,6 +109,7 @@
 		7CA44885B9DFB52AF710F452 /* GameIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameIntroView.m; path = src/iadt/views/GameIntroView.m; sourceTree = "<group>"; };
 		7CA449140D01EB85726D8D17 /* SaveToDocuments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaveToDocuments.m; path = src/iadt/operations/SaveToDocuments.m; sourceTree = "<group>"; };
 		7CA4493BD6ACF6FEA66A39F9 /* CBLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBLayer.m; path = src/toolkit/CBButtons/CBLayer.m; sourceTree = "<group>"; };
+		7CA44980FE87FCCAA06DE2B5 /* sucessItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = sucessItems.plist; path = assets/_plists/sucessItems.plist; sourceTree = "<group>"; };
 		7CA449AB0EEA64E50D9B7E84 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Utils.m"; path = "src/utils/UIColor+Utils.m"; sourceTree = "<group>"; };
 		7CA44A210007019B4258F7E9 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = src/iadt/models/Model.h; sourceTree = "<group>"; };
 		7CA44A41707BFB31F54F96BF /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceUtils.h; path = src/utils/DeviceUtils.h; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				7CA44D998257E1E02D40D2FA /* NSString+Utils.h */,
 				7CA4485C7E2245A6C8BFC993 /* TextField.h */,
 				7CA44BA0A8AF0F496DA50559 /* TextField.m */,
+				7CA44980FE87FCCAA06DE2B5 /* sucessItems.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -323,6 +326,7 @@
 				03FE777F167FC6F8007880E1 /* GameIntroView.xib in Resources */,
 				03FE7792167FD521007880E1 /* data.plist in Resources */,
 				033FE87D1680C0CD00F370BB /* NavigationBar.xib in Resources */,
+				7CA445406D3E75AAF6043038 /* sucessItems.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +477,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniela Postigo (64Z2RX7572)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BasicProject/IADT-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "TESTFLIGHT_ENABLED=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TESTFLIGHT_ENABLED=1",
+					"DEBUG=0",
+				);
 				INFOPLIST_FILE = "BasicProject/IADT-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"\"${PROJECT_DIR}/src/toolkit/TestFlight\"/**",
@@ -515,6 +522,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BasicProject/IADT-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=0";
 				INFOPLIST_FILE = "BasicProject/IADT-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"\"${PROJECT_DIR}/src/toolkit/TestFlight\"/**",

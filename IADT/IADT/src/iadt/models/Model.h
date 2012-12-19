@@ -16,6 +16,8 @@
 
 @property(nonatomic, strong) NSDictionary *gamesData;
 @property(nonatomic, retain) NSString *dataString;
+@property(nonatomic, strong) NSMutableDictionary *scores;
+@property(nonatomic, strong) NSDictionary *scoreData;
 + (Model *) sharedModel;
 
 

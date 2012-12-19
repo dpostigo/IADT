@@ -19,6 +19,7 @@
     IBOutletCollection(UIView) NSArray *containerViews;
 
     IBOutletCollection(UIView) NSArray *successViews;
+    IBOutlet UIView *successView;
 }
 
 

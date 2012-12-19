@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Sections</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>Backpack</string>
+			<key>Scoring Mode</key>
+			<string>Horizontal</string>
+			<key>Constant Axis</key>
+			<string>y</string>
+			<key>Variable Axis</key>
+			<string>x</string>
+			<key>Items</key>
+			<array>
+				<string>knife-icon.png</string>
+				<string>watch-icon.png</string>
+				<string>map-icon.png</string>
+				<string>mp3-icon.png</string>
+				<string>camera-icon.png</string>
+				<string>sketchbook-icon.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>People</string>
+			<key>Scoring Mode</key>
+			<string>Diagonal</string>
+			<key>Items</key>
+			<array>
+				<string>chanel-icon.png</string>
+				<string>spielberg-icon.png</string>
+				<string>rowling-icon.png</string>
+				<string>jobs-icon.png</string>
+				<string>picasso-icon.png</string>
+				<string>einstein-icon.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>Games</string>
+			<key>Scoring Mode</key>
+			<string>Vertical</string>
+			<key>Items</key>
+			<array>
+				<string>chess.png</string>
+				<string>tictactoe.png</string>
+				<string>cards.png</string>
+				<string>puzzle.png</string>
+				<string>wordgame.png</string>
+				<string>pictionary.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>Drinks</string>
+			<key>Scoring Mode</key>
+			<string>Diagonal</string>
+			<key>Items</key>
+			<array>
+				<string>milkshake.png</string>
+				<string>juice.png</string>
+				<string>water.png</string>
+				<string>soda.png</string>
+				<string>tea.png</string>
+				<string>coffee.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>Party</string>
+			<key>Scoring Mode</key>
+			<string>None</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>Seats</string>
+			<key>Scoring Mode</key>
+			<string>None</string>
+		</dict>
+	</array>
+	<key>New item - 2</key>
+	<dict>
+		<key>Backpack</key>
+		<dict>
+			<key>Title</key>
+			<string>You&apos;re going on a trip and\nyou can only bring 3 items.</string>
+			<key>Detail</key>
+			<string>Place the items in the bag.</string>
+		</dict>
+		<key>People</key>
+		<dict>
+			<key>Title</key>
+			<string>Who do you admire the most?</string>
+			<key>Detail</key>
+			<string>Rank the people by dragging their icons.</string>
+		</dict>
+		<key>Party</key>
+		<dict>
+			<key>Title</key>
+			<string>You&apos;re at a party. Where do you go first?</string>
+			<key>Detail</key>
+			<string>Place yourself there.</string>
+		</dict>
+		<key>Games</key>
+		<dict>
+			<key>Title</key>
+			<string>Your friends are coming over to play games.</string>
+			<key>Detail</key>
+			<string>Pick three you want to play.</string>
+		</dict>
+		<key>Drinks</key>
+		<dict>
+			<key>Title</key>
+			<string>You go to the kitchen for a drink. What do you pick?</string>
+			<key>Detail</key>
+			<string>Rank the drinks by dragging them.</string>
+		</dict>
+		<key>Seats</key>
+		<dict>
+			<key>Title</key>
+			<string>It&apos;s your first day in a new class.</string>
+			<key>Detail</key>
+			<string>Put yourself in your ideal seat.</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

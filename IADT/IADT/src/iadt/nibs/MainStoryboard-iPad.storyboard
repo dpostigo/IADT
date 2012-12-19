@@ -557,27 +557,49 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                 <rect key="frame" x="563" y="181" width="403" height="249"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView tag="12" contentMode="scaleToFill" image="cards.png" id="KpE-T7-FVm">
+                                    <imageView tag="10" contentMode="scaleToFill" image="chess.png" id="m9o-3N-Viw">
+                                        <rect key="frame" x="181" y="50" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView tag="20" contentMode="scaleToFill" image="cards.png" id="KpE-T7-FVm">
                                         <rect key="frame" x="121" y="70" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
                                     </imageView>
+                                    <imageView tag="30" contentMode="scaleToFill" image="puzzle.png" id="eMo-aX-dCj">
+                                        <rect key="frame" x="51" y="51" width="120" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView tag="40" contentMode="scaleToFill" image="wordgame.png" id="az1-p6-4ia">
+                                        <rect key="frame" x="81" y="51" width="110" height="147"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <imageView tag="50" contentMode="scaleToFill" image="tictactoe.png" id="cHL-Sa-dPU">
+                                        <rect key="frame" x="116" y="53" width="110" height="143"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView tag="60" contentMode="scaleToFill" image="pictionary.png" id="zci-h2-c9B">
+                                        <rect key="frame" x="241" y="51" width="100" height="147"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView contentMode="scaleToFill" image="basket.png" id="Vhv-30-dJ4">
+                            <imageView contentMode="scaleToFill" image="basket.png" id="Vhv-30-dJ4" propertyAccessControl="all">
                                 <rect key="frame" x="589" y="219" width="350" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView tag="2" contentMode="scaleToFill" image="cards.png" id="NGL-cm-1cd">
-                                <rect key="frame" x="325" y="173" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView tag="1" contentMode="scaleToFill" image="chess.png" id="QAH-Tn-kmm">
                                 <rect key="frame" x="74" y="174" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView tag="2" contentMode="scaleToFill" image="cards.png" id="NGL-cm-1cd">
+                                <rect key="frame" x="325" y="173" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <imageView tag="3" contentMode="scaleToFill" image="puzzle.png" id="3Rx-5N-bJc">
                                 <rect key="frame" x="90" y="340" width="120" height="148"/>
@@ -604,6 +626,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                     <navigationItem key="navigationItem" id="pCQ-aK-dtA"/>
                     <connections>
                         <outlet property="containerView" destination="Vhv-30-dJ4" id="HAf-lV-bR7"/>
+                        <outlet property="successView" destination="NXc-6B-pTh" id="GwP-1b-xZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="So2-fC-tBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -895,6 +918,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
             <relationships>
                 <relationship kind="action" name="reset:"/>
                 <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="successView" candidateClass="UIView"/>
                 <relationship kind="outletCollection" name="containerViews" candidateClass="UIView"/>
                 <relationship kind="outletCollection" name="successViews" candidateClass="UIView"/>
             </relationships>
@@ -902,6 +926,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <class className="BasicViewController" superclassName="VeryBasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicViewController.h"/>
             <relationships>
+                <relationship kind="action" name="popToRoot:"/>
                 <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
             </relationships>

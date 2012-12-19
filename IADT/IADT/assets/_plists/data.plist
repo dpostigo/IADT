@@ -46,5 +46,97 @@
 			<string>Put yourself in your ideal seat.</string>
 		</dict>
 	</dict>
+	<dict>
+		<key>Backpack</key>
+		<dict>
+			<key>Identifier</key>
+			<string>Backpack</string>
+			<key>Range</key>
+			<string>Pragmatic, Conceptual</string>
+			<key>Scoring Mode</key>
+			<string>Horizontal</string>
+			<key>Constant Axis</key>
+			<string>y</string>
+			<key>Variable Axis</key>
+			<string>x</string>
+			<key>Items</key>
+			<array>
+				<string>knife-icon.png</string>
+				<string>watch-icon.png</string>
+				<string>map-icon.png</string>
+				<string>mp3-icon.png</string>
+				<string>camera-icon.png</string>
+				<string>sketchbook-icon.png</string>
+			</array>
+		</dict>
+		<key>People</key>
+		<dict>
+			<key>Identifier</key>
+			<string>People</string>
+			<key>Range</key>
+			<string>Methodical, Innovative</string>
+			<key>Scoring Mode</key>
+			<string>Diagonal Top</string>
+			<key>Items</key>
+			<array>
+				<string>chanel-icon.png</string>
+				<string>spielberg-icon.png</string>
+				<string>rowling-icon.png</string>
+				<string>jobs-icon.png</string>
+				<string>picasso-icon.png</string>
+				<string>einstein-icon.png</string>
+			</array>
+		</dict>
+		<key>Games</key>
+		<dict>
+			<key>Identifier</key>
+			<string>Games</string>
+			<key>Range</key>
+			<string>Creative, Analytic</string>
+			<key>Scoring Mode</key>
+			<string>Vertical</string>
+			<key>Items</key>
+			<array>
+				<string>chess.png</string>
+				<string>tictactoe.png</string>
+				<string>cards.png</string>
+				<string>puzzle.png</string>
+				<string>wordgame.png</string>
+				<string>pictionary.png</string>
+			</array>
+		</dict>
+		<key>Drinks</key>
+		<dict>
+			<key>Identifier</key>
+			<string>Drinks</string>
+			<key>Range</key>
+			<string>Intuitive, Logical</string>
+			<key>Scoring Mode</key>
+			<string>Diagonal Bottom</string>
+			<key>Items</key>
+			<array>
+				<string>milkshake.png</string>
+				<string>juice.png</string>
+				<string>water.png</string>
+				<string>soda.png</string>
+				<string>tea.png</string>
+				<string>coffee.png</string>
+			</array>
+		</dict>
+		<key>Seats</key>
+		<dict>
+			<key>Identifier</key>
+			<string>Seats</string>
+			<key>Scoring Mode</key>
+			<string>None</string>
+		</dict>
+		<key>Party</key>
+		<dict>
+			<key>Identifier</key>
+			<string>Party</string>
+			<key>Scoring Mode</key>
+			<string>None</string>
+		</dict>
+	</dict>
 </array>
 </plist>
