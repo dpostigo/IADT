@@ -46,6 +46,7 @@
 
         self.gamesData = dictionary;
         self.scoreData = [array objectAtIndex: 1];
+        self.scores = [[NSMutableDictionary alloc] init];
 
         _dataString = [[NSUserDefaults standardUserDefaults] objectForKey: @"dataString"];
         NSLog(@"_dataString = %@", _dataString);

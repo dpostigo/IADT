@@ -13,19 +13,21 @@
 @interface BasicGameViewController : BasicViewController {
 
     GameIntroView *introView;
-    NSMutableArray *startPositions;
+
 
     IBOutlet UIView *containerView;
     IBOutletCollection(UIView) NSArray *containerViews;
 
     IBOutletCollection(UIView) NSArray *successViews;
     IBOutlet UIView *successView;
+
+    NSMutableArray *draggables;
 }
 
 
 @property(nonatomic, strong) GameIntroView *introView;
-@property(nonatomic, strong) NSMutableArray *startPositions;
 
+@property(nonatomic, strong) NSMutableArray *draggables;
 - (IBAction) reset: (id) sender;
 - (void) dragItem: (UIPanGestureRecognizer *) recognizer;
 

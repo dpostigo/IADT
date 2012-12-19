@@ -47,6 +47,7 @@
         [dict setObject: email.text forKey: @"Email"];
         [dict setObject: phone.text forKey: @"Phone"];
         [dict setObject: zip.text forKey: @"Zip Code"];
+        [dict setObject: [NSDate date] forKey: @"Date"];
 
         [_queue addOperation: [[SaveToDocuments alloc] initWithDictionary: dict]];
         [self performSegueWithIdentifier: @"LoginSegue" sender: self];

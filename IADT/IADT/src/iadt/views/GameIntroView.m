@@ -31,8 +31,6 @@
 - (void) layoutSubviews {
     [super layoutSubviews];
 
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-
     [textLabel sizeToFit];
     textLabel.centerX = textLabel.superview.width/2;
 
