@@ -38,9 +38,7 @@
 
     _model.dataString = string;
 
-    [[NSUserDefaults standardUserDefaults] setObject: _model.dataString forKey: @"dataString"];
-    NSData *data = [_model.dataString dataUsingEncoding: NSUTF8StringEncoding];
-    [data writeToFile: path atomically: YES];
+    [self saveFile];
 
 }
 

@@ -10,6 +10,10 @@
 #import "Model.h"
 #import "PuttyView.h"
 #import "Draggable.h"
+#import "UIImage+Grayscale.h"
+
+
+#define GHOST_IMAGE_ALPHA 0.4
 
 
 @interface BasicGameViewController () <DraggableDelegate> {
@@ -44,8 +48,19 @@
     draggables = [[NSMutableArray alloc] init];
     for (int j = 0; j < 6; j++) {
         NSInteger tag = j + 1;
-        UIView *view = [self.view viewWithTag: tag];
+        UIImageView *view = (UIImageView *) [self.view viewWithTag: tag];
         if (view) {
+
+
+
+            if (containerView != backgroundView || containerViews != nil) {
+                UIImageView *ghostImage = [[UIImageView alloc] initWithFrame: view.frame];
+                ghostImage.image = view.image;
+                ghostImage.alpha = GHOST_IMAGE_ALPHA;
+                [self.view insertSubview: ghostImage belowSubview: view];
+            }
+
+
             Draggable *draggable = [[Draggable alloc] initWithFrame: view.frame];
             draggable.delegate = self;
             [self.view insertSubview: draggable belowSubview: view];
@@ -188,12 +203,10 @@ int rand_range(int min_n, int max_n) {
     NSLog(@"label = %@", label);
     if (label) {
 
-
         [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
 
-            label.alpha = 0.2;
-        } completion: ^(BOOL completion){
-
+                        label.alpha = GHOST_IMAGE_ALPHA;
+        }                completion: ^(BOOL completion) {
         }];
     }
 }

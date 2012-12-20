@@ -7,9 +7,10 @@
 
 #import <Foundation/Foundation.h>
 #import "BasicOperation.h"
+#import "BasicCSVOperation.h"
 
 
-@interface SaveToDocuments : BasicOperation {
+@interface SaveToDocuments : BasicCSVOperation {
 
     NSDictionary *dictionary;
 }

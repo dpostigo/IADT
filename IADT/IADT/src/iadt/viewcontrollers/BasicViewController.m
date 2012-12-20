@@ -9,6 +9,7 @@
 #import "DeviceUtils.h"
 #import "UIColor+Utils.h"
 #import "FadePopSegue.h"
+#import "DeleteToDocuments.h"
 
 
 @implementation BasicViewController {
@@ -61,6 +62,7 @@
 
     else {
 
+        [_queue addOperation: [[DeleteToDocuments alloc] init]];
         UIViewController *root = [self.navigationController.viewControllers objectAtIndex: 0];
         UIStoryboardSegue *segue = [[FadePopSegue alloc] initWithIdentifier: @"BackToHome" source: self destination: root];
         [segue perform];
@@ -82,8 +84,6 @@
         CGFloat dx = stopLocation.x - startLocation.x;
         CGFloat dy = stopLocation.y - startLocation.y;
         CGFloat distance = sqrt(dx * dx + dy * dy);
-        NSLog(@"Distance: %f", distance);
-
         if (distance > 700) {
 
             CGPoint velocity = [sender velocityInView: sender.view];

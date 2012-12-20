@@ -175,14 +175,6 @@
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" image="backpack-ghosts.png" id="WTt-LH-sBa">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" id="Ceq-fS-Bwe">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="backpack-icon.png" id="hFh-ga-8fF">
                                 <rect key="frame" x="661" y="184" width="210" height="350"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -310,9 +302,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cM9-ke-2uj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="ST3-I5-6AO" customClass="TestObject">
+                <customObject id="ST3-I5-6AO" customClass="GameObject">
                     <connections>
-                        <outlet property="ghostImage" destination="Mou-XK-Du4" id="KsL-XN-dPw"/>
+                        <outlet property="imageView" destination="Mou-XK-Du4" id="AGG-Dd-fy6"/>
                     </connections>
                 </customObject>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="2sH-0J-hpn">
@@ -486,7 +478,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="bottom" image="people-ghosts.png" id="FTr-MA-1co" propertyAccessControl="none">
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="bottom" image="people-labels.png" id="FTr-MA-1co" propertyAccessControl="none">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -914,7 +906,6 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         </scene>
     </scenes>
     <resources>
-        <image name="backpack-ghosts.png" width="1024" height="768"/>
         <image name="backpack-icon.png" width="210" height="350"/>
         <image name="basket.png" width="350" height="300"/>
         <image name="camera-icon.png" width="150" height="150"/>
@@ -940,7 +931,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <image name="mp3-icon.png" width="150" height="150"/>
         <image name="next-button.png" width="80" height="80"/>
         <image name="party-bg.png" width="1024" height="768"/>
-        <image name="people-ghosts.png" width="1024" height="768"/>
+        <image name="people-labels.png" width="1024" height="768"/>
         <image name="person-icon.png" width="50" height="130"/>
         <image name="picasso-icon.png" width="160" height="170"/>
         <image name="pictionary.png" width="100" height="147"/>
@@ -987,6 +978,12 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <class className="BasicWhiteView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicWhiteView.h"/>
         </class>
+        <class className="GameObject" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameObject.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
         <class className="LoginViewController" superclassName="BasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
@@ -1002,12 +999,6 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ResultsViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TestObject" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TestObject.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ghostImage" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="TextField" superclassName="UITextField">

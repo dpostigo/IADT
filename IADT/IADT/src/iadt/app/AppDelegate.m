@@ -23,7 +23,7 @@
     [[UINavigationBar appearance] setBarStyle: UIBarStyleBlackTranslucent];
 
     //    UIImage *shadow = [[UIImage imageNamed: @"navbar_shadow.png"] resizableImageWithCapInsets: UIEdgeInsetsMake(0, 0, 0, 0)];
-//    [[UINavigationBar appearance] setShadowImage: shadow];
+    //    [[UINavigationBar appearance] setShadowImage: shadow];
 
 
     //
@@ -41,6 +41,8 @@
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
 
 #ifdef TESTFLIGHT_ENABLED
+
+    [TestFlight setDeviceIdentifier: [[UIDevice currentDevice] uniqueIdentifier]];
     [TestFlight takeOff: @"44a2eeaa-a91a-4178-b51a-4d7584bef7dc"];
 #endif
 

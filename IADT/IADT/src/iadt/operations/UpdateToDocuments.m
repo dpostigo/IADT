@@ -32,13 +32,9 @@
 
 
     NSString *string = [[_model.sessionDictionary allValues] componentsJoinedByString: @", "];
-
     _model.dataString = [_model.dataString stringByReplacingOccurrencesOfString: _model.lastEntry withString: string];
 
-    NSString *path = [_model.userDocumentsPath stringByAppendingString: @"/data.csv"];
-    [[NSUserDefaults standardUserDefaults] setObject: _model.dataString forKey: @"dataString"];
-    NSData *data = [_model.dataString dataUsingEncoding: NSUTF8StringEncoding];
-    [data writeToFile: path atomically: YES];
+    [self saveFile];
 
 
 }
