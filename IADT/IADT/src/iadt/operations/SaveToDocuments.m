@@ -37,12 +37,14 @@
     NSString *string = [self composeFile: dictionary];
 
     _model.dataString = string;
-    [[NSUserDefaults standardUserDefaults] setObject: _model.dataString forKey: @"dataString"];
 
+    [[NSUserDefaults standardUserDefaults] setObject: _model.dataString forKey: @"dataString"];
     NSData *data = [_model.dataString dataUsingEncoding: NSUTF8StringEncoding];
     [data writeToFile: path atomically: YES];
 
 }
+
+
 
 
 - (NSString *) composeFile: (NSDictionary *) dict {
@@ -60,6 +62,7 @@
     }
 
     NSString *string = [array componentsJoinedByString: @"\n"];
+    _model.lastEntry = valueString;
 
     return string;
 }

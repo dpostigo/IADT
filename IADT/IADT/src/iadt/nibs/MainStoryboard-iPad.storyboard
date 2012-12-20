@@ -470,44 +470,44 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                 </connections>
                             </button>
                             <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="Sza-kx-wtc">
-                                <rect key="frame" x="594" y="257" width="100" height="100"/>
+                                <rect key="frame" x="526" y="227" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="1Vb-CX-z26">
-                                <rect key="frame" x="714" y="257" width="100" height="100"/>
+                                <rect key="frame" x="694" y="227" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="kQB-nD-KEX">
-                                <rect key="frame" x="832" y="257" width="100" height="100"/>
+                                <rect key="frame" x="861" y="227" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView tag="5" contentMode="scaleToFill" image="picasso-icon.png" id="kPS-cT-ON5">
-                                <rect key="frame" x="320" y="169" width="160" height="160"/>
+                                <rect key="frame" x="320" y="147" width="160" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView tag="2" contentMode="scaleToFill" image="spielberg-icon.png" id="SuW-EM-JUQ">
-                                <rect key="frame" x="70" y="169" width="160" height="160"/>
+                                <rect key="frame" x="70" y="147" width="160" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView tag="4" contentMode="scaleToFill" image="jobs-icon.png" id="fTf-HI-mLj">
-                                <rect key="frame" x="70" y="336" width="160" height="160"/>
+                                <rect key="frame" x="70" y="314" width="160" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView tag="3" contentMode="scaleToFill" image="rowling-icon.png" id="SEx-bp-lR6">
-                                <rect key="frame" x="320" y="336" width="160" height="160"/>
+                                <rect key="frame" x="320" y="314" width="160" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView tag="6" contentMode="scaleToFill" image="einstein-icon.png" id="gN0-2X-cai">
-                                <rect key="frame" x="70" y="503" width="160" height="160"/>
+                                <rect key="frame" x="70" y="481" width="160" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView tag="1" contentMode="scaleToFill" image="chanel-icon.png" id="WHX-Av-KjR">
-                                <rect key="frame" x="320" y="503" width="160" height="160"/>
+                                <rect key="frame" x="320" y="481" width="160" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -568,40 +568,18 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                     <segue destination="COc-Gb-Zec" kind="custom" customClass="FadeSegue" id="ecg-Nk-Z74"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="NXc-6B-pTh">
-                                <rect key="frame" x="563" y="181" width="403" height="249"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="map-icon.png" id="fRN-y6-YH2">
+                                <rect key="frame" x="697" y="219" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView tag="10" contentMode="scaleToFill" image="chess.png" id="m9o-3N-Viw">
-                                        <rect key="frame" x="181" y="50" width="150" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView tag="20" contentMode="scaleToFill" image="cards.png" id="KpE-T7-FVm">
-                                        <rect key="frame" x="121" y="70" width="150" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <gestureRecognizers/>
-                                    </imageView>
-                                    <imageView tag="30" contentMode="scaleToFill" image="puzzle.png" id="eMo-aX-dCj">
-                                        <rect key="frame" x="51" y="51" width="120" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView tag="40" contentMode="scaleToFill" image="wordgame.png" id="az1-p6-4ia">
-                                        <rect key="frame" x="81" y="51" width="110" height="147"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <gestureRecognizers/>
-                                    </imageView>
-                                    <imageView tag="50" contentMode="scaleToFill" image="tictactoe.png" id="cHL-Sa-dPU">
-                                        <rect key="frame" x="116" y="53" width="110" height="143"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView tag="60" contentMode="scaleToFill" image="pictionary.png" id="zci-h2-c9B">
-                                        <rect key="frame" x="241" y="51" width="100" height="147"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <gestureRecognizers/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="map-icon.png" id="QaS-Ip-0BD">
+                                <rect key="frame" x="759" y="236" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="chess.png" id="ZF1-Wa-I84">
+                                <rect key="frame" x="627" y="232" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView contentMode="scaleToFill" image="basket.png" id="Vhv-30-dJ4" propertyAccessControl="all">
                                 <rect key="frame" x="589" y="219" width="350" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -641,7 +619,9 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                     <navigationItem key="navigationItem" id="pCQ-aK-dtA"/>
                     <connections>
                         <outlet property="containerView" destination="Vhv-30-dJ4" id="HAf-lV-bR7"/>
-                        <outlet property="successView" destination="NXc-6B-pTh" id="GwP-1b-xZx"/>
+                        <outletCollection property="successViews" destination="ZF1-Wa-I84" id="MeJ-l5-Ihg"/>
+                        <outletCollection property="successViews" destination="fRN-y6-YH2" id="IpW-fA-DgA"/>
+                        <outletCollection property="successViews" destination="QaS-Ip-0BD" id="8GN-68-bFB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="So2-fC-tBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -691,44 +671,44 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                 </connections>
                             </button>
                             <imageView tag="1" contentMode="scaleToFill" image="milkshake.png" id="dwF-D2-kb9">
-                                <rect key="frame" x="344" y="176" width="112" height="144"/>
+                                <rect key="frame" x="325" y="147" width="150" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView tag="6" contentMode="scaleToFill" image="coffee.png" id="mG9-Tv-npV">
-                                <rect key="frame" x="94" y="176" width="112" height="144"/>
+                                <rect key="frame" x="75" y="147" width="150" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView tag="4" contentMode="scaleToFill" image="soda.png" id="frU-6g-MrN">
-                                <rect key="frame" x="94" y="343" width="112" height="144"/>
+                                <rect key="frame" x="75" y="314" width="150" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView tag="2" contentMode="scaleToFill" image="juice.png" id="scU-xq-xdU">
-                                <rect key="frame" x="344" y="343" width="112" height="144"/>
+                                <rect key="frame" x="325" y="314" width="150" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView tag="5" contentMode="scaleToFill" image="tea.png" id="Hbg-h5-tLV">
-                                <rect key="frame" x="94" y="511" width="112" height="143"/>
+                                <rect key="frame" x="75" y="481" width="150" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView tag="3" contentMode="scaleToFill" image="water.png" id="Kxe-9f-pGZ">
-                                <rect key="frame" x="335" y="511" width="130" height="143"/>
+                                <rect key="frame" x="325" y="481" width="150" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="srI-13-Svs">
-                                <rect key="frame" x="593" y="257" width="100" height="100"/>
+                                <rect key="frame" x="594" y="257" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="8ql-c5-hG6">
-                                <rect key="frame" x="713" y="257" width="100" height="100"/>
+                                <rect key="frame" x="714" y="257" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView alpha="0.5" contentMode="scaleToFill" image="placeholder-icon.png" id="P3E-38-yQd">
-                                <rect key="frame" x="831" y="257" width="100" height="100"/>
+                                <rect key="frame" x="835" y="257" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -817,18 +797,18 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="congrats-bg.png" id="4Bp-YT-73b">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="-20" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Analytic, Logical, Innovative and Pragmatic. " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Bt-b3-6lq">
-                                <rect key="frame" x="276" y="489" width="471" height="29"/>
+                                <rect key="frame" x="276" y="469" width="471" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1PC-EE-SRr">
-                                <rect key="frame" x="335" y="634" width="80" height="80"/>
+                                <rect key="frame" x="335" y="614" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="facebook-button.png">
@@ -840,7 +820,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WDd-tC-HRD">
-                                <rect key="frame" x="472" y="634" width="80" height="80"/>
+                                <rect key="frame" x="472" y="614" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="twitter-button.png">
@@ -852,7 +832,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UBq-zg-t8c">
-                                <rect key="frame" x="610" y="634" width="80" height="80"/>
+                                <rect key="frame" x="610" y="614" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="exit-button.png">
@@ -874,6 +854,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                     <navigationItem key="navigationItem" id="T3P-yo-pMY"/>
                     <connections>
                         <outlet property="backgroundView" destination="2Bt-b3-6lq" id="18Q-U3-95n"/>
+                        <outlet property="resultLabel" destination="2Bt-b3-6lq" id="NL8-sG-O69"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YN8-AU-4iw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -888,47 +869,47 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <image name="camera-icon.png" width="150" height="150"/>
         <image name="cardgames.png" width="1024" height="768"/>
         <image name="cards.png" width="150" height="150"/>
-        <image name="chanel-icon.png" width="160" height="160"/>
+        <image name="chanel-icon.png" width="160" height="170"/>
         <image name="chess.png" width="150" height="150"/>
         <image name="coatcheck.png" width="85" height="140"/>
-        <image name="coffee.png" width="112" height="144"/>
+        <image name="coffee.png" width="150" height="170"/>
         <image name="congrats-bg.png" width="1024" height="768"/>
         <image name="dancefloor.png" width="84" height="140"/>
         <image name="drinks.png" width="1024" height="768"/>
-        <image name="einstein-icon.png" width="160" height="160"/>
+        <image name="einstein-icon.png" width="160" height="170"/>
         <image name="exit-button.png" width="80" height="80"/>
         <image name="exit.png" width="84" height="115"/>
         <image name="facebook-button.png" width="80" height="80"/>
         <image name="introText-bg.png" width="1024" height="768"/>
-        <image name="jobs-icon.png" width="160" height="160"/>
-        <image name="juice.png" width="112" height="144"/>
+        <image name="jobs-icon.png" width="160" height="170"/>
+        <image name="juice.png" width="150" height="170"/>
         <image name="knife-icon.png" width="150" height="150"/>
         <image name="map-icon.png" width="150" height="150"/>
-        <image name="milkshake.png" width="112" height="144"/>
+        <image name="milkshake.png" width="150" height="170"/>
         <image name="mp3-icon.png" width="150" height="150"/>
         <image name="next-button.png" width="80" height="80"/>
         <image name="party-bg.png" width="1024" height="768"/>
         <image name="people-ghosts.png" width="1024" height="768"/>
         <image name="person-icon.png" width="50" height="130"/>
-        <image name="picasso-icon.png" width="160" height="160"/>
+        <image name="picasso-icon.png" width="160" height="170"/>
         <image name="pictionary.png" width="100" height="147"/>
         <image name="placeholder-icon.png" width="100" height="100"/>
         <image name="puzzle.png" width="120" height="148"/>
         <image name="reset-button.png" width="80" height="80"/>
-        <image name="rowling-icon.png" width="160" height="160"/>
+        <image name="rowling-icon.png" width="160" height="170"/>
         <image name="seats-bg.png" width="1024" height="768"/>
         <image name="sketchbook-icon.png" width="150" height="150"/>
         <image name="snackbar.png" width="84" height="140"/>
-        <image name="soda.png" width="112" height="144"/>
-        <image name="spielberg-icon.png" width="160" height="160"/>
+        <image name="soda.png" width="150" height="170"/>
+        <image name="spielberg-icon.png" width="160" height="170"/>
         <image name="splash-bg.png" width="1024" height="768"/>
         <image name="start-button.png" width="80" height="80"/>
         <image name="submit-button.png" width="80" height="80"/>
-        <image name="tea.png" width="112" height="143"/>
+        <image name="tea.png" width="150" height="170"/>
         <image name="tictactoe.png" width="110" height="143"/>
         <image name="twitter-button.png" width="80" height="80"/>
         <image name="watch-icon.png" width="150" height="150"/>
-        <image name="water.png" width="130" height="143"/>
+        <image name="water.png" width="150" height="170"/>
         <image name="wordgame.png" width="110" height="147"/>
     </resources>
     <classes>
@@ -966,7 +947,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <class className="ResultsViewController" superclassName="BasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ResultsViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="resultTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="TextField" superclassName="UITextField">

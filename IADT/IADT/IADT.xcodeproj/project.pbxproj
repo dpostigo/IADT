@@ -31,6 +31,7 @@
 		7CA4420C5984DD4801EAAECC /* Draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA443DAF14D49530141BEB2 /* Draggable.m */; };
 		7CA4440A343B1402518E4DC4 /* BasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C54A3156CA9E9116E42 /* BasicView.m */; };
 		7CA4447DFD912454A6578D69 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44CFBBECC3E27CED74B74 /* ResultsViewController.m */; };
+		7CA4448FC30E0A06FF2D0B8A /* UpdateToDocuments.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA448C3D3772DE971C96692 /* UpdateToDocuments.m */; };
 		7CA444EFC09F4ACD21C2075D /* BasicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA440002B6DADB5E265A341 /* BasicLibrary.m */; };
 		7CA445406D3E75AAF6043038 /* sucessItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CA44980FE87FCCAA06DE2B5 /* sucessItems.plist */; };
 		7CA445EDB0F9FFA969AAB05D /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4483B1E625AB9B288C093 /* SMPageControl.m */; };
@@ -103,6 +104,7 @@
 		7CA44484B988A212F810F07F /* VeryBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VeryBasicViewController.h; path = src/viewcontrollers/VeryBasicViewController.h; sourceTree = "<group>"; };
 		7CA444FF41836A7D7A81A87D /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Utils.h"; path = "src/utils/UIView+Utils.h"; sourceTree = "<group>"; };
 		7CA44584CA6CC65C39F3F360 /* NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationBar.h; path = src/iadt/views/NavigationBar.h; sourceTree = "<group>"; };
+		7CA445C301DA93D32818330E /* UpdateToDocuments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateToDocuments.h; path = src/iadt/operations/UpdateToDocuments.h; sourceTree = "<group>"; };
 		7CA445FA6B9AC7A570AC7D2F /* CBLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBLayer.h; path = src/toolkit/CBButtons/CBLayer.h; sourceTree = "<group>"; };
 		7CA4464B0D508C197482CEE3 /* PuttyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PuttyView.m; path = src/toolkit/PuttyView/PuttyView.m; sourceTree = "<group>"; };
 		7CA446926218C11435558B6D /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Utils.h"; path = "src/utils/UIColor+Utils.h"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		7CA4483B1E625AB9B288C093 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMPageControl.m; path = src/toolkit/SMPageControl/SMPageControl.m; sourceTree = "<group>"; };
 		7CA4485C7E2245A6C8BFC993 /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextField.h; path = src/controls/TextField.h; sourceTree = "<group>"; };
 		7CA44885B9DFB52AF710F452 /* GameIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameIntroView.m; path = src/iadt/views/GameIntroView.m; sourceTree = "<group>"; };
+		7CA448C3D3772DE971C96692 /* UpdateToDocuments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateToDocuments.m; path = src/iadt/operations/UpdateToDocuments.m; sourceTree = "<group>"; };
 		7CA449140D01EB85726D8D17 /* SaveToDocuments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaveToDocuments.m; path = src/iadt/operations/SaveToDocuments.m; sourceTree = "<group>"; };
 		7CA4493BD6ACF6FEA66A39F9 /* CBLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBLayer.m; path = src/toolkit/CBButtons/CBLayer.m; sourceTree = "<group>"; };
 		7CA44980FE87FCCAA06DE2B5 /* sucessItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = sucessItems.plist; path = assets/_plists/sucessItems.plist; sourceTree = "<group>"; };
@@ -161,9 +164,7 @@
 		0346ACB1166EB0DF00A00BC4 = {
 			isa = PBXGroup;
 			children = (
-				033FE87C1680C0CD00F370BB /* NavigationBar.xib */,
 				03FE7791167FD521007880E1 /* data.plist */,
-				03FE777E167FC6F8007880E1 /* GameIntroView.xib */,
 				0346ACC6166EB0E000A00BC4 /* BasicProject */,
 				03150127166EB4960025F1F7 /* src */,
 				03150125166EB4960025F1F7 /* assets */,
@@ -172,6 +173,9 @@
 				0346ACBD166EB0E000A00BC4 /* Products */,
 				7CA44484B988A212F810F07F /* VeryBasicViewController.h */,
 				7CA44D8F8408EA95DDA9C41C /* VeryBasicViewController.m */,
+				033FE87C1680C0CD00F370BB /* NavigationBar.xib */,
+				03FE777E167FC6F8007880E1 /* GameIntroView.xib */,
+				7CA44796EB68CEAD388DFE4B /* MainStoryboard-iPad.storyboard */,
 				7CA44C33806448F4A0C2A111 /* BasicModel.m */,
 				7CA442855C5395A5923EE458 /* BasicModel.h */,
 				7CA440002B6DADB5E265A341 /* BasicLibrary.m */,
@@ -198,7 +202,6 @@
 				7CA44A210007019B4258F7E9 /* Model.h */,
 				7CA44D5706437760E20A9845 /* Model.m */,
 				7CA441CF1B972062ACE99F69 /* AppConstants.h */,
-				7CA44796EB68CEAD388DFE4B /* MainStoryboard-iPad.storyboard */,
 				7CA44014CCBC3A38320655B2 /* MainStoryboard.storyboard */,
 				7CA4414DF1A9060CE207108B /* AppDelegate.m */,
 				7CA4438AF6C8580B6A8EBE3A /* AppDelegate.h */,
@@ -231,6 +234,8 @@
 				7CA447534C5BF1FCE49E8E44 /* Draggable.h */,
 				7CA44CFBBECC3E27CED74B74 /* ResultsViewController.m */,
 				7CA4410B181C93FBE3281420 /* ResultsViewController.h */,
+				7CA448C3D3772DE971C96692 /* UpdateToDocuments.m */,
+				7CA445C301DA93D32818330E /* UpdateToDocuments.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -397,6 +402,7 @@
 				7CA440BB347F89E3B21C8C82 /* PuttyView.m in Sources */,
 				7CA4420C5984DD4801EAAECC /* Draggable.m in Sources */,
 				7CA4447DFD912454A6578D69 /* ResultsViewController.m in Sources */,
+				7CA4448FC30E0A06FF2D0B8A /* UpdateToDocuments.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

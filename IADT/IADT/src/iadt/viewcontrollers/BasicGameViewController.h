@@ -14,21 +14,26 @@
 
     GameIntroView *introView;
 
-
     IBOutlet UIView *containerView;
-    IBOutletCollection(UIView) NSArray *containerViews;
-
-    IBOutletCollection(UIView) NSArray *successViews;
     IBOutlet UIView *successView;
 
+    IBOutletCollection(UIView) NSArray *successViews;
+    IBOutletCollection(UIView) NSArray *containerViews;
+
+
     NSMutableArray *draggables;
+
+    NSInteger itemCount;
+
+
 }
 
 
 @property(nonatomic, strong) GameIntroView *introView;
-
 @property(nonatomic, strong) NSMutableArray *draggables;
+
+
 - (IBAction) reset: (id) sender;
-- (void) dragItem: (UIPanGestureRecognizer *) recognizer;
+
 
 @end

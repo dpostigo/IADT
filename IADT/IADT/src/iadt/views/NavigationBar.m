@@ -14,8 +14,7 @@
 
 @synthesize pageControlContainer;
 @synthesize pageControl;
-
-
+@synthesize homeButton;
 
 
 - (void) awakeFromNib {
@@ -27,11 +26,12 @@
     pageControl.right = pageControlContainer.width;
     pageControl.userInteractionEnabled = NO;
 
-    pageControl.numberOfPages = 9;
+    pageControl.numberOfPages = 10;
     pageControl.indicatorMargin = 20.0f;
     pageControl.indicatorDiameter = 10.0f;
-    [pageControl setPageIndicatorImage: [UIImage imageNamed: @"pageDot.png"]];
-    [pageControl setCurrentPageIndicatorImage: [UIImage imageNamed: @"pageDot-selected.png"]];
+    [pageControl setPageIndicatorImage: [UIImage imageNamed: [NSString stringWithFormat: @"pageDot.png"]]];
+    [pageControl setCurrentPageIndicatorImage: [UIImage imageNamed: [NSString stringWithFormat: @"pageDot-selected.png"]]];
+
 }
 
 

@@ -23,7 +23,6 @@
 
 
 @synthesize introView;
-
 @synthesize draggables;
 
 
@@ -38,21 +37,26 @@
     introView.textLabel.text = [introView.textLabel.text stringByReplacingOccurrencesOfString: @"\\n" withString: @"\n"];
     introView.detailTextLabel.text = [[[_model.gamesData objectForKey: self.restorationIdentifier] objectForKey: @"Detail"] uppercaseString];
 
-
     draggables = [[NSMutableArray alloc] init];
     for (int j = 0; j < 6; j++) {
         NSInteger tag = j + 1;
         UIView *view = [self.view viewWithTag: tag];
         if (view) {
-            Draggable *draggableView = [[Draggable alloc] initWithFrame: view.frame];
-            draggableView.delegate = self;
-            [self.view insertSubview: draggableView belowSubview: view];
-            draggableView.contentView = view;
-            draggableView.droppable = containerView;
-            draggableView.droppables = containerViews;
-            [draggables addObject: draggableView];
+            Draggable *draggable = [[Draggable alloc] initWithFrame: view.frame];
+            draggable.delegate = self;
+            [self.view insertSubview: draggable belowSubview: view];
+            draggable.contentView = view;
+            draggable.droppable = containerView;
+            draggable.droppables = [NSMutableArray arrayWithArray:  containerViews];
 
-            if (containerView == backgroundView || containerViews != nil) draggableView.shouldFade = NO;
+            [draggables addObject: draggable];
+
+            if (containerView == backgroundView || containerViews != nil) draggable.shouldFade = NO;
+            if (containerView == nil) {
+                draggable.snapsToContainer = YES;
+                draggable.maskEnabled = YES;
+                draggable.circleRadius = 50;
+            }
         }
     }
 
@@ -63,14 +67,10 @@
 - (void) viewWillAppear: (BOOL) animated {
     [super viewWillAppear: animated];
     introView.frame = self.view.bounds;
-
 }
 
 
-
-
 - (void) saveScore {
-
 
     NSString *scoringMode = [[_model.scoreData objectForKey: self.restorationIdentifier] objectForKey: @"Scoring Mode"];
     if ([scoringMode isEqualToString: @"None"]) {
@@ -98,8 +98,6 @@
     NSString *result = [options objectAtIndex: resultIndex];
     [_model.scores setObject: result forKey: self.restorationIdentifier];
 
-
-
     NSLog(@"_model.scores = %@", _model.scores);
 }
 
@@ -107,7 +105,6 @@
 - (CGPoint) calculatePoint: (UIImageView *) imageView {
 
     NSString *scoringMode = [[_model.scoreData objectForKey: self.restorationIdentifier] objectForKey: @"Scoring Mode"];
-
     CGFloat score = [self calculateScore: imageView];
     CGPoint point = CGPointZero;
 
@@ -129,8 +126,6 @@
 
 - (CGFloat) calculateScore: (UIImageView *) imageView {
 
-
-
     NSInteger index = imageView.tag;
 
     NSLog(@"index = %i", index);
@@ -148,25 +143,24 @@
 
     [self saveScore];
     [self reset: self];
-
-
-
 }
 
 
 - (IBAction) reset: (id) sender {
-    for (Draggable *d in draggables)  [d reset];
+    for (Draggable *d in draggables) [d reset];
+    itemCount = 0;
+
     [self resetSuccessViews];
+
+    for (UIView *c in containerViews) {
+        c.userInteractionEnabled = YES;
+    }
 }
-
-
 
 
 int rand_range(int min_n, int max_n) {
     return arc4random() % (max_n - min_n + 1) + min_n;
 }
-
-
 - (void) itemDropped: (UIView *) item {
 
     if (successView) {
@@ -191,22 +185,33 @@ int rand_range(int min_n, int max_n) {
 - (void) draggableDidDrop: (Draggable *) draggable {
     NSLog(@"%s", __PRETTY_FUNCTION__);
 
-    for (UIImageView *imageView in successViews) {
-        if (imageView.alpha == 0) {
+    itemCount++;
 
-            imageView.image = ((UIImageView *)draggable.contentView).image;
-            imageView.top += 10;
+    if (itemCount == 3) {
+        for (Draggable *d in draggables) d.droppingDisabled = YES;
 
-            [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseOut animations: ^{
+    }
 
-                imageView.alpha = 1;
-                imageView.top -= 10;
 
-            } completion: ^(BOOL completion) {
+    if (draggable.snapsToContainer) {
+    }
 
-            }];
+    else if (successViews) {
+        for (UIImageView *imageView in successViews) {
+            if (imageView.alpha == 0) {
 
-            return;
+                imageView.image = ((UIImageView *) draggable.contentView).image;
+                imageView.top += 10;
+
+                [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseOut animations: ^{
+
+                    imageView.alpha = 1;
+                    imageView.top -= 10;
+                }                completion: ^(BOOL completion) {
+                }];
+
+                return;
+            }
         }
     }
 }

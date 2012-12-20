@@ -7,6 +7,7 @@
 
 #import "ResultsViewController.h"
 #import "Model.h"
+#import "UpdateToDocuments.h"
 
 
 @implementation ResultsViewController {
@@ -23,7 +24,11 @@
     [super viewWillAppear: animated];
 
     NSString *string = [[_model.scores allValues] componentsJoinedByString: @", "];
-    resultTextField.text = string;
+
+    NSLog(@"string = %@", string);
+    resultLabel.text = string;
+
+    [_queue addOperation: [[UpdateToDocuments alloc] initWithResult: string]];
 }
 
 @end

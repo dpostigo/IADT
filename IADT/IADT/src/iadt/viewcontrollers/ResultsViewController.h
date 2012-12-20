@@ -11,7 +11,7 @@
 
 @interface ResultsViewController : BasicViewController   {
 
-    IBOutlet UITextField *resultTextField;
+    IBOutlet UILabel *resultLabel;
 }
 
 

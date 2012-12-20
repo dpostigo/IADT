@@ -13,6 +13,7 @@
 
     IBOutlet UIView *pageControlContainer;
     SMPageControl *pageControl;
+    IBOutlet UIButton *homeButton;
 
 
 }
@@ -20,5 +21,6 @@
 
 @property(nonatomic, strong) UIView *pageControlContainer;
 @property(nonatomic, strong) SMPageControl *pageControl;
+@property(nonatomic, strong) UIButton *homeButton;
 
 @end

@@ -32,12 +32,23 @@
     [super loadView];
     self.navigationBarView = [[[NSBundle mainBundle] loadNibNamed: @"NavigationBar" owner: navigationBarView options: nil] objectAtIndex: 0];
     [self.view addSubview: navigationBarView];
-
     navigationBarView.pageControl.currentPage = [self.navigationController.viewControllers count] - 1;
 
-    UIPanGestureRecognizer *swipe = [[UIPanGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipe:)];
-    swipe.cancelsTouchesInView = NO;
-    [self.view addGestureRecognizer: swipe];
+
+    if (DEBUG) {
+
+        UIPanGestureRecognizer *swipe = [[UIPanGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipe:)];
+        swipe.cancelsTouchesInView = NO;
+        [self.view addGestureRecognizer: swipe];
+    }
+
+    [navigationBarView.homeButton addTarget: self action: @selector(handleHome:) forControlEvents: UIControlEventTouchUpInside];
+}
+
+
+
+- (IBAction) handleHome: (id) sender {
+
 }
 
 
@@ -76,5 +87,7 @@
 - (BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) toInterfaceOrientation {
     return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
 }
+
+
 
 @end

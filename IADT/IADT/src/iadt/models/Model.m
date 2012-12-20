@@ -21,6 +21,7 @@
 @synthesize dataString = _dataString;
 @synthesize scores = _scores;
 @synthesize scoreData = _scoreData;
+@synthesize lastEntry = _lastEntry;
 
 
 + (Model *) sharedModel {

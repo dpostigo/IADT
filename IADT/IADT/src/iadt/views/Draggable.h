@@ -22,24 +22,43 @@
 
 @interface Draggable : PuttyView {
 
+    BOOL snapsToContainer;
+    BOOL shouldFade;
+    BOOL droppingDisabled;
+    BOOL shouldHover;
+
+
+    CGFloat circleRadius;
+    BOOL maskEnabled;
+
     UIView *droppable;
-    NSArray *droppables;
+    NSMutableArray *droppables;
+
 
     CGPoint startingPoint;
-    BOOL shouldSnap;
-    BOOL shouldFade;
 
     id<DraggableDelegate> delegate;
+
+    NSInteger itemLimit;
+    NSUInteger itemCount;
+
+
 
 
 }
 
 
 @property(nonatomic, strong) UIView *droppable;
-@property(nonatomic, strong) NSArray *droppables;
+@property(nonatomic, strong) NSMutableArray *droppables;
 @property(nonatomic) CGPoint startingPoint;
 @property(nonatomic, strong) id <DraggableDelegate> delegate;
 @property(nonatomic) BOOL shouldFade;
+@property(nonatomic) BOOL snapsToContainer;
+@property(nonatomic) CGFloat circleRadius;
+@property(nonatomic) BOOL maskEnabled;
+@property(nonatomic) NSInteger itemLimit;
+@property(nonatomic) BOOL droppingDisabled;
+@property(nonatomic) BOOL shouldHover;
 - (void) reset;
 
 @end
