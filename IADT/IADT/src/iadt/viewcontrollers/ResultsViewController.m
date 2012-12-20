@@ -28,6 +28,8 @@
     NSLog(@"string = %@", string);
     resultLabel.text = string;
 
+
+    string = [[_model.scores allValues] componentsJoinedByString: @" "];
     [_queue addOperation: [[UpdateToDocuments alloc] initWithResult: string]];
 }
 

@@ -19,6 +19,9 @@
 
     IBOutletCollection(UIView) NSArray *successViews;
     IBOutletCollection(UIView) NSArray *containerViews;
+    IBOutletCollection(UIView) NSArray *labels;
+
+
 
 
     NSMutableArray *draggables;

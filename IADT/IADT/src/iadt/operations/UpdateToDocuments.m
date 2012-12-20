@@ -28,7 +28,11 @@
 - (void) main {
     [super main];
 
-    NSString *string = [NSString stringWithFormat: @"%@%@", _model.lastEntry, result];
+    [_model.sessionDictionary setObject: result forKey: @"Result"];
+
+
+    NSString *string = [[_model.sessionDictionary allValues] componentsJoinedByString: @", "];
+
     _model.dataString = [_model.dataString stringByReplacingOccurrencesOfString: _model.lastEntry withString: string];
 
     NSString *path = [_model.userDocumentsPath stringByAppendingString: @"/data.csv"];

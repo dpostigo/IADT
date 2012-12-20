@@ -12,7 +12,10 @@
 #import "Draggable.h"
 
 
-@interface BasicGameViewController () <DraggableDelegate>
+@interface BasicGameViewController () <DraggableDelegate> {
+
+    NSMutableArray *selectedImages;
+}
 
 
 @end
@@ -29,6 +32,7 @@
 - (void) loadView {
     [super loadView];
 
+    selectedImages = [[NSMutableArray alloc] init];
     introView = [[[NSBundle mainBundle] loadNibNamed: @"GameIntroView" owner: introView options: nil] objectAtIndex: 0];
     [self.view addSubview: introView];
     [self.view insertSubview: introView belowSubview: navigationBarView];
@@ -47,7 +51,7 @@
             [self.view insertSubview: draggable belowSubview: view];
             draggable.contentView = view;
             draggable.droppable = containerView;
-            draggable.droppables = [NSMutableArray arrayWithArray:  containerViews];
+            draggable.droppables = [NSMutableArray arrayWithArray: containerViews];
 
             [draggables addObject: draggable];
 
@@ -76,8 +80,6 @@
     if ([scoringMode isEqualToString: @"None"]) {
         return;
     }
-
-    NSArray *selectedImages;
     NSMutableArray *points = [[NSMutableArray alloc] init];
     CGFloat xValue = 0;
     CGFloat yValue = 0;
@@ -127,7 +129,6 @@
 - (CGFloat) calculateScore: (UIImageView *) imageView {
 
     NSInteger index = imageView.tag;
-
     NSLog(@"index = %i", index);
 
     NSArray *items = [[_model.scoreData objectForKey: self.restorationIdentifier] objectForKey: @"Items"];
@@ -156,8 +157,6 @@
         c.userInteractionEnabled = YES;
     }
 }
-
-
 int rand_range(int min_n, int max_n) {
     return arc4random() % (max_n - min_n + 1) + min_n;
 }
@@ -182,16 +181,48 @@ int rand_range(int min_n, int max_n) {
 }
 
 
+- (void) draggableBeganDrop: (Draggable *) draggable {
+
+    UIImageView *item = (UIImageView *) draggable.contentView;
+    UILabel *label = (UILabel *) [self.view viewWithTag: item.tag + 10];
+    NSLog(@"label = %@", label);
+    if (label) {
+
+
+        [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
+
+            label.alpha = 0.2;
+        } completion: ^(BOOL completion){
+
+        }];
+    }
+}
+
+
+- (void) draggableDidNotDrop: (Draggable *) draggable {
+
+    UIImageView *item = (UIImageView *) draggable.contentView;
+    UILabel *label = (UILabel *) [self.view viewWithTag: item.tag + 10];
+    NSLog(@"label = %@", label);
+    if (label) {
+        [UIView animateWithDuration: 0.5 animations: ^{
+            label.alpha = 1.0;
+        }];
+    }
+}
+
+
 - (void) draggableDidDrop: (Draggable *) draggable {
     NSLog(@"%s", __PRETTY_FUNCTION__);
 
+    UIImageView *item = (UIImageView *) draggable.contentView;
+
     itemCount++;
+    [selectedImages addObject: item];
 
     if (itemCount == 3) {
         for (Draggable *d in draggables) d.droppingDisabled = YES;
-
     }
-
 
     if (draggable.snapsToContainer) {
     }

@@ -78,16 +78,21 @@
 - (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
     [super touchesBegan: touches withEvent: event];
 
-    [UIView animateWithDuration: 0.2 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
+    if (currentDrop != nil) {
+        currentDrop.userInteractionEnabled = YES;
+        currentDrop = nil;
+    }
+
+
+    [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseOut animations: ^{
         self.transform = CGAffineTransformScale(self.transform, 1.15, 1.15);
     }                completion: ^(BOOL completion) {
 
     }];
 
-    if (currentDrop != nil) {
-        currentDrop.userInteractionEnabled = YES;
-        currentDrop = nil;
-    }
+    [self draggableBeganDrop];
+
+
 }
 
 
@@ -138,6 +143,11 @@
 }
 
 
+- (void) draggableBeganDrop {
+    if ([delegate respondsToSelector: @selector(draggableBeganDrop:)]) {
+        [delegate performSelector: @selector(draggableBeganDrop:) withObject: self];
+    }
+}
 
 - (void) draggableWasDropped: (UIView *) dropContainer {
 
@@ -169,6 +179,10 @@
 
 - (void) draggableWasNotDropped {
     [self reset];
+
+    if ([delegate respondsToSelector: @selector(draggableDidNotDrop:)]) {
+        [delegate performSelector: @selector(draggableDidNotDrop:) withObject: self];
+    }
 }
 
 

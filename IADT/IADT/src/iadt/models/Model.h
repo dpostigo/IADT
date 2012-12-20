@@ -19,6 +19,7 @@
 @property(nonatomic, strong) NSMutableDictionary *scores;
 @property(nonatomic, strong) NSDictionary *scoreData;
 @property(nonatomic, retain) NSString *lastEntry;
+@property(nonatomic, strong) NSMutableDictionary *sessionDictionary;
 + (Model *) sharedModel;
 
 

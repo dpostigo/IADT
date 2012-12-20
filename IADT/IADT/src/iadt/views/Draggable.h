@@ -14,7 +14,9 @@
 
 
 @optional
+- (void) draggableBeganDrop: (Draggable *) draggable;
 - (void) draggableDidDrop: (Draggable *) draggable;
+- (void) draggableDidNotDrop: (Draggable *) draggable;
 
 
 @end

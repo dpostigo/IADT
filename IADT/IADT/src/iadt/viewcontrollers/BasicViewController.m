@@ -8,6 +8,7 @@
 #import "BasicViewController.h"
 #import "DeviceUtils.h"
 #import "UIColor+Utils.h"
+#import "FadePopSegue.h"
 
 
 @implementation BasicViewController {
@@ -34,21 +35,36 @@
     [self.view addSubview: navigationBarView];
     navigationBarView.pageControl.currentPage = [self.navigationController.viewControllers count] - 1;
 
-
     if (DEBUG) {
 
-        UIPanGestureRecognizer *swipe = [[UIPanGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipe:)];
-        swipe.cancelsTouchesInView = NO;
-        [self.view addGestureRecognizer: swipe];
+//        UIPanGestureRecognizer *swipe = [[UIPanGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipe:)];
+//        swipe.cancelsTouchesInView = NO;
+//        [self.view addGestureRecognizer: swipe];
     }
 
-    [navigationBarView.homeButton addTarget: self action: @selector(handleHome:) forControlEvents: UIControlEventTouchUpInside];
+    if (navigationBarView.pageControl.currentPage > 2)
+        [navigationBarView.homeButton addTarget: self action: @selector(handleHome:) forControlEvents: UIControlEventTouchUpInside];
 }
-
 
 
 - (IBAction) handleHome: (id) sender {
 
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: @"Quit" message: @"Are you sure you want to cancel and restart?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles: @"Quit", nil];
+    alertView.delegate = self;
+    [alertView show];
+}
+
+
+- (void) alertView: (UIAlertView *) alertView didDismissWithButtonIndex: (NSInteger) buttonIndex {
+    if (buttonIndex == alertView.cancelButtonIndex) {
+    }
+
+    else {
+
+        UIViewController *root = [self.navigationController.viewControllers objectAtIndex: 0];
+        UIStoryboardSegue *segue = [[FadePopSegue alloc] initWithIdentifier: @"BackToHome" source: self destination: root];
+        [segue perform];
+    }
 }
 
 
@@ -78,7 +94,6 @@
             else {
                 NSLog(@"gesture went left");
             }
-
         }
     }
 }
@@ -87,7 +102,5 @@
 - (BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) toInterfaceOrientation {
     return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
 }
-
-
 
 @end

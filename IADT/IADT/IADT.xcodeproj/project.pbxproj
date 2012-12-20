@@ -24,6 +24,7 @@
 		03FE777F167FC6F8007880E1 /* GameIntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03FE777E167FC6F8007880E1 /* GameIntroView.xib */; };
 		03FE7792167FD521007880E1 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03FE7791167FD521007880E1 /* data.plist */; };
 		7CA440776EC534B3540FB8EC /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA449AB0EEA64E50D9B7E84 /* UIColor+Utils.m */; };
+		7CA44080CBAB5BD52A7F2B87 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA440B1117D2994BB3C66E5 /* TestObject.m */; };
 		7CA440BB347F89E3B21C8C82 /* PuttyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4464B0D508C197482CEE3 /* PuttyView.m */; };
 		7CA440E254B01B33FE39F442 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA442990F2AA1E997E6A4E1 /* BasicViewController.m */; };
 		7CA4415ADF7573D4378B298C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA44A597255E591874F395D /* libTestFlight.a */; };
@@ -82,6 +83,7 @@
 		7CA4400AD444B389E28A8689 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMPageControl.h; path = src/toolkit/SMPageControl/SMPageControl.h; sourceTree = "<group>"; };
 		7CA44014CCBC3A38320655B2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = src/iadt/nibs/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		7CA4406241E474C59116F5DE /* GameIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameIntroView.h; path = src/iadt/views/GameIntroView.h; sourceTree = "<group>"; };
+		7CA440B1117D2994BB3C66E5 /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestObject.m; path = src/iadt/models/TestObject.m; sourceTree = "<group>"; };
 		7CA440E563D2F0A2B1B17E26 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/iadt/viewcontrollers/LoginViewController.m; sourceTree = "<group>"; };
 		7CA4410B181C93FBE3281420 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewController.h; path = src/iadt/viewcontrollers/ResultsViewController.h; sourceTree = "<group>"; };
 		7CA4410F635493B84B31AEC0 /* FadeSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FadeSegue.m; path = src/iadt/segues/FadeSegue.m; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		7CA447534C5BF1FCE49E8E44 /* Draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Draggable.h; path = src/iadt/views/Draggable.h; sourceTree = "<group>"; };
 		7CA447557B77CA37DFF56A01 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = src/toolkit/TestFlight/TestFlight.h; sourceTree = "<group>"; };
 		7CA44796EB68CEAD388DFE4B /* MainStoryboard-iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "MainStoryboard-iPad.storyboard"; path = "src/iadt/nibs/MainStoryboard-iPad.storyboard"; sourceTree = "<group>"; };
+		7CA447EBE794336538D0C71D /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestObject.h; path = src/iadt/models/TestObject.h; sourceTree = "<group>"; };
 		7CA4483B1E625AB9B288C093 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMPageControl.m; path = src/toolkit/SMPageControl/SMPageControl.m; sourceTree = "<group>"; };
 		7CA4485C7E2245A6C8BFC993 /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextField.h; path = src/controls/TextField.h; sourceTree = "<group>"; };
 		7CA44885B9DFB52AF710F452 /* GameIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameIntroView.m; path = src/iadt/views/GameIntroView.m; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 				7CA4410B181C93FBE3281420 /* ResultsViewController.h */,
 				7CA448C3D3772DE971C96692 /* UpdateToDocuments.m */,
 				7CA445C301DA93D32818330E /* UpdateToDocuments.h */,
+				7CA440B1117D2994BB3C66E5 /* TestObject.m */,
+				7CA447EBE794336538D0C71D /* TestObject.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -403,6 +408,7 @@
 				7CA4420C5984DD4801EAAECC /* Draggable.m in Sources */,
 				7CA4447DFD912454A6578D69 /* ResultsViewController.m in Sources */,
 				7CA4448FC30E0A06FF2D0B8A /* UpdateToDocuments.m in Sources */,
+				7CA44080CBAB5BD52A7F2B87 /* TestObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

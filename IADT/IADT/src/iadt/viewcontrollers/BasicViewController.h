@@ -9,7 +9,7 @@
 #import "VeryBasicViewController.h"
 #import "NavigationBar.h"
 
-@interface BasicViewController : VeryBasicViewController {
+@interface BasicViewController : VeryBasicViewController <UIAlertViewDelegate> {
     IBOutlet UIView *backgroundView;
     IBOutlet UIActivityIndicatorView *activityView;
 

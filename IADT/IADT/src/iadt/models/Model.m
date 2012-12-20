@@ -14,6 +14,7 @@
     NSString *_dataString;
     NSMutableDictionary *_scores;
     NSDictionary *_scoreData;
+    NSMutableDictionary *_sessionDictionary;
 }
 
 
@@ -22,6 +23,7 @@
 @synthesize scores = _scores;
 @synthesize scoreData = _scoreData;
 @synthesize lastEntry = _lastEntry;
+@synthesize sessionDictionary = _sessionDictionary;
 
 
 + (Model *) sharedModel {

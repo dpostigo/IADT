@@ -48,7 +48,10 @@
         [dict setObject: phone.text forKey: @"Phone"];
         [dict setObject: zip.text forKey: @"Zip Code"];
         [dict setObject: [NSDate date] forKey: @"Date"];
+        [dict setObject: @"" forKey: @"Result"];
 
+
+        _model.sessionDictionary = dict;
         [_queue addOperation: [[SaveToDocuments alloc] initWithDictionary: dict]];
         [self performSegueWithIdentifier: @"LoginSegue" sender: self];
     }
