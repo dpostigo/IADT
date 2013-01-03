@@ -7,12 +7,15 @@
 
 #import <Foundation/Foundation.h>
 #import "BasicViewController.h"
+#import "SA_OAuthTwitterController.h"
 
 
-@interface ResultsViewController : BasicViewController   {
+@interface ResultsViewController : BasicViewController <SA_OAuthTwitterControllerDelegate> {
 
     IBOutlet UILabel *resultLabel;
 }
 
+
+- (IBAction) handleTwitter: (id) sender;
 
 @end

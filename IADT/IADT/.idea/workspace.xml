@@ -20,120 +20,32 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_IPAD" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SaveToDocuments.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/operations/SaveToDocuments.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="47" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SaveToDocuments.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/operations/SaveToDocuments.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="20" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#initWithDictionary:#0;n#SaveToDocuments#0" expanded="true" />
-                <element signature="n#composeFile:#0;n#SaveToDocuments#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BasicGameViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="46" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#6053#6123#0" expanded="true" />
-                <element signature="e#6151#6181#0" expanded="true" />
-                <element signature="e#6490#6533#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="78" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+            <state line="38" column="1" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicViewController.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BasicGameViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="36" selection-start="328" selection-end="338" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="41" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.81276006">
+            <state line="46" column="78" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="n#handleHome:#0;n#BasicViewController#0" expanded="true" />
-                <element signature="n#handleSwipe:#0;n#BasicViewController#0" expanded="true" />
+                <element signature="n#viewDidLoad#0;n#BasicViewController#0" expanded="true" />
+                <element signature="n#alertView:didDismissWithButtonIndex:#0;n#BasicViewController#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicCSVOperation.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/operations/BasicCSVOperation.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicCSVOperation.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/operations/BasicCSVOperation.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="86" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateToDocuments.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/operations/UpdateToDocuments.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateToDocuments.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/operations/UpdateToDocuments.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="94" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NavigationBar.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/views/NavigationBar.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="23" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeleteToDocuments.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/operations/DeleteToDocuments.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeleteToDocuments.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/operations/DeleteToDocuments.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="20" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -141,11 +53,8 @@
       <file leaf-file-name="AppDelegate.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/app/AppDelegate.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="109" selection-start="1925" selection-end="1925" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#application:didFinishLaunchingWithOptions:#0;n#AppDelegate#0" expanded="true" />
-                <element signature="n#applicationDidEnterBackground:#0;n#AppDelegate#0" expanded="true" />
-              </folding>
+            <state line="37" column="31" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,7 +80,102 @@
       <file leaf-file-name="ResultsViewController.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/ResultsViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="92" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+            <state line="20" column="4" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SA_OAuthTwitterEngine.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/toolkit/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterEngine.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="87" column="9" selection-start="2894" selection-end="2894" vertical-scroll-proportion="-1.1428572">
+              <folding>
+                <element signature="n#isAuthorized#0;n#SA_OAuthTwitterEngine#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SA_OAuthTwitterController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/toolkit/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="101" column="68" selection-start="2986" selection-end="2986" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#controllerToEnterCredentialsWithTwitterEngine:delegate:forOrientation:#0;n#SA_OAuthTwitterController#0" expanded="true" />
+                <element signature="n#controllerToEnterCredentialsWithTwitterEngine:delegate:#0;n#SA_OAuthTwitterController#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SA_OAuthTwitterController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/toolkit/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="11" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SocialHandler.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/SocialHandler.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TwitterHandler.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/TwitterHandler.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FacebookHandler.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/FacebookHandler.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FacebookHandler.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/FacebookHandler.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="87" column="50" selection-start="1084" selection-end="3477" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TwitterHandler.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/TwitterHandler.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="40" selection-start="3490" selection-end="3490" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SocialHandler.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/SocialHandler.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="10" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppConstants.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/models/AppConstants.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="32" selection-start="580" selection-end="604" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -180,8 +184,16 @@
       <file leaf-file-name="ResultsViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/ResultsViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="72" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="57" column="42" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#handleFacebook:#0;n#ResultsViewController#0" expanded="true" />
+                <element signature="e#3535#4080#0" expanded="true" />
+                <element signature="e#4165#4169#0" expanded="true" />
+                <element signature="n#storeCachedTwitterOAuthData:forUsername:#0;n#ResultsViewController#0" expanded="true" />
+                <element signature="n#cachedTwitterOAuthDataForUsername:#0;n#ResultsViewController#0" expanded="true" />
+                <element signature="n#OAuthTwitterController:authenticatedWithUsername:#0;n#ResultsViewController#0" expanded="true" />
+                <element signature="e#4720#4750#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,15 +202,6 @@
         <entry file="file://$PROJECT_DIR$/src/iadt/models/GameObject.h">
           <provider selected="true" editor-type-id="text-editor">
             <state line="17" column="29" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameObject.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/models/GameObject.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="16" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -223,27 +226,26 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.m" />
-        <option value="$PROJECT_DIR$/src/iadt/models/TestObject.h" />
-        <option value="$PROJECT_DIR$/src/iadt/models/GameObject.h" />
-        <option value="$PROJECT_DIR$/src/utils/UIImage+Grayscale.h" />
-        <option value="$PROJECT_DIR$/src/utils/UIImage+Grayscale.m" />
-        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m" />
-        <option value="$PROJECT_DIR$/src/iadt/app/AppDelegate.m" />
-        <option value="$PROJECT_DIR$/src/iadt/operations/BasicCSVOperation.h" />
-        <option value="$PROJECT_DIR$/src/iadt/operations/SaveToDocuments.h" />
-        <option value="$PROJECT_DIR$/src/iadt/operations/UpdateToDocuments.h" />
-        <option value="$PROJECT_DIR$/src/iadt/operations/BasicCSVOperation.m" />
         <option value="$PROJECT_DIR$/src/iadt/operations/SaveToDocuments.m" />
         <option value="$PROJECT_DIR$/src/iadt/operations/UpdateToDocuments.m" />
         <option value="$PROJECT_DIR$/src/iadt/operations/DeleteToDocuments.m" />
         <option value="$PROJECT_DIR$/src/iadt/operations/DeleteToDocuments.h" />
+        <option value="$PROJECT_DIR$/src/iadt/views/Draggable.m" />
+        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.h" />
+        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m" />
+        <option value="$PROJECT_DIR$/src/iadt/app/AppDelegate.m" />
+        <option value="$PROJECT_DIR$/src/utils/TwitterHandler.m" />
+        <option value="$PROJECT_DIR$/src/utils/SocialHandler.h" />
+        <option value="$PROJECT_DIR$/src/utils/FacebookHandler.m" />
+        <option value="$PROJECT_DIR$/src/iadt/models/AppConstants.h" />
+        <option value="$PROJECT_DIR$/src/utils/SocialHandler.m" />
+        <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/ResultsViewController.m" />
+        <option value="$PROJECT_DIR$/src/toolkit/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.m" />
         <option value="$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-14" />
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="804" />
@@ -354,7 +356,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SMPageControl" />
+              <option name="myItemId" value="FacebookComposeViewController" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,135 +378,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PuttyView" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IADT" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iadt" />
+              <option name="myItemId" value="FacebookComposeViewController" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IADT" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iadt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="viewcontrollers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IADT" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iadt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IADT" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iadt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="segues" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IADT" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iadt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="operations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IADT" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iadt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -558,33 +436,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IADT" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_navbar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="DirectoryView.Xcode" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="IADT" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Application.IADT">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="BasicProject" TARGET_NAME="BasicProject" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="BasicProject" RUN_TARGET_NAME="BasicProject" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -593,6 +457,8 @@
     </configuration>
     <configuration default="false" name="IADT" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="IADT" PROJECT_NAME="IADT" TARGET_NAME="IADT" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="IADT" RUN_TARGET_NAME="IADT" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
+      <RunnerSettings RunnerId="AppRunner" />
+      <ConfigurationWrapper RunnerId="AppRunner" />
       <method />
     </configuration>
     <list size="1">
@@ -627,22 +493,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-14" y="22" width="1440" height="804" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="804" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6707483" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292517" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -701,126 +568,128 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/iadt/views/NavigationBar.h">
+    <entry file="file://$PROJECT_DIR$/src/utils/SocialHandler.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
+        <state line="16" column="0" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/views/Draggable.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="36" selection-start="1895" selection-end="1895" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="8" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/models/GameObject.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="29" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/models/AppConstants.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="32" selection-start="580" selection-end="604" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="46" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#6053#6123#0" expanded="true" />
-            <element signature="e#6151#6181#0" expanded="true" />
-            <element signature="e#6490#6533#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/segues/FadePopSegue.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+        <state line="38" column="1" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolkit/SMPageControl/SMPageControl.h">
+    <entry file="file://$PROJECT_DIR$/src/utils/SocialHandler.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
+        <state line="31" column="10" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/operations/BasicCSVOperation.h">
+    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicGameViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
+        <state line="16" column="36" selection-start="328" selection-end="338" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/UIImage+Grayscale.h">
+    <entry file="file://$PROJECT_DIR$/src/utils/FacebookHandler.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="33" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
+        <state line="87" column="50" selection-start="1084" selection-end="3477" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/operations/SaveToDocuments.h">
+    <entry file="file://$PROJECT_DIR$/src/utils/TwitterHandler.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="47" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+        <state line="89" column="40" selection-start="3490" selection-end="3490" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/UIImage+Grayscale.m">
+    <entry file="file://$PROJECT_DIR$/src/toolkit/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="107" selection-start="1056" selection-end="3117" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#imageBlackAndWhite#0;n#UIImage#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/operations/UpdateToDocuments.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
+        <state line="23" column="11" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/views/NavigationBar.m">
+    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="23" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/operations/BasicCSVOperation.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="86" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/operations/SaveToDocuments.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="20" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#initWithDictionary:#0;n#SaveToDocuments#0" expanded="true" />
-            <element signature="n#composeFile:#0;n#SaveToDocuments#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/operations/UpdateToDocuments.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="94" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/operations/DeleteToDocuments.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iadt/operations/DeleteToDocuments.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="20" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
+        <state line="11" column="78" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="41" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.81276006">
+        <state line="46" column="78" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#handleHome:#0;n#BasicViewController#0" expanded="true" />
-            <element signature="n#handleSwipe:#0;n#BasicViewController#0" expanded="true" />
+            <element signature="n#viewDidLoad#0;n#BasicViewController#0" expanded="true" />
+            <element signature="n#alertView:didDismissWithButtonIndex:#0;n#BasicViewController#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/ResultsViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="42" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#handleFacebook:#0;n#ResultsViewController#0" expanded="true" />
+            <element signature="e#3535#4080#0" expanded="true" />
+            <element signature="e#4165#4169#0" expanded="true" />
+            <element signature="n#storeCachedTwitterOAuthData:forUsername:#0;n#ResultsViewController#0" expanded="true" />
+            <element signature="n#cachedTwitterOAuthDataForUsername:#0;n#ResultsViewController#0" expanded="true" />
+            <element signature="n#OAuthTwitterController:authenticatedWithUsername:#0;n#ResultsViewController#0" expanded="true" />
+            <element signature="e#4720#4750#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolkit/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="68" selection-start="2986" selection-end="2986" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#controllerToEnterCredentialsWithTwitterEngine:delegate:forOrientation:#0;n#SA_OAuthTwitterController#0" expanded="true" />
+            <element signature="n#controllerToEnterCredentialsWithTwitterEngine:delegate:#0;n#SA_OAuthTwitterController#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolkit/Twitter+OAuth/SAOAuthTwitterEngine/SA_OAuthTwitterEngine.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="9" selection-start="2894" selection-end="2894" vertical-scroll-proportion="-1.1428572">
+          <folding>
+            <element signature="n#isAuthorized#0;n#SA_OAuthTwitterEngine#0" expanded="true" />
           </folding>
         </state>
       </provider>

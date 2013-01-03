@@ -39,5 +39,16 @@
 	</array>
 	<key>UIFileSharingEnabled</key>
 	<true/>
+	<key>FacebookAppID</key>
+	<string>470492246319315</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb470492246319315</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

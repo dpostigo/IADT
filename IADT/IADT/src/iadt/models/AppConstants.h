@@ -19,4 +19,8 @@
 #define LINEACTION_ENDED @"Line action ended."
 
 
+#define kOAuthTwitterConsumerKey                @"6IhlfcamblDSuGUlsWcGoQ"
+#define kOAuthTwitterConsumerSecret            @"PSLgb3G4aQNU4K1ogrUhhaMaf9KlAjWOpIPsz5U8"
+
+
 @end

@@ -30,6 +30,8 @@
 }
 
 
+
+
 - (void) loadView {
     [super loadView];
     self.navigationBarView = [[[NSBundle mainBundle] loadNibNamed: @"NavigationBar" owner: navigationBarView options: nil] objectAtIndex: 0];
@@ -41,6 +43,8 @@
 //        UIPanGestureRecognizer *swipe = [[UIPanGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipe:)];
 //        swipe.cancelsTouchesInView = NO;
 //        [self.view addGestureRecognizer: swipe];
+
+
     }
 
     if (navigationBarView.pageControl.currentPage > 2)

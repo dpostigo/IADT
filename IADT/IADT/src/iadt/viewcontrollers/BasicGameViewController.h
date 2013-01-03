@@ -14,20 +14,15 @@
 
     GameIntroView *introView;
 
+    IBOutlet UIImageView *ghostImage;
     IBOutlet UIView *containerView;
     IBOutlet UIView *successView;
 
     IBOutletCollection(UIView) NSArray *successViews;
     IBOutletCollection(UIView) NSArray *containerViews;
     IBOutletCollection(UIView) NSArray *labels;
-
-
-
-
     NSMutableArray *draggables;
-
     NSInteger itemCount;
-
 
 }
 

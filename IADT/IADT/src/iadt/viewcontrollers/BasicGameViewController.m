@@ -36,6 +36,8 @@
 - (void) loadView {
     [super loadView];
 
+
+
     selectedImages = [[NSMutableArray alloc] init];
     introView = [[[NSBundle mainBundle] loadNibNamed: @"GameIntroView" owner: introView options: nil] objectAtIndex: 0];
     [self.view addSubview: introView];
@@ -51,15 +53,12 @@
         UIImageView *view = (UIImageView *) [self.view viewWithTag: tag];
         if (view) {
 
-
-
             if (containerView != backgroundView || containerViews != nil) {
                 UIImageView *ghostImage = [[UIImageView alloc] initWithFrame: view.frame];
                 ghostImage.image = view.image;
                 ghostImage.alpha = GHOST_IMAGE_ALPHA;
                 [self.view insertSubview: ghostImage belowSubview: view];
             }
-
 
             Draggable *draggable = [[Draggable alloc] initWithFrame: view.frame];
             draggable.delegate = self;
@@ -74,7 +73,7 @@
             if (containerView == nil) {
                 draggable.snapsToContainer = YES;
                 draggable.maskEnabled = YES;
-                draggable.circleRadius = 50;
+                draggable.circleRadius = 30;
             }
         }
     }
@@ -163,7 +162,14 @@
 
 
 - (IBAction) reset: (id) sender {
-    for (Draggable *d in draggables) [d reset];
+    for (Draggable *d in draggables) {
+
+        for (UIView *droppable in d.droppables) {
+            droppable.userInteractionEnabled = YES;
+        }
+        [d reset];
+    }
+
     itemCount = 0;
 
     [self resetSuccessViews];
@@ -181,7 +187,6 @@ int rand_range(int min_n, int max_n) {
         UIView *view = [successView viewWithTag: item.tag * 10];
         [UIView animateWithDuration: 0.25 animations: ^{
             view.alpha = 1;
-
             view.transform = CGAffineTransformRotate(view.transform, 1);
         }];
     }
@@ -193,6 +198,16 @@ int rand_range(int min_n, int max_n) {
         view.alpha = 0;
         view.userInteractionEnabled = NO;
     }
+
+    if (labels) {
+        for (UILabel *label in labels) {
+
+            [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
+                label.alpha = 1.0;
+            }                completion: ^(BOOL completion) {
+            }];
+        }
+    }
 }
 
 
@@ -200,12 +215,9 @@ int rand_range(int min_n, int max_n) {
 
     UIImageView *item = (UIImageView *) draggable.contentView;
     UILabel *label = (UILabel *) [self.view viewWithTag: item.tag + 10];
-    NSLog(@"label = %@", label);
     if (label) {
-
         [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
-
-                        label.alpha = GHOST_IMAGE_ALPHA;
+            label.alpha = GHOST_IMAGE_ALPHA;
         }                completion: ^(BOOL completion) {
         }];
     }
@@ -216,7 +228,6 @@ int rand_range(int min_n, int max_n) {
 
     UIImageView *item = (UIImageView *) draggable.contentView;
     UILabel *label = (UILabel *) [self.view viewWithTag: item.tag + 10];
-    NSLog(@"label = %@", label);
     if (label) {
         [UIView animateWithDuration: 0.5 animations: ^{
             label.alpha = 1.0;
@@ -226,15 +237,21 @@ int rand_range(int min_n, int max_n) {
 
 
 - (void) draggableDidDrop: (Draggable *) draggable {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
 
     UIImageView *item = (UIImageView *) draggable.contentView;
 
     itemCount++;
     [selectedImages addObject: item];
 
-    if (itemCount == 3) {
-        for (Draggable *d in draggables) d.droppingDisabled = YES;
+
+
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"itemCount = %i", itemCount);
+
+    if (containerView != nil && itemCount == 3) {
+        for (Draggable *d in draggables) {
+            d.droppingDisabled = YES;
+        }
     }
 
     if (draggable.snapsToContainer) {
@@ -258,6 +275,10 @@ int rand_range(int min_n, int max_n) {
             }
         }
     }
+}
+
+- (void) handleSingleContainer {
+
 }
 
 @end
