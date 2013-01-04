@@ -163,7 +163,7 @@ static NSString *const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 
         NSLog(@"[[UIScreen mainScreen] bounds] = %@", NSStringFromCGRect([[UIScreen mainScreen] bounds]));
 
-        CGRect rect = [[UIScreen mainScreen] bounds];
+//        CGRect rect = [[UIScreen mainScreen] bounds];
         self.view = [[[UIView alloc] initWithFrame: CGRectMake(0, 0, 480, 288)] autorelease];
 //        self.view.backgroundColor = [UIColor blueColor];
         _backgroundView.frame = CGRectMake(0, 44, 480, 288);

@@ -41,7 +41,6 @@
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
 
 #ifdef TESTFLIGHT_ENABLED
-
     [TestFlight setDeviceIdentifier: [[UIDevice currentDevice] uniqueIdentifier]];
     [TestFlight takeOff: @"44a2eeaa-a91a-4178-b51a-4d7584bef7dc"];
 #endif

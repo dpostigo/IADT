@@ -54,10 +54,10 @@
         if (view) {
 
             if (containerView != backgroundView || containerViews != nil) {
-                UIImageView *ghostImage = [[UIImageView alloc] initWithFrame: view.frame];
-                ghostImage.image = view.image;
-                ghostImage.alpha = GHOST_IMAGE_ALPHA;
-                [self.view insertSubview: ghostImage belowSubview: view];
+                UIImageView *ghost = [[UIImageView alloc] initWithFrame: view.frame];
+                ghost.image = view.image;
+                ghost.alpha = GHOST_IMAGE_ALPHA;
+                [self.view insertSubview: ghost belowSubview: view];
             }
 
             Draggable *draggable = [[Draggable alloc] initWithFrame: view.frame];

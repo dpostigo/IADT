@@ -10,6 +10,8 @@
 		03150128166EB4960025F1F7 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 03150125166EB4960025F1F7 /* assets */; };
 		03150129166EB4960025F1F7 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = 03150126166EB4960025F1F7 /* scripts */; };
 		0315012A166EB4960025F1F7 /* src in Resources */ = {isa = PBXBuildFile; fileRef = 03150127166EB4960025F1F7 /* src */; };
+		032CE4E11696647700710114 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 032CE4E01696647700710114 /* Icon.png */; };
+		032CE4E31696648F00710114 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 032CE4E21696648F00710114 /* Icon@2x.png */; };
 		033FE87D1680C0CD00F370BB /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033FE87C1680C0CD00F370BB /* NavigationBar.xib */; };
 		0346ACC1166EB0E000A00BC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346ACC0166EB0E000A00BC4 /* UIKit.framework */; };
 		0346ACC3166EB0E000A00BC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346ACC2166EB0E000A00BC4 /* Foundation.framework */; };
@@ -102,6 +104,9 @@
 		03150125166EB4960025F1F7 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		03150126166EB4960025F1F7 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		03150127166EB4960025F1F7 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
+		032CE4DD1696563500710114 /* IADT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = IADT.entitlements; sourceTree = "<group>"; };
+		032CE4E01696647700710114 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		032CE4E21696648F00710114 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		033FE87C1680C0CD00F370BB /* NavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NavigationBar.xib; path = src/xibs/NavigationBar.xib; sourceTree = "<group>"; };
 		0346ACBC166EB0E000A00BC4 /* IADT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IADT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0346ACC0166EB0E000A00BC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -301,6 +306,9 @@
 		0346ACB1166EB0DF00A00BC4 = {
 			isa = PBXGroup;
 			children = (
+				032CE4E21696648F00710114 /* Icon@2x.png */,
+				032CE4E01696647700710114 /* Icon.png */,
+				032CE4DD1696563500710114 /* IADT.entitlements */,
 				0359993216962FCE00182370 /* Social.framework */,
 				0359993016962FC700182370 /* AdSupport.framework */,
 				03FE7791167FD521007880E1 /* data.plist */,
@@ -575,6 +583,8 @@
 				7CA445406D3E75AAF6043038 /* sucessItems.plist in Resources */,
 				7CA445D1417BF0D7FC3D7BE1 /* DEFacebookComposeView.xib in Resources */,
 				0359992D16962F7500182370 /* FacebookSDKResources.bundle in Resources */,
+				032CE4E11696647700710114 /* Icon.png in Resources */,
+				032CE4E31696648F00710114 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,7 +697,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniela Postigo (64Z2RX7572)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniela Postigo (64Z2RX7572)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -702,6 +713,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "A5F44000-D899-40C7-A058-D8C2E0628A7F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A5F44000-D899-40C7-A058-D8C2E0628A7F";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -716,7 +729,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniela Postigo (64Z2RX7572)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniela Postigo (64Z2RX7572)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -724,6 +738,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "A5F44000-D899-40C7-A058-D8C2E0628A7F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "09EA5215-5FF3-4891-827F-8017AAC7477A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -733,7 +749,8 @@
 		0346ACDB166EB0E000A00BC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniela Postigo (64Z2RX7572)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniela Postigo (KLYVK5PYR7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniela Postigo (KLYVK5PYR7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Documents/FacebookSDK,
@@ -756,7 +773,8 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = IADT;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8F90C656-4FC9-4EF5-BCB5-9E09CED63988";
+				PROVISIONING_PROFILE = "5B60F0EE-BE5E-4D60-84E7-F639944607D5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5B60F0EE-BE5E-4D60-84E7-F639944607D5";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -765,7 +783,8 @@
 		0346ACDC166EB0E000A00BC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniela Postigo (64Z2RX7572)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Daniela Postigo";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Daniela Postigo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Documents/FacebookSDK,
@@ -773,7 +792,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BasicProject/IADT-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"TESTFLIGHT_ENABLED=1",
+					"TESTFLIGHT_ENABLED=0",
 					"DEBUG=0",
 				);
 				HEADER_SEARCH_PATHS = "\"$(SDKROOT)/usr/include/libxml2\"/**";
@@ -787,7 +806,8 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = IADT;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8F90C656-4FC9-4EF5-BCB5-9E09CED63988";
+				PROVISIONING_PROFILE = "8DC4DCB0-A1B7-45FC-BA79-520CEA1B1DC2";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8DC4DCB0-A1B7-45FC-BA79-520CEA1B1DC2";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};

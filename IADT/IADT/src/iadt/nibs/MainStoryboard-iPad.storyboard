@@ -98,11 +98,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" id="yyj-0U-CIs" customClass="TextField">
-                                        <rect key="frame" x="20" y="4.5" width="334.5" height="30"/>
+                                        <rect key="frame" x="20" y="5" width="334.5" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1114,6 +1114,8 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <class className="BasicViewController" superclassName="VeryBasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicViewController.h"/>
             <relationships>
+                <relationship kind="action" name="handleHome:"/>
+                <relationship kind="action" name="popToRoot:"/>
                 <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
             </relationships>
@@ -1141,6 +1143,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <class className="ResultsViewController" superclassName="BasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ResultsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="handleFacebook:"/>
                 <relationship kind="action" name="handleTwitter:"/>
                 <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
             </relationships>
@@ -1161,6 +1164,6 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="IeT-gV-Au9"/>
+        <segue reference="k4Z-1z-RJ4"/>
     </inferredMetricsTieBreakers>
 </document>

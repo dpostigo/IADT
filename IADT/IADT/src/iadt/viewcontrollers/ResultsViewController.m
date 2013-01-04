@@ -74,10 +74,10 @@
 
 - (void) tweet {
 
-    TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
-    [tweetViewController setInitialText: @"Hello. This is a tweet."];
+    SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType: SLServiceTypeTwitter];
+    [controller setInitialText: @"Hello. This is a tweet."];
 
-    [tweetViewController setCompletionHandler: ^(TWTweetComposeViewControllerResult result) {
+    [controller setCompletionHandler: ^(TWTweetComposeViewControllerResult result) {
         NSString *output;
 
         switch (result) {
@@ -97,7 +97,7 @@
         [self dismissViewControllerAnimated: YES completion: nil];
     }];
 
-    [self presentViewController: tweetViewController animated: YES completion: nil];
+    [self presentViewController: controller animated: YES completion: nil];
 }
 
 

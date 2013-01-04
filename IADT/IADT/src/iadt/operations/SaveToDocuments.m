@@ -33,7 +33,7 @@
 
     if (dictionary == nil) return;
 
-    NSString *path = [_model.userDocumentsPath stringByAppendingString: @"/data.csv"];
+//    NSString *path = [_model.userDocumentsPath stringByAppendingString: @"/data.csv"];
     NSString *string = [self composeFile: dictionary];
 
     _model.dataString = string;
