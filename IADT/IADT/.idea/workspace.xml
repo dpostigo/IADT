@@ -20,6 +20,15 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_IPAD" />
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="TwitterHandler.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/TwitterHandler.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="40" selection-start="3490" selection-end="3490" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DEFacebookComposeViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/toolkit/FacebookComposeViewController/DEFacebookComposeViewController.m">
           <provider selected="true" editor-type-id="text-editor">
@@ -162,15 +171,6 @@
         <entry file="file://$PROJECT_DIR$/src/utils/FacebookHandler.m">
           <provider selected="true" editor-type-id="text-editor">
             <state line="87" column="50" selection-start="1084" selection-end="3477" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TwitterHandler.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/TwitterHandler.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="40" selection-start="3490" selection-end="3490" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -430,12 +430,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="IADT" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.IADT">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="BasicProject" TARGET_NAME="BasicProject" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="BasicProject" RUN_TARGET_NAME="BasicProject" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">

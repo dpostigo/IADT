@@ -98,10 +98,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" id="yyj-0U-CIs" customClass="TextField">
-                                        <rect key="frame" x="20" y="5" width="334.5" height="30"/>
+                                        <rect key="frame" x="13" y="4" width="334.5" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                 </subviews>
@@ -112,10 +112,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="cI4-NM-f30" customClass="TextField">
-                                        <rect key="frame" x="20" y="4.5" width="334.5" height="30"/>
+                                        <rect key="frame" x="13" y="4.5" width="334.5" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                 </subviews>
@@ -126,10 +126,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" minimumFontSize="17" id="Kyz-X8-ydF" customClass="TextField">
-                                        <rect key="frame" x="19.5" y="4.5" width="335" height="30"/>
+                                        <rect key="frame" x="13" y="4.5" width="335" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                 </subviews>
@@ -140,10 +140,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip Code" minimumFontSize="17" id="5sz-oW-Z3L" customClass="TextField">
-                                        <rect key="frame" x="20" y="4.5" width="334.5" height="30"/>
+                                        <rect key="frame" x="13" y="4.5" width="334.5" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                 </subviews>
@@ -347,8 +347,8 @@ IGJyZWVkLg
                                 <rect key="frame" x="219" y="329" width="603" height="132"/>
                                 <string key="text" base64-UTF8="YES">
 SGlnaGx5IGV2b2x2ZWQsIGRpZ2l0YWxseSBzYXZ2eSBhbmQgYWRlcHQgYXQgbWFueSADZGlzY2lwbGlu
-ZXMuIFRha2UgdGhpcyB0ZXN0IHRvIGRpc2NvdmVyIGlmIHlvdSBoYXZlIAN0aGUgcmF3IHRhbGVudCB0
-byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
+ZXMuIFRha2UgdGhpcyB0ZXN0IHRvIGRpc2NvdmVyIGlmIHlvdSBoYXZlIHRoZSByYXcgA3RhbGVudCBh
+bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
 </string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -982,14 +982,14 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Analytic, Logical, Innovative and Pragmatic. " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Bt-b3-6lq">
-                                <rect key="frame" x="276" y="469" width="471" height="29"/>
+                                <rect key="frame" x="276" y="406" width="471" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1PC-EE-SRr">
-                                <rect key="frame" x="335" y="614" width="80" height="80"/>
+                                <rect key="frame" x="335" y="529" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="facebook-button.png">
@@ -1004,7 +1004,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WDd-tC-HRD">
-                                <rect key="frame" x="472" y="614" width="80" height="80"/>
+                                <rect key="frame" x="472" y="529" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="twitter-button.png">
@@ -1019,7 +1019,7 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UBq-zg-t8c">
-                                <rect key="frame" x="610" y="614" width="80" height="80"/>
+                                <rect key="frame" x="610" y="529" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="exit-button.png">
@@ -1114,8 +1114,6 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <class className="BasicViewController" superclassName="VeryBasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicViewController.h"/>
             <relationships>
-                <relationship kind="action" name="handleHome:"/>
-                <relationship kind="action" name="popToRoot:"/>
                 <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
             </relationships>
@@ -1143,7 +1141,6 @@ byBiZSBwYXJ0IG9mIHRoZSBOZXcgQnJlZWQuIA
         <class className="ResultsViewController" superclassName="BasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ResultsViewController.h"/>
             <relationships>
-                <relationship kind="action" name="handleFacebook:"/>
                 <relationship kind="action" name="handleTwitter:"/>
                 <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
             </relationships>

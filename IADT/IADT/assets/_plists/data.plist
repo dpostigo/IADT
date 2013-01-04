@@ -27,7 +27,7 @@
 		<key>Games</key>
 		<dict>
 			<key>Title</key>
-			<string>Your friends are coming over to play games.</string>
+			<string>Your friends are coming \nover to play games.</string>
 			<key>Detail</key>
 			<string>Pick three you want to play.</string>
 		</dict>
@@ -36,14 +36,14 @@
 			<key>Title</key>
 			<string>You go to the kitchen for a drink. What do you pick?</string>
 			<key>Detail</key>
-			<string>Rank the drinks by dragging them.</string>
+			<string>Rank your top three choices.</string>
 		</dict>
 		<key>Seats</key>
 		<dict>
 			<key>Title</key>
 			<string>It&apos;s your first day in a new class.</string>
 			<key>Detail</key>
-			<string>Put yourself in your ideal seat.</string>
+			<string>Put yourself in your preferred seat.</string>
 		</dict>
 	</dict>
 	<dict>

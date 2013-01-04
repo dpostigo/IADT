@@ -309,8 +309,6 @@
 				032CE4E21696648F00710114 /* Icon@2x.png */,
 				032CE4E01696647700710114 /* Icon.png */,
 				032CE4DD1696563500710114 /* IADT.entitlements */,
-				0359993216962FCE00182370 /* Social.framework */,
-				0359993016962FC700182370 /* AdSupport.framework */,
 				03FE7791167FD521007880E1 /* data.plist */,
 				0346ACC6166EB0E000A00BC4 /* BasicProject */,
 				03150127166EB4960025F1F7 /* src */,
@@ -477,6 +475,8 @@
 		0346ACBF166EB0E000A00BC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0359993216962FCE00182370 /* Social.framework */,
+				0359993016962FC700182370 /* AdSupport.framework */,
 				03F0F4F116951B51003AB1D6 /* Accounts.framework */,
 				0346ACC4166EB0E000A00BC4 /* CoreGraphics.framework */,
 				038066E116839AE900E71F3F /* CoreImage.framework */,
@@ -749,8 +749,8 @@
 		0346ACDB166EB0E000A00BC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daniela Postigo (KLYVK5PYR7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniela Postigo (KLYVK5PYR7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniela Postigo (64Z2RX7572)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniela Postigo (64Z2RX7572)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Documents/FacebookSDK,
@@ -773,8 +773,8 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = IADT;
-				PROVISIONING_PROFILE = "5B60F0EE-BE5E-4D60-84E7-F639944607D5";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5B60F0EE-BE5E-4D60-84E7-F639944607D5";
+				PROVISIONING_PROFILE = "A5F44000-D899-40C7-A058-D8C2E0628A7F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A5F44000-D899-40C7-A058-D8C2E0628A7F";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -783,8 +783,8 @@
 		0346ACDC166EB0E000A00BC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Daniela Postigo";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Daniela Postigo";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Elastic Creative";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Elastic Creative";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Documents/FacebookSDK,
@@ -806,8 +806,8 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = IADT;
-				PROVISIONING_PROFILE = "8DC4DCB0-A1B7-45FC-BA79-520CEA1B1DC2";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8DC4DCB0-A1B7-45FC-BA79-520CEA1B1DC2";
+				PROVISIONING_PROFILE = "D1E79859-59E0-4CF9-8CE1-BCBEFE9A6637";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D1E79859-59E0-4CF9-8CE1-BCBEFE9A6637";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
