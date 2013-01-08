@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0311A997169B8A2F007A4886 /* FacebookComposeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0311A996169B8A2F007A4886 /* FacebookComposeViewController.bundle */; };
 		03150128166EB4960025F1F7 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 03150125166EB4960025F1F7 /* assets */; };
 		03150129166EB4960025F1F7 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = 03150126166EB4960025F1F7 /* scripts */; };
 		0315012A166EB4960025F1F7 /* src in Resources */ = {isa = PBXBuildFile; fileRef = 03150127166EB4960025F1F7 /* src */; };
@@ -109,7 +108,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0311A996169B8A2F007A4886 /* FacebookComposeViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookComposeViewController.bundle; path = ../../../../../Documents/GitHub/DEFacebookComposeViewController/FacebookComposeViewController/FacebookComposeViewController.bundle; sourceTree = "<group>"; };
 		03150125166EB4960025F1F7 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		03150126166EB4960025F1F7 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		03150127166EB4960025F1F7 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
@@ -500,7 +498,6 @@
 		0346ACC6166EB0E000A00BC4 /* BasicProject */ = {
 			isa = PBXGroup;
 			children = (
-				0311A996169B8A2F007A4886 /* FacebookComposeViewController.bundle */,
 				0346ACC7166EB0E000A00BC4 /* Supporting Files */,
 			);
 			path = BasicProject;
@@ -592,7 +589,6 @@
 				7CA4437C2BE6A060CB514A77 /* DETweetComposeView.xib in Resources */,
 				7CA4416A8F36E3FE363172FE /* DEViewController_iPad.xib in Resources */,
 				7CA4498578D7BD55F878336F /* DEViewController_iPhone.xib in Resources */,
-				0311A997169B8A2F007A4886 /* FacebookComposeViewController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
