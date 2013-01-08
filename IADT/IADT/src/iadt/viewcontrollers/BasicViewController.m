@@ -38,14 +38,7 @@
     [self.view addSubview: navigationBarView];
     navigationBarView.pageControl.currentPage = [self.navigationController.viewControllers count] - 1;
 
-    if (DEBUG) {
 
-//        UIPanGestureRecognizer *swipe = [[UIPanGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipe:)];
-//        swipe.cancelsTouchesInView = NO;
-//        [self.view addGestureRecognizer: swipe];
-
-
-    }
 
     if (navigationBarView.pageControl.currentPage > 2)
         [navigationBarView.homeButton addTarget: self action: @selector(handleHome:) forControlEvents: UIControlEventTouchUpInside];

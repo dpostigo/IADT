@@ -7,15 +7,17 @@
 
 #import <Foundation/Foundation.h>
 #import "BasicViewController.h"
-#import "SA_OAuthTwitterController.h"
+//#import "SA_OAuthTwitterController.h"
 
 
-@interface ResultsViewController : BasicViewController <SA_OAuthTwitterControllerDelegate> {
+@interface ResultsViewController : BasicViewController {
 
     IBOutlet UILabel *resultLabel;
+    IBOutlet UIImageView *badgeView;
 }
 
 
 - (IBAction) handleTwitter: (id) sender;
+- (IBAction) handleFacebook: (id) sender;
 
 @end

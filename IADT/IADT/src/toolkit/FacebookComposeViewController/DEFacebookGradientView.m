@@ -45,6 +45,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self tweetGradientViewInit];
+        NSLog(@"%s", __PRETTY_FUNCTION__);
+        NSLog(@"frame = %@", NSStringFromCGRect(frame));
     }
     return self;
 }
@@ -104,6 +106,11 @@
         _centerOffset = offset;
         [self setNeedsDisplay];
     }
+}
+
+
+- (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 

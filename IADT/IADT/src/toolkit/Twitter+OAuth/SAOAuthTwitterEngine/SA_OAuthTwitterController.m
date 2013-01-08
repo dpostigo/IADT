@@ -118,7 +118,7 @@ static NSString *const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 
         _webView.alpha = 0.0;
         _webView.delegate = self;
-        _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin;
         if ([_webView respondsToSelector: @selector(setDetectsPhoneNumbers:)]) [(id) _webView setDetectsPhoneNumbers: NO];
         if ([_webView respondsToSelector: @selector(setDataDetectorTypes:)]) [(id) _webView setDataDetectorTypes: 0];
 
@@ -163,9 +163,9 @@ static NSString *const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 
         NSLog(@"[[UIScreen mainScreen] bounds] = %@", NSStringFromCGRect([[UIScreen mainScreen] bounds]));
 
-//        CGRect rect = [[UIScreen mainScreen] bounds];
+        //        CGRect rect = [[UIScreen mainScreen] bounds];
         self.view = [[[UIView alloc] initWithFrame: CGRectMake(0, 0, 480, 288)] autorelease];
-//        self.view.backgroundColor = [UIColor blueColor];
+        //        self.view.backgroundColor = [UIColor blueColor];
         _backgroundView.frame = CGRectMake(0, 44, 480, 288);
         _navBar = [[[UINavigationBar alloc] initWithFrame: CGRectMake(0, 0, 480, 32)] autorelease];
     } else {
@@ -182,7 +182,8 @@ static NSString *const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
     if (!UIInterfaceOrientationIsLandscape( self.orientation)) [self.view addSubview: _backgroundView];
 
     [self.view addSubview: _webView];
-    [self.view addSubview: _navBar];
+        [self.view addSubview: _navBar];
+//    _navBar.frame = CGRectZero;
 
     _blockerView = [[[UIView alloc] initWithFrame: CGRectMake(0, 0, 200, 60)] autorelease];
     _blockerView.backgroundColor = [UIColor colorWithWhite: 0.0 alpha: 0.8];
@@ -191,6 +192,8 @@ static NSString *const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
     _blockerView.clipsToBounds = YES;
     _blockerView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     if ([_blockerView.layer respondsToSelector: @selector(setCornerRadius:)]) [(id) _blockerView.layer setCornerRadius: 10];
+
+
 
     UILabel *label = [[[UILabel alloc] initWithFrame: CGRectMake(0, 5, _blockerView.bounds.size.width, 15)] autorelease];
     label.text = NSLocalizedString(@"Please Wait…", nil);
@@ -375,6 +378,17 @@ Ugly. I apologize for its inelegance. Bleah.
     }
     if (navigationType != UIWebViewNavigationTypeOther) _webView.alpha = 0.1;
     return YES;
+}
+
+
+- (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+
+    UITouch *touch = [touches anyObject];
+    CGPoint point = [touch locationInView: self.view];
+
+
+
 }
 
 @end

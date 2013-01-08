@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03150128166EB4960025F1F7 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 03150125166EB4960025F1F7 /* assets */; };
+		03150129166EB4960025F1F7 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = 03150126166EB4960025F1F7 /* scripts */; };
+		0315012A166EB4960025F1F7 /* src in Resources */ = {isa = PBXBuildFile; fileRef = 03150127166EB4960025F1F7 /* src */; };
+		0346ACC1166EB0E000A00BC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346ACC0166EB0E000A00BC4 /* UIKit.framework */; };
+		0346ACC3166EB0E000A00BC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346ACC2166EB0E000A00BC4 /* Foundation.framework */; };
+		0346ACC5166EB0E000A00BC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346ACC4166EB0E000A00BC4 /* CoreGraphics.framework */; };
+		0346ACCB166EB0E000A00BC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0346ACC9166EB0E000A00BC4 /* InfoPlist.strings */; };
+		0346ACCD166EB0E000A00BC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346ACCC166EB0E000A00BC4 /* main.m */; };
+		0346ACD3166EB0E000A00BC4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346ACD2166EB0E000A00BC4 /* Default.png */; };
+		0346ACD5166EB0E000A00BC4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346ACD4166EB0E000A00BC4 /* Default@2x.png */; };
+		0346ACD7166EB0E000A00BC4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346ACD6166EB0E000A00BC4 /* Default-568h@2x.png */; };
+		0348A7E31679497B00BDC6A3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0348A7E21679497B00BDC6A3 /* QuartzCore.framework */; };
+		0348A7F916794AA700BDC6A3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0348A7F816794AA700BDC6A3 /* libz.dylib */; };
+		03B1F8751697A75C00E39A58 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B1F8741697A75C00E39A58 /* Accounts.framework */; };
+		03B1F8771697A76000E39A58 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B1F8761697A76000E39A58 /* Social.framework */; };
+		03B1F8791697A76300E39A58 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B1F8781697A76300E39A58 /* Twitter.framework */; };
+		7CA440776EC534B3540FB8EC /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA449AB0EEA64E50D9B7E84 /* UIColor+Utils.m */; };
+		7CA44106ECA362456D8188F9 /* TwitterDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44049586747F08E0FD738 /* TwitterDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA4415ADF7573D4378B298C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA44A597255E591874F395D /* libTestFlight.a */; };
+		7CA44175ED96C554A5266476 /* DETweetSheetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44667117ED65425BB0D16 /* DETweetSheetCardView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA441E585916FB4C8204B3E /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA445C1D8F3FD5F04B7DE6C /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA441E805B81CAFC2D3E922 /* OAuth+DEUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA440BC2FA7AE33E9AF2E08 /* OAuth+DEUserDefaults.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA442A0EC29BA645C64F52B /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 7CA446878281DC5762190660 /* sha1.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA442A2660259DDCEF2CA68 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44841D2D8CCF656D55C19 /* Base64Transcoder.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA4438722D0EAAD86886571 /* DETweetGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F117420B09C23323667 /* DETweetGradientView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA4440A343B1402518E4DC4 /* BasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C54A3156CA9E9116E42 /* BasicView.m */; };
+		7CA4443F04AAD95DD0904AEE /* DEViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CA44143876B3AF292126C3F /* DEViewController_iPhone.xib */; };
+		7CA444EFC09F4ACD21C2075D /* BasicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA440002B6DADB5E265A341 /* BasicLibrary.m */; };
+		7CA446617542C572C67264A0 /* TableRowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44AFDF317F3DDC298D272 /* TableRowObject.m */; };
+		7CA44689A36EC8313EE507D3 /* DEViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4482594A6F0F78FE3294C /* DEViewController_iPad.xib */; };
+		7CA446E1451A9DC340417EFA /* DETweetComposeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CA447F3E85A37D827608B8C /* DETweetComposeView.xib */; };
+		7CA447A5308915D7E620B4A0 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D9F87CCD8B9679F1F2F /* UIView+Utils.m */; };
+		7CA4482FDE62A01D41B9E656 /* VeryBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D8F8408EA95DDA9C41C /* VeryBasicViewController.m */; };
+		7CA4485201AA0055E51EA54D /* DEHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4413518DA1603E46F9FB5 /* DEHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA4487ACC965ECB14F16AC4 /* DEEmbossedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA447FAD3FD9EA6872D6620 /* DEEmbossedLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA448E29489DBAE3BC991A7 /* DETweetTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44A62E186095404570EC0 /* DETweetTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA449A2BD72FBBBC073F151 /* TableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44BA33B63A9E57E509D2C /* TableSection.m */; };
+		7CA449C460D3216894B855D8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA44EB689EED3F4D79410A6 /* MainStoryboard.storyboard */; };
+		7CA449C562885FA5C7F7951C /* MainStoryboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4444C5BFBA90896DF870C /* MainStoryboard-iPad.storyboard */; };
+		7CA449E6CAF60C68E986B007 /* DERuledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44512534DE7B5E75F9FEA /* DERuledView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA44A243C39D424AD6F06D8 /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44045152BF10D77E9F269 /* OAHMAC_SHA1SignatureProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA44AB21EB9D39DEB7977B5 /* OAuth+DEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D604B995E19C8394474 /* OAuth+DEExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA44B17E91BD41550F98C53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA442A34DB6B86BD1048EC6 /* AppDelegate.m */; };
+		7CA44B1B3467798FF75BC435 /* CBLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4493BD6ACF6FEA66A39F9 /* CBLayer.m */; };
+		7CA44B20164EEEDA955A6AAF /* OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA444D656C4AB8ECC6259E8 /* OAuth.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA44B45B7FBABEB067E6F87 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44E5CD22294ADC80722B9 /* DeviceUtils.m */; };
+		7CA44BCC46AE6EE07365F235 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F9A4035DFB8D9137DDC /* BasicViewController.m */; };
+		7CA44C8741278AF793842783 /* UIDevice+DETweetComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4416BEEDF728B1151D5C7 /* UIDevice+DETweetComposeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA44CA6B3660E2BB3F0CE20 /* DETweetComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA441A23132E46EDE77824A /* DETweetComposeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA44CEE2EBF0DB7D9B09459 /* DETweetPoster.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C0996548A65952D080E /* DETweetPoster.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA44DA5ADA14172D9A4FD8F /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA444E43759C20851165204 /* Model.m */; };
+		7CA44DF6C6D0CC373A19AE28 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44EC22F6E88E0D1F776F9 /* hmac.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA44E1961E49C8E043CA613 /* BasicOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F4C3BAB96C5940B8B7A /* BasicOperation.m */; };
+		7CA44EE395A2AA60A31497A0 /* BasicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C33806448F4A0C2A111 /* BasicModel.m */; };
+		7CA44F33788E5E45D9A1A563 /* DETweetAccountSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA444247EAC14610B19101B /* DETweetAccountSelectorViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA44F643263DB6F84798EDF /* UIApplication+DETweetComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44479F685775E6657FC1D /* UIApplication+DETweetComposeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03150125166EB4960025F1F7 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		03150126166EB4960025F1F7 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
+		03150127166EB4960025F1F7 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
+		0346ACBC166EB0E000A00BC4 /* BasicProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0346ACC0166EB0E000A00BC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0346ACC2166EB0E000A00BC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0346ACC4166EB0E000A00BC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0346ACC8166EB0E000A00BC4 /* BasicProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BasicProject-Info.plist"; sourceTree = "<group>"; };
+		0346ACCA166EB0E000A00BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0346ACCC166EB0E000A00BC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0346ACCE166EB0E000A00BC4 /* BasicProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BasicProject-Prefix.pch"; sourceTree = "<group>"; };
+		0346ACD2166EB0E000A00BC4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		0346ACD4166EB0E000A00BC4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0346ACD6166EB0E000A00BC4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0348A7E21679497B00BDC6A3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0348A7F816794AA700BDC6A3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		03B1F8741697A75C00E39A58 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		03B1F8761697A76000E39A58 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		03B1F8781697A76300E39A58 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		7CA440002B6DADB5E265A341 /* BasicLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicLibrary.m; path = src/models/BasicLibrary.m; sourceTree = "<group>"; };
+		7CA44045152BF10D77E9F269 /* OAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAHMAC_SHA1SignatureProvider.m; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/OAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
+		7CA44049586747F08E0FD738 /* TwitterDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterDialog.m; path = src/toolkit/DETweetComposeViewController/TwitterDialog.m; sourceTree = "<group>"; };
+		7CA440BC2FA7AE33E9AF2E08 /* OAuth+DEUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OAuth+DEUserDefaults.m"; path = "src/toolkit/DETweetComposeViewController/OAuth+DEUserDefaults.m"; sourceTree = "<group>"; };
+		7CA440DCAF4531658CF198A2 /* OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAHMAC_SHA1SignatureProvider.h; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
+		7CA4412AE0D3CE69DF5F30D9 /* DETweetAccountSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DETweetAccountSelectorViewController.h; path = src/toolkit/DETweetComposeViewController/DETweetAccountSelectorViewController.h; sourceTree = "<group>"; };
+		7CA4413518DA1603E46F9FB5 /* DEHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEHTTPRequest.m; path = src/toolkit/DETweetComposeViewController/OAuth/DEHTTPRequest.m; sourceTree = "<group>"; };
+		7CA44141612378CC15BDA0E2 /* BasicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicLibrary.h; path = src/models/BasicLibrary.h; sourceTree = "<group>"; };
+		7CA44143876B3AF292126C3F /* DEViewController_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DEViewController_iPhone.xib; path = src/toolkit/DETweetComposeViewController/DEViewController_iPhone.xib; sourceTree = "<group>"; };
+		7CA4416BEEDF728B1151D5C7 /* UIDevice+DETweetComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+DETweetComposeViewController.m"; path = "src/toolkit/DETweetComposeViewController/UIDevice+DETweetComposeViewController.m"; sourceTree = "<group>"; };
+		7CA441A23132E46EDE77824A /* DETweetComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DETweetComposeViewController.m; path = src/toolkit/DETweetComposeViewController/DETweetComposeViewController.m; sourceTree = "<group>"; };
+		7CA441A48A1995ECCEA2FD25 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/hmac.h; sourceTree = "<group>"; };
+		7CA441D6E81D055192693A43 /* UIApplication+DETweetComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+DETweetComposeViewController.h"; path = "src/toolkit/DETweetComposeViewController/UIApplication+DETweetComposeViewController.h"; sourceTree = "<group>"; };
+		7CA441E08D8C93F966604247 /* OAuth+DEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OAuth+DEExtensions.h"; path = "src/toolkit/DETweetComposeViewController/OAuth+DEExtensions.h"; sourceTree = "<group>"; };
+		7CA441E7AC12F2693076A38A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../src/_app/app/AppDelegate.h; sourceTree = "<group>"; };
+		7CA4427A39CC9A27A15B5D91 /* OAuthConsumerCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuthConsumerCredentials.h; path = src/toolkit/DETweetComposeViewController/OAuth/OAuthConsumerCredentials.h; sourceTree = "<group>"; };
+		7CA442855C5395A5923EE458 /* BasicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicModel.h; path = src/models/BasicModel.h; sourceTree = "<group>"; };
+		7CA442A34DB6B86BD1048EC6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../src/_app/app/AppDelegate.m; sourceTree = "<group>"; };
+		7CA4433DCEA93C9301355DC1 /* OAuthTwitterCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuthTwitterCallbacks.h; path = src/toolkit/DETweetComposeViewController/OAuth/OAuthTwitterCallbacks.h; sourceTree = "<group>"; };
+		7CA443AC3E50A6F9E00C0AA9 /* BasicOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicOperation.h; path = src/operations/BasicOperation.h; sourceTree = "<group>"; };
+		7CA443C58E76E28CDF8404BC /* OAuth+DEUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OAuth+DEUserDefaults.h"; path = "src/toolkit/DETweetComposeViewController/OAuth+DEUserDefaults.h"; sourceTree = "<group>"; };
+		7CA443CB16DCDDD0D49AD275 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = src/_app/models/Model.h; sourceTree = "<group>"; };
+		7CA44413C2C63D3BB35D558D /* TwitterLoginUiFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterLoginUiFeedback.h; path = src/toolkit/DETweetComposeViewController/OAuth/TwitterLoginUiFeedback.h; sourceTree = "<group>"; };
+		7CA444247EAC14610B19101B /* DETweetAccountSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DETweetAccountSelectorViewController.m; path = src/toolkit/DETweetComposeViewController/DETweetAccountSelectorViewController.m; sourceTree = "<group>"; };
+		7CA4444C5BFBA90896DF870C /* MainStoryboard-iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "MainStoryboard-iPad.storyboard"; path = "src/_app/nibs/MainStoryboard-iPad.storyboard"; sourceTree = "<group>"; };
+		7CA44479F685775E6657FC1D /* UIApplication+DETweetComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+DETweetComposeViewController.m"; path = "src/toolkit/DETweetComposeViewController/UIApplication+DETweetComposeViewController.m"; sourceTree = "<group>"; };
+		7CA44484B988A212F810F07F /* VeryBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VeryBasicViewController.h; path = src/viewcontrollers/VeryBasicViewController.h; sourceTree = "<group>"; };
+		7CA444D656C4AB8ECC6259E8 /* OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuth.m; path = src/toolkit/DETweetComposeViewController/OAuth/OAuth.m; sourceTree = "<group>"; };
+		7CA444E43759C20851165204 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = src/_app/models/Model.m; sourceTree = "<group>"; };
+		7CA444FF41836A7D7A81A87D /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Utils.h"; path = "src/utils/UIView+Utils.h"; sourceTree = "<group>"; };
+		7CA44512534DE7B5E75F9FEA /* DERuledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DERuledView.m; path = src/toolkit/DETweetComposeViewController/DERuledView.m; sourceTree = "<group>"; };
+		7CA445A07A3715724952FE29 /* DERuledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DERuledView.h; path = src/toolkit/DETweetComposeViewController/DERuledView.h; sourceTree = "<group>"; };
+		7CA445A3F482E02162B33398 /* DEEmbossedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEEmbossedLabel.h; path = src/toolkit/DETweetComposeViewController/DEEmbossedLabel.h; sourceTree = "<group>"; };
+		7CA445C1D8F3FD5F04B7DE6C /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncoding.m"; path = "src/toolkit/DETweetComposeViewController/OAuth/NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		7CA445F985288075BFE96522 /* DEHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEHTTPRequest.h; path = src/toolkit/DETweetComposeViewController/OAuth/DEHTTPRequest.h; sourceTree = "<group>"; };
+		7CA445FA6B9AC7A570AC7D2F /* CBLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBLayer.h; path = src/toolkit/CBButtons/CBLayer.h; sourceTree = "<group>"; };
+		7CA445FFF85FA6351989B1F1 /* DETweetPoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DETweetPoster.h; path = src/toolkit/DETweetComposeViewController/DETweetPoster.h; sourceTree = "<group>"; };
+		7CA44667117ED65425BB0D16 /* DETweetSheetCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DETweetSheetCardView.m; path = src/toolkit/DETweetComposeViewController/DETweetSheetCardView.m; sourceTree = "<group>"; };
+		7CA446878281DC5762190660 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/sha1.c; sourceTree = "<group>"; };
+		7CA446926218C11435558B6D /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Utils.h"; path = "src/utils/UIColor+Utils.h"; sourceTree = "<group>"; };
+		7CA446A4C1BE2393441B06A3 /* TableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableSection.h; path = src/table/TableSection.h; sourceTree = "<group>"; };
+		7CA446BE098BC0B9A4339368 /* OASignatureProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OASignatureProviding.h; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/OASignatureProviding.h; sourceTree = "<group>"; };
+		7CA446D3B51558138C9F3B84 /* UIDevice+DETweetComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+DETweetComposeViewController.h"; path = "src/toolkit/DETweetComposeViewController/UIDevice+DETweetComposeViewController.h"; sourceTree = "<group>"; };
+		7CA446EC23E1B313C91F3B01 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncoding.h"; path = "src/toolkit/DETweetComposeViewController/OAuth/NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		7CA4473F2BC96847BF04328C /* DETweetComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DETweetComposeViewController.h; path = src/toolkit/DETweetComposeViewController/DETweetComposeViewController.h; sourceTree = "<group>"; };
+		7CA4474098CEE3AD9A992597 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceUtils.h; path = src/utils/DeviceUtils.h; sourceTree = "<group>"; };
+		7CA447557B77CA37DFF56A01 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = src/toolkit/TestFlight/TestFlight.h; sourceTree = "<group>"; };
+		7CA447AC325EFAED3222EEFE /* TwitterDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterDialog.h; path = src/toolkit/DETweetComposeViewController/TwitterDialog.h; sourceTree = "<group>"; };
+		7CA447ED50D482B36B25349C /* DETweetTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DETweetTextView.h; path = src/toolkit/DETweetComposeViewController/DETweetTextView.h; sourceTree = "<group>"; };
+		7CA447F3E85A37D827608B8C /* DETweetComposeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DETweetComposeView.xib; path = src/toolkit/DETweetComposeViewController/DETweetComposeView.xib; sourceTree = "<group>"; };
+		7CA447FAD3FD9EA6872D6620 /* DEEmbossedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEEmbossedLabel.m; path = src/toolkit/DETweetComposeViewController/DEEmbossedLabel.m; sourceTree = "<group>"; };
+		7CA44810E92A9216B55FF657 /* DETweetSheetCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DETweetSheetCardView.h; path = src/toolkit/DETweetComposeViewController/DETweetSheetCardView.h; sourceTree = "<group>"; };
+		7CA4482594A6F0F78FE3294C /* DEViewController_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DEViewController_iPad.xib; path = src/toolkit/DETweetComposeViewController/DEViewController_iPad.xib; sourceTree = "<group>"; };
+		7CA44841D2D8CCF656D55C19 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Base64Transcoder.c; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/Base64Transcoder.c; sourceTree = "<group>"; };
+		7CA4493BD6ACF6FEA66A39F9 /* CBLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBLayer.m; path = src/toolkit/CBButtons/CBLayer.m; sourceTree = "<group>"; };
+		7CA449AB0EEA64E50D9B7E84 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Utils.m"; path = "src/utils/UIColor+Utils.m"; sourceTree = "<group>"; };
+		7CA449C8C8C91F3A00DCD62B /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConstants.h; path = src/_app/models/AppConstants.h; sourceTree = "<group>"; };
+		7CA44A597255E591874F395D /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = src/toolkit/TestFlight/libTestFlight.a; sourceTree = "<group>"; };
+		7CA44A62E186095404570EC0 /* DETweetTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DETweetTextView.m; path = src/toolkit/DETweetComposeViewController/DETweetTextView.m; sourceTree = "<group>"; };
+		7CA44AFDF317F3DDC298D272 /* TableRowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableRowObject.m; path = src/table/TableRowObject.m; sourceTree = "<group>"; };
+		7CA44B3F36FA58EC5C6EA297 /* DETweetGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DETweetGradientView.h; path = src/toolkit/DETweetComposeViewController/DETweetGradientView.h; sourceTree = "<group>"; };
+		7CA44B8169E2F1174FF6F92B /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64Transcoder.h; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/Base64Transcoder.h; sourceTree = "<group>"; };
+		7CA44BA33B63A9E57E509D2C /* TableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableSection.m; path = src/table/TableSection.m; sourceTree = "<group>"; };
+		7CA44BDA30F1BBE3F1C5A218 /* BasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicView.h; path = src/views/BasicView.h; sourceTree = "<group>"; };
+		7CA44C0996548A65952D080E /* DETweetPoster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DETweetPoster.m; path = src/toolkit/DETweetComposeViewController/DETweetPoster.m; sourceTree = "<group>"; };
+		7CA44C0F04D9F8BD427DA61E /* OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuth.h; path = src/toolkit/DETweetComposeViewController/OAuth/OAuth.h; sourceTree = "<group>"; };
+		7CA44C33806448F4A0C2A111 /* BasicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicModel.m; path = src/models/BasicModel.m; sourceTree = "<group>"; };
+		7CA44C54A3156CA9E9116E42 /* BasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicView.m; path = src/views/BasicView.m; sourceTree = "<group>"; };
+		7CA44C5A741C6244104961FF /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicViewController.h; path = src/_app/viewcontrollers/BasicViewController.h; sourceTree = "<group>"; };
+		7CA44D604B995E19C8394474 /* OAuth+DEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OAuth+DEExtensions.m"; path = "src/toolkit/DETweetComposeViewController/OAuth+DEExtensions.m"; sourceTree = "<group>"; };
+		7CA44D8F8408EA95DDA9C41C /* VeryBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VeryBasicViewController.m; path = src/viewcontrollers/VeryBasicViewController.m; sourceTree = "<group>"; };
+		7CA44D9F87CCD8B9679F1F2F /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Utils.m"; path = "src/utils/UIView+Utils.m"; sourceTree = "<group>"; };
+		7CA44E1DD93FDEE5D1E19CC9 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/sha1.h; sourceTree = "<group>"; };
+		7CA44E5CD22294ADC80722B9 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceUtils.m; path = src/utils/DeviceUtils.m; sourceTree = "<group>"; };
+		7CA44EB689EED3F4D79410A6 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = src/_app/nibs/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		7CA44EC22F6E88E0D1F776F9 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hmac.c; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/hmac.c; sourceTree = "<group>"; };
+		7CA44F108609679CF5D210EE /* TableRowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableRowObject.h; path = src/table/TableRowObject.h; sourceTree = "<group>"; };
+		7CA44F117420B09C23323667 /* DETweetGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DETweetGradientView.m; path = src/toolkit/DETweetComposeViewController/DETweetGradientView.m; sourceTree = "<group>"; };
+		7CA44F4C3BAB96C5940B8B7A /* BasicOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicOperation.m; path = src/operations/BasicOperation.m; sourceTree = "<group>"; };
+		7CA44F9A4035DFB8D9137DDC /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicViewController.m; path = src/_app/viewcontrollers/BasicViewController.m; sourceTree = "<group>"; };
+		7CA44FFE3BDDA92F8F38532A /* TwitterLoginPopupDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterLoginPopupDelegate.h; path = src/toolkit/DETweetComposeViewController/OAuth/TwitterLoginPopupDelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0346ACB9166EB0E000A00BC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B1F8791697A76300E39A58 /* Twitter.framework in Frameworks */,
+				03B1F8771697A76000E39A58 /* Social.framework in Frameworks */,
+				03B1F8751697A75C00E39A58 /* Accounts.framework in Frameworks */,
+				0348A7F916794AA700BDC6A3 /* libz.dylib in Frameworks */,
+				0348A7E31679497B00BDC6A3 /* QuartzCore.framework in Frameworks */,
+				0346ACC1166EB0E000A00BC4 /* UIKit.framework in Frameworks */,
+				0346ACC3166EB0E000A00BC4 /* Foundation.framework in Frameworks */,
+				0346ACC5166EB0E000A00BC4 /* CoreGraphics.framework in Frameworks */,
+				7CA4415ADF7573D4378B298C /* libTestFlight.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0346ACB1166EB0DF00A00BC4 = {
+			isa = PBXGroup;
+			children = (
+				03B1F8781697A76300E39A58 /* Twitter.framework */,
+				03B1F8761697A76000E39A58 /* Social.framework */,
+				03B1F8741697A75C00E39A58 /* Accounts.framework */,
+				0346ACC6166EB0E000A00BC4 /* BasicProject */,
+				03150127166EB4960025F1F7 /* src */,
+				03150125166EB4960025F1F7 /* assets */,
+				03150126166EB4960025F1F7 /* scripts */,
+				0346ACBF166EB0E000A00BC4 /* Frameworks */,
+				0346ACBD166EB0E000A00BC4 /* Products */,
+				7CA44C5A741C6244104961FF /* BasicViewController.h */,
+				7CA44F9A4035DFB8D9137DDC /* BasicViewController.m */,
+				7CA44484B988A212F810F07F /* VeryBasicViewController.h */,
+				7CA44D8F8408EA95DDA9C41C /* VeryBasicViewController.m */,
+				7CA443CB16DCDDD0D49AD275 /* Model.h */,
+				7CA444E43759C20851165204 /* Model.m */,
+				7CA44C33806448F4A0C2A111 /* BasicModel.m */,
+				7CA442855C5395A5923EE458 /* BasicModel.h */,
+				7CA440002B6DADB5E265A341 /* BasicLibrary.m */,
+				7CA44141612378CC15BDA0E2 /* BasicLibrary.h */,
+				7CA44F4C3BAB96C5940B8B7A /* BasicOperation.m */,
+				7CA443AC3E50A6F9E00C0AA9 /* BasicOperation.h */,
+				7CA444FF41836A7D7A81A87D /* UIView+Utils.h */,
+				7CA44D9F87CCD8B9679F1F2F /* UIView+Utils.m */,
+				7CA446926218C11435558B6D /* UIColor+Utils.h */,
+				7CA449AB0EEA64E50D9B7E84 /* UIColor+Utils.m */,
+				7CA44C54A3156CA9E9116E42 /* BasicView.m */,
+				7CA44BDA30F1BBE3F1C5A218 /* BasicView.h */,
+				7CA44F108609679CF5D210EE /* TableRowObject.h */,
+				7CA44AFDF317F3DDC298D272 /* TableRowObject.m */,
+				7CA446A4C1BE2393441B06A3 /* TableSection.h */,
+				7CA44BA33B63A9E57E509D2C /* TableSection.m */,
+				7CA4444C5BFBA90896DF870C /* MainStoryboard-iPad.storyboard */,
+				7CA44EB689EED3F4D79410A6 /* MainStoryboard.storyboard */,
+				7CA4493BD6ACF6FEA66A39F9 /* CBLayer.m */,
+				7CA445FA6B9AC7A570AC7D2F /* CBLayer.h */,
+				7CA449C8C8C91F3A00DCD62B /* AppConstants.h */,
+				7CA447557B77CA37DFF56A01 /* TestFlight.h */,
+				7CA4474098CEE3AD9A992597 /* DeviceUtils.h */,
+				7CA44E5CD22294ADC80722B9 /* DeviceUtils.m */,
+				7CA445A3F482E02162B33398 /* DEEmbossedLabel.h */,
+				7CA447FAD3FD9EA6872D6620 /* DEEmbossedLabel.m */,
+				7CA445A07A3715724952FE29 /* DERuledView.h */,
+				7CA44512534DE7B5E75F9FEA /* DERuledView.m */,
+				7CA4412AE0D3CE69DF5F30D9 /* DETweetAccountSelectorViewController.h */,
+				7CA444247EAC14610B19101B /* DETweetAccountSelectorViewController.m */,
+				7CA447F3E85A37D827608B8C /* DETweetComposeView.xib */,
+				7CA4473F2BC96847BF04328C /* DETweetComposeViewController.h */,
+				7CA441A23132E46EDE77824A /* DETweetComposeViewController.m */,
+				7CA44B3F36FA58EC5C6EA297 /* DETweetGradientView.h */,
+				7CA44F117420B09C23323667 /* DETweetGradientView.m */,
+				7CA445FFF85FA6351989B1F1 /* DETweetPoster.h */,
+				7CA44C0996548A65952D080E /* DETweetPoster.m */,
+				7CA44810E92A9216B55FF657 /* DETweetSheetCardView.h */,
+				7CA44667117ED65425BB0D16 /* DETweetSheetCardView.m */,
+				7CA447ED50D482B36B25349C /* DETweetTextView.h */,
+				7CA44A62E186095404570EC0 /* DETweetTextView.m */,
+				7CA4482594A6F0F78FE3294C /* DEViewController_iPad.xib */,
+				7CA44143876B3AF292126C3F /* DEViewController_iPhone.xib */,
+				7CA441E08D8C93F966604247 /* OAuth+DEExtensions.h */,
+				7CA44D604B995E19C8394474 /* OAuth+DEExtensions.m */,
+				7CA443C58E76E28CDF8404BC /* OAuth+DEUserDefaults.h */,
+				7CA440BC2FA7AE33E9AF2E08 /* OAuth+DEUserDefaults.m */,
+				7CA441D6E81D055192693A43 /* UIApplication+DETweetComposeViewController.h */,
+				7CA44479F685775E6657FC1D /* UIApplication+DETweetComposeViewController.m */,
+				7CA446D3B51558138C9F3B84 /* UIDevice+DETweetComposeViewController.h */,
+				7CA4416BEEDF728B1151D5C7 /* UIDevice+DETweetComposeViewController.m */,
+				7CA445F985288075BFE96522 /* DEHTTPRequest.h */,
+				7CA4413518DA1603E46F9FB5 /* DEHTTPRequest.m */,
+				7CA446EC23E1B313C91F3B01 /* NSString+URLEncoding.h */,
+				7CA445C1D8F3FD5F04B7DE6C /* NSString+URLEncoding.m */,
+				7CA44C0F04D9F8BD427DA61E /* OAuth.h */,
+				7CA444D656C4AB8ECC6259E8 /* OAuth.m */,
+				7CA4427A39CC9A27A15B5D91 /* OAuthConsumerCredentials.h */,
+				7CA4433DCEA93C9301355DC1 /* OAuthTwitterCallbacks.h */,
+				7CA44FFE3BDDA92F8F38532A /* TwitterLoginPopupDelegate.h */,
+				7CA44413C2C63D3BB35D558D /* TwitterLoginUiFeedback.h */,
+				7CA44049586747F08E0FD738 /* TwitterDialog.m */,
+				7CA447AC325EFAED3222EEFE /* TwitterDialog.h */,
+				7CA44841D2D8CCF656D55C19 /* Base64Transcoder.c */,
+				7CA44B8169E2F1174FF6F92B /* Base64Transcoder.h */,
+				7CA44EC22F6E88E0D1F776F9 /* hmac.c */,
+				7CA441A48A1995ECCEA2FD25 /* hmac.h */,
+				7CA440DCAF4531658CF198A2 /* OAHMAC_SHA1SignatureProvider.h */,
+				7CA44045152BF10D77E9F269 /* OAHMAC_SHA1SignatureProvider.m */,
+				7CA446BE098BC0B9A4339368 /* OASignatureProviding.h */,
+				7CA446878281DC5762190660 /* sha1.c */,
+				7CA44E1DD93FDEE5D1E19CC9 /* sha1.h */,
+			);
+			sourceTree = "<group>";
+		};
+		0346ACBD166EB0E000A00BC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0346ACBC166EB0E000A00BC4 /* BasicProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0346ACBF166EB0E000A00BC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0348A7F816794AA700BDC6A3 /* libz.dylib */,
+				7CA44A597255E591874F395D /* libTestFlight.a */,
+				0348A7E21679497B00BDC6A3 /* QuartzCore.framework */,
+				0346ACC0166EB0E000A00BC4 /* UIKit.framework */,
+				0346ACC2166EB0E000A00BC4 /* Foundation.framework */,
+				0346ACC4166EB0E000A00BC4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0346ACC6166EB0E000A00BC4 /* BasicProject */ = {
+			isa = PBXGroup;
+			children = (
+				7CA441E7AC12F2693076A38A /* AppDelegate.h */,
+				7CA442A34DB6B86BD1048EC6 /* AppDelegate.m */,
+				0346ACC7166EB0E000A00BC4 /* Supporting Files */,
+			);
+			path = BasicProject;
+			sourceTree = "<group>";
+		};
+		0346ACC7166EB0E000A00BC4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0346ACC8166EB0E000A00BC4 /* BasicProject-Info.plist */,
+				0346ACC9166EB0E000A00BC4 /* InfoPlist.strings */,
+				0346ACCC166EB0E000A00BC4 /* main.m */,
+				0346ACCE166EB0E000A00BC4 /* BasicProject-Prefix.pch */,
+				0346ACD2166EB0E000A00BC4 /* Default.png */,
+				0346ACD4166EB0E000A00BC4 /* Default@2x.png */,
+				0346ACD6166EB0E000A00BC4 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0346ACBB166EB0E000A00BC4 /* BasicProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0346ACDA166EB0E000A00BC4 /* Build configuration list for PBXNativeTarget "BasicProject" */;
+			buildPhases = (
+				0346ACB8166EB0E000A00BC4 /* Sources */,
+				0346ACB9166EB0E000A00BC4 /* Frameworks */,
+				0346ACBA166EB0E000A00BC4 /* Resources */,
+				0346ACE9166EB1F700A00BC4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BasicProject;
+			productName = BasicProject;
+			productReference = 0346ACBC166EB0E000A00BC4 /* BasicProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0346ACB3166EB0DF00A00BC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Daniela Postigo";
+			};
+			buildConfigurationList = 0346ACB6166EB0DF00A00BC4 /* Build configuration list for PBXProject "IADTTwitter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0346ACB1166EB0DF00A00BC4;
+			productRefGroup = 0346ACBD166EB0E000A00BC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0346ACBB166EB0E000A00BC4 /* BasicProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0346ACBA166EB0E000A00BC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0346ACCB166EB0E000A00BC4 /* InfoPlist.strings in Resources */,
+				0346ACD3166EB0E000A00BC4 /* Default.png in Resources */,
+				0346ACD5166EB0E000A00BC4 /* Default@2x.png in Resources */,
+				0346ACD7166EB0E000A00BC4 /* Default-568h@2x.png in Resources */,
+				03150128166EB4960025F1F7 /* assets in Resources */,
+				03150129166EB4960025F1F7 /* scripts in Resources */,
+				0315012A166EB4960025F1F7 /* src in Resources */,
+				7CA449C562885FA5C7F7951C /* MainStoryboard-iPad.storyboard in Resources */,
+				7CA449C460D3216894B855D8 /* MainStoryboard.storyboard in Resources */,
+				7CA446E1451A9DC340417EFA /* DETweetComposeView.xib in Resources */,
+				7CA44689A36EC8313EE507D3 /* DEViewController_iPad.xib in Resources */,
+				7CA4443F04AAD95DD0904AEE /* DEViewController_iPhone.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0346ACE9166EB1F700A00BC4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"${SRCROOT}/scripts/import_script.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0346ACB8166EB0E000A00BC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0346ACCD166EB0E000A00BC4 /* main.m in Sources */,
+				7CA44B17E91BD41550F98C53 /* AppDelegate.m in Sources */,
+				7CA44BCC46AE6EE07365F235 /* BasicViewController.m in Sources */,
+				7CA4482FDE62A01D41B9E656 /* VeryBasicViewController.m in Sources */,
+				7CA44DA5ADA14172D9A4FD8F /* Model.m in Sources */,
+				7CA44EE395A2AA60A31497A0 /* BasicModel.m in Sources */,
+				7CA444EFC09F4ACD21C2075D /* BasicLibrary.m in Sources */,
+				7CA44E1961E49C8E043CA613 /* BasicOperation.m in Sources */,
+				7CA447A5308915D7E620B4A0 /* UIView+Utils.m in Sources */,
+				7CA440776EC534B3540FB8EC /* UIColor+Utils.m in Sources */,
+				7CA4440A343B1402518E4DC4 /* BasicView.m in Sources */,
+				7CA446617542C572C67264A0 /* TableRowObject.m in Sources */,
+				7CA449A2BD72FBBBC073F151 /* TableSection.m in Sources */,
+				7CA44B1B3467798FF75BC435 /* CBLayer.m in Sources */,
+				7CA44B45B7FBABEB067E6F87 /* DeviceUtils.m in Sources */,
+				7CA4487ACC965ECB14F16AC4 /* DEEmbossedLabel.m in Sources */,
+				7CA449E6CAF60C68E986B007 /* DERuledView.m in Sources */,
+				7CA44F33788E5E45D9A1A563 /* DETweetAccountSelectorViewController.m in Sources */,
+				7CA44CA6B3660E2BB3F0CE20 /* DETweetComposeViewController.m in Sources */,
+				7CA4438722D0EAAD86886571 /* DETweetGradientView.m in Sources */,
+				7CA44CEE2EBF0DB7D9B09459 /* DETweetPoster.m in Sources */,
+				7CA44175ED96C554A5266476 /* DETweetSheetCardView.m in Sources */,
+				7CA448E29489DBAE3BC991A7 /* DETweetTextView.m in Sources */,
+				7CA44AB21EB9D39DEB7977B5 /* OAuth+DEExtensions.m in Sources */,
+				7CA441E805B81CAFC2D3E922 /* OAuth+DEUserDefaults.m in Sources */,
+				7CA44F643263DB6F84798EDF /* UIApplication+DETweetComposeViewController.m in Sources */,
+				7CA44C8741278AF793842783 /* UIDevice+DETweetComposeViewController.m in Sources */,
+				7CA4485201AA0055E51EA54D /* DEHTTPRequest.m in Sources */,
+				7CA441E585916FB4C8204B3E /* NSString+URLEncoding.m in Sources */,
+				7CA44B20164EEEDA955A6AAF /* OAuth.m in Sources */,
+				7CA44106ECA362456D8188F9 /* TwitterDialog.m in Sources */,
+				7CA442A2660259DDCEF2CA68 /* Base64Transcoder.c in Sources */,
+				7CA44DF6C6D0CC373A19AE28 /* hmac.c in Sources */,
+				7CA44A243C39D424AD6F06D8 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
+				7CA442A0EC29BA645C64F52B /* sha1.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0346ACC9166EB0E000A00BC4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0346ACCA166EB0E000A00BC4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0346ACD8166EB0E000A00BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		0346ACD9166EB0E000A00BC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0346ACDB166EB0E000A00BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BasicProject/BasicProject-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TESTFLIGHT_ENABLED=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BasicProject/BasicProject-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/src/toolkit/TestFlight\"/**",
+					"\"${PROJECT_DIR}/src/toolkit/TestFlight\"/**",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0346ACDC166EB0E000A00BC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BasicProject/BasicProject-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "TESTFLIGHT_ENABLED=1";
+				INFOPLIST_FILE = "BasicProject/BasicProject-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/src/toolkit/TestFlight\"/**",
+					"\"${PROJECT_DIR}/src/toolkit/TestFlight\"/**",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0348A7E5167949F600BDC6A3 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AppStore;
+		};
+		0348A7E6167949F600BDC6A3 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BasicProject/BasicProject-Prefix.pch";
+				INFOPLIST_FILE = "BasicProject/BasicProject-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/src/toolkit/TestFlight\"/**",
+					"\"${PROJECT_DIR}/src/toolkit/TestFlight\"/**",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = AppStore;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0346ACB6166EB0DF00A00BC4 /* Build configuration list for PBXProject "IADTTwitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0346ACD8166EB0E000A00BC4 /* Debug */,
+				0346ACD9166EB0E000A00BC4 /* Release */,
+				0348A7E5167949F600BDC6A3 /* AppStore */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0346ACDA166EB0E000A00BC4 /* Build configuration list for PBXNativeTarget "BasicProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0346ACDB166EB0E000A00BC4 /* Debug */,
+				0346ACDC166EB0E000A00BC4 /* Release */,
+				0348A7E6167949F600BDC6A3 /* AppStore */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0346ACB3166EB0DF00A00BC4 /* Project object */;
+}

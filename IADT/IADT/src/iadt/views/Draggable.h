@@ -43,6 +43,7 @@
 
     NSInteger itemLimit;
     NSUInteger itemCount;
+    UIView *currentDrop;
 
 
 
@@ -61,6 +62,8 @@
 @property(nonatomic) NSInteger itemLimit;
 @property(nonatomic) BOOL droppingDisabled;
 @property(nonatomic) BOOL shouldHover;
+@property(nonatomic, strong) UIView *currentDrop;
+- (BOOL) isPlaced;
 - (void) reset;
 
 @end

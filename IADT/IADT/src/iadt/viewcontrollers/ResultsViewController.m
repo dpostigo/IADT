@@ -5,39 +5,87 @@
 //
 
 
-#import <Accounts/Accounts.h>
 #import <Twitter/Twitter.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "ResultsViewController.h"
 #import "Model.h"
 #import "UpdateToDocuments.h"
-#import "MGTwitterEngine.h"
-#import "SA_OAuthTwitterEngine.h"
-#import "SA_OAuthTwitterController.h"
 #import "SocialHandler.h"
 #import "DEFacebookComposeViewController.h"
-
-
+#import "DETweetComposeViewController.h"
 
 
 @implementation ResultsViewController {
-    SA_OAuthTwitterController *authController;
-    SA_OAuthTwitterEngine *_engine;
+    NSString *badgeName;
+    NSString *messageString;
 }
 
 
 - (void) loadView {
     [super loadView];
+
+    messageString = [NSString stringWithFormat: @"My digital DNA."];
+
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+
+    NSArray *points = [_model.pointScores allValues];
+    CGPoint monsterPoint = CGPointMake(0, 0);
+    for (NSValue *value in points) {
+        CGPoint point = [value CGPointValue];
+        monsterPoint.x += point.x;
+        monsterPoint.y += point.y;
+    }
+
+    NSUInteger numGames = [[_model.pointScores allKeys] count];
+    CGPoint resultPoint = CGPointMake(monsterPoint.x / numGames, monsterPoint.y / numGames);
+    NSInteger base = 0;
+    if (resultPoint.y > 0) {
+        if (resultPoint.x < 0) {
+            base = 1;
+            base = base + [self chooseTriangle: monsterPoint switch: NO];
+        } else {
+            base = 3;
+            base = base + [self chooseTriangle: monsterPoint switch: YES];
+        }
+    } else {
+        if (resultPoint.x > 0) {
+            base = 5;
+            base = base + [self chooseTriangle: monsterPoint switch: NO];
+        } else {
+            base = 7;
+            base = base + [self chooseTriangle: monsterPoint switch: YES];
+        }
+    }
+
+    badgeName = [NSString stringWithFormat: @"badge%i", base];
+    badgeView.image = [UIImage imageNamed: badgeName];
+
+    NSLog(@"NSStringFromCGPoint(resultPoint) = %@", NSStringFromCGPoint(resultPoint));
+    NSLog(@"badgeName = %@", badgeName);
+}
+
+
+- (NSInteger) chooseTriangle: (CGPoint) monsterPoint switch: (BOOL) shouldSwitch {
+
+    NSInteger ret = 0;
+    if (abs((int) monsterPoint.x) > abs((int) monsterPoint.y)) {
+        ret = 0;
+    } else {
+        ret = 1;
+    }
+
+    if (shouldSwitch) {
+        ret = (ret == 0) ? 1: 0;
+    }
+    return ret;
 }
 
 
 - (void) viewWillAppear: (BOOL) animated {
     [super viewWillAppear: animated];
 
-    if (!DEBUG) {
-
+    if ([[_model.scores allValues] count] > 0) {
         NSString *string = [[_model.scores allValues] componentsJoinedByString: @", "];
-
         NSLog(@"string = %@", string);
         resultLabel.text = string;
 
@@ -49,26 +97,60 @@
 
 - (IBAction) handleTwitter: (id) sender {
 
-    if (DEBUG) {
-
-        _engine = [[SA_OAuthTwitterEngine alloc] initOAuthWithDelegate: self];
-        _engine.consumerKey = kOAuthTwitterConsumerKey;
-        _engine.consumerSecret = kOAuthTwitterConsumerSecret;
-
-        authController = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self forOrientation: self.interfaceOrientation];
-
-        if (authController) {
-
-            authController.modalPresentationStyle = UIModalPresentationFormSheet;
-            authController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-            [self presentViewController: authController animated: YES completion: nil];
+    DETweetComposeViewControllerCompletionHandler completionHandler = ^(DETweetComposeViewControllerResult result) {
+        switch (result) {
+            case DETweetComposeViewControllerResultCancelled:
+                NSLog(@"Twitter Result: Cancelled");
+                break;
+            case DETweetComposeViewControllerResultDone:
+                NSLog(@"Twitter Result: Sent");
+                break;
         }
 
-        else {
-            NSLog(@"Already updated.");
-            [_engine sendUpdate: [NSString stringWithFormat: @"Already Updated. %@", [NSDate date]]];
+        [self dismissViewControllerAnimated: YES completion: nil];
+
+        NSHTTPCookie *cookie;
+        NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        for (cookie in [storage cookies]) {
+            [storage deleteCookie: cookie];
         }
-    }
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    };
+    DETweetComposeViewController *controller = [[DETweetComposeViewController alloc] init];
+    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+    [controller setInitialText: messageString];
+    [controller addImage: [UIImage imageNamed: badgeName]];
+    controller.alwaysUseDETwitterCredentials = YES;
+    controller.completionHandler = completionHandler;
+    [self presentViewController: controller animated: YES completion: nil];
+}
+
+
+- (IBAction) handleFacebook: (id) sender {
+
+    DEFacebookComposeViewControllerCompletionHandler completionHandler = ^(DEFacebookComposeViewControllerResult result) {
+        switch (result) {
+            case DEFacebookComposeViewControllerResultCancelled:
+                NSLog(@"Facebook Result: Cancelled");
+                break;
+            case DEFacebookComposeViewControllerResultDone:
+                NSLog(@"Facebook Result: Sent");
+                break;
+        }
+        [self dismissViewControllerAnimated: YES completion: NULL];
+    };
+    DEFacebookComposeViewController *controller = [[DEFacebookComposeViewController alloc] init];
+//    controller.fromViewController = self;
+    [self setModalPresentationStyle: UIModalPresentationCurrentContext];
+    controller.modalPresentationStyle = UIModalPresentationFullScreen;
+    //    self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    [controller setInitialText: messageString];
+    [controller addImage: [UIImage imageNamed: badgeName]];
+    [controller setCompletionHandler: completionHandler];
+
+    [self presentViewController: controller animated: YES completion: nil];
+
+
 }
 
 
@@ -94,6 +176,13 @@
         }
 
         [SocialHandler removeTwitterAccounts];
+        NSHTTPCookie *cookie;
+        NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        for (cookie in [storage cookies]) {
+            [storage deleteCookie: cookie];
+        }
+        [[NSUserDefaults standardUserDefaults] synchronize];
+
         [self dismissViewControllerAnimated: YES completion: nil];
     }];
 
@@ -101,75 +190,9 @@
 }
 
 
-
-- (IBAction) handleFacebook: (id) sender {
+- (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
 
     NSLog(@"%s", __PRETTY_FUNCTION__);
-
-    if (DEBUG) {
-
-
-        DEFacebookComposeViewController *facebookViewComposer = [[DEFacebookComposeViewController alloc] init];
-
-        self.modalPresentationStyle = UIModalPresentationCurrentContext;
-        [facebookViewComposer setInitialText:@"Hello. This is a Facebook post."];
-        // [facebookViewComposer addImage:[UIImage imageNamed:@"1.jpg"]];
-        // [facebookViewComposer addURL:[NSURL URLWithString:@"http://applications.3d4medical.com/heart_pro.php"]];
-
-        [facebookViewComposer setCompletionHandler:^(DEFacebookComposeViewControllerResult result) {
-            switch (result) {
-                case DEFacebookComposeViewControllerResultCancelled:
-                    NSLog(@"Facebook Result: Cancelled");
-                    break;
-                case DEFacebookComposeViewControllerResultDone:
-                    NSLog(@"Facebook Result: Sent");
-                    break;
-            }
-
-            [self dismissViewControllerAnimated: YES completion: nil];
-
-            [[FBSession activeSession] closeAndClearTokenInformation];
-        }];
-
-        [self presentViewController:facebookViewComposer animated:YES completion:^{ }];
-
-
-    }
-
 }
-
-
-
-
-#pragma mark SA_OAuthTwitterEngineDelegate
-
-- (void) storeCachedTwitterOAuthData: (NSString *) data forUsername: (NSString *) username {
-    [SocialHandler saveTwitterAccountWithDataString: data];
-}
-
-- (NSString *) cachedTwitterOAuthDataForUsername: (NSString *) username {
-    return nil;
-}
-
-
-#pragma mark SA_OAuthTwitterControllerDelegate
-- (void) OAuthTwitterController: (SA_OAuthTwitterController *) controller authenticatedWithUsername: (NSString *) username {
-    [authController dismissViewControllerAnimated: YES completion: ^{
-        [self tweet];
-    }];
-}
-
-
-- (void) OAuthTwitterControllerFailed: (SA_OAuthTwitterController *) controller {
-    NSLog(@"Authentication Failed!");
-}
-
-
-- (void) OAuthTwitterControllerCanceled: (SA_OAuthTwitterController *) controller {
-    NSLog(@"Authentication Canceled.");
-}
-
-
-
 
 @end

@@ -10,8 +10,10 @@
 #import "GameIntroView.h"
 
 
+
 @interface BasicGameViewController : BasicViewController {
 
+    BOOL isDummyGame;
     GameIntroView *introView;
 
     IBOutlet UIImageView *ghostImage;
@@ -24,13 +26,14 @@
     NSMutableArray *draggables;
     NSInteger itemCount;
 
+    IBOutlet UIButton *nextButton;
+
 }
 
 
 @property(nonatomic, strong) GameIntroView *introView;
 @property(nonatomic, strong) NSMutableArray *draggables;
-
-
+@property(nonatomic) BOOL isDummyGame;
 - (IBAction) reset: (id) sender;
 
 

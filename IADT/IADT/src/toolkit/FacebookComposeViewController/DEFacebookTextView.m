@@ -17,31 +17,31 @@
 //
 
 #import "DEFacebookTextView.h"
-#import "DERuledView.h"
+#import "DEFacebookRuledView.h"
 #import "UIDevice+DEFacebookComposeViewController.h"
 
 
 @interface DEFacebookTextView ()
 
-@property (nonatomic, retain) DERuledView *ruledView;
-@property (nonatomic, retain) UIButton *fromButton;
-@property (nonatomic, retain) UIButton *accountButton;
-@property (nonatomic, retain) UIImageView *accountLine;
 
-- (void)textViewInit;
-- (CGRect)ruledViewFrame;
-- (void)updateAccountsView;
+@property(nonatomic, retain) DEFacebookRuledView *ruledView;
+@property(nonatomic, retain) UIButton *fromButton;
+@property(nonatomic, retain) UIButton *accountButton;
+@property(nonatomic, retain) UIImageView *accountLine;
+- (void) textViewInit;
+- (CGRect) ruledViewFrame;
+- (void) updateAccountsView;
 
 @end
 
 
 @implementation DEFacebookTextView
 
-    // Public
+// Public
 @synthesize accountName = _accountName;
 @dynamic fromButtonFrame;
 
-    // Private
+// Private
 @synthesize ruledView = _ruledView;
 @synthesize fromButton = _fromButton;
 @synthesize accountButton = _accountButton;
@@ -50,104 +50,96 @@
 
 #pragma mark - Setup & Teardown
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+- (id) initWithFrame: (CGRect) frame {
+    self = [super initWithFrame: frame];
     if (self) {
         [self textViewInit];
     }
-    
+
     return self;
 }
 
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
+- (id) initWithCoder: (NSCoder *) aDecoder {
+    self = [super initWithCoder: aDecoder];
     if (self) {
         [self textViewInit];
     }
-    
+
     return self;
 }
 
 
-- (void)textViewInit
-{   
+- (void) textViewInit {
     self.clipsToBounds = NO;  // So the rules can extend outside of the view.
 
-    _ruledView = [[DERuledView alloc] initWithFrame:[self ruledViewFrame]];
-    _ruledView.lineColor = [UIColor colorWithWhite:0.5f alpha:0.15f];
+    _ruledView = [[DEFacebookRuledView alloc] initWithFrame: [self ruledViewFrame]];
+    _ruledView.lineColor = [UIColor colorWithWhite: 0.5f alpha: 0.15f];
     _ruledView.lineWidth = 1.0f;
     _ruledView.rowHeight = self.font.lineHeight;
-    [self insertSubview:self.ruledView atIndex:0];
+    [self insertSubview: self.ruledView atIndex: 0];
 }
 
 
-- (void)dealloc
-{
-        // Public
+- (void) dealloc {
+    // Public
     [_accountName release], _accountName = nil;
-    
-        // Private
+
+    // Private
     [_ruledView release], _ruledView = nil;
     [_fromButton release], _fromButton = nil;
     [_accountButton release], _accountButton = nil;
     [_accountLine release], _accountLine = nil;
-    
+
     [super dealloc];
 }
 
 
 #pragma mark - Superclass Overrides
 
-- (void)layoutSubviews
-{
+- (void) layoutSubviews {
     [super layoutSubviews];
-    
+
     if ([self.accountName length] > 0) {
         CGRect frame = self.fromButton.frame;
         frame.origin = CGPointMake(12.0f, -21.0f);
         self.fromButton.frame = frame;
-        
+
         frame = self.accountButton.frame;
         frame.origin.x = CGRectGetMaxX(self.fromButton.frame) + 3.0f;
         frame.origin.y = self.fromButton.frame.origin.y;
         self.accountButton.frame = frame;
-        
+
         frame = self.accountLine.frame;
         frame.origin = CGPointMake(0.0f, CGRectGetMaxY(self.fromButton.frame) + 2.0f);
         self.accountLine.frame = frame;
-        
+
         self.contentInset = UIEdgeInsetsMake(25.0f, 0.0f, 0.0f, 0.0f);
     }
-    
+
     self.ruledView.frame = [self ruledViewFrame];
 }
 
 
-- (void)setContentSize:(CGSize)contentSize
-{
-    [super setContentSize:contentSize];
+- (void) setContentSize: (CGSize) contentSize {
+    [super setContentSize: contentSize];
     self.ruledView.frame = [self ruledViewFrame];
 }
 
 
-- (void)setFont:(UIFont *)font
-{
-    [super setFont:font];
+- (void) setFont: (UIFont *) font {
+    [super setFont: font];
     self.ruledView.rowHeight = self.font.lineHeight;
 }
 
 
 #pragma mark - Private
 
-- (CGRect)ruledViewFrame
-{
+- (CGRect) ruledViewFrame {
     CGFloat extraForBounce = 200.0f;  // Extra added to top and bottom so it's visible when the user drags past the bounds.
     CGFloat width = 1024.0f;  // Needs to be at least as wide as we might make the Tweet sheet.
     CGFloat textAlignmentOffset = -2.0f;  // To center the text between the lines. May want to find a way to determine this procedurally eventually.
-    
+
     CGRect frame;
     if ([self.accountName length] > 0) {
         frame = CGRectMake(0.0f, 30.0f, width, self.contentSize.height + extraForBounce);
@@ -155,40 +147,39 @@
     else {
         frame = CGRectMake(0.0f, -extraForBounce + textAlignmentOffset, width, self.contentSize.height + (2 * extraForBounce));
     }
-    
+
     return frame;
 }
 
 
-- (void)updateAccountsView
-{
+- (void) updateAccountsView {
     if ([self.accountName length] > 0) {
         if (self.fromButton == nil) {
-            self.fromButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            [self.fromButton addTarget:self action:@selector(accountButtonTouched) forControlEvents:UIControlEventTouchUpInside];
-            [self.fromButton setTitle:NSLocalizedString(@"From:", @"") forState:UIControlStateNormal];
-            self.fromButton.titleLabel.font = [UIFont systemFontOfSize:17.0f];
-            [self.fromButton setTitleColor:[UIColor colorWithWhite:0.58f alpha:1.0f] forState:UIControlStateNormal];
-            [self.fromButton setTitleColor:[UIColor lightTextColor] forState:UIControlStateHighlighted];
+            self.fromButton = [UIButton buttonWithType: UIButtonTypeCustom];
+            [self.fromButton addTarget: self action: @selector(accountButtonTouched) forControlEvents: UIControlEventTouchUpInside];
+            [self.fromButton setTitle: NSLocalizedString(@"From:", @"") forState: UIControlStateNormal];
+            self.fromButton.titleLabel.font = [UIFont systemFontOfSize: 17.0f];
+            [self.fromButton setTitleColor: [UIColor colorWithWhite: 0.58f alpha: 1.0f] forState: UIControlStateNormal];
+            [self.fromButton setTitleColor: [UIColor lightTextColor] forState: UIControlStateHighlighted];
             [self.fromButton sizeToFit];
-            [self addSubview:self.fromButton];
+            [self addSubview: self.fromButton];
         }
         if (self.accountButton == nil) {
-            self.accountButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            [self.accountButton addTarget:self action:@selector(accountButtonTouched) forControlEvents:UIControlEventTouchUpInside];
-            [self.accountButton setTitleColor:[UIColor darkTextColor] forState:UIControlStateNormal];
-            [self.accountButton setTitleColor:[UIColor lightTextColor] forState:UIControlStateHighlighted];
-            self.accountButton.titleLabel.font = [UIFont systemFontOfSize:17.0f];
-            [self addSubview:self.accountButton];
-            
-            self.accountLine = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DEFacebookCardAccountLine"]] autorelease];
-            [self addSubview:self.accountLine];
+            self.accountButton = [UIButton buttonWithType: UIButtonTypeCustom];
+            [self.accountButton addTarget: self action: @selector(accountButtonTouched) forControlEvents: UIControlEventTouchUpInside];
+            [self.accountButton setTitleColor: [UIColor darkTextColor] forState: UIControlStateNormal];
+            [self.accountButton setTitleColor: [UIColor lightTextColor] forState: UIControlStateHighlighted];
+            self.accountButton.titleLabel.font = [UIFont systemFontOfSize: 17.0f];
+            [self addSubview: self.accountButton];
+
+            self.accountLine = [[[UIImageView alloc] initWithImage: [UIImage imageNamed: @"DEFacebookCardAccountLine"]] autorelease];
+            [self addSubview: self.accountLine];
         }
-        [self.accountButton setTitle:self.accountName forState:UIControlStateNormal];
+        [self.accountButton setTitle: self.accountName forState: UIControlStateNormal];
         [self.accountButton sizeToFit];
         [self setNeedsLayout];
     }
-    
+
     else {
         [self.fromButton removeFromSuperview];
         self.fromButton = nil;
@@ -200,19 +191,21 @@
 
 #pragma mark - Actions
 
-- (IBAction)accountButtonTouched
-{
-    if ([self.delegate respondsToSelector:@selector(tweetTextViewAccountButtonWasTouched:)]) {
-        [self.delegate performSelector:@selector(tweetTextViewAccountButtonWasTouched:) withObject:self];
+- (IBAction) accountButtonTouched {
+
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+
+
+    if ([self.delegate respondsToSelector: @selector(tweetTextViewAccountButtonWasTouched:)]) {
+        [self.delegate performSelector: @selector(tweetTextViewAccountButtonWasTouched:) withObject: self];
     }
 }
 
 
 #pragma mark - Accessors
 
-- (void)setAccountName:(NSString *)name
-{
-    if ([_accountName isEqualToString:name] == NO) {
+- (void) setAccountName: (NSString *) name {
+    if ([_accountName isEqualToString: name] == NO) {
         [_accountName release];
         _accountName = [name copy];
         [self updateAccountsView];
@@ -220,10 +213,8 @@
 }
 
 
-- (CGRect)fromButtonFrame
-{
+- (CGRect) fromButtonFrame {
     return self.fromButton.frame;
 }
-
 
 @end

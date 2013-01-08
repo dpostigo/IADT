@@ -12,7 +12,6 @@
 @implementation Draggable {
     UIView *circleMask;
     NSMutableArray *usedDroppables;
-    UIView *currentDrop;
 }
 
 
@@ -27,7 +26,12 @@
 @synthesize itemLimit;
 @synthesize droppingDisabled;
 @synthesize shouldHover;
+@synthesize currentDrop;
 
+
+- (BOOL) isPlaced {
+    return (currentDrop != nil);
+}
 
 - (id) initWithFrame: (CGRect) frame {
     self = [super initWithFrame: frame];
@@ -73,7 +77,7 @@
 - (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
     [super touchesBegan: touches withEvent: event];
 
-    [self addSubview: circleMask];
+    //    [self addSubview: circleMask];
 
     if (currentDrop != nil) {
         currentDrop.userInteractionEnabled = YES;
@@ -108,18 +112,23 @@
         UIView *dropContainer = [self getDropContainer];
         [self draggableWasDropped: dropContainer];
     }
+
     else [self draggableWasNotDropped];
 }
 
 
 - (BOOL) wasDropped {
 
-    NSLog(@"droppingDisabled = %d", droppingDisabled);
 
-    if (droppingDisabled) return NO;
-    if (droppable != nil) return CGRectIntersectsRect(droppable.frame, self.frame);
+    if (droppingDisabled) {
 
-    NSLog(@"Doing loop");
+        return NO;
+    }
+    if (droppable != nil) {
+        CGRect frame = CGRectMake(self.origin.x + circleMask.origin.x, self.origin.y + circleMask.origin.y, circleMask.size.width, circleMask.size.height);
+        return CGRectContainsRect(droppable.frame, frame);
+    }
+
 
     BOOL wasDropped = NO;
 
@@ -129,11 +138,9 @@
             CGRect frame = CGRectMake(self.origin.x + circleMask.origin.x, self.origin.y + circleMask.origin.y, circleMask.size.width, circleMask.size.height);
             wasDropped = CGRectContainsRect(aDroppable.frame, frame);
 
-            NSLog(@"aDroppable.userInteractionEnabled = %d", aDroppable.userInteractionEnabled);
             if (aDroppable.userInteractionEnabled == NO) {
                 wasDropped = NO;
             }
-
 
             if (wasDropped) {
                 break;
@@ -147,14 +154,28 @@
 
 - (void) showIntersects {
 
+    BOOL showDebug = NO;
+
+    if (droppable != nil) {
+        CGRect frame = CGRectMake(self.origin.x + circleMask.origin.x, self.origin.y + circleMask.origin.y, circleMask.size.width, circleMask.size.height);
+        BOOL contains = CGRectContainsRect(droppable.frame, frame);
+
+        if (contains) {
+            if (showDebug) droppable.backgroundColor = [UIColor grayColor];
+        }
+
+        else {
+            droppable.backgroundColor = [UIColor clearColor];
+        }
+    }
+
     if (droppables != nil && [droppables count] > 0) {
         for (UIView *aDroppable in droppables) {
-
             CGRect frame = CGRectMake(self.origin.x + circleMask.origin.x, self.origin.y + circleMask.origin.y, circleMask.size.width, circleMask.size.height);
             BOOL contains = CGRectContainsRect(aDroppable.frame, frame);
 
             if (contains) {
-//                aDroppable.backgroundColor = [UIColor grayColor];
+                if (showDebug) aDroppable.backgroundColor = [UIColor grayColor];
             }
 
             else {
@@ -196,8 +217,6 @@
     currentDrop = dropContainer;
 
     itemCount += 1;
-
-
 
     [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
         self.transform = CGAffineTransformIdentity;

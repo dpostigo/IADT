@@ -7,6 +7,105 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
     </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DEFacebookComposeViewController/FacebookComposeViewController/FacebookComposeViewController.bundle">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DEFacebookComposeViewController/FacebookComposeViewController/FacebookComposeViewController.bundle" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DEEmbossedLabel.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DEEmbossedLabel.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DEEmbossedLabel.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DEEmbossedLabel.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DEFacebookRuledView.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DEFacebookRuledView.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetAccountSelectorViewController.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetAccountSelectorViewController.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetAccountSelectorViewController.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetAccountSelectorViewController.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetComposeViewController.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetComposeViewController.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetComposeViewController.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetComposeViewController.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetGradientView.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetGradientView.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetGradientView.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetGradientView.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetPoster.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetPoster.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetPoster.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetPoster.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetSheetCardView.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetSheetCardView.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetSheetCardView.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetSheetCardView.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetTextView.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetTextView.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetTextView.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETweetTextView.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETwitterRuledView.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/DETwitterRuledView.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/OAuth+DEExtensions.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/OAuth+DEExtensions.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/OAuth+DEExtensions.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/OAuth+DEExtensions.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/OAuth+DEUserDefaults.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/OAuth+DEUserDefaults.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/OAuth+DEUserDefaults.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/OAuth+DEUserDefaults.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/UIApplication+DETweetComposeViewController.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/UIApplication+DETweetComposeViewController.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/UIApplication+DETweetComposeViewController.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/UIApplication+DETweetComposeViewController.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/UIDevice+DETweetComposeViewController.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/UIDevice+DETweetComposeViewController.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/UIDevice+DETweetComposeViewController.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweetComposeViewController/UIDevice+DETweetComposeViewController.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/DEAppDelegate.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/DEAppDelegate.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/DEAppDelegate.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/DEAppDelegate.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/DETweeter-Info.plist">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/DETweeter-Info.plist" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/DETweeter-Prefix.pch">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/DETweeter-Prefix.pch" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/DEViewController.h">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/DEViewController.h" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/DEViewController.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/DEViewController.m" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/en.lproj/InfoPlist.strings">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/en.lproj/InfoPlist.strings" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/main.m">
+      <sourceFolder url="file://$USER_HOME$/Documents/GitHub/DETweetComposeViewController/DETweeter/main.m" isTestSource="false" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
