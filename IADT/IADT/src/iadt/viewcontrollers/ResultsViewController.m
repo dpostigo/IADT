@@ -13,6 +13,7 @@
 #import "SocialHandler.h"
 #import "DEFacebookComposeViewController.h"
 #import "DETweetComposeViewController.h"
+#import "Reachability.h"
 
 
 @implementation ResultsViewController {
@@ -97,6 +98,11 @@
 
 - (IBAction) handleTwitter: (id) sender {
 
+    if (!self.isNetworkAvailable) {
+        [self showNoNetwork];
+        return;
+    }
+
     DETweetComposeViewControllerCompletionHandler completionHandler = ^(DETweetComposeViewControllerResult result) {
         switch (result) {
             case DETweetComposeViewControllerResultCancelled:
@@ -128,6 +134,11 @@
 
 - (IBAction) handleFacebook: (id) sender {
 
+    if (!self.isNetworkAvailable) {
+        [self showNoNetwork];
+        return;
+    }
+
     DEFacebookComposeViewControllerCompletionHandler completionHandler = ^(DEFacebookComposeViewControllerResult result) {
         switch (result) {
             case DEFacebookComposeViewControllerResultCancelled:
@@ -137,10 +148,12 @@
                 NSLog(@"Facebook Result: Sent");
                 break;
         }
+
+        [[FBSession activeSession] closeAndClearTokenInformation];
+        [self clearCookies];
         [self dismissViewControllerAnimated: YES completion: NULL];
     };
     DEFacebookComposeViewController *controller = [[DEFacebookComposeViewController alloc] init];
-//    controller.fromViewController = self;
     [self setModalPresentationStyle: UIModalPresentationCurrentContext];
     controller.modalPresentationStyle = UIModalPresentationFullScreen;
     //    self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
@@ -149,8 +162,6 @@
     [controller setCompletionHandler: completionHandler];
 
     [self presentViewController: controller animated: YES completion: nil];
-
-
 }
 
 
@@ -176,12 +187,7 @@
         }
 
         [SocialHandler removeTwitterAccounts];
-        NSHTTPCookie *cookie;
-        NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-        for (cookie in [storage cookies]) {
-            [storage deleteCookie: cookie];
-        }
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self clearCookies];
 
         [self dismissViewControllerAnimated: YES completion: nil];
     }];
@@ -190,9 +196,40 @@
 }
 
 
+- (void) clearCookies {
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [storage cookies]) {
+        [storage deleteCookie: cookie];
+    }
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
 - (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
 
     NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+
+- (BOOL) isNetworkAvailable {
+
+    Reachability *curReach = [Reachability reachabilityForInternetConnection];
+    NetworkStatus netStatus = [curReach currentReachabilityStatus];
+    BOOL connectionRequired = [curReach connectionRequired];
+    NSString *statusString = @"";
+
+    if (netStatus == NotReachable) {
+        return false;
+    }
+
+    return true;
+}
+
+
+- (void) showNoNetwork {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"No Internet Connection" message: @"Your device is not connected to the Internet." delegate: nil cancelButtonTitle: @"OK" otherButtonTitles: nil];
+    [alert show];
 }
 
 @end

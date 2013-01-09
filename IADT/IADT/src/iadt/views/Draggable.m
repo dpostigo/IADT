@@ -27,11 +27,17 @@
 @synthesize droppingDisabled;
 @synthesize shouldHover;
 @synthesize currentDrop;
+@synthesize reverseScale;
+@synthesize draggingMode;
 
+#define DRAG_DEBUG 0
+#define REVERSE_SCALE_DEBUG 1
+#define DRAGMODE_DEBUG 0
 
 - (BOOL) isPlaced {
     return (currentDrop != nil);
 }
+
 
 - (id) initWithFrame: (CGRect) frame {
     self = [super initWithFrame: frame];
@@ -40,6 +46,10 @@
 
         circleMask = [[UIView alloc] initWithFrame: self.bounds];
         circleMask.backgroundColor = [UIColor clearColor];
+
+        if (DRAG_DEBUG) {
+            circleMask.backgroundColor = [UIColor blueColor];
+        }
         [self addSubview: circleMask];
 
         usedDroppables = [[NSMutableArray alloc] init];
@@ -77,7 +87,9 @@
 - (void) touchesBegan: (NSSet *) touches withEvent: (UIEvent *) event {
     [super touchesBegan: touches withEvent: event];
 
-    //    [self addSubview: circleMask];
+    if (DRAG_DEBUG) {
+        [self addSubview: circleMask];
+    }
 
     if (currentDrop != nil) {
         currentDrop.userInteractionEnabled = YES;
@@ -85,7 +97,19 @@
     }
 
     [UIView animateWithDuration: 0.15 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
-        self.transform = CGAffineTransformScale(self.transform, 1.15, 1.15);
+
+        if (REVERSE_SCALE_DEBUG) {
+            if (reverseScale) {
+                self.transform = CGAffineTransformIdentity;
+            } else {
+
+                self.transform = CGAffineTransformScale(self.transform, 1.15, 1.15);
+            }
+        }
+
+        else {
+            self.transform = CGAffineTransformScale(self.transform, 1.15, 1.15);
+        }
     }                completion: ^(BOOL completion) {
     }];
 
@@ -106,7 +130,7 @@
 - (void) touchesEnded: (NSSet *) touches withEvent: (UIEvent *) event {
     [super touchesEnded: touches withEvent: event];
 
-    BOOL wasDropped = [self wasDropped];
+    BOOL wasDropped = [self calculateWasDropped];
 
     if (wasDropped) {
         UIView *dropContainer = [self getDropContainer];
@@ -117,26 +141,19 @@
 }
 
 
-- (BOOL) wasDropped {
+- (BOOL) calculateWasDropped {
+    if (droppingDisabled) return NO;
 
-
-    if (droppingDisabled) {
-
-        return NO;
-    }
     if (droppable != nil) {
-        CGRect frame = CGRectMake(self.origin.x + circleMask.origin.x, self.origin.y + circleMask.origin.y, circleMask.size.width, circleMask.size.height);
-        return CGRectContainsRect(droppable.frame, frame);
+        return [self evalWasDropped: droppable];
     }
-
 
     BOOL wasDropped = NO;
 
     if (droppables != nil && [droppables count] > 0) {
         for (UIView *aDroppable in droppables) {
 
-            CGRect frame = CGRectMake(self.origin.x + circleMask.origin.x, self.origin.y + circleMask.origin.y, circleMask.size.width, circleMask.size.height);
-            wasDropped = CGRectContainsRect(aDroppable.frame, frame);
+            wasDropped = [self evalWasDropped: aDroppable];
 
             if (aDroppable.userInteractionEnabled == NO) {
                 wasDropped = NO;
@@ -152,34 +169,43 @@
 }
 
 
+- (BOOL) evalWasDropped: (UIView *) aDroppable {
+    CGRect frame = CGRectMake(self.origin.x + circleMask.origin.x, self.origin.y + circleMask.origin.y, circleMask.size.width, circleMask.size.height);
+
+    if (DRAGMODE_DEBUG) {
+        return (draggingMode == DraggingModeContains ? CGRectContainsRect(aDroppable.frame, frame): CGRectIntersectsRect(aDroppable.frame, frame));
+    }
+    else {
+        return CGRectIntersectsRect(aDroppable.frame, frame);
+    }
+}
+
+
 - (void) showIntersects {
 
-    BOOL showDebug = NO;
-
-    if (droppable != nil) {
-        CGRect frame = CGRectMake(self.origin.x + circleMask.origin.x, self.origin.y + circleMask.origin.y, circleMask.size.width, circleMask.size.height);
-        BOOL contains = CGRectContainsRect(droppable.frame, frame);
-
-        if (contains) {
-            if (showDebug) droppable.backgroundColor = [UIColor grayColor];
-        }
-
-        else {
-            droppable.backgroundColor = [UIColor clearColor];
-        }
-    }
-
-    if (droppables != nil && [droppables count] > 0) {
-        for (UIView *aDroppable in droppables) {
-            CGRect frame = CGRectMake(self.origin.x + circleMask.origin.x, self.origin.y + circleMask.origin.y, circleMask.size.width, circleMask.size.height);
-            BOOL contains = CGRectContainsRect(aDroppable.frame, frame);
-
+    if (DRAG_DEBUG) {
+        if (droppable != nil) {
+            BOOL contains = [self evalWasDropped: droppable];
             if (contains) {
-                if (showDebug) aDroppable.backgroundColor = [UIColor grayColor];
+                droppable.backgroundColor = [UIColor grayColor];
             }
 
             else {
-                aDroppable.backgroundColor = [UIColor clearColor];
+                droppable.backgroundColor = [UIColor clearColor];
+            }
+        }
+
+        if (droppables != nil && [droppables count] > 0) {
+            for (UIView *aDroppable in droppables) {
+                BOOL contains = [self evalWasDropped: aDroppable];
+
+                if (contains) {
+                    aDroppable.backgroundColor = [UIColor grayColor];
+                }
+
+                else {
+                    aDroppable.backgroundColor = [UIColor clearColor];
+                }
             }
         }
     }
@@ -192,8 +218,7 @@
     UIView *dropContainer = nil;
     for (UIView *aDroppable in droppables) {
 
-        CGRect frame = CGRectMake(self.origin.x + circleMask.origin.x, self.origin.y + circleMask.origin.y, circleMask.size.width, circleMask.size.height);
-        BOOL contains = CGRectContainsRect(aDroppable.frame, frame);
+        BOOL contains = [self evalWasDropped: aDroppable];
 
         if (contains) {
             dropContainer = aDroppable;
@@ -215,10 +240,10 @@
 - (void) draggableWasDropped: (UIView *) dropContainer {
 
     currentDrop = dropContainer;
-
     itemCount += 1;
 
     [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
+
         self.transform = CGAffineTransformIdentity;
         self.alpha = !shouldFade;
 
@@ -254,7 +279,21 @@
 
 - (void) resetPosition {
     [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
-        self.transform = CGAffineTransformIdentity;
+
+        if (REVERSE_SCALE_DEBUG) {
+
+            if (reverseScale) {
+                if (CGAffineTransformEqualToTransform(self.transform, CGAffineTransformIdentity)) {
+                    self.transform = CGAffineTransformScale(self.transform, 1.15, 1.15);
+                }
+            } else {
+                self.transform = CGAffineTransformIdentity;
+            }
+        }
+
+        else {
+            self.transform = CGAffineTransformIdentity;
+        }
         self.origin = startingPoint;
         self.alpha = 1;
     }                completion: ^(BOOL completion) {

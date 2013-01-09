@@ -22,5 +22,7 @@
 #define kOAuthTwitterConsumerKey                @"6IhlfcamblDSuGUlsWcGoQ"
 #define kOAuthTwitterConsumerSecret            @"PSLgb3G4aQNU4K1ogrUhhaMaf9KlAjWOpIPsz5U8"
 
+#define FACEBOOK_APP_ID @"470492246319315"
+
 
 @end

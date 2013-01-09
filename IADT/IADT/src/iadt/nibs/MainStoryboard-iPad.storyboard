@@ -85,11 +85,11 @@
                                     <action selector="handleSubmit:" destination="nwi-cg-cVf" eventType="touchUpInside" id="GJd-li-7cY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GRZ-0o-JnP">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GRZ-0o-JnP">
                                 <rect key="frame" x="325" y="397" width="374" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">This information will be used to contact you through various means, which may include: phone, text messaging, email, and postal mail, about the programs and services that are offered.</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1114,6 +1114,54 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
             </objects>
             <point key="canvasLocation" x="-2348" y="1766"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Xw-gm-44Y">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="CEI-Kf-6GS" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ao9-dq-Olz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6f7-Mh-rk5" kind="relationship" relationship="rootViewController" id="eXh-wL-o3R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="058-mI-A4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3610" y="1790"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kY7-gi-Sh9">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="39f-aY-lW3" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D9e-EC-QO8">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QsI-3Z-7gx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3610" y="1790"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0fF-eo-oik">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="2lJ-X3-215" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YOJ-qs-1rb">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6f7-Mh-rk5" kind="relationship" relationship="rootViewController" id="Da9-dh-YeB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AMX-lm-CyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3610" y="1790"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backpack-icon.png" width="210" height="350"/>
@@ -1183,8 +1231,6 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
         <class className="BasicViewController" superclassName="VeryBasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicViewController.h"/>
             <relationships>
-                <relationship kind="action" name="handleHome:"/>
-                <relationship kind="action" name="popToRoot:"/>
                 <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
             </relationships>
@@ -1236,5 +1282,6 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
     <inferredMetricsTieBreakers>
         <segue reference="XCQ-uW-gqk"/>
         <segue reference="IeT-gV-Au9"/>
+        <segue reference="Da9-dh-YeB"/>
     </inferredMetricsTieBreakers>
 </document>

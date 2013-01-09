@@ -30,16 +30,7 @@
 #import "DEFacebookGradientView.h"
 #import "UIDevice+DEFacebookComposeViewController.h"
 #import <QuartzCore/QuartzCore.h>
-
-
-#ifdef DEFACEBOOKCOMPOSEVIEWCONTROLLER_MANUAL_SDK
-#import "FacebookSDK.h"
-#else
-
 #import <FacebookSDK/FacebookSDK.h>
-
-
-#endif
 
 #import <Social/Social.h>
 
@@ -56,16 +47,17 @@ static BOOL waitingForAccess = NO;
 @property(nonatomic, retain) NSArray *attachmentFrameViews;
 @property(nonatomic, retain) NSArray *attachmentImageViews;
 @property(nonatomic) UIStatusBarStyle previousStatusBarStyle;
+@property(nonatomic, assign) UIViewController *fromViewController;
 @property(nonatomic, retain) UIImageView *backgroundImageView;
 @property(nonatomic, retain) DEFacebookGradientView *gradientView;
 @property(nonatomic, retain) UIPickerView *accountPickerView;
 @property(nonatomic, retain) UIPopoverController *accountPickerPopoverController;
+@property(retain, nonatomic) NSString *urlSchemeSuffix;
 - (void) facebookComposeViewControllerInit;
 - (void) updateFramesForOrientation: (UIInterfaceOrientation) interfaceOrientation;
 - (BOOL) isPresented;
 - (NSInteger) attachmentsCount;
 - (void) updateAttachments;
-- (UIImage *) captureScreen;
 
 @end
 
@@ -92,7 +84,6 @@ static BOOL waitingForAccess = NO;
 // Public
 @synthesize completionHandler = _completionHandler;
 @synthesize customParameters = _customParameters;
-@synthesize fromViewController = _fromViewController;
 
 // Private
 @synthesize text = _text;
@@ -101,6 +92,7 @@ static BOOL waitingForAccess = NO;
 @synthesize attachmentFrameViews = _attachmentFrameViews;
 @synthesize attachmentImageViews = _attachmentImageViews;
 @synthesize previousStatusBarStyle = _previousStatusBarStyle;
+@synthesize fromViewController = _fromViewController;
 @synthesize backgroundImageView = _backgroundImageView;
 @synthesize gradientView = _gradientView;
 @synthesize accountPickerView = _accountPickerView;
@@ -350,6 +342,7 @@ enum {
 - (void) viewDidAppear: (BOOL) animated {
     [super viewDidAppear: animated];
 
+    NSLog(@"self.gradientView = %@", self.gradientView);
 
     self.backgroundImageView.alpha = 1.0f;
     //self.backgroundImageView.frame = [self.view convertRect:self.backgroundImageView.frame fromView:[UIApplication sharedApplication].keyWindow];
@@ -548,6 +541,7 @@ enum {
             buttonTop = 6.0f;
             cancelButtonImage = [[UIImage imageNamed: @"FacebookComposeViewController.bundle/DEFacebookSendButtonLandscape.png"] stretchableImageWithLeftCapWidth: 4 topCapHeight: 0];
             sendButtonImage = [[UIImage imageNamed: @"FacebookComposeViewController.bundle/DEFacebookSendButtonLandscape.png"] stretchableImageWithLeftCapWidth: 4 topCapHeight: 0];
+
             cardHeaderLineTop = 32.0f;
             titleLabelFontSize = 17.0f;
             titleLabelTop = 5.0f;
@@ -569,6 +563,8 @@ enum {
             cardTop = 110.0f;
         }
     }
+
+    NSLog(@"cancelButtonImage = %@", cancelButtonImage);
 
     CGFloat cardLeft = trunc((CGRectGetWidth(self.view.bounds) - cardWidth) / 2);
     self.cardView.frame = CGRectMake(cardLeft, cardTop, cardWidth, cardHeight);
@@ -681,23 +677,26 @@ enum {
 
 - (IBAction) send {
 
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    [self.textView resignFirstResponder];
+
     if (![FBSession.activeSession isOpen]) {
 
-        [FBSession openActiveSessionWithPublishPermissions: [NSArray arrayWithObjects: @"publish_stream", nil]
-                                           defaultAudience: FBSessionDefaultAudienceEveryone
-                                              allowLoginUI: YES
+        FBSession *session = [[FBSession alloc] initWithAppID: nil permissions: [NSArray arrayWithObjects: @"publish_stream", nil]
+                                              urlSchemeSuffix: self.urlSchemeSuffix
+                                           tokenCacheStrategy: nil];
 
-                                         completionHandler: ^(FBSession *session,
-                                                 FBSessionState status,
-                                                 NSError *error) {
+        [FBSession setActiveSession: session];
 
-                                             if (error) {
-                                                 NSLog(@"error");
-                                             } else {
-                                                 [FBSession setActiveSession: session];
-                                                 [self setSendButtonTitle: NSLocalizedString(@"Post", @"")];
-                                             }
-                                         }];
+        [session openWithBehavior: FBSessionLoginBehaviorForcingWebView completionHandler: ^(FBSession *session, FBSessionState state, NSError *error) {
+            if (error) {
+                NSLog(@"Connection error: %@ - %@", error.localizedDescription, error.userInfo);
+            } else {
+                [FBSession setActiveSession: session];
+                [self setSendButtonTitle: NSLocalizedString(@"Post", @"")];
+            }
+        }];
+        [session release];
 
         return;
     }
@@ -714,7 +713,7 @@ enum {
 
     NSMutableDictionary *d = nil;
     if ([self.urls count] > 0 && [self.images count] > 0) {
-        d = [NSMutableDictionary dictionaryWithObject: [NSString stringWithFormat: @"%@\n%@", self.textView.text, [self.urls lastObject]]
+        d = [NSMutableDictionary dictionaryWithObject: [NSString stringWithFormat: @"%@\n%@", self.textView.text, [[self.urls lastObject] absoluteString]]
                                                forKey: @"message"];
     } else {
         d = [NSMutableDictionary dictionaryWithObject: self.textView.text
@@ -724,7 +723,7 @@ enum {
     NSString *graphPath = @"me/feed";
 
     if ([self.urls count] > 0) {
-        [d setObject: [self.urls lastObject] forKey: @"link"];
+        [d setObject: [[self.urls lastObject] absoluteString] forKey: @"link"];
     }
 
     if ([self.images count] > 0) {
@@ -745,7 +744,7 @@ enum {
 
     [newConnection addRequest: request completionHandler: ^(FBRequestConnection *connection, id result, NSError *error) {
         if (error) {
-            NSLog(@"    error");
+            //            NSLog(@"    error");
 
             // remove activity
             [[[self.sendButton subviews] lastObject] removeFromSuperview];
@@ -773,10 +772,10 @@ enum {
                 self.completionHandler(DEFacebookComposeViewControllerResultDone);
             }
             else {
-                [self dismissModalViewControllerAnimated: YES];
+                [self dismissViewControllerAnimated: YES completion: nil];
             }
 
-            NSLog(@"   ok");
+            //            NSLog(@"   ok");
         };
     }];
 

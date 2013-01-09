@@ -57,13 +57,15 @@
     introView.textLabel.text = [introView.textLabel.text stringByReplacingOccurrencesOfString: @"\\n" withString: @"\n"];
     introView.detailTextLabel.text = [[[_model.gamesData objectForKey: self.restorationIdentifier] objectForKey: @"Detail"] uppercaseString];
 
+    NSLog(@"self.restorationIdentifier = %@", self.restorationIdentifier);
+    NSLog(@"self.isDummyGame = %d", self.isDummyGame);
     draggables = [[NSMutableArray alloc] init];
     for (int j = 0; j < 6; j++) {
         NSInteger tag = j + 1;
         UIImageView *view = (UIImageView *) [self.view viewWithTag: tag];
         if (view) {
 
-            if (!self.isDummyGame || containerViews != nil) {
+            if (!self.isDummyGame || self.isSortingGame) {
                 UIImageView *ghost = [[UIImageView alloc] initWithFrame: view.frame];
                 ghost.image = view.image;
                 ghost.alpha = GHOST_IMAGE_ALPHA;
@@ -79,7 +81,18 @@
 
             [draggables addObject: draggable];
 
-            if (self.isDummyGame || containerViews != nil) draggable.shouldFade = NO;
+            if (self.isDummyGame) {
+                draggable.shouldFade = NO;
+                draggable.reverseScale = YES;
+                draggable.draggingMode = DraggingModeIntersects;
+                [draggable reset];
+            }
+
+            else if (self.isSortingGame) {
+                draggable.shouldFade = NO;
+            }
+
+
             if (containerView == nil) {
                 draggable.snapsToContainer = YES;
                 draggable.maskEnabled = YES;
@@ -103,7 +116,6 @@
 
 
 - (void) saveScore {
-    NSLog(@"self.isDummyGame = %d", self.isDummyGame);
     if (!self.isDummyGame) {
         [self calculateScoreByTags];
         //    [self calculateScoreByImageViews];
@@ -115,8 +127,6 @@
 
 - (void) calculateScoreByImageViews {
 
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    NSLog(@"self.restorationIdentifier = %@", self.restorationIdentifier);
 
     NSArray *items = [[_model.scoreData objectForKey: self.restorationIdentifier] objectForKey: @"Items"];
     NSString *scoringMode = [[_model.scoreData objectForKey: self.restorationIdentifier] objectForKey: @"Scoring Mode"];
@@ -300,7 +310,6 @@ int rand_range(int min_n, int max_n) {
 
 - (void) updateScore {
     if (!self.isDummyGame) {
-        NSLog(@"%s", __PRETTY_FUNCTION__);
 
         [selectedImages removeAllObjects];
         [selectedTags removeAllObjects];
@@ -413,9 +422,5 @@ int rand_range(int min_n, int max_n) {
     return (containerView != nil && !self.isDummyGame);
 }
 
-//
-//- (BOOL) isDummyGame {
-//    return (containerView != nil && containerView == backgroundView);
-//}
 
 @end

@@ -6,36 +6,12 @@
 //  Copyright (c) 2012 Daniela Postigo. All rights reserved.
 //
 
+#import <FacebookSDK/FacebookSDK.h>
 #import "AppDelegate.h"
 
 
 @implementation AppDelegate
 
-
-- (void) customizeAppearance {
-    // Create resizable images
-//    UIImage *navbarBg = [[UIImage imageNamed: @"navbar_bg.png"]
-//            resizableImageWithCapInsets: UIEdgeInsetsMake(0, 0, 0, 0)];
-//
-//    // Set the background image for *all* UINavigationBars
-//    [[UINavigationBar appearance] setBackgroundImage: navbarBg forBarMetrics: UIBarMetricsDefault];
-//
-//    [[UINavigationBar appearance] setBarStyle: UIBarStyleBlackTranslucent];
-
-    //    UIImage *shadow = [[UIImage imageNamed: @"navbar_shadow.png"] resizableImageWithCapInsets: UIEdgeInsetsMake(0, 0, 0, 0)];
-    //    [[UINavigationBar appearance] setShadowImage: shadow];
-
-
-    //
-    //    // Customize the title text for *all* UINavigationBars
-    //    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    //    [dict setObject: [UIColor colorWithRed: 255.0 / 255.0 green: 255.0 / 255.0 blue: 255.0 / 255.0 alpha: 1.0] forKey: UITextAttributeTextColor];
-    //    [dict setObject: [UIColor colorWithRed: 0.0 green: 0.0 blue: 0.0 alpha: 0.8] forKey: UITextAttributeTextShadowColor];
-    //    [dict setObject: [NSValue valueWithUIOffset: UIOffsetMake(0, -1)] forKey: UITextAttributeTextShadowOffset];
-    //    [dict setObject: [UIFont fontWithName: @"Arial-Bold" size: 0.0] forKey: UITextAttributeFont];
-    //
-    //    [[UINavigationBar appearance] setTitleTextAttributes: dict];
-}
 
 
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
@@ -45,39 +21,44 @@
     [TestFlight takeOff: @"44a2eeaa-a91a-4178-b51a-4d7584bef7dc"];
 #endif
 
-    [self customizeAppearance];
+
     return YES;
 }
 
 
+- (BOOL) application: (UIApplication *) application
+             openURL: (NSURL *) url
+   sourceApplication: (NSString *) sourceApplication
+          annotation: (id) annotation {
+
+//    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+
+    // attempt to extract a token from the url
+    return [FBSession.activeSession handleOpenURL: url];
+}
+
+
 - (void) applicationWillResignActive: (UIApplication *) application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 
     NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 
 - (void) applicationDidEnterBackground: (UIApplication *) application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 
     NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 
 - (void) applicationWillEnterForeground: (UIApplication *) application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 
 - (void) applicationDidBecomeActive: (UIApplication *) application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 
 - (void) applicationWillTerminate: (UIApplication *) application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 @end

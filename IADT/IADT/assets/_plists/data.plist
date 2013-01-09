@@ -34,7 +34,7 @@
 		<key>Drinks</key>
 		<dict>
 			<key>Title</key>
-			<string>You go to the kitchen for a drink. What do you pick?</string>
+			<string>You go to the kitchen for a drink. \nWhat do you pick?</string>
 			<key>Detail</key>
 			<string>Rank your top three choices.</string>
 		</dict>

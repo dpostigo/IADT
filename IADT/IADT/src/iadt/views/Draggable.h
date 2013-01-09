@@ -9,7 +9,13 @@
 #import "PuttyView.h"
 
 
+typedef enum {
+    DraggingModeContains = 0,
+    DraggingModeIntersects = 1
+} DraggingMode;
 @class Draggable;
+
+
 @protocol DraggableDelegate <NSObject>
 
 
@@ -17,7 +23,6 @@
 - (void) draggableBeganDrop: (Draggable *) draggable;
 - (void) draggableDidDrop: (Draggable *) draggable;
 - (void) draggableDidNotDrop: (Draggable *) draggable;
-
 
 @end
 
@@ -28,26 +33,17 @@
     BOOL shouldFade;
     BOOL droppingDisabled;
     BOOL shouldHover;
-
-
+    BOOL reverseScale;
     CGFloat circleRadius;
     BOOL maskEnabled;
-
     UIView *droppable;
     NSMutableArray *droppables;
-
-
     CGPoint startingPoint;
-
-    id<DraggableDelegate> delegate;
-
+    id <DraggableDelegate> delegate;
     NSInteger itemLimit;
     NSUInteger itemCount;
     UIView *currentDrop;
-
-
-
-
+    DraggingMode draggingMode;
 }
 
 
@@ -63,6 +59,8 @@
 @property(nonatomic) BOOL droppingDisabled;
 @property(nonatomic) BOOL shouldHover;
 @property(nonatomic, strong) UIView *currentDrop;
+@property(nonatomic) BOOL reverseScale;
+@property(nonatomic) DraggingMode draggingMode;
 - (BOOL) isPlaced;
 - (void) reset;
 

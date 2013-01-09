@@ -27,6 +27,8 @@
 		0359992F16962F8A00182370 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0359992E16962F8A00182370 /* FacebookSDK.framework */; };
 		0359993116962FC700182370 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0359993016962FC700182370 /* AdSupport.framework */; };
 		0359993316962FCE00182370 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0359993216962FCE00182370 /* Social.framework */; };
+		035E91CF169CE4DF00202E27 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035E91CE169CE4DE00202E27 /* SystemConfiguration.framework */; };
+		035E91D2169CEA8100202E27 /* FacebookComposeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 035E91D1169CEA8100202E27 /* FacebookComposeViewController.bundle */; };
 		0370D01F16951CE000C101FF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0370D01E16951CE000C101FF /* libxml2.dylib */; };
 		0370D02316951F0C00C101FF /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0370D02216951F0C00C101FF /* Twitter.framework */; };
 		038066E216839AE900E71F3F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038066E116839AE900E71F3F /* CoreImage.framework */; };
@@ -45,6 +47,7 @@
 		7CA44329FB8409EE34B342D8 /* DEFacebookSheetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44916BA431E3BCB9F0FF6 /* DEFacebookSheetCardView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA4437C2BE6A060CB514A77 /* DETweetComposeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CA442AB9C8ADE4D61ABE39B /* DETweetComposeView.xib */; };
 		7CA443C7621A71545E149D88 /* DETweetComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4439290653A79C2AE5E4F /* DETweetComposeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CA443D1C9BEAF2BCA1E4C87 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44ADD08C52170C7B9EED3 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA4440A343B1402518E4DC4 /* BasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C54A3156CA9E9116E42 /* BasicView.m */; };
 		7CA44432176B90EB690F7C36 /* UIDevice+DEFacebookComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4411E1866EF5FFEA67AFE /* UIDevice+DEFacebookComposeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA4447DFD912454A6578D69 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44CFBBECC3E27CED74B74 /* ResultsViewController.m */; };
@@ -132,6 +135,8 @@
 		0359992E16962F8A00182370 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		0359993016962FC700182370 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		0359993216962FCE00182370 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		035E91CE169CE4DE00202E27 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		035E91D1169CEA8100202E27 /* FacebookComposeViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookComposeViewController.bundle; path = assets/_toolkit/FacebookComposeViewController/FacebookComposeViewController.bundle; sourceTree = SOURCE_ROOT; };
 		0370D01E16951CE000C101FF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0370D02216951F0C00C101FF /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		038066E116839AE900E71F3F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -178,6 +183,7 @@
 		7CA443C20CEA2F856D1CA44D /* BasicCSVOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicCSVOperation.m; path = src/iadt/operations/BasicCSVOperation.m; sourceTree = "<group>"; };
 		7CA443DAF14D49530141BEB2 /* Draggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Draggable.m; path = src/iadt/views/Draggable.m; sourceTree = "<group>"; };
 		7CA443DB00AFD572F2507D89 /* FadePopSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FadePopSegue.m; path = src/iadt/segues/FadePopSegue.m; sourceTree = "<group>"; };
+		7CA4441336E1C11044FC6DB9 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = src/toolkit/Reachability/Reachability.h; sourceTree = "<group>"; };
 		7CA44413B0B4516C0AB86E04 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Utils.m"; path = "src/utils/NSString+Utils.m"; sourceTree = "<group>"; };
 		7CA444178BF0C5EECFCDDBCA /* SocialHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialHandler.h; path = src/utils/SocialHandler.h; sourceTree = "<group>"; };
 		7CA4441D605E51BCBF18DF39 /* DETweetAccountSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DETweetAccountSelectorViewController.h; path = src/toolkit/DETweetComposeViewController/DETweetAccountSelectorViewController.h; sourceTree = "<group>"; };
@@ -232,6 +238,7 @@
 		7CA44AA53E4D75F9C36C3151 /* TwitterLoginUiFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterLoginUiFeedback.h; path = src/toolkit/DETweetComposeViewController/OAuth/TwitterLoginUiFeedback.h; sourceTree = "<group>"; };
 		7CA44AC27DA2EB997822BBC0 /* DEFacebookRuledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEFacebookRuledView.m; path = src/toolkit/FacebookComposeViewController/DEFacebookRuledView.m; sourceTree = "<group>"; };
 		7CA44AD9DBE5236D96C359F7 /* OAuthConsumerCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuthConsumerCredentials.h; path = src/toolkit/DETweetComposeViewController/OAuth/OAuthConsumerCredentials.h; sourceTree = "<group>"; };
+		7CA44ADD08C52170C7B9EED3 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = src/toolkit/Reachability/Reachability.m; sourceTree = "<group>"; };
 		7CA44AEF39B9C6EF87F0B8AF /* TwitterHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterHandler.m; path = src/utils/TwitterHandler.m; sourceTree = "<group>"; };
 		7CA44AF73E6BA7B7B89A3FF0 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/sha1.c; sourceTree = "<group>"; };
 		7CA44AFD96B1320904F1C943 /* OAuth+DEUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OAuth+DEUserDefaults.h"; path = "src/toolkit/DETweetComposeViewController/OAuth+DEUserDefaults.h"; sourceTree = "<group>"; };
@@ -287,6 +294,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				035E91CF169CE4DF00202E27 /* SystemConfiguration.framework in Frameworks */,
 				0359993316962FCE00182370 /* Social.framework in Frameworks */,
 				0359993116962FC700182370 /* AdSupport.framework in Frameworks */,
 				0370D02316951F0C00C101FF /* Twitter.framework in Frameworks */,
@@ -462,6 +470,8 @@
 				7CA4408D09EE25DA34403174 /* OASignatureProviding.h */,
 				7CA44AF73E6BA7B7B89A3FF0 /* sha1.c */,
 				7CA44B57A0B54800375005A5 /* sha1.h */,
+				7CA4441336E1C11044FC6DB9 /* Reachability.h */,
+				7CA44ADD08C52170C7B9EED3 /* Reachability.m */,
 			);
 			sourceTree = "<group>";
 		};
@@ -476,6 +486,7 @@
 		0346ACBF166EB0E000A00BC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				035E91CE169CE4DE00202E27 /* SystemConfiguration.framework */,
 				0359993216962FCE00182370 /* Social.framework */,
 				0359993016962FC700182370 /* AdSupport.framework */,
 				03F0F4F116951B51003AB1D6 /* Accounts.framework */,
@@ -498,6 +509,7 @@
 		0346ACC6166EB0E000A00BC4 /* BasicProject */ = {
 			isa = PBXGroup;
 			children = (
+				035E91D1169CEA8100202E27 /* FacebookComposeViewController.bundle */,
 				0346ACC7166EB0E000A00BC4 /* Supporting Files */,
 			);
 			path = BasicProject;
@@ -589,6 +601,7 @@
 				7CA4437C2BE6A060CB514A77 /* DETweetComposeView.xib in Resources */,
 				7CA4416A8F36E3FE363172FE /* DEViewController_iPad.xib in Resources */,
 				7CA4498578D7BD55F878336F /* DEViewController_iPhone.xib in Resources */,
+				035E91D2169CEA8100202E27 /* FacebookComposeViewController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +692,7 @@
 				7CA44B456A214E0EEBAA19BA /* hmac.c in Sources */,
 				7CA44BB2FF83845926F8FEB6 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
 				7CA44F3C278E369CD21D858E /* sha1.c in Sources */,
+				7CA443D1C9BEAF2BCA1E4C87 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
