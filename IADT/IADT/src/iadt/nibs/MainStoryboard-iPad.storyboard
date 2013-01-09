@@ -72,7 +72,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SbO-ov-qiS">
-                                <rect key="frame" x="472" y="509" width="80" height="80"/>
+                                <rect key="frame" x="472" y="508" width="80" height="80"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="submit-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -94,53 +94,53 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="RYt-Eh-P4S" customClass="BasicWhiteView">
-                                <rect key="frame" x="325" y="188" width="374" height="39"/>
+                                <rect key="frame" x="324" y="188" width="376" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" id="yyj-0U-CIs" customClass="TextField">
-                                        <rect key="frame" x="13" y="4" width="334.5" height="30"/>
+                                        <rect key="frame" x="12" y="4" width="336" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="qKO-4n-pvJ" customClass="BasicWhiteView">
-                                <rect key="frame" x="325" y="241" width="374" height="39"/>
+                                <rect key="frame" x="324" y="240" width="376" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="cI4-NM-f30" customClass="TextField">
-                                        <rect key="frame" x="13" y="4.5" width="334.5" height="30"/>
+                                        <rect key="frame" x="12" y="4" width="336" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="hvz-x3-o8Q" customClass="BasicWhiteView">
-                                <rect key="frame" x="325" y="295" width="374" height="39"/>
+                                <rect key="frame" x="324" y="296" width="376" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" minimumFontSize="17" id="Kyz-X8-ydF" customClass="TextField">
-                                        <rect key="frame" x="13" y="4.5" width="335" height="30"/>
+                                        <rect key="frame" x="12" y="4" width="336" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="b9w-Xj-eB7" customClass="BasicWhiteView">
-                                <rect key="frame" x="325" y="348" width="374" height="39"/>
+                                <rect key="frame" x="324" y="348" width="376" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip Code" minimumFontSize="17" id="5sz-oW-Z3L" customClass="TextField">
-                                        <rect key="frame" x="13" y="4.5" width="334.5" height="30"/>
+                                        <rect key="frame" x="12" y="4" width="336" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
@@ -350,7 +350,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vYa-9V-bHW">
-                                <rect key="frame" x="248" y="243" width="533" height="96"/>
+                                <rect key="frame" x="248" y="244" width="533" height="96"/>
                                 <string key="text" base64-UTF8="YES">
 VG9tb3Jyb3figJlzIGNyZWF0aXZlIGFuZCB0ZWNobmljYWwgA2xlYWRlcnMgYXJlIGEgd2hvbGUgbmV3
 IGJyZWVkLg
@@ -360,7 +360,7 @@ IGJyZWVkLg
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ihn-US-Q0V">
-                                <rect key="frame" x="219" y="329" width="603" height="132"/>
+                                <rect key="frame" x="219" y="328" width="603" height="132"/>
                                 <string key="text" base64-UTF8="YES">
 SGlnaGx5IGV2b2x2ZWQsIGRpZ2l0YWxseSBzYXZ2eSBhbmQgYWRlcHQgYXQgbWFueSADZGlzY2lwbGlu
 ZXMuIFRha2UgdGhpcyB0ZXN0IHRvIGRpc2NvdmVyIGlmIHlvdSBoYXZlIHRoZSByYXcgA3RhbGVudCBh
@@ -371,7 +371,7 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cUl-zy-CQl">
-                                <rect key="frame" x="185" y="201" width="713" height="278"/>
+                                <rect key="frame" x="185" y="200" width="713" height="278"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1114,54 +1114,6 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
             </objects>
             <point key="canvasLocation" x="-2348" y="1766"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7Xw-gm-44Y">
-            <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="CEI-Kf-6GS" sceneMemberID="viewController">
-                    <nil key="simulatedTopBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ao9-dq-Olz">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="6f7-Mh-rk5" kind="relationship" relationship="rootViewController" id="eXh-wL-o3R"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="058-mI-A4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3610" y="1790"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="kY7-gi-Sh9">
-            <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="39f-aY-lW3" sceneMemberID="viewController">
-                    <nil key="simulatedTopBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D9e-EC-QO8">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QsI-3Z-7gx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3610" y="1790"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="0fF-eo-oik">
-            <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="2lJ-X3-215" sceneMemberID="viewController">
-                    <nil key="simulatedTopBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YOJ-qs-1rb">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="6f7-Mh-rk5" kind="relationship" relationship="rootViewController" id="Da9-dh-YeB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AMX-lm-CyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3610" y="1790"/>
-        </scene>
     </scenes>
     <resources>
         <image name="backpack-icon.png" width="210" height="350"/>
@@ -1231,6 +1183,8 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
         <class className="BasicViewController" superclassName="VeryBasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicViewController.h"/>
             <relationships>
+                <relationship kind="action" name="handleHome:"/>
+                <relationship kind="action" name="popToRoot:"/>
                 <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
             </relationships>
@@ -1282,6 +1236,5 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
     <inferredMetricsTieBreakers>
         <segue reference="XCQ-uW-gqk"/>
         <segue reference="IeT-gV-Au9"/>
-        <segue reference="Da9-dh-YeB"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -87,7 +87,31 @@
 
 - (BOOL) textFieldShouldReturn: (UITextField *) aTextField {
     NSLog(@"%s", __PRETTY_FUNCTION__);
-    [aTextField resignFirstResponder];
+
+    NSInteger index;
+    switch (aTextField.returnKeyType) {
+
+        case UIReturnKeyNext :
+
+            index = [textFields indexOfObject: aTextField];
+            if (index < [textFields count]) {
+                UITextField *nextTextfield = [textFields objectAtIndex: index + 1];
+                [nextTextfield becomeFirstResponder];
+            }
+            else {
+                [aTextField resignFirstResponder];
+            }
+
+            break;
+
+        case UIReturnKeyDone :
+            [aTextField resignFirstResponder];
+            break;
+
+        default:
+            break;
+    }
+
     [self textFieldDidReturn: aTextField];
     return NO;
 }
@@ -131,7 +155,6 @@
     }
 
     return YES;
-
 }
 
 @end

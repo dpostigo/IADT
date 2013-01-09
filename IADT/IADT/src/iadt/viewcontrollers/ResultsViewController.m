@@ -43,18 +43,18 @@
     if (resultPoint.y > 0) {
         if (resultPoint.x < 0) {
             base = 1;
-            base = base + [self chooseTriangle: monsterPoint switch: NO];
+            base = base + [self chooseTriangle: resultPoint switch: NO];
         } else {
             base = 3;
-            base = base + [self chooseTriangle: monsterPoint switch: YES];
+            base = base + [self chooseTriangle: resultPoint switch: YES];
         }
     } else {
         if (resultPoint.x > 0) {
             base = 5;
-            base = base + [self chooseTriangle: monsterPoint switch: NO];
+            base = base + [self chooseTriangle: resultPoint switch: NO];
         } else {
             base = 7;
-            base = base + [self chooseTriangle: monsterPoint switch: YES];
+            base = base + [self chooseTriangle: resultPoint switch: YES];
         }
     }
 

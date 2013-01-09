@@ -118,20 +118,26 @@ enum {
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     if (![[UIApplication sharedApplication] isStatusBarHidden]) {
-        CGFloat statusBarOffset = -20.0f;
-        if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
-            CGContextTranslateCTM(context, statusBarOffset, 0.0f);
-        } else {
-            CGContextTranslateCTM(context, 0.0f, statusBarOffset);
-        }
+
+        //        CGFloat statusBarOffset = -20.0f;
+        //        if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
+        //            CGContextTranslateCTM(context, statusBarOffset, 0.0f);
+        //        } else {
+        //            CGContextTranslateCTM(context, 0.0f, statusBarOffset);
+        //        }
+
+        CGFloat statusBarOffset = 20.0f;
+        CGContextTranslateCTM(context, statusBarOffset, 0.0f);
     }
 
     [keyWindow.layer renderInContext: context];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-    UIImageOrientation imageOrientation;
-    switch ([UIApplication sharedApplication].statusBarOrientation) {
+    UIImageOrientation imageOrientation = UIImageOrientationLeft;
+    UIInterfaceOrientation statusOrientation = [UIApplication sharedApplication].statusBarOrientation;
+
+    switch (statusOrientation) {
         case UIInterfaceOrientationLandscapeLeft:
             imageOrientation = UIImageOrientationRight;
             break;
@@ -145,6 +151,7 @@ enum {
             imageOrientation = UIImageOrientationDown;
             break;
         default:
+            imageOrientation = UIImageOrientationLeft;
             break;
     }
 

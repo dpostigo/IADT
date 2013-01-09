@@ -60,6 +60,7 @@
 
 - (void) textFieldEndedEditing: (UITextField *) aTextField {
     [super textFieldEndedEditing: aTextField];
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     BOOL isValid = [self isValid];
 
     submitButton.userInteractionEnabled = isValid;
