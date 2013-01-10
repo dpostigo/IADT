@@ -13,6 +13,15 @@ typedef enum {
     DraggingModeContains = 0,
     DraggingModeIntersects = 1
 } DraggingMode;
+
+typedef enum {
+    DraggableMaskTypeCircle = 0,
+    DraggableMaskTypeCustom = 1,
+    DraggableMaskTypeCustomCentered = 2
+} DraggableMaskType;
+
+
+
 @class Draggable;
 
 
@@ -20,22 +29,29 @@ typedef enum {
 
 
 @optional
-- (void) draggableBeganDrop: (Draggable *) draggable;
-- (void) draggableDidDrop: (Draggable *) draggable;
+- (void) draggableBeganDragging: (Draggable *) draggable;
+- (void) draggableWillDrop: (Draggable *) draggable;
 - (void) draggableDidNotDrop: (Draggable *) draggable;
+- (void) draggableDidFinishDrop: (Draggable *) draggable;
+- (void) draggableDidFinishDragging: (Draggable *) draggable;
 
 @end
 
 
 @interface Draggable : PuttyView {
 
+
+    __unsafe_unretained UILabel *associatedLabel;
     BOOL snapsToContainer;
     BOOL shouldFade;
     BOOL droppingDisabled;
     BOOL shouldHover;
     BOOL reverseScale;
-    CGFloat circleRadius;
     BOOL maskEnabled;
+
+
+    UIView *maskView;
+    CGFloat circleRadius;
     UIView *droppable;
     NSMutableArray *droppables;
     CGPoint startingPoint;
@@ -44,6 +60,7 @@ typedef enum {
     NSUInteger itemCount;
     UIView *currentDrop;
     DraggingMode draggingMode;
+    DraggableMaskType maskType;
 }
 
 
@@ -61,8 +78,12 @@ typedef enum {
 @property(nonatomic, strong) UIView *currentDrop;
 @property(nonatomic) BOOL reverseScale;
 @property(nonatomic) DraggingMode draggingMode;
+@property(nonatomic, assign) UILabel *associatedLabel;
+@property(nonatomic) DraggableMaskType maskType;
+@property(nonatomic, strong) UIView *maskView;
 - (BOOL) isPlaced;
 - (void) reset;
+- (void) reset: (BOOL) animated;
 
 @end
 

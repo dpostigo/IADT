@@ -14,15 +14,15 @@
 #define REQUEST_DENIED @"Drawing request denied."
 #define REQUEST_INIT @"New drawing request."
 
-#define LINEACTIONS_CHANNEL @"LINEACTIONS_CHANNEL"
-#define LINEACTION_STARTED @"Line action started."
-#define LINEACTION_ENDED @"Line action ended."
 
 
 #define kOAuthTwitterConsumerKey                @"6IhlfcamblDSuGUlsWcGoQ"
 #define kOAuthTwitterConsumerSecret            @"PSLgb3G4aQNU4K1ogrUhhaMaf9KlAjWOpIPsz5U8"
 
 #define FACEBOOK_APP_ID @"470492246319315"
+
+#define GHOST_IMAGE_ALPHA 0.4
+
 
 
 @end

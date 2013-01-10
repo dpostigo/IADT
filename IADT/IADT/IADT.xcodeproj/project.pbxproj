@@ -86,9 +86,11 @@
 		7CA44BAC4B8899A91C21964E /* BasicCSVOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA443C20CEA2F856D1CA44D /* BasicCSVOperation.m */; };
 		7CA44BB2FF83845926F8FEB6 /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4471E08FA3E1E3F2658CA /* OAHMAC_SHA1SignatureProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA44BE08242116A44ED09FB /* SocialHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44763A4E781090F130550 /* SocialHandler.m */; };
+		7CA44C11CC9963C7D3DC513E /* SuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44115D04F6BDB65710299 /* SuccessView.m */; };
 		7CA44C3B8BD744E7E4EA07CE /* TwitterDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44FEC088166379E83A616 /* TwitterDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA44C40F85B8A388A05512E /* UIDevice+DETweetComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44DDC42CFA4773C0F08A6 /* UIDevice+DETweetComposeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA44C7BD5DE11418AE7DA65 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44413B0B4516C0AB86E04 /* NSString+Utils.m */; };
+		7CA44CD0E711DF0C6E2DAFF4 /* DDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F5ED4EA0A65F277AA5A /* DDProgressView.m */; };
 		7CA44D473D48A94BA840111F /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44FB82EEE5BAB8E1B6E01 /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA44D952DAD5581E5322A0C /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C74A552AD37D0802467 /* Base64Transcoder.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA44DDD340F4E9B58D6A4A7 /* DEFacebookRuledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44AC27DA2EB997822BBC0 /* DEFacebookRuledView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -154,6 +156,7 @@
 		7CA440E563D2F0A2B1B17E26 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/iadt/viewcontrollers/LoginViewController.m; sourceTree = "<group>"; };
 		7CA4410B181C93FBE3281420 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewController.h; path = src/iadt/viewcontrollers/ResultsViewController.h; sourceTree = "<group>"; };
 		7CA4410F635493B84B31AEC0 /* FadeSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FadeSegue.m; path = src/iadt/segues/FadeSegue.m; sourceTree = "<group>"; };
+		7CA44115D04F6BDB65710299 /* SuccessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuccessView.m; path = src/iadt/views/SuccessView.m; sourceTree = "<group>"; };
 		7CA44116AECDAA68C3ECB890 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceUtils.m; path = src/utils/DeviceUtils.m; sourceTree = "<group>"; };
 		7CA4411E1866EF5FFEA67AFE /* UIDevice+DEFacebookComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+DEFacebookComposeViewController.m"; path = "src/toolkit/FacebookComposeViewController/UIDevice+DEFacebookComposeViewController.m"; sourceTree = "<group>"; };
 		7CA44130E68578A9DCE8EA5C /* DETweetSheetCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DETweetSheetCardView.m; path = src/toolkit/DETweetComposeViewController/DETweetSheetCardView.m; sourceTree = "<group>"; };
@@ -174,6 +177,7 @@
 		7CA442AB9C8ADE4D61ABE39B /* DETweetComposeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DETweetComposeView.xib; path = src/toolkit/DETweetComposeViewController/DETweetComposeView.xib; sourceTree = "<group>"; };
 		7CA442AD2EFE714BAAB1CD92 /* UIDevice+DEFacebookComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+DEFacebookComposeViewController.h"; path = "src/toolkit/FacebookComposeViewController/UIDevice+DEFacebookComposeViewController.h"; sourceTree = "<group>"; };
 		7CA442FB9EFA1F904332F21F /* BasicWhiteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicWhiteView.m; path = src/views/BasicWhiteView.m; sourceTree = "<group>"; };
+		7CA4433FA353DF9BF5C34B84 /* DDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDProgressView.h; path = src/toolkit/DDProgressView/DDProgressView.h; sourceTree = "<group>"; };
 		7CA4436572589DEDC856FADD /* DEFacebookSheetCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEFacebookSheetCardView.h; path = src/toolkit/FacebookComposeViewController/DEFacebookSheetCardView.h; sourceTree = "<group>"; };
 		7CA44384E0882F3822A1B8AD /* UIImage+Grayscale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Grayscale.m"; path = "src/utils/UIImage+Grayscale.m"; sourceTree = "<group>"; };
 		7CA4438AF6C8580B6A8EBE3A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/iadt/app/AppDelegate.h; sourceTree = "<group>"; };
@@ -260,6 +264,7 @@
 		7CA44C54A3156CA9E9116E42 /* BasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicView.m; path = src/views/BasicView.m; sourceTree = "<group>"; };
 		7CA44C58D32A5468FAEE5C76 /* OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuth.h; path = src/toolkit/DETweetComposeViewController/OAuth/OAuth.h; sourceTree = "<group>"; };
 		7CA44C74A552AD37D0802467 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Base64Transcoder.c; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/Base64Transcoder.c; sourceTree = "<group>"; };
+		7CA44C79A6223EFF41864C4A /* SuccessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuccessView.h; path = src/iadt/views/SuccessView.h; sourceTree = "<group>"; };
 		7CA44C84DED4255E14E5AE11 /* SaveToDocuments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SaveToDocuments.h; path = src/iadt/operations/SaveToDocuments.h; sourceTree = "<group>"; };
 		7CA44CFBBECC3E27CED74B74 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewController.m; path = src/iadt/viewcontrollers/ResultsViewController.m; sourceTree = "<group>"; };
 		7CA44D5706437760E20A9845 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = src/iadt/models/Model.m; sourceTree = "<group>"; };
@@ -282,6 +287,7 @@
 		7CA44F35D38E1A6D737BF111 /* DERuledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DERuledView.m; path = src/toolkit/DETweetComposeViewController/DERuledView.m; sourceTree = "<group>"; };
 		7CA44F38B45CF61BE7D4CE4B /* DEEmbossedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEEmbossedLabel.m; path = src/toolkit/DETweetComposeViewController/DEEmbossedLabel.m; sourceTree = "<group>"; };
 		7CA44F4C3BAB96C5940B8B7A /* BasicOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicOperation.m; path = src/operations/BasicOperation.m; sourceTree = "<group>"; };
+		7CA44F5ED4EA0A65F277AA5A /* DDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDProgressView.m; path = src/toolkit/DDProgressView/DDProgressView.m; sourceTree = "<group>"; };
 		7CA44FB72408517107E4AFD0 /* DEFacebookRuledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEFacebookRuledView.h; path = src/toolkit/FacebookComposeViewController/DEFacebookRuledView.h; sourceTree = "<group>"; };
 		7CA44FB82EEE5BAB8E1B6E01 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncoding.m"; path = "src/toolkit/DETweetComposeViewController/OAuth/NSString+URLEncoding.m"; sourceTree = "<group>"; };
 		7CA44FBD2824832F8811F730 /* DERuledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DERuledView.h; path = src/toolkit/DETweetComposeViewController/DERuledView.h; sourceTree = "<group>"; };
@@ -472,6 +478,10 @@
 				7CA44B57A0B54800375005A5 /* sha1.h */,
 				7CA4441336E1C11044FC6DB9 /* Reachability.h */,
 				7CA44ADD08C52170C7B9EED3 /* Reachability.m */,
+				7CA44115D04F6BDB65710299 /* SuccessView.m */,
+				7CA44C79A6223EFF41864C4A /* SuccessView.h */,
+				7CA4433FA353DF9BF5C34B84 /* DDProgressView.h */,
+				7CA44F5ED4EA0A65F277AA5A /* DDProgressView.m */,
 			);
 			sourceTree = "<group>";
 		};
@@ -693,6 +703,8 @@
 				7CA44BB2FF83845926F8FEB6 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
 				7CA44F3C278E369CD21D858E /* sha1.c in Sources */,
 				7CA443D1C9BEAF2BCA1E4C87 /* Reachability.m in Sources */,
+				7CA44C11CC9963C7D3DC513E /* SuccessView.m in Sources */,
+				7CA44CD0E711DF0C6E2DAFF4 /* DDProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,8 +807,8 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = IADT;
-				PROVISIONING_PROFILE = "A5F44000-D899-40C7-A058-D8C2E0628A7F";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A5F44000-D899-40C7-A058-D8C2E0628A7F";
+				PROVISIONING_PROFILE = "BF67DC19-FE73-49DC-9AEC-5979D50F2478";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BF67DC19-FE73-49DC-9AEC-5979D50F2478";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -828,8 +840,8 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = IADT;
-				PROVISIONING_PROFILE = "D1E79859-59E0-4CF9-8CE1-BCBEFE9A6637";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D1E79859-59E0-4CF9-8CE1-BCBEFE9A6637";
+				PROVISIONING_PROFILE = "791377EA-B638-4A82-9E33-A7B8F4FF4A1E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "791377EA-B638-4A82-9E33-A7B8F4FF4A1E";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};

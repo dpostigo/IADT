@@ -108,6 +108,10 @@
             [aTextField resignFirstResponder];
             break;
 
+        case UIReturnKeyDefault:
+            [aTextField resignFirstResponder];
+            break;
+
         default:
             break;
     }

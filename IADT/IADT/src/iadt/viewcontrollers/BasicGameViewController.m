@@ -13,12 +13,13 @@
 #import "UIImage+Grayscale.h"
 
 
-#define GHOST_IMAGE_ALPHA 0.4
+#define ITEM_TAG 10
+#define BUTTON_TAG 20
+#define DRAGGABLE_TAG 40
+#define DegreesToRadians(x) ((x) * M_PI / 180.0)
 
 
 @interface BasicGameViewController () <DraggableDelegate> {
-
-    NSMutableArray *selectedImages;
 }
 
 
@@ -27,6 +28,7 @@
 
 @implementation BasicGameViewController {
     NSMutableArray *selectedTags;
+    UILabel *instructionLabel;
 }
 
 
@@ -34,64 +36,56 @@
 @synthesize draggables;
 @synthesize isDummyGame;
 
-
+int rand_range(int min_n, int max_n) {
+    return arc4random() % (max_n - min_n + 1) + min_n;
+}
 - (void) loadView {
     [super loadView];
 
-    NSLog(@"isDummyGame = %d", isDummyGame);
-
-    [self disableNextButton];
-
-    if (DEBUG) {
-        nextButton.userInteractionEnabled = YES;
-    }
-
-    selectedImages = [[NSMutableArray alloc] init];
     selectedTags = [[NSMutableArray alloc] init];
-    introView = [[[NSBundle mainBundle] loadNibNamed: @"GameIntroView" owner: introView options: nil] objectAtIndex: 0];
+    [self disableNextButton];
+    [self setupIntroView];
+    [self setupInstructionText];
 
-    [self.view addSubview: introView];
-    [self.view insertSubview: introView belowSubview: navigationBarView];
-
-    introView.textLabel.text = [[_model.gamesData objectForKey: self.restorationIdentifier] objectForKey: @"Title"];
-    introView.textLabel.text = [introView.textLabel.text stringByReplacingOccurrencesOfString: @"\\n" withString: @"\n"];
-    introView.detailTextLabel.text = [[[_model.gamesData objectForKey: self.restorationIdentifier] objectForKey: @"Detail"] uppercaseString];
-
-    NSLog(@"self.restorationIdentifier = %@", self.restorationIdentifier);
-    NSLog(@"self.isDummyGame = %d", self.isDummyGame);
     draggables = [[NSMutableArray alloc] init];
+
     for (int j = 0; j < 6; j++) {
         NSInteger tag = j + 1;
         UIImageView *view = (UIImageView *) [self.view viewWithTag: tag];
         if (view) {
 
-            if (!self.isDummyGame || self.isSortingGame) {
-                UIImageView *ghost = [[UIImageView alloc] initWithFrame: view.frame];
-                ghost.image = view.image;
-                ghost.alpha = GHOST_IMAGE_ALPHA;
-                [self.view insertSubview: ghost belowSubview: view];
-            }
+            NSLog(@"view = %@", view);
+
+            [self handleGhostImage: view];
 
             Draggable *draggable = [[Draggable alloc] initWithFrame: view.frame];
             draggable.delegate = self;
             [self.view insertSubview: draggable belowSubview: view];
             draggable.contentView = view;
             draggable.droppable = containerView;
-            draggable.droppables = [NSMutableArray arrayWithArray: containerViews];
+            draggable.tag = DRAGGABLE_TAG + view.tag;
+            draggable.associatedLabel = (UILabel *) [self.view viewWithTag: view.tag + ITEM_TAG];
 
             [draggables addObject: draggable];
 
             if (self.isDummyGame) {
                 draggable.shouldFade = NO;
-                draggable.reverseScale = YES;
-                draggable.draggingMode = DraggingModeIntersects;
+                draggable.draggingMode = DraggingModeContains;
+                draggable.maskType = DraggableMaskTypeCustom;
+                draggable.maskView.frame = CGRectMake(0, 0, 3, 3);
+                draggable.maskView.left = view.width / 2 - draggable.maskView.width / 2;
+                draggable.maskView.top = view.height / 2 - draggable.maskView.height / 2;
+
                 [draggable reset];
             }
 
             else if (self.isSortingGame) {
                 draggable.shouldFade = NO;
+                draggable.droppables = [NSMutableArray arrayWithArray: containerViews];
             }
 
+            else if (self.isContainerGame) {
+            }
 
             if (containerView == nil) {
                 draggable.snapsToContainer = YES;
@@ -109,6 +103,36 @@
 }
 
 
+- (void) handleGhostImage: (UIImageView *) view {
+
+    if (!self.isDummyGame) {
+        UIImageView *ghost = [[UIImageView alloc] initWithFrame: view.frame];
+        ghost.image = view.image;
+        ghost.alpha = GHOST_IMAGE_ALPHA;
+        [self.view insertSubview: ghost belowSubview: view];
+    }
+}
+
+
+- (void) setupInstructionText {
+    instructionLabel = [[UILabel alloc] initWithFrame: CGRectMake(90, 128, 600, 21)];
+    instructionLabel.font = [UIFont fontWithName: @"HelveticaNeue-Light" size: 18.0];
+    instructionLabel.text = introView.detailTextLabel.text;
+    instructionLabel.backgroundColor = [UIColor clearColor];
+    instructionLabel.alpha = 0;
+    [self.view insertSubview: instructionLabel belowSubview: introView];
+    
+}
+- (void) setupIntroView {
+    introView = [[[NSBundle mainBundle] loadNibNamed: @"GameIntroView" owner: introView options: nil] objectAtIndex: 0];
+    introView.delegate = self;
+    [self.view insertSubview: introView belowSubview: navigationBarView];
+    introView.textLabel.text = [[_model.gamesData objectForKey: self.restorationIdentifier] objectForKey: @"Title"];
+    introView.textLabel.text = [introView.textLabel.text stringByReplacingOccurrencesOfString: @"\\n" withString: @"\n"];
+    introView.detailTextLabel.text = [[[_model.gamesData objectForKey: self.restorationIdentifier] objectForKey: @"Detail"] uppercaseString];
+}
+
+
 - (void) viewWillAppear: (BOOL) animated {
     [super viewWillAppear: animated];
     introView.frame = self.view.bounds;
@@ -118,36 +142,9 @@
 - (void) saveScore {
     if (!self.isDummyGame) {
         [self calculateScoreByTags];
-        //    [self calculateScoreByImageViews];
     }
 
     NSLog(@"_model.scores = %@", _model.scores);
-}
-
-
-- (void) calculateScoreByImageViews {
-
-
-    NSArray *items = [[_model.scoreData objectForKey: self.restorationIdentifier] objectForKey: @"Items"];
-    NSString *scoringMode = [[_model.scoreData objectForKey: self.restorationIdentifier] objectForKey: @"Scoring Mode"];
-    if ([scoringMode isEqualToString: @"None"]) {
-        return;
-    }
-
-    CGFloat score = 0;
-    for (UIImageView *imageView in selectedImages) {
-        NSInteger index = imageView.tag - 1;
-        CGFloat midpoint = [items count] / 2;
-        CGFloat thisScore = ((CGFloat) index) + ((midpoint * -1) + 1);
-        score += thisScore;
-    }
-
-    CGFloat numericResult = score / [selectedImages count];
-    NSString *stringResult = [[self dnaTypes] objectAtIndex: (numericResult > 0) ? 1: 0];
-    [_model.scores setObject: stringResult forKey: self.restorationIdentifier];
-
-    NSLog(@"numericResult = %f", numericResult);
-    NSLog(@"stringResult = %@", stringResult);
 }
 
 
@@ -218,47 +215,48 @@
 
     itemCount = 0;
     [self resetDraggables];
-    [self clearResults];
     [self resetSuccessViews];
 
     for (UIView *c in containerViews) {
         c.userInteractionEnabled = YES;
     }
 
-
     [self disableNextButton];
+    [introView show: self.view];
 }
 
 
 - (void) resetDraggables {
     for (Draggable *d in draggables) {
-        for (UIView *droppable in d.droppables) {
-            droppable.userInteractionEnabled = YES;
-        }
-        [d reset];
+        [d reset: NO];
     }
 }
 
 
-- (void) clearResults {
-    [selectedImages removeAllObjects];
-}
-int rand_range(int min_n, int max_n) {
-    return arc4random() % (max_n - min_n + 1) + min_n;
-}
 - (void) resetSuccessViews {
+
+    if (self.isDummyGame) {
+
+        Draggable *draggable = [draggables objectAtIndex: 0];
+
+        draggable.transform = CGAffineTransformScale(draggable.transform, 1.15, 1.15);
+    }
     for (UIView *view in successViews) {
         view.alpha = 0;
         view.userInteractionEnabled = NO;
     }
 
-    if (labels) {
-        for (UILabel *label in labels) {
+    for (UIButton *button in successButtons) {
+        button.alpha = 0;
+    }
+}
 
-            [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
-                label.alpha = 1.0;
-            }                completion: ^(BOOL completion) {
-            }];
+
+
+- (void) toggleOtherDraggables: (Draggable *) draggable enabled: (BOOL) isEnabled {
+    for (Draggable *aDraggable in draggables) {
+        if (aDraggable != draggable) {
+            aDraggable.userInteractionEnabled = isEnabled;
         }
     }
 }
@@ -266,36 +264,26 @@ int rand_range(int min_n, int max_n) {
 #pragma mark DraggableDelegate
 
 
-- (void) draggableBeganDrop: (Draggable *) draggable {
 
-    UIImageView *item = (UIImageView *) draggable.contentView;
-    UILabel *label = (UILabel *) [self.view viewWithTag: item.tag + 10];
-    if (label) {
-        [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
-            label.alpha = GHOST_IMAGE_ALPHA;
-        }                completion: ^(BOOL completion) {
-        }];
-    }
+- (void) draggableBeganDragging: (Draggable *) draggable {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+
+    [self.view bringSubviewToFront: draggable];
+
+    [self toggleOtherDraggables: draggable enabled: NO];
+
 }
 
 
 - (void) draggableDidNotDrop: (Draggable *) draggable {
     NSLog(@"%s", __PRETTY_FUNCTION__);
 
-    UIImageView *item = (UIImageView *) draggable.contentView;
-    UILabel *label = (UILabel *) [self.view viewWithTag: item.tag + 10];
-    if (label) {
-        [UIView animateWithDuration: 0.5 animations: ^{
-            label.alpha = 1.0;
-        }];
-    }
-
     [self updateScore];
     [self handleToggleNextButton];
 }
 
 
-- (void) draggableDidDrop: (Draggable *) draggable {
+- (void) draggableWillDrop: (Draggable *) draggable {
     NSLog(@"%s", __PRETTY_FUNCTION__);
 
     UIImageView *item = (UIImageView *) draggable.contentView;
@@ -305,19 +293,24 @@ int rand_range(int min_n, int max_n) {
     [self handleLimit: draggable];
     [self handleSuccess: draggable];
     [self handleToggleNextButton];
+
+}
+
+
+- (void) draggableDidFinishDragging: (Draggable *) draggable {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    [self toggleOtherDraggables: draggable enabled: YES];
 }
 
 
 - (void) updateScore {
     if (!self.isDummyGame) {
 
-        [selectedImages removeAllObjects];
         [selectedTags removeAllObjects];
 
         for (Draggable *draggable in draggables) {
             if (draggable.isPlaced) {
                 UIImageView *item = (UIImageView *) draggable.contentView;
-                [selectedImages addObject: item];
                 [selectedTags addObject: [NSNumber numberWithInteger: item.tag]];
             }
         }
@@ -353,18 +346,31 @@ int rand_range(int min_n, int max_n) {
     if (draggable.snapsToContainer) {
     }
 
-    else if (successViews) {
-        for (UIImageView *imageView in successViews) {
-            if (imageView.alpha == 0) {
+    else if (successButtons) {
+        for (UIButton *button in successButtons) {
 
-                imageView.image = ((UIImageView *) draggable.contentView).image;
-                imageView.top += 10;
+            if (button.alpha == 0) {
+                UIImage *image = ((UIImageView *) draggable.contentView).image;
+                [button setImage: image forState: UIControlStateNormal];
+                button.top += 10;
+                button.tag = BUTTON_TAG + draggable.contentView.tag;
+
+                NSInteger index = [successButtons indexOfObject: button];
+                CGFloat degrees = 10;
+                if (index == 0) degrees = -10;
+                else if (index == 2) degrees = 10;
+
+                NSLog(@"degrees = %f", degrees);
+
+                button.transform = CGAffineTransformIdentity;
+                //                button.transform = CGAffineTransformRotate(button.transform, DegreesToRadians(degrees));
 
                 [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseOut animations: ^{
-
-                    imageView.alpha = 1;
-                    imageView.top -= 10;
+                    button.alpha = 1;
+                    button.top -= 10;
                 }                completion: ^(BOOL completion) {
+                    //                    draggable.left = button.left;
+                    //                    draggable.top = button.top;
                 }];
 
                 return;
@@ -379,17 +385,22 @@ int rand_range(int min_n, int max_n) {
 
 
 - (void) handleToggleNextButton {
-    if (self.isContainerGame && itemCount == 3) {
-        [self enableNextButton];
-    }
+    if (self.isContainerGame || self.isSortingGame) {
 
-    else if (self.isSortingGame && [selectedTags count] == 3) {
-        [self enableNextButton];
+        NSLog(@"selectedTags = %@", selectedTags);
+
+        if ([selectedTags count] == 3) {
+            [self enableNextButton];
+        }
+
+        else {
+            [self disableNextButton];
+        }
     }
 
     else if (self.isDummyGame) {
         Draggable *draggable = [draggables objectAtIndex: 0];
-        if (draggable.currentDrop != nil) [self enableNextButton];
+        if (draggable.isPlaced) [self enableNextButton];
         else {
             [self disableNextButton];
         }
@@ -410,6 +421,10 @@ int rand_range(int min_n, int max_n) {
     [UIView animateWithDuration: 0.25 animations: ^{
         nextButton.alpha = GHOST_IMAGE_ALPHA;
     }];
+
+    if (DEBUG) {
+        nextButton.userInteractionEnabled = YES;
+    }
 }
 
 
@@ -422,5 +437,52 @@ int rand_range(int min_n, int max_n) {
     return (containerView != nil && !self.isDummyGame);
 }
 
+
+- (void) handleContainerTapped: (id) sender {
+    for (UIButton *button in successButtons) {
+        if (button.alpha == 1) {
+        }
+    }
+}
+
+
+- (IBAction) handleSuccessButtonTapped: (id) sender {
+    [self revertSuccessButton: sender];
+
+    Draggable *draggable = (Draggable *) [self.view viewWithTag: [sender tag] - 20 + DRAGGABLE_TAG];
+    [draggable reset];
+
+    [self updateScore];
+    [self handleToggleNextButton];
+}
+
+
+- (void) revertSuccessButton: (UIButton *) button {
+    [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseOut animations: ^{
+        button.alpha = 0;
+    }                completion: nil];
+}
+
+
+- (void) gameIntroViewWillDismiss: (GameIntroView *) gameIntroView {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+
+    CGFloat textDelay = 0.5;
+
+    if (self.isDummyGame) {
+
+        textDelay = 0.7;
+        Draggable *draggable = [draggables objectAtIndex: 0];
+        [UIView animateWithDuration: 0.15 delay: 0.15 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
+
+            draggable.transform = CGAffineTransformIdentity;
+        }                completion: nil];
+    }
+
+    [UIView animateWithDuration: 0.5 delay: textDelay options: UIViewAnimationOptionCurveEaseOut animations: ^{
+
+    instructionLabel.alpha = 1;
+        } completion: nil];
+}
 
 @end

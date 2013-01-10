@@ -10,7 +10,6 @@
 
 
 @implementation Draggable {
-    UIView *circleMask;
     NSMutableArray *usedDroppables;
 }
 
@@ -29,10 +28,13 @@
 @synthesize currentDrop;
 @synthesize reverseScale;
 @synthesize draggingMode;
+@synthesize associatedLabel;
+@synthesize maskType;
+@synthesize maskView;
 
 #define DRAG_DEBUG 0
 #define REVERSE_SCALE_DEBUG 1
-#define DRAGMODE_DEBUG 0
+#define DRAGMODE_ENABLED 1
 
 - (BOOL) isPlaced {
     return (currentDrop != nil);
@@ -44,13 +46,13 @@
     if (self) {
         shouldFade = YES;
 
-        circleMask = [[UIView alloc] initWithFrame: self.bounds];
-        circleMask.backgroundColor = [UIColor clearColor];
+        maskView = [[UIView alloc] initWithFrame: self.bounds];
+        maskView.backgroundColor = [UIColor clearColor];
 
         if (DRAG_DEBUG) {
-            circleMask.backgroundColor = [UIColor blueColor];
+            maskView.backgroundColor = [UIColor blueColor];
         }
-        [self addSubview: circleMask];
+        [self addSubview: maskView];
 
         usedDroppables = [[NSMutableArray alloc] init];
         itemCount = 0;
@@ -68,17 +70,35 @@
 
 - (void) setCircleRadius: (CGFloat) circleRadius1 {
     circleRadius = circleRadius1;
+    [self layout];
+}
 
-    circleMask.width = circleRadius * 2;
-    circleMask.height = circleRadius * 2;
-    circleMask.layer.cornerRadius = circleRadius;
-    circleMask.center = CGPointMake(self.width / 2, self.height / 2);
+
+- (void) layout {
+
+    switch (maskType) {
+
+        case DraggableMaskTypeCustom :
+            break;
+
+        case DraggableMaskTypeCustomCentered :
+            maskView.center = CGPointMake(self.width / 2, self.height / 2);
+            break;
+
+        case DraggableMaskTypeCircle :
+        default:
+            maskView.width = circleRadius * 2;
+            maskView.height = circleRadius * 2;
+            maskView.layer.cornerRadius = circleRadius;
+            maskView.center = CGPointMake(self.width / 2, self.height / 2);
+            break;
+    }
 }
 
 
 - (BOOL) pointInside: (CGPoint) point withEvent: (UIEvent *) event {
     if (maskEnabled) {
-        return CGRectContainsPoint(circleMask.frame, point);
+        return CGRectContainsPoint(maskView.frame, point);
     }
     return [super pointInside: point withEvent: event];
 }
@@ -88,7 +108,7 @@
     [super touchesBegan: touches withEvent: event];
 
     if (DRAG_DEBUG) {
-        [self addSubview: circleMask];
+        [self addSubview: maskView];
     }
 
     if (currentDrop != nil) {
@@ -113,7 +133,7 @@
     }                completion: ^(BOOL completion) {
     }];
 
-    [self draggableBeganDrop];
+    [self draggableBeganDragging];
 }
 
 
@@ -137,7 +157,11 @@
         [self draggableWasDropped: dropContainer];
     }
 
-    else [self draggableWasNotDropped];
+    else{
+        [self draggableWasNotDropped];
+        [self draggableDidFinishDragging];
+    }
+
 }
 
 
@@ -151,6 +175,10 @@
     BOOL wasDropped = NO;
 
     if (droppables != nil && [droppables count] > 0) {
+
+        for (UIView *aDroppable in droppables) {
+            NSLog(@"aDroppable.userInteractionEnabled = %d", aDroppable.userInteractionEnabled);
+        }
         for (UIView *aDroppable in droppables) {
 
             wasDropped = [self evalWasDropped: aDroppable];
@@ -170,9 +198,9 @@
 
 
 - (BOOL) evalWasDropped: (UIView *) aDroppable {
-    CGRect frame = CGRectMake(self.origin.x + circleMask.origin.x, self.origin.y + circleMask.origin.y, circleMask.size.width, circleMask.size.height);
+    CGRect frame = CGRectMake(self.origin.x + maskView.origin.x, self.origin.y + maskView.origin.y, maskView.size.width, maskView.size.height);
 
-    if (DRAGMODE_DEBUG) {
+    if (DRAGMODE_ENABLED) {
         return (draggingMode == DraggingModeContains ? CGRectContainsRect(aDroppable.frame, frame): CGRectIntersectsRect(aDroppable.frame, frame));
     }
     else {
@@ -230,9 +258,22 @@
 }
 
 
-- (void) draggableBeganDrop {
-    if ([delegate respondsToSelector: @selector(draggableBeganDrop:)]) {
-        [delegate performSelector: @selector(draggableBeganDrop:) withObject: self];
+- (void) draggableBeganDragging {
+
+    if (associatedLabel != nil) {
+        [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
+            associatedLabel.alpha = GHOST_IMAGE_ALPHA;
+        }                completion: nil];
+    }
+
+    if ([delegate respondsToSelector: @selector(draggableBeganDragging:)]) {
+        [delegate performSelector: @selector(draggableBeganDragging:) withObject: self];
+    }
+}
+
+- (void) draggableDidFinishDragging {
+    if ([delegate respondsToSelector: @selector(draggableDidFinishDragging:)]) {
+        [delegate performSelector: @selector(draggableDidFinishDragging:) withObject: self];
     }
 }
 
@@ -241,6 +282,13 @@
 
     currentDrop = dropContainer;
     itemCount += 1;
+
+
+
+    if ([delegate respondsToSelector: @selector(draggableWillDrop:)]) {
+        [delegate performSelector: @selector(draggableWillDrop:) withObject: self];
+    }
+
 
     [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
 
@@ -252,17 +300,26 @@
             self.centerY = dropContainer.centerY;
         }
     }                completion: ^(BOOL completion) {
+
+
+        if ([delegate respondsToSelector: @selector(draggableDidFinishDrop:)]) {
+            [delegate performSelector: @selector(draggableDidFinishDrop:) withObject: self];
+        }
+
+
+        [self draggableDidFinishDragging];
+
     }];
 
-    if ([delegate respondsToSelector: @selector(draggableDidDrop:)]) {
-        [delegate performSelector: @selector(draggableDidDrop:) withObject: self];
-    }
+
+
 }
 
 
 - (void) draggableWasNotDropped {
 
-    [self resetPosition];
+    [self resetPosition: YES];
+    [self resetLabel];
 
     if ([delegate respondsToSelector: @selector(draggableDidNotDrop:)]) {
         [delegate performSelector: @selector(draggableDidNotDrop:) withObject: self];
@@ -271,14 +328,32 @@
 
 
 - (void) reset {
-
-    self.droppingDisabled = NO;
-    [self resetPosition];
+    [self reset: YES];
 }
 
 
-- (void) resetPosition {
+- (void) reset: (BOOL) animated {
+    for (UIView *aDroppable in self.droppables) {
+        aDroppable.userInteractionEnabled = YES;
+    }
+
+    self.droppingDisabled = NO;
+    currentDrop = nil;
+    [self resetPosition: animated];
+    [self resetLabel];
+}
+
+
+- (void) resetLabel {
     [UIView animateWithDuration: 0.25 delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
+        associatedLabel.alpha = 1.0;
+    }                completion: nil];
+}
+
+
+- (void) resetPosition: (BOOL) animated {
+
+    [UIView animateWithDuration: (animated ? 0.25: 0) delay: 0.0 options: UIViewAnimationOptionCurveEaseInOut animations: ^{
 
         if (REVERSE_SCALE_DEBUG) {
 

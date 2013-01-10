@@ -39,6 +39,7 @@
 
     NSUInteger numGames = [[_model.pointScores allKeys] count];
     CGPoint resultPoint = CGPointMake(monsterPoint.x / numGames, monsterPoint.y / numGames);
+
     NSInteger base = 0;
     if (resultPoint.y > 0) {
         if (resultPoint.x < 0) {

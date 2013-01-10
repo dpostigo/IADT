@@ -30,17 +30,19 @@
 }
 
 
-
-
 - (void) loadView {
     [super loadView];
     self.navigationBarView = [[[NSBundle mainBundle] loadNibNamed: @"NavigationBar" owner: navigationBarView options: nil] objectAtIndex: 0];
     [self.view addSubview: navigationBarView];
-    navigationBarView.pageControl.currentPage = [self.navigationController.viewControllers count] - 1;
+    //navigationBarView.pageControl.currentPage = [self.navigationController.viewControllers count] - 1;
 
 
+    CGFloat currentPage = [self.navigationController.viewControllers count] - 1;
+    CGFloat progress =  currentPage / 9.0f;
+    navigationBarView.progressView.progress = progress;
 
-    if (navigationBarView.pageControl.currentPage > 2)
+
+    if (currentPage > 2)
         [navigationBarView.homeButton addTarget: self action: @selector(handleHome:) forControlEvents: UIControlEventTouchUpInside];
 }
 

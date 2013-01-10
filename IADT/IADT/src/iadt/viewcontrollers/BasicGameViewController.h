@@ -20,6 +20,7 @@
     IBOutlet UIView *containerView;
     IBOutlet UIView *successView;
 
+    IBOutletCollection(UIView) NSArray *successButtons;
     IBOutletCollection(UIView) NSArray *successViews;
     IBOutletCollection(UIView) NSArray *containerViews;
     IBOutletCollection(UIView) NSArray *labels;

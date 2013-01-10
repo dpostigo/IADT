@@ -20,7 +20,7 @@
 		<key>Party</key>
 		<dict>
 			<key>Title</key>
-			<string>You&apos;re at a party. Where do you go first?</string>
+			<string>You&apos;re at a party. \nWhere do you go first?</string>
 			<key>Detail</key>
 			<string>Place yourself there.</string>
 		</dict>
