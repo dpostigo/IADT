@@ -127,6 +127,11 @@ enum {
         //        }
 
         CGFloat statusBarOffset = 20.0f;
+
+        if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft) {
+            statusBarOffset = -20.0f;
+        }
+
         CGContextTranslateCTM(context, statusBarOffset, 0.0f);
     }
 

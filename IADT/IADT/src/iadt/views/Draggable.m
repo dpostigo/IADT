@@ -166,6 +166,8 @@
 
 
 - (BOOL) calculateWasDropped {
+
+
     if (droppingDisabled) return NO;
 
     if (droppable != nil) {
@@ -176,13 +178,9 @@
 
     if (droppables != nil && [droppables count] > 0) {
 
-        for (UIView *aDroppable in droppables) {
-            NSLog(@"aDroppable.userInteractionEnabled = %d", aDroppable.userInteractionEnabled);
-        }
-        for (UIView *aDroppable in droppables) {
 
+        for (UIView *aDroppable in droppables) {
             wasDropped = [self evalWasDropped: aDroppable];
-
             if (aDroppable.userInteractionEnabled == NO) {
                 wasDropped = NO;
             }

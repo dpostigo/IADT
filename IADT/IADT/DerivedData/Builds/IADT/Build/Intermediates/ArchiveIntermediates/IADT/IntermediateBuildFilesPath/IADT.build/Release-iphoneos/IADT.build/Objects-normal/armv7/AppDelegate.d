@@ -1,0 +1,29 @@
+dependencies: \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/iadt/app/AppDelegate.m \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FacebookSDK.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBSession.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBRequest.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBRequestConnection.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBGraphObject.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBError.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBSettings.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBLoginView.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBGraphUser.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBGraphPlace.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBGraphLocation.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBProfilePictureView.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBUserSettingsViewController.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBViewController.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBPlacePickerViewController.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBCacheDescriptor.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBFriendPickerViewController.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBOpenGraphAction.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBNativeDialogs.h \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/iadt/app/AppDelegate.h \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/iadt/operations/ReconcileCSV.h \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/iadt/operations/BasicCSVOperation.h \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/operations/BasicOperation.h \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/iadt/models/Model.h \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/models/BasicModel.h \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/models/BasicLibrary.h \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/toolkit/DebugLog/DebugLog.h

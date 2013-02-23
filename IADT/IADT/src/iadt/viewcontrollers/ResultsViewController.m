@@ -14,10 +14,10 @@
 #import "DEFacebookComposeViewController.h"
 #import "DETweetComposeViewController.h"
 #import "Reachability.h"
+#import "CalculateFinalScore.h"
 
 
 @implementation ResultsViewController {
-    NSString *badgeName;
     NSString *messageString;
 }
 
@@ -25,61 +25,24 @@
 - (void) loadView {
     [super loadView];
 
-    messageString = [NSString stringWithFormat: @"My digital DNA."];
+    messageString = [NSString stringWithFormat: @"My Digital DNA says I’m Conceptual, Methodical, Analytic and Intuitive. Sound like me? www.IADT.edu"];
 
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-
-    NSArray *points = [_model.pointScores allValues];
-    CGPoint monsterPoint = CGPointMake(0, 0);
-    for (NSValue *value in points) {
-        CGPoint point = [value CGPointValue];
-        monsterPoint.x += point.x;
-        monsterPoint.y += point.y;
-    }
-
-    NSUInteger numGames = [[_model.pointScores allKeys] count];
-    CGPoint resultPoint = CGPointMake(monsterPoint.x / numGames, monsterPoint.y / numGames);
-
-    NSInteger base = 0;
-    if (resultPoint.y > 0) {
-        if (resultPoint.x < 0) {
-            base = 1;
-            base = base + [self chooseTriangle: resultPoint switch: NO];
-        } else {
-            base = 3;
-            base = base + [self chooseTriangle: resultPoint switch: YES];
-        }
-    } else {
-        if (resultPoint.x > 0) {
-            base = 5;
-            base = base + [self chooseTriangle: resultPoint switch: NO];
-        } else {
-            base = 7;
-            base = base + [self chooseTriangle: resultPoint switch: YES];
-        }
-    }
-
-    badgeName = [NSString stringWithFormat: @"badge%i", base];
-    badgeView.image = [UIImage imageNamed: badgeName];
-
-    NSLog(@"NSStringFromCGPoint(resultPoint) = %@", NSStringFromCGPoint(resultPoint));
-    NSLog(@"badgeName = %@", badgeName);
+    [_queue addOperation: [[CalculateFinalScore alloc] init]];
 }
 
 
-- (NSInteger) chooseTriangle: (CGPoint) monsterPoint switch: (BOOL) shouldSwitch {
+- (void) finalScoreDidUpdate {
 
-    NSInteger ret = 0;
-    if (abs((int) monsterPoint.x) > abs((int) monsterPoint.y)) {
-        ret = 0;
-    } else {
-        ret = 1;
-    }
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"_model.badgeName = %@", _model.badgeName);
+    badgeView.image = [UIImage imageNamed: _model.badgeName];
 
-    if (shouldSwitch) {
-        ret = (ret == 0) ? 1: 0;
-    }
-    return ret;
+}
+
+
+- (void) finalScoreDidUpdateWithDebugString: (NSString *) debugString {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+//    debugLabel.text = debugString;
 }
 
 
@@ -90,6 +53,12 @@
         NSString *string = [[_model.scores allValues] componentsJoinedByString: @", "];
         NSLog(@"string = %@", string);
         resultLabel.text = string;
+
+        NSMutableArray *values = [[NSMutableArray alloc] initWithArray: [_model.scores allValues]];
+        NSString *lastObject = [values lastObject];
+        [values replaceObjectAtIndex: [values indexOfObject: lastObject] withObject: [NSString stringWithFormat: @"and %@", lastObject]];
+        string = [values componentsJoinedByString: @", "];
+        messageString = [NSString stringWithFormat: @"My Digital DNA says I’m %@. Sound like me? www.IADT.edu", string];
 
         string = [[_model.scores allValues] componentsJoinedByString: @" "];
         [_queue addOperation: [[UpdateToDocuments alloc] initWithResult: string]];
@@ -125,8 +94,8 @@
     };
     DETweetComposeViewController *controller = [[DETweetComposeViewController alloc] init];
     self.modalPresentationStyle = UIModalPresentationCurrentContext;
-    [controller setInitialText: messageString];
-    [controller addImage: [UIImage imageNamed: badgeName]];
+    [controller setInitialText: [NSString stringWithFormat: @"%@ #IADTevolve", messageString]];
+    [controller addImage: [UIImage imageNamed: _model.badgeName]];
     controller.alwaysUseDETwitterCredentials = YES;
     controller.completionHandler = completionHandler;
     [self presentViewController: controller animated: YES completion: nil];
@@ -159,7 +128,7 @@
     controller.modalPresentationStyle = UIModalPresentationFullScreen;
     //    self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
     [controller setInitialText: messageString];
-    [controller addImage: [UIImage imageNamed: badgeName]];
+    [controller addImage: [UIImage imageNamed: _model.badgeName]];
     [controller setCompletionHandler: completionHandler];
 
     [self presentViewController: controller animated: YES completion: nil];

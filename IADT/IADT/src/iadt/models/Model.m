@@ -16,6 +16,8 @@
     NSDictionary *_scoreData;
     NSMutableDictionary *_sessionDictionary;
     NSMutableDictionary *_pointScores;
+    NSString *_badgeName;
+    NSMutableDictionary *_itemScores;
 }
 
 
@@ -26,6 +28,8 @@
 @synthesize lastEntry = _lastEntry;
 @synthesize sessionDictionary = _sessionDictionary;
 @synthesize pointScores = _pointScores;
+@synthesize badgeName = _badgeName;
+@synthesize itemScores = _itemScores;
 
 
 + (Model *) sharedModel {
@@ -53,9 +57,9 @@
         self.scoreData = [array objectAtIndex: 1];
         self.scores = [[NSMutableDictionary alloc] init];
         self.pointScores = [[NSMutableDictionary alloc] init];
+        self.itemScores = [[NSMutableDictionary alloc] init];
 
         _dataString = [[NSUserDefaults standardUserDefaults] objectForKey: @"dataString"];
-        NSLog(@"_dataString = %@", _dataString);
 
 
 

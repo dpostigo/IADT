@@ -11,8 +11,9 @@
 
 
 @interface LoginViewController : BasicViewController {
-    IBOutlet UITextField *name;
-    IBOutlet UITextField *email;
+    IBOutlet TextField *name;
+    IBOutlet TextField *lastName;
+    IBOutlet TextField *email;
     IBOutlet TextField *phone;
     IBOutlet TextField *zip;
 

@@ -8,6 +8,8 @@
 
 #import <FacebookSDK/FacebookSDK.h>
 #import "AppDelegate.h"
+#import "ReconcileCSV.h"
+#import "DebugLog.h"
 
 
 @implementation AppDelegate
@@ -20,6 +22,9 @@
     [TestFlight setDeviceIdentifier: [[UIDevice currentDevice] uniqueIdentifier]];
     [TestFlight takeOff: @"44a2eeaa-a91a-4178-b51a-4d7584bef7dc"];
 #endif
+
+    NSOperationQueue *queue = [NSOperationQueue new];
+    [queue addOperation: [[ReconcileCSV alloc] init]];
 
 
     return YES;

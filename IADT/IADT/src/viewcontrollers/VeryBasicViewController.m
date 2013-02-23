@@ -21,6 +21,7 @@
 @synthesize delegate;
 @synthesize delegates;
 @synthesize textFields;
+@synthesize debugLabel;
 
 
 - (id) initWithNibName: (NSString *) nibNameOrNil bundle: (NSBundle *) nibBundleOrNil {
@@ -67,6 +68,7 @@
     if (![textFields containsObject: aTextField]) {
         [textFields addObject: aTextField];
         aTextField.delegate = self;
+        [aTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     }
 }
 
@@ -126,6 +128,8 @@
 }
 
 
+
+
 - (void) dismissModal {
     [self dismissViewControllerAnimated: YES completion: nil];
 }
@@ -136,6 +140,10 @@
 
 
 - (void) textFieldEndedEditing: (UITextField *) aTextField {
+}
+
+- (void) textFieldDidChange: (UITextField *) aTextField {
+
 }
 
 

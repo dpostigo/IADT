@@ -14,9 +14,7 @@
 
 - (void) main {
     [super main];
-
     _model.dataString = [_model.dataString stringByReplacingOccurrencesOfString: _model.lastEntry withString: @""];
-
     [self saveFile];
 }
 

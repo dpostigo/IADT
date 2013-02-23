@@ -40,26 +40,33 @@
 		7CA44080CBAB5BD52A7F2B87 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA440B1117D2994BB3C66E5 /* GameObject.m */; };
 		7CA440BB347F89E3B21C8C82 /* PuttyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4464B0D508C197482CEE3 /* PuttyView.m */; };
 		7CA440E254B01B33FE39F442 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA442990F2AA1E997E6A4E1 /* BasicViewController.m */; };
+		7CA4413655493E94DC54785F /* DebugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44E0B7F7B33A344D64D25 /* DebugLog.m */; };
+		7CA4413FA9582CFCC2C9DFAB /* LogValidItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA442ACD83D2AAF24D6624A /* LogValidItem.m */; };
 		7CA4415ADF7573D4378B298C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA44A597255E591874F395D /* libTestFlight.a */; };
 		7CA4416A8F36E3FE363172FE /* DEViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CA44BEA9D075387A22774DE /* DEViewController_iPad.xib */; };
+		7CA441A8A6C134F44FFF585F /* CalculateGameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44BA46CCEF68D37694422 /* CalculateGameScore.m */; };
 		7CA441F29B57A8FA76255435 /* SaveToDocuments.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA449140D01EB85726D8D17 /* SaveToDocuments.m */; };
 		7CA4420C5984DD4801EAAECC /* Draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA443DAF14D49530141BEB2 /* Draggable.m */; };
+		7CA4429BF2F433D7B78FA66C /* ReconcileCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4435DCF261F89067EDCCC /* ReconcileCSV.m */; };
 		7CA44329FB8409EE34B342D8 /* DEFacebookSheetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44916BA431E3BCB9F0FF6 /* DEFacebookSheetCardView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA4437C2BE6A060CB514A77 /* DETweetComposeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CA442AB9C8ADE4D61ABE39B /* DETweetComposeView.xib */; };
 		7CA443C7621A71545E149D88 /* DETweetComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4439290653A79C2AE5E4F /* DETweetComposeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA443D1C9BEAF2BCA1E4C87 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44ADD08C52170C7B9EED3 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA4440A343B1402518E4DC4 /* BasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C54A3156CA9E9116E42 /* BasicView.m */; };
+		7CA44416AF4B7A158CA423DA /* DeleteCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44FF92507729EFF4F23C1 /* DeleteCSV.m */; };
 		7CA44432176B90EB690F7C36 /* UIDevice+DEFacebookComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4411E1866EF5FFEA67AFE /* UIDevice+DEFacebookComposeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA4447DFD912454A6578D69 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44CFBBECC3E27CED74B74 /* ResultsViewController.m */; };
 		7CA4448FC30E0A06FF2D0B8A /* UpdateToDocuments.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA448C3D3772DE971C96692 /* UpdateToDocuments.m */; };
 		7CA444A7F6B77E90F28F81C1 /* OAuth+DEUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA446F77EB6457D5285200E /* OAuth+DEUserDefaults.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA444EFC09F4ACD21C2075D /* BasicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA440002B6DADB5E265A341 /* BasicLibrary.m */; };
 		7CA445406D3E75AAF6043038 /* sucessItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CA44980FE87FCCAA06DE2B5 /* sucessItems.plist */; };
+		7CA4455079485052AD445783 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44A32EEB4FBC573612AB8 /* UIImage+Alpha.m */; };
 		7CA445D1417BF0D7FC3D7BE1 /* DEFacebookComposeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CA44B770BE96AE19C2B10E0 /* DEFacebookComposeView.xib */; };
 		7CA445EDB0F9FFA969AAB05D /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4483B1E625AB9B288C093 /* SMPageControl.m */; };
 		7CA445F559F34524E6CEC744 /* DETweetSheetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44130E68578A9DCE8EA5C /* DETweetSheetCardView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA44620779D3129B47EEB21 /* BasicWhiteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA442FB9EFA1F904332F21F /* BasicWhiteView.m */; };
 		7CA446617542C572C67264A0 /* TableRowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44AFDF317F3DDC298D272 /* TableRowObject.m */; };
+		7CA44661BC073042C22F6FA8 /* IrregularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA443753ECDA575C57615FE /* IrregularButton.m */; };
 		7CA44667ED06434B519E1E9A /* DEEmbossedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F38B45CF61BE7D4CE4B /* DEEmbossedLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA446799D6BE8A3A07DD001 /* DETweetGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA448203F6C44125B7900AF /* DETweetGradientView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA4467DA3E6DD6301C4CDAA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA44014CCBC3A38320655B2 /* MainStoryboard.storyboard */; };
@@ -87,6 +94,7 @@
 		7CA44BB2FF83845926F8FEB6 /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4471E08FA3E1E3F2658CA /* OAHMAC_SHA1SignatureProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA44BE08242116A44ED09FB /* SocialHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44763A4E781090F130550 /* SocialHandler.m */; };
 		7CA44C11CC9963C7D3DC513E /* SuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44115D04F6BDB65710299 /* SuccessView.m */; };
+		7CA44C311C20CFFFD276471E /* CalculateFinalScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F59CB72D3DE31876E9E /* CalculateFinalScore.m */; };
 		7CA44C3B8BD744E7E4EA07CE /* TwitterDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44FEC088166379E83A616 /* TwitterDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA44C40F85B8A388A05512E /* UIDevice+DETweetComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44DDC42CFA4773C0F08A6 /* UIDevice+DETweetComposeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7CA44C7BD5DE11418AE7DA65 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44413B0B4516C0AB86E04 /* NSString+Utils.m */; };
@@ -175,16 +183,20 @@
 		7CA442855C5395A5923EE458 /* BasicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicModel.h; path = src/models/BasicModel.h; sourceTree = "<group>"; };
 		7CA442990F2AA1E997E6A4E1 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicViewController.m; path = src/iadt/viewcontrollers/BasicViewController.m; sourceTree = "<group>"; };
 		7CA442AB9C8ADE4D61ABE39B /* DETweetComposeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DETweetComposeView.xib; path = src/toolkit/DETweetComposeViewController/DETweetComposeView.xib; sourceTree = "<group>"; };
+		7CA442ACD83D2AAF24D6624A /* LogValidItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogValidItem.m; path = src/iadt/operations/LogValidItem.m; sourceTree = "<group>"; };
 		7CA442AD2EFE714BAAB1CD92 /* UIDevice+DEFacebookComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+DEFacebookComposeViewController.h"; path = "src/toolkit/FacebookComposeViewController/UIDevice+DEFacebookComposeViewController.h"; sourceTree = "<group>"; };
 		7CA442FB9EFA1F904332F21F /* BasicWhiteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicWhiteView.m; path = src/views/BasicWhiteView.m; sourceTree = "<group>"; };
 		7CA4433FA353DF9BF5C34B84 /* DDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDProgressView.h; path = src/toolkit/DDProgressView/DDProgressView.h; sourceTree = "<group>"; };
+		7CA4435DCF261F89067EDCCC /* ReconcileCSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReconcileCSV.m; path = src/iadt/operations/ReconcileCSV.m; sourceTree = "<group>"; };
 		7CA4436572589DEDC856FADD /* DEFacebookSheetCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEFacebookSheetCardView.h; path = src/toolkit/FacebookComposeViewController/DEFacebookSheetCardView.h; sourceTree = "<group>"; };
+		7CA443753ECDA575C57615FE /* IrregularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IrregularButton.m; path = src/toolkit/IrregularButton/IrregularButton.m; sourceTree = "<group>"; };
 		7CA44384E0882F3822A1B8AD /* UIImage+Grayscale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Grayscale.m"; path = "src/utils/UIImage+Grayscale.m"; sourceTree = "<group>"; };
 		7CA4438AF6C8580B6A8EBE3A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/iadt/app/AppDelegate.h; sourceTree = "<group>"; };
 		7CA4439290653A79C2AE5E4F /* DETweetComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DETweetComposeViewController.m; path = src/toolkit/DETweetComposeViewController/DETweetComposeViewController.m; sourceTree = "<group>"; };
 		7CA44398099EA64C7B5D66CE /* DEFacebookGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEFacebookGradientView.h; path = src/toolkit/FacebookComposeViewController/DEFacebookGradientView.h; sourceTree = "<group>"; };
 		7CA443AC3E50A6F9E00C0AA9 /* BasicOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicOperation.h; path = src/operations/BasicOperation.h; sourceTree = "<group>"; };
 		7CA443C20CEA2F856D1CA44D /* BasicCSVOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicCSVOperation.m; path = src/iadt/operations/BasicCSVOperation.m; sourceTree = "<group>"; };
+		7CA443D7226A142A07134739 /* DebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugLog.h; path = src/toolkit/DebugLog/DebugLog.h; sourceTree = "<group>"; };
 		7CA443DAF14D49530141BEB2 /* Draggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Draggable.m; path = src/iadt/views/Draggable.m; sourceTree = "<group>"; };
 		7CA443DB00AFD572F2507D89 /* FadePopSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FadePopSegue.m; path = src/iadt/segues/FadePopSegue.m; sourceTree = "<group>"; };
 		7CA4441336E1C11044FC6DB9 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = src/toolkit/Reachability/Reachability.h; sourceTree = "<group>"; };
@@ -200,6 +212,7 @@
 		7CA444FF41836A7D7A81A87D /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Utils.h"; path = "src/utils/UIView+Utils.h"; sourceTree = "<group>"; };
 		7CA44509463F2204B5B92E21 /* DEFacebookComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEFacebookComposeViewController.m; path = src/toolkit/FacebookComposeViewController/DEFacebookComposeViewController.m; sourceTree = "<group>"; };
 		7CA4451547DEFDBD6F348861 /* DEFacebookGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEFacebookGradientView.m; path = src/toolkit/FacebookComposeViewController/DEFacebookGradientView.m; sourceTree = "<group>"; };
+		7CA445664E14D9201A7F0772 /* LogValidItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogValidItem.h; path = src/iadt/operations/LogValidItem.h; sourceTree = "<group>"; };
 		7CA44584CA6CC65C39F3F360 /* NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationBar.h; path = src/iadt/views/NavigationBar.h; sourceTree = "<group>"; };
 		7CA445C301DA93D32818330E /* UpdateToDocuments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateToDocuments.h; path = src/iadt/operations/UpdateToDocuments.h; sourceTree = "<group>"; };
 		7CA445D08D47E30218C9FCDF /* UIApplication+DEFacebookComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+DEFacebookComposeViewController.m"; path = "src/toolkit/FacebookComposeViewController/UIApplication+DEFacebookComposeViewController.m"; sourceTree = "<group>"; };
@@ -227,6 +240,7 @@
 		7CA4483B1E625AB9B288C093 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMPageControl.m; path = src/toolkit/SMPageControl/SMPageControl.m; sourceTree = "<group>"; };
 		7CA4485C7E2245A6C8BFC993 /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextField.h; path = src/controls/TextField.h; sourceTree = "<group>"; };
 		7CA44885B9DFB52AF710F452 /* GameIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameIntroView.m; path = src/iadt/views/GameIntroView.m; sourceTree = "<group>"; };
+		7CA4488FEF3CCEFC9ADB63E4 /* ReconcileCSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReconcileCSV.h; path = src/iadt/operations/ReconcileCSV.h; sourceTree = "<group>"; };
 		7CA448C3D3772DE971C96692 /* UpdateToDocuments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateToDocuments.m; path = src/iadt/operations/UpdateToDocuments.m; sourceTree = "<group>"; };
 		7CA449140D01EB85726D8D17 /* SaveToDocuments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SaveToDocuments.m; path = src/iadt/operations/SaveToDocuments.m; sourceTree = "<group>"; };
 		7CA44916BA431E3BCB9F0FF6 /* DEFacebookSheetCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEFacebookSheetCardView.m; path = src/toolkit/FacebookComposeViewController/DEFacebookSheetCardView.m; sourceTree = "<group>"; };
@@ -235,6 +249,7 @@
 		7CA449AB0EEA64E50D9B7E84 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Utils.m"; path = "src/utils/UIColor+Utils.m"; sourceTree = "<group>"; };
 		7CA44A0EBDD181F8618DEB72 /* DETweetGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DETweetGradientView.h; path = src/toolkit/DETweetComposeViewController/DETweetGradientView.h; sourceTree = "<group>"; };
 		7CA44A210007019B4258F7E9 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = src/iadt/models/Model.h; sourceTree = "<group>"; };
+		7CA44A32EEB4FBC573612AB8 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Alpha.m"; path = "src/utils/UIImage+Alpha.m"; sourceTree = "<group>"; };
 		7CA44A41707BFB31F54F96BF /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceUtils.h; path = src/utils/DeviceUtils.h; sourceTree = "<group>"; };
 		7CA44A597255E591874F395D /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = src/toolkit/TestFlight/libTestFlight.a; sourceTree = "<group>"; };
 		7CA44A656A158433299058E5 /* TwitterLoginPopupDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterLoginPopupDelegate.h; path = src/toolkit/DETweetComposeViewController/OAuth/TwitterLoginPopupDelegate.h; sourceTree = "<group>"; };
@@ -255,6 +270,7 @@
 		7CA44B9A4FC1E93605022616 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hmac.c; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/hmac.c; sourceTree = "<group>"; };
 		7CA44BA0A8AF0F496DA50559 /* TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextField.m; path = src/controls/TextField.m; sourceTree = "<group>"; };
 		7CA44BA33B63A9E57E509D2C /* TableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableSection.m; path = src/table/TableSection.m; sourceTree = "<group>"; };
+		7CA44BA46CCEF68D37694422 /* CalculateGameScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalculateGameScore.m; path = src/iadt/operations/CalculateGameScore.m; sourceTree = "<group>"; };
 		7CA44BB801003254286614D8 /* DeleteToDocuments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeleteToDocuments.m; path = src/iadt/operations/DeleteToDocuments.m; sourceTree = "<group>"; };
 		7CA44BDA30F1BBE3F1C5A218 /* BasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicView.h; path = src/views/BasicView.h; sourceTree = "<group>"; };
 		7CA44BEA9D075387A22774DE /* DEViewController_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DEViewController_iPad.xib; path = src/toolkit/DETweetComposeViewController/DEViewController_iPad.xib; sourceTree = "<group>"; };
@@ -263,13 +279,17 @@
 		7CA44C33806448F4A0C2A111 /* BasicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicModel.m; path = src/models/BasicModel.m; sourceTree = "<group>"; };
 		7CA44C54A3156CA9E9116E42 /* BasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicView.m; path = src/views/BasicView.m; sourceTree = "<group>"; };
 		7CA44C58D32A5468FAEE5C76 /* OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuth.h; path = src/toolkit/DETweetComposeViewController/OAuth/OAuth.h; sourceTree = "<group>"; };
+		7CA44C67D66DBA0571B1FC0A /* DeleteCSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeleteCSV.h; path = src/iadt/operations/DeleteCSV.h; sourceTree = "<group>"; };
 		7CA44C74A552AD37D0802467 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Base64Transcoder.c; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/Base64Transcoder.c; sourceTree = "<group>"; };
 		7CA44C79A6223EFF41864C4A /* SuccessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuccessView.h; path = src/iadt/views/SuccessView.h; sourceTree = "<group>"; };
 		7CA44C84DED4255E14E5AE11 /* SaveToDocuments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SaveToDocuments.h; path = src/iadt/operations/SaveToDocuments.h; sourceTree = "<group>"; };
+		7CA44C99D9254777FEEC0266 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Alpha.h"; path = "src/utils/UIImage+Alpha.h"; sourceTree = "<group>"; };
 		7CA44CFBBECC3E27CED74B74 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewController.m; path = src/iadt/viewcontrollers/ResultsViewController.m; sourceTree = "<group>"; };
+		7CA44D071B83BC2DC181022E /* CalculateFinalScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalculateFinalScore.h; path = src/iadt/operations/CalculateFinalScore.h; sourceTree = "<group>"; };
 		7CA44D5706437760E20A9845 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = src/iadt/models/Model.m; sourceTree = "<group>"; };
 		7CA44D5F5889D1F01F956AE0 /* DEHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEHTTPRequest.h; path = src/toolkit/DETweetComposeViewController/OAuth/DEHTTPRequest.h; sourceTree = "<group>"; };
 		7CA44D7C2416083E0ECC9284 /* TwitterHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterHandler.h; path = src/utils/TwitterHandler.h; sourceTree = "<group>"; };
+		7CA44D85187BDECFEC14BEBC /* CalculateGameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalculateGameScore.h; path = src/iadt/operations/CalculateGameScore.h; sourceTree = "<group>"; };
 		7CA44D892F9FE1E7054E20D3 /* FadePopSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FadePopSegue.h; path = src/iadt/segues/FadePopSegue.h; sourceTree = "<group>"; };
 		7CA44D8F8408EA95DDA9C41C /* VeryBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VeryBasicViewController.m; path = src/viewcontrollers/VeryBasicViewController.m; sourceTree = "<group>"; };
 		7CA44D9026F4A07A1E3F3A38 /* OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuth.m; path = src/toolkit/DETweetComposeViewController/OAuth/OAuth.m; sourceTree = "<group>"; };
@@ -277,6 +297,7 @@
 		7CA44D9ED6550B8753EBDFA3 /* OAuth+DEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OAuth+DEExtensions.h"; path = "src/toolkit/DETweetComposeViewController/OAuth+DEExtensions.h"; sourceTree = "<group>"; };
 		7CA44D9F87CCD8B9679F1F2F /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Utils.m"; path = "src/utils/UIView+Utils.m"; sourceTree = "<group>"; };
 		7CA44DDC42CFA4773C0F08A6 /* UIDevice+DETweetComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+DETweetComposeViewController.m"; path = "src/toolkit/DETweetComposeViewController/UIDevice+DETweetComposeViewController.m"; sourceTree = "<group>"; };
+		7CA44E0B7F7B33A344D64D25 /* DebugLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DebugLog.m; path = src/toolkit/DebugLog/DebugLog.m; sourceTree = "<group>"; };
 		7CA44E1D0426969F089A945B /* TwitterDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterDialog.h; path = src/toolkit/DETweetComposeViewController/TwitterDialog.h; sourceTree = "<group>"; };
 		7CA44E79440F5E1BD52418EF /* PuttyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PuttyView.h; path = src/toolkit/PuttyView/PuttyView.h; sourceTree = "<group>"; };
 		7CA44ED6B869560E7409B52C /* OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAHMAC_SHA1SignatureProvider.h; path = src/toolkit/DETweetComposeViewController/OAuth/Crypto/OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
@@ -287,12 +308,15 @@
 		7CA44F35D38E1A6D737BF111 /* DERuledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DERuledView.m; path = src/toolkit/DETweetComposeViewController/DERuledView.m; sourceTree = "<group>"; };
 		7CA44F38B45CF61BE7D4CE4B /* DEEmbossedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEEmbossedLabel.m; path = src/toolkit/DETweetComposeViewController/DEEmbossedLabel.m; sourceTree = "<group>"; };
 		7CA44F4C3BAB96C5940B8B7A /* BasicOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicOperation.m; path = src/operations/BasicOperation.m; sourceTree = "<group>"; };
+		7CA44F534639F53F130DE3DD /* IrregularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IrregularButton.h; path = src/toolkit/IrregularButton/IrregularButton.h; sourceTree = "<group>"; };
+		7CA44F59CB72D3DE31876E9E /* CalculateFinalScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalculateFinalScore.m; path = src/iadt/operations/CalculateFinalScore.m; sourceTree = "<group>"; };
 		7CA44F5ED4EA0A65F277AA5A /* DDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDProgressView.m; path = src/toolkit/DDProgressView/DDProgressView.m; sourceTree = "<group>"; };
 		7CA44FB72408517107E4AFD0 /* DEFacebookRuledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEFacebookRuledView.h; path = src/toolkit/FacebookComposeViewController/DEFacebookRuledView.h; sourceTree = "<group>"; };
 		7CA44FB82EEE5BAB8E1B6E01 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncoding.m"; path = "src/toolkit/DETweetComposeViewController/OAuth/NSString+URLEncoding.m"; sourceTree = "<group>"; };
 		7CA44FBD2824832F8811F730 /* DERuledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DERuledView.h; path = src/toolkit/DETweetComposeViewController/DERuledView.h; sourceTree = "<group>"; };
 		7CA44FC8ADEF7480827FAF16 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncoding.h"; path = "src/toolkit/DETweetComposeViewController/OAuth/NSString+URLEncoding.h"; sourceTree = "<group>"; };
 		7CA44FEC088166379E83A616 /* TwitterDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterDialog.m; path = src/toolkit/DETweetComposeViewController/TwitterDialog.m; sourceTree = "<group>"; };
+		7CA44FF92507729EFF4F23C1 /* DeleteCSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeleteCSV.m; path = src/iadt/operations/DeleteCSV.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -482,6 +506,22 @@
 				7CA44C79A6223EFF41864C4A /* SuccessView.h */,
 				7CA4433FA353DF9BF5C34B84 /* DDProgressView.h */,
 				7CA44F5ED4EA0A65F277AA5A /* DDProgressView.m */,
+				7CA4435DCF261F89067EDCCC /* ReconcileCSV.m */,
+				7CA4488FEF3CCEFC9ADB63E4 /* ReconcileCSV.h */,
+				7CA443753ECDA575C57615FE /* IrregularButton.m */,
+				7CA44F534639F53F130DE3DD /* IrregularButton.h */,
+				7CA44A32EEB4FBC573612AB8 /* UIImage+Alpha.m */,
+				7CA44C99D9254777FEEC0266 /* UIImage+Alpha.h */,
+				7CA44E0B7F7B33A344D64D25 /* DebugLog.m */,
+				7CA443D7226A142A07134739 /* DebugLog.h */,
+				7CA44F59CB72D3DE31876E9E /* CalculateFinalScore.m */,
+				7CA44D071B83BC2DC181022E /* CalculateFinalScore.h */,
+				7CA442ACD83D2AAF24D6624A /* LogValidItem.m */,
+				7CA445664E14D9201A7F0772 /* LogValidItem.h */,
+				7CA44BA46CCEF68D37694422 /* CalculateGameScore.m */,
+				7CA44D85187BDECFEC14BEBC /* CalculateGameScore.h */,
+				7CA44FF92507729EFF4F23C1 /* DeleteCSV.m */,
+				7CA44C67D66DBA0571B1FC0A /* DeleteCSV.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -705,6 +745,14 @@
 				7CA443D1C9BEAF2BCA1E4C87 /* Reachability.m in Sources */,
 				7CA44C11CC9963C7D3DC513E /* SuccessView.m in Sources */,
 				7CA44CD0E711DF0C6E2DAFF4 /* DDProgressView.m in Sources */,
+				7CA4429BF2F433D7B78FA66C /* ReconcileCSV.m in Sources */,
+				7CA44661BC073042C22F6FA8 /* IrregularButton.m in Sources */,
+				7CA4455079485052AD445783 /* UIImage+Alpha.m in Sources */,
+				7CA4413655493E94DC54785F /* DebugLog.m in Sources */,
+				7CA44C311C20CFFFD276471E /* CalculateFinalScore.m in Sources */,
+				7CA4413FA9582CFCC2C9DFAB /* LogValidItem.m in Sources */,
+				7CA441A8A6C134F44FFF585F /* CalculateGameScore.m in Sources */,
+				7CA44416AF4B7A158CA423DA /* DeleteCSV.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

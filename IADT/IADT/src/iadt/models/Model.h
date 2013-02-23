@@ -21,6 +21,8 @@
 @property(nonatomic, retain) NSString *lastEntry;
 @property(nonatomic, strong) NSMutableDictionary *sessionDictionary;
 @property(nonatomic, strong) NSMutableDictionary *pointScores;
+@property(nonatomic, retain) NSString *badgeName;
+@property(nonatomic, strong) NSMutableDictionary *itemScores;
 + (Model *) sharedModel;
 
 

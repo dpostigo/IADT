@@ -1,0 +1,1 @@
+/Users/dpostigo/Development/IADT/IADT/IADT/DerivedData/Builds/IADT/Build/Intermediates/ArchiveIntermediates/IADT/InstallationBuildProductsLocation/Applications/IADT.app

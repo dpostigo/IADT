@@ -10,10 +10,15 @@
 #import "UIColor+Utils.h"
 #import "FadePopSegue.h"
 #import "DeleteToDocuments.h"
+#import "DeleteCSV.h"
+
+
+#define FINAL_TAG 22
 
 
 @implementation BasicViewController {
     CGPoint startLocation;
+    NSInteger lastTag;
 }
 
 
@@ -27,6 +32,63 @@
 
     self.view.backgroundColor = [UIColor colorWithString: @"e9e9e9"];
     self.navigationItem.hidesBackButton = YES;
+
+
+}
+
+
+- (void) viewDidAppear: (BOOL) animated {
+    [super viewDidAppear: animated];
+
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    for (int j = 0; j < 3; j++) {
+        UIButton *button = [UIButton buttonWithType: UIButtonTypeCustom];
+        button.bounds = CGRectMake(0, 0, 100, 100);
+//        button.backgroundColor = [UIColor blueColor];
+
+        if (j == 0) {
+            button.right = self.view.width;
+            button.top = 0;
+        } else if (j == 1) {
+
+            button.bottom = self.view.height;
+            button.right = self.view.width;
+        } else if (j == 2) {
+            button.left = 0;
+            button.bottom = self.view.height;
+        }
+
+        button.tag = 20 + j;
+        [button addTarget: self action: @selector(handleSecretGesture:) forControlEvents: UIControlEventTouchUpInside];
+
+        [self.view addSubview: button];
+    }
+}
+
+
+- (void) handleSecretGesture: (id) sender {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+
+
+    NSInteger tag = [sender tag];
+
+    if (tag == FINAL_TAG) {
+        lastTag = 0;
+
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: @"Delete Data" message: @"Are you sure you want to delete all your data?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles: @"OK", nil];
+        alertView.delegate = self;
+        [alertView show];
+    } else if (tag == lastTag - 1 || lastTag == 0) {
+        lastTag = tag;
+    } else {
+        //Not in sequence
+    }
+}
+
+
+- (void) handleDeleteData {
+
+    [_queue addOperation: [[DeleteCSV alloc] init]];
 }
 
 
@@ -38,9 +100,8 @@
 
 
     CGFloat currentPage = [self.navigationController.viewControllers count] - 1;
-    CGFloat progress =  currentPage / 9.0f;
+    CGFloat progress = currentPage / 9.0f;
     navigationBarView.progressView.progress = progress;
-
 
     if (currentPage > 2)
         [navigationBarView.homeButton addTarget: self action: @selector(handleHome:) forControlEvents: UIControlEventTouchUpInside];
@@ -56,15 +117,20 @@
 
 
 - (void) alertView: (UIAlertView *) alertView didDismissWithButtonIndex: (NSInteger) buttonIndex {
-    if (buttonIndex == alertView.cancelButtonIndex) {
+    if ([alertView.title isEqualToString: @"Quit"]) {
+        if (buttonIndex != alertView.cancelButtonIndex) {
+
+            [_queue addOperation: [[DeleteToDocuments alloc] init]];
+            UIViewController *root = [self.navigationController.viewControllers objectAtIndex: 0];
+            UIStoryboardSegue *segue = [[FadePopSegue alloc] initWithIdentifier: @"BackToHome" source: self destination: root];
+            [segue perform];
+        }
     }
 
-    else {
-
-        [_queue addOperation: [[DeleteToDocuments alloc] init]];
-        UIViewController *root = [self.navigationController.viewControllers objectAtIndex: 0];
-        UIStoryboardSegue *segue = [[FadePopSegue alloc] initWithIdentifier: @"BackToHome" source: self destination: root];
-        [segue perform];
+    else if ([alertView.title isEqualToString: @"Delete Data"]) {
+        if (buttonIndex != alertView.cancelButtonIndex) {
+            [self handleDeleteData];
+        }
     }
 }
 

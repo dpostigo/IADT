@@ -1,0 +1,31 @@
+Contents of /Users/dpostigo/Development/IADT/IADT/IADT/BasicProject/IADT-Prefix.pch
+4.1 (tags/Apple/clang-421.11.66) (based on LLVM 3.1svn)
+arm-apple-darwin11.4.2
+-x
+objective-c
+-arch
+armv7s
+-fmessage-length=0
+-std=gnu99
+-fobjc-arc
+-fpascal-strings
+-Os
+-DTESTFLIGHT_ENABLED=0
+-DDEBUG=0
+-isysroot
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk
+-g
+-fvisibility=hidden
+-DIBOutlet=__attribute__((iboutlet))
+-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))
+-DIBAction=void)__attribute__((ibaction)
+-miphoneos-version-min=6.0
+-iquote
+-iquote
+-I/Users/dpostigo/Development/IADT/IADT/IADT/DerivedData/Builds/IADT/Build/Intermediates/ArchiveIntermediates/IADT/BuildProductsPath/Release-iphoneos/include
+-I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/include/libxml2
+-I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/include/libxml2/libxml
+-F/Users/dpostigo/Development/IADT/IADT/IADT/DerivedData/Builds/IADT/Build/Intermediates/ArchiveIntermediates/IADT/BuildProductsPath/Release-iphoneos
+-F/Documents/FacebookSDK
+-DNS_BLOCK_ASSERTIONS=1
+SDK_PRODUCT_BUILD_VERSION=10A403

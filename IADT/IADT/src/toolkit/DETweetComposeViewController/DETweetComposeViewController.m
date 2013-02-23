@@ -29,6 +29,18 @@
 #import <Accounts/Accounts.h>
 #import <Twitter/TWRequest.h>
 
+#import <sys/utsname.h>
+
+
+NSString *
+machineName() {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+
+    return [NSString stringWithCString: systemInfo.machine
+                              encoding: NSUTF8StringEncoding];
+}
+
 
 static BOOL waitingForAccess = NO;
 
@@ -67,7 +79,7 @@ static BOOL waitingForAccess = NO;
 
 @implementation DETweetComposeViewController {
 @private
-    UIImageView * _navImage;
+    UIImageView *_navImage;
 }
 
 
@@ -189,14 +201,19 @@ static NSString *const DETweetLastAccountIdentifier = @"DETweetLastAccountIdenti
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     if (![[UIApplication sharedApplication] isStatusBarHidden]) {
-//        CGFloat statusBarOffset = -20.0f;
-//        if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
-//            CGContextTranslateCTM(context, statusBarOffset, 0.0f);
-//        } else {
-//            CGContextTranslateCTM(context, 0.0f, statusBarOffset);
-//        }
+        //        CGFloat statusBarOffset = -20.0f;
+        //        if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
+        //            CGContextTranslateCTM(context, statusBarOffset, 0.0f);
+        //        } else {
+        //            CGContextTranslateCTM(context, 0.0f, statusBarOffset);
+        //        }
 
         CGFloat statusBarOffset = 20.0f;
+
+        if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft) {
+            statusBarOffset = -20.0f;
+        }
+
         CGContextTranslateCTM(context, statusBarOffset, 0.0f);
     }
 
@@ -204,7 +221,7 @@ static NSString *const DETweetLastAccountIdentifier = @"DETweetLastAccountIdenti
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-    UIImageOrientation imageOrientation;
+    UIImageOrientation imageOrientation = UIImageOrientationLeft;
     switch ([UIApplication sharedApplication].statusBarOrientation) {
         case UIInterfaceOrientationLandscapeLeft:
             imageOrientation = UIImageOrientationRight;
@@ -378,7 +395,6 @@ static NSString *const DETweetLastAccountIdentifier = @"DETweetLastAccountIdenti
     [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleBlackOpaque animated: YES];
 
     [self updateFramesForOrientation: self.interfaceOrientation];
-
 
     [self selectTwitterAccount];  // Set or verify our default account.
 
@@ -659,8 +675,6 @@ static NSString *const DETweetLastAccountIdentifier = @"DETweetLastAccountIdenti
     CGFloat cardLeft = trunc((CGRectGetWidth(self.view.bounds) - cardWidth) / 2);
     self.cardView.frame = CGRectMake(cardLeft, cardTop, cardWidth, cardHeight);
 
-
-
     self.navImage.frame = CGRectMake(0, 0, cardWidth, 44);
 
     self.titleLabel.font = [UIFont boldSystemFontOfSize: titleLabelFontSize];
@@ -883,7 +897,6 @@ static NSString *const DETweetLastAccountIdentifier = @"DETweetLastAccountIdenti
 
 - (void) checkTwitterCredentials {
 
-
     if (self.alwaysUseDETwitterCredentials == NO && [UIDevice de_isIOS5]) {
         // Try using iOS5 Twitter credentials
         if ([[self class] canAccessTwitterAccounts]) {
@@ -900,15 +913,15 @@ static NSString *const DETweetLastAccountIdentifier = @"DETweetLastAccountIdenti
     }
     else {
         // Present Twitter OAuth login if necessary
-//        if (![OAuth isTwitterAuthorized]) {
-            self.oAuth = [[[OAuth alloc] initWithConsumerKey: kDEConsumerKey andConsumerSecret: kDEConsumerSecret] autorelease];
-            TwitterDialog *td = [[[TwitterDialog alloc] init] autorelease];
-            td.twitterOAuth = self.oAuth;
-            td.delegate = self;
-            td.logindelegate = self;
-            [self.textView resignFirstResponder];
-            [td show];
-//        }
+        //        if (![OAuth isTwitterAuthorized]) {
+        self.oAuth = [[[OAuth alloc] initWithConsumerKey: kDEConsumerKey andConsumerSecret: kDEConsumerSecret] autorelease];
+        TwitterDialog *td = [[[TwitterDialog alloc] init] autorelease];
+        td.twitterOAuth = self.oAuth;
+        td.delegate = self;
+        td.logindelegate = self;
+        [self.textView resignFirstResponder];
+        [td show];
+        //        }
     }
 }
 
@@ -1012,9 +1025,7 @@ static NSString *const DETweetLastAccountIdentifier = @"DETweetLastAccountIdenti
 
 - (IBAction) send {
 
-
     [self checkTwitterCredentials];
-
 }
 
 
@@ -1058,8 +1069,6 @@ static NSString *const DETweetLastAccountIdentifier = @"DETweetLastAccountIdenti
     NSLog(@"%s", __PRETTY_FUNCTION__);
     [self.oAuth saveOAuthContext];
     [self.textView becomeFirstResponder];
-
-
 
     self.sendButton.enabled = NO;
 

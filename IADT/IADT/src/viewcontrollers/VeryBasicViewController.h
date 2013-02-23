@@ -19,6 +19,8 @@
     NSMutableArray *delegates;
     NSMutableArray *textFields;
 
+    IBOutlet UILabel *debugLabel;
+
 
 }
 
@@ -27,12 +29,13 @@
 @property(nonatomic, strong) NSOperationQueue *queue;
 @property(nonatomic, strong) NSMutableArray *delegates;
 @property(nonatomic, strong) NSMutableArray *textFields;
-
+@property(nonatomic, strong) UILabel *debugLabel;
 - (IBAction) dismissModal;
 
 - (void) subscribeTextField: (UITextField *) aTextField;
 - (void) unsubscribeTextField: (UITextField *) aTextField;
 - (void) textFieldDidReturn: (UITextField *) aTextField;
 - (void) textFieldEndedEditing: (UITextField *) aTextField;
+- (void) textFieldDidChange: (UITextField *) aTextField;
 
 @end

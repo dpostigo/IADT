@@ -19,6 +19,7 @@
     IBOutlet UIImageView *ghostImage;
     IBOutlet UIView *containerView;
     IBOutlet UIView *successView;
+    IBOutlet UIButton *validSuccessButton;
 
     IBOutletCollection(UIView) NSArray *successButtons;
     IBOutletCollection(UIView) NSArray *successViews;

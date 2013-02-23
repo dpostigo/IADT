@@ -1,0 +1,26 @@
+dependencies: \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/toolkit/FacebookComposeViewController/DEFacebookComposeViewController.m \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/toolkit/FacebookComposeViewController/DEFacebookComposeViewController.h \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/toolkit/FacebookComposeViewController/DEFacebookSheetCardView.h \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/toolkit/FacebookComposeViewController/DEFacebookTextView.h \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/toolkit/FacebookComposeViewController/DEFacebookGradientView.h \
+  /Users/dpostigo/Development/IADT/IADT/IADT/src/toolkit/FacebookComposeViewController/UIDevice+DEFacebookComposeViewController.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FacebookSDK.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBSession.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBRequest.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBRequestConnection.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBGraphObject.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBError.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBSettings.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBLoginView.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBGraphUser.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBGraphPlace.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBGraphLocation.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBProfilePictureView.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBUserSettingsViewController.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBViewController.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBPlacePickerViewController.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBCacheDescriptor.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBFriendPickerViewController.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBOpenGraphAction.h \
+  /Documents/FacebookSDK/FacebookSDK.framework/Headers/FBNativeDialogs.h
