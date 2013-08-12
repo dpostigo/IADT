@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="0ie-Gl-MeT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="0ie-Gl-MeT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Basic View Controller-->
@@ -1250,75 +1250,6 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
         <image name="water.png" width="150" height="170"/>
         <image name="wordgame.png" width="150" height="150"/>
     </resources>
-    <classes>
-        <class className="BasicGameViewController" superclassName="BasicViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicGameViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="reset:"/>
-                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="ghostImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="successView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="validSuccessButton" candidateClass="UIButton"/>
-                <relationship kind="outletCollection" name="containerViews" candidateClass="UIView"/>
-                <relationship kind="outletCollection" name="labels" candidateClass="UIView"/>
-                <relationship kind="outletCollection" name="successButtons" candidateClass="UIView"/>
-                <relationship kind="outletCollection" name="successViews" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="BasicViewController" superclassName="VeryBasicViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="BasicWhiteView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicWhiteView.h"/>
-        </class>
-        <class className="GameObject" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameObject.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="IrregularButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IrregularButton.h"/>
-        </class>
-        <class className="LoginViewController" superclassName="BasicViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="handleSubmit:"/>
-                <relationship kind="outlet" name="email" candidateClass="TextField"/>
-                <relationship kind="outlet" name="lastName" candidateClass="TextField"/>
-                <relationship kind="outlet" name="name" candidateClass="TextField"/>
-                <relationship kind="outlet" name="phone" candidateClass="TextField"/>
-                <relationship kind="outlet" name="submitButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="zip" candidateClass="TextField"/>
-            </relationships>
-        </class>
-        <class className="ResultsViewController" superclassName="BasicViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ResultsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="handleFacebook:"/>
-                <relationship kind="action" name="handleTwitter:"/>
-                <relationship kind="outlet" name="badgeView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TextField" superclassName="UITextField">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TextField.h"/>
-            <relationships>
-                <relationship kind="outlet" name="invalidView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="VeryBasicViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VeryBasicViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="dismissModal"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

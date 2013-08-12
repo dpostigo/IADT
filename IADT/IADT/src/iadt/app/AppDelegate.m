@@ -15,55 +15,50 @@
 @implementation AppDelegate
 
 
-
-- (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:@"user_data_enabled"];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 
 #ifdef TESTFLIGHT_ENABLED
-    [TestFlight setDeviceIdentifier: [[UIDevice currentDevice] uniqueIdentifier]];
-    [TestFlight takeOff: @"44a2eeaa-a91a-4178-b51a-4d7584bef7dc"];
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    [TestFlight takeOff:@"44a2eeaa-a91a-4178-b51a-4d7584bef7dc"];
 #endif
 
     NSOperationQueue *queue = [NSOperationQueue new];
-    [queue addOperation: [[ReconcileCSV alloc] init]];
+    [queue addOperation:[[ReconcileCSV alloc] init]];
 
 
     return YES;
 }
 
 
-- (BOOL) application: (UIApplication *) application
-             openURL: (NSURL *) url
-   sourceApplication: (NSString *) sourceApplication
-          annotation: (id) annotation {
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 
 //    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
 
     // attempt to extract a token from the url
-    return [FBSession.activeSession handleOpenURL: url];
+    return [FBSession.activeSession handleOpenURL:url];
 }
 
 
-- (void) applicationWillResignActive: (UIApplication *) application {
-
+- (void)applicationWillResignActive:(UIApplication *)application {
     NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
+- (void)applicationDidBecomeActive:(UIApplication *)application {
 
-- (void) applicationDidEnterBackground: (UIApplication *) application {
+}
 
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
     NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
-
-- (void) applicationWillEnterForeground: (UIApplication *) application {
+- (void)applicationWillEnterForeground:(UIApplication *)application {
 }
 
-
-- (void) applicationDidBecomeActive: (UIApplication *) application {
+- (void)applicationWillTerminate:(UIApplication *)application {
 }
 
-
-- (void) applicationWillTerminate: (UIApplication *) application {
-}
 
 @end

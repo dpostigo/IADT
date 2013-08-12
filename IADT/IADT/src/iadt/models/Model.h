@@ -10,6 +10,8 @@
 
 @interface Model : BasicModel  {
 
+    BOOL collectsUserData;
+
 
 }
 
@@ -23,6 +25,8 @@
 @property(nonatomic, strong) NSMutableDictionary *pointScores;
 @property(nonatomic, retain) NSString *badgeName;
 @property(nonatomic, strong) NSMutableDictionary *itemScores;
+@property(nonatomic) BOOL collectsUserData;
+
 + (Model *) sharedModel;
 
 

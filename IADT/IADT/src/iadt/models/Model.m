@@ -32,7 +32,9 @@
 @synthesize itemScores = _itemScores;
 
 
-+ (Model *) sharedModel {
+@synthesize collectsUserData;
+
++ (Model *)sharedModel {
     static Model *_instance = nil;
 
     @synchronized (self) {
@@ -45,22 +47,23 @@
 }
 
 
-- (id) init {
+- (id)init {
     self = [super init];
     if (self) {
 
-        NSString *path = [[NSBundle mainBundle] pathForResource: @"data" ofType: @"plist"];
-        NSArray *array = [NSArray arrayWithContentsOfFile: path];
-        NSDictionary *dictionary = [array objectAtIndex: 0];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"];
+        NSArray *array = [NSArray arrayWithContentsOfFile:path];
+        NSDictionary *dictionary = [array objectAtIndex:0];
 
         self.gamesData = dictionary;
-        self.scoreData = [array objectAtIndex: 1];
+        self.scoreData = [array objectAtIndex:1];
         self.scores = [[NSMutableDictionary alloc] init];
         self.pointScores = [[NSMutableDictionary alloc] init];
         self.itemScores = [[NSMutableDictionary alloc] init];
 
-        _dataString = [[NSUserDefaults standardUserDefaults] objectForKey: @"dataString"];
+        _dataString = [[NSUserDefaults standardUserDefaults] objectForKey:@"dataString"];
 
+        collectsUserData = [[NSUserDefaults standardUserDefaults] boolForKey:@"user_data_enabled"];
 
 
     }
