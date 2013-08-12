@@ -28,64 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BasicProject/main.m">
+      <file leaf-file-name="BasicCSVOperation.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/operations/BasicCSVOperation.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/HomeViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="71" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="34" selection-start="3534" selection-end="3534" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppDelegate.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dpgraphics/AppDelegate.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="60" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CalculateGameScore.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/operations/CalculateGameScore.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppDelegate.m" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/iadt/app/AppDelegate.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="1" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.6216617">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Model.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/models/Model.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="25" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+            <state line="10" column="33" selection-start="165" selection-end="182" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -100,10 +46,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicCSVOperation.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iadt/operations/BasicCSVOperation.m">
+      <file leaf-file-name="Model.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/models/Model.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="33" selection-start="165" selection-end="182" vertical-scroll-proportion="0.0">
+            <state line="12" column="25" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppDelegate.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/iadt/app/AppDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="1" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.8902077">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalculateGameScore.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/operations/CalculateGameScore.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppDelegate.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dpgraphics/AppDelegate.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="60" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/LoginViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="126" column="34" selection-start="3534" selection-end="3534" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/HomeViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="71" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BasicProject/main.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -195,7 +195,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="DirectoryView.Xcode" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -264,18 +263,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="DirectoryView.Xcode" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.sourceCode.General" />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="IADT" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.IADT">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="BasicProject" TARGET_NAME="BasicProject" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="BasicProject" RUN_TARGET_NAME="BasicProject" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -321,12 +321,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-18" y="22" width="1440" height="807" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17360115" sideWeight="0.67040676" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21879484" sideWeight="0.67040676" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22238164" sideWeight="0.67040676" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.9527778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -414,33 +414,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/BasicViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="55" selection-start="986" selection-end="986" vertical-scroll-proportion="0.032467533">
-          <folding>
-            <element signature="n#viewDidLoad#0;n#BasicViewController#0" expanded="false" />
-            <element signature="n#handleSecretGesture:#0;n#BasicViewController#0" expanded="false" />
-            <element signature="n#handleDeleteData#0;n#BasicViewController#0" expanded="false" />
-            <element signature="n#loadView#0;n#BasicViewController#0" expanded="false" />
-            <element signature="n#handleHome:#0;n#BasicViewController#0" expanded="false" />
-            <element signature="n#alertView:didDismissWithButtonIndex:#0;n#BasicViewController#0" expanded="false" />
-            <element signature="n#popToRoot:#0;n#BasicViewController#0" expanded="false" />
-            <element signature="n#handleSwipe:#0;n#BasicViewController#0" expanded="false" />
-            <element signature="n#shouldAutorotateToInterfaceOrientation:#0;n#BasicViewController#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="47" column="55" selection-start="986" selection-end="986" vertical-scroll-proportion="0.032467533" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/ResultsViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="38" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="35" column="38" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/operations/ReconcileCSV.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="14" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="23" column="14" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/viewcontrollers/HomeViewController.h">
@@ -452,9 +436,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/operations/CalculateFinalScore.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="25" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="75" column="25" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dpgraphics/models/Model.m">
@@ -470,13 +452,6 @@
     <entry file="file://$PROJECT_DIR$/src/iadt/models/Model.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="25" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BasicProject/main.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -509,14 +484,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/models/Model.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="105" selection-start="1657" selection-end="1757" vertical-scroll-proportion="0.5">
-          <folding />
-        </state>
+        <state line="64" column="105" selection-start="1657" selection-end="1757" vertical-scroll-proportion="0.5" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iadt/app/AppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="1" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.6216617">
+        <state line="40" column="1" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.8902077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicProject/main.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
