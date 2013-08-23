@@ -7,10 +7,8 @@
 
 #import "BasicCSVOperation.h"
 
-
 @implementation BasicCSVOperation {
 }
-
 
 - (void) saveFile {
 

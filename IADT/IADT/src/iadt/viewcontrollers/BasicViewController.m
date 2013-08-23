@@ -44,7 +44,6 @@
     for (int j = 0; j < 3; j++) {
         UIButton *button = [UIButton buttonWithType: UIButtonTypeCustom];
         button.bounds = CGRectMake(0, 0, 100, 100);
-//        button.backgroundColor = [UIColor blueColor];
 
         if (j == 0) {
             button.right = self.view.width;
@@ -60,9 +59,10 @@
 
         button.tag = 20 + j;
         [button addTarget: self action: @selector(handleSecretGesture:) forControlEvents: UIControlEventTouchUpInside];
-
         [self.view addSubview: button];
     }
+
+    NSLog(@"%s", sel_getName(_cmd));
 }
 
 
@@ -87,7 +87,6 @@
 
 
 - (void) handleDeleteData {
-
     [_queue addOperation: [[DeleteCSV alloc] init]];
 }
 
@@ -109,7 +108,6 @@
 
 
 - (IBAction) handleHome: (id) sender {
-
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: @"Quit" message: @"Are you sure you want to cancel and restart?" delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles: @"Quit", nil];
     alertView.delegate = self;
     [alertView show];
@@ -120,6 +118,7 @@
     if ([alertView.title isEqualToString: @"Quit"]) {
         if (buttonIndex != alertView.cancelButtonIndex) {
 
+            NSLog(@"Delete to documents");
             [_queue addOperation: [[DeleteToDocuments alloc] init]];
             UIViewController *root = [self.navigationController.viewControllers objectAtIndex: 0];
             UIStoryboardSegue *segue = [[FadePopSegue alloc] initWithIdentifier: @"BackToHome" source: self destination: root];

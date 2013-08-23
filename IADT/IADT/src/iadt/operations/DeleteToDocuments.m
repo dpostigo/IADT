@@ -7,15 +7,16 @@
 
 #import "DeleteToDocuments.h"
 
-
 @implementation DeleteToDocuments {
 }
 
-
 - (void) main {
     [super main];
-    _model.dataString = [_model.dataString stringByReplacingOccurrencesOfString: _model.lastEntry withString: @""];
-    [self saveFile];
+
+    if (_model.collectsUserData) {
+        _model.dataString = [_model.dataString stringByReplacingOccurrencesOfString: _model.lastEntry withString: @""];
+        [self saveFile];
+    }
 }
 
 @end

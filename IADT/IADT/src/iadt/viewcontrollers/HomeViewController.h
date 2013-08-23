@@ -9,10 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "BasicViewController.h"
 
-
 @interface HomeViewController : BasicViewController {
 
 }
 
-- (IBAction)handleStartButton:(id)sender;
+- (IBAction) handleStartButton: (id) sender;
 @end

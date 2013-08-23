@@ -16,11 +16,9 @@
 #import "Reachability.h"
 #import "CalculateFinalScore.h"
 
-
 @implementation ResultsViewController {
     NSString *messageString;
 }
-
 
 - (void) loadView {
     [super loadView];
@@ -33,15 +31,12 @@
 
 - (void) finalScoreDidUpdate {
 
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    NSLog(@"_model.badgeName = %@", _model.badgeName);
     badgeView.image = [UIImage imageNamed: _model.badgeName];
 
 }
 
 
 - (void) finalScoreDidUpdateWithDebugString: (NSString *) debugString {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
 //    debugLabel.text = debugString;
 }
 

@@ -9,17 +9,16 @@
 #import "HomeViewController.h"
 #import "Model.h"
 
-
 @implementation HomeViewController {
 
 }
 
-- (IBAction)handleStartButton:(id)sender {
+- (IBAction) handleStartButton: (id) sender {
     NSLog(@"_model.collectsUserData = %d", _model.collectsUserData);
     if (_model.collectsUserData) {
-        [self performSegueWithIdentifier:@"UserDataSegue" sender:self];
+        [self performSegueWithIdentifier: @"UserDataSegue" sender: self];
     }
-    else [self performSegueWithIdentifier:@"StartSegue" sender:self];
+    else [self performSegueWithIdentifier: @"StartSegue" sender: self];
 
 }
 @end
