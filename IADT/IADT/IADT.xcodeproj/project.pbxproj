@@ -898,8 +898,8 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = IADT;
-				PROVISIONING_PROFILE = "9C94AA24-8B95-42FD-8B13-D23DC6FEAA3E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9C94AA24-8B95-42FD-8B13-D23DC6FEAA3E";
+				PROVISIONING_PROFILE = "83B1B5FC-B945-4B3C-A44E-E7B0340CA501";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "83B1B5FC-B945-4B3C-A44E-E7B0340CA501";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -931,7 +931,8 @@
 		0348A7E6167949F600BDC6A3 /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Elastic Creative (A968NU8AEL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Elastic Creative (A968NU8AEL)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"~/Documents/FacebookSDK",
@@ -950,6 +951,8 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = IADT;
+				PROVISIONING_PROFILE = "83B1B5FC-B945-4B3C-A44E-E7B0340CA501";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "83B1B5FC-B945-4B3C-A44E-E7B0340CA501";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};

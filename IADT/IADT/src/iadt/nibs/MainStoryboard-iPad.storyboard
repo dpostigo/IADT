@@ -1128,14 +1128,14 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Analytic, Logical, Innovative and Pragmatic. " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Bt-b3-6lq">
-                                <rect key="frame" x="277" y="445" width="471" height="29"/>
+                                <rect key="frame" x="277" y="459" width="471" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1PC-EE-SRr">
-                                <rect key="frame" x="335" y="549" width="80" height="80"/>
+                                <rect key="frame" x="335" y="529" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="facebook-button.png">
@@ -1150,7 +1150,7 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WDd-tC-HRD">
-                                <rect key="frame" x="472" y="549" width="80" height="80"/>
+                                <rect key="frame" x="472" y="529" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="twitter-button.png">
@@ -1165,7 +1165,7 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UBq-zg-t8c">
-                                <rect key="frame" x="610" y="549" width="80" height="80"/>
+                                <rect key="frame" x="610" y="529" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="exit-button.png">
@@ -1264,7 +1264,6 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
         <class className="BasicGameViewController" superclassName="BasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicGameViewController.h"/>
             <relationships>
-                <relationship kind="action" name="handleSuccessButtonTapped:"/>
                 <relationship kind="action" name="reset:"/>
                 <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="ghostImage" candidateClass="UIImageView"/>
@@ -1280,8 +1279,6 @@ bmQgaG93IHRvIGJlIHBhcnQgb2YgdGhlIE5ldyBCcmVlZC4gA
         <class className="BasicViewController" superclassName="VeryBasicViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicViewController.h"/>
             <relationships>
-                <relationship kind="action" name="handleHome:"/>
-                <relationship kind="action" name="popToRoot:"/>
                 <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
             </relationships>

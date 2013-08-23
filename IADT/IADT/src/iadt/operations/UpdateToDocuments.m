@@ -15,7 +15,7 @@
 @synthesize result;
 
 
-- (id) initWithResult: (NSString *) aResult {
+- (id)initWithResult: (NSString *) aResult {
     self = [super init];
     if (self) {
         result = aResult;
@@ -25,18 +25,15 @@
 }
 
 
-- (void) main {
+- (void)main {
     [super main];
 
-    [_model.sessionDictionary setObject: result forKey: @"Result"];
-
-
-    NSString *string = [[_model.sessionDictionary allValues] componentsJoinedByString: @", "];
-    _model.dataString = [_model.dataString stringByReplacingOccurrencesOfString: _model.lastEntry withString: string];
-
-    [self saveFile];
-
-
+    if (_model.collectsUserData) {
+        [_model.sessionDictionary setObject: result forKey: @"Result"];
+        NSString *string = [[_model.sessionDictionary allValues] componentsJoinedByString: @", "];
+        _model.dataString = [_model.dataString stringByReplacingOccurrencesOfString: _model.lastEntry withString: string];
+        [self saveFile];
+    }
 }
 
 @end
